@@ -9,6 +9,22 @@
   "pathExecutable": "pulumi",
   "tasks": [
     {
+      "help": "Cancel a stacks currently running update, if any",
+      "postfix": "Cancel",
+      "commonPropertySets": ["yes"],
+      "definiteArgument": "cancel",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Stack",
+            "type": "string",
+            "format": "{value}",
+            "help": "The name of the stack to operate on. Defaults to the current stack"
+          }
+        ]
+      }
+    },
+    {
       "help": "Show a preview of updates to a stacks resources",
       "postfix": "Preview",
       "definiteArgument": "preview",
@@ -24,8 +40,20 @@
       }
     },
     {
+      "help": "Manage stacks",
+      "postfix": "Stack",
+      "commonPropertySets": [
+        "stack"
+      ],
+      "definiteArgument": "stack",
+      "settingsClass": {}
+    },
+    {
       "help": "Show a stacks output properties",
       "postfix": "StackOutput",
+      "commonPropertySets": [
+        "stack"
+      ],
       "definiteArgument": "stack output",
       "settingsClass": {
         "properties": [
@@ -112,6 +140,42 @@
       "help": "Enable verbose logging (e.g., v=3); anything >3 is very verbose"
     }
   ],
+  "commonTaskPropertySets": {
+    "yes": [
+      {
+        "name": "Yes",
+        "type": "bool",
+        "format": "--yes",
+        "help": "Skip confirmation prompts, and proceed anyway"
+      }
+    ],
+    "stack": [
+      {
+        "name": "ShowIds",
+        "type": "bool",
+        "format": "--show-ids",
+        "help": "Display each resource's provider-assigned unique ID"
+      },
+      {
+        "name": "ShowSecrets",
+        "type": "bool",
+        "format": "--show-secrets",
+        "help": "Display stack outputs which are marked as secret in plaintext"
+      },
+      {
+        "name": "ShowUrns",
+        "type": "bool",
+        "format": "--show-urns",
+        "help": "Display each resource's Pulumi-assigned globally unique URN"
+      },
+      {
+        "name": "Stack",
+        "type": "string",
+        "format": "--stack {value}",
+        "help": "The name of the stack to operate on. Defaults to the current stack"
+      }
+    ]
+  },
   "enumerations": [
     {
       "name": "ColorizeOutput",
