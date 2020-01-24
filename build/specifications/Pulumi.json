@@ -1,0 +1,64 @@
+{
+  "$schema": "https://raw.githubusercontent.com/nuke-build/nuke/master/source/Nuke.CodeGeneration/schema.json",
+  "references": [
+    "https://www.pulumi.com/docs/reference/cli/"
+  ],
+  "name": "Pulumi",
+  "officialUrl": "https://www.pulumi.com/",
+  "help": "Pulumi is controlled primarily using the command line interface (CLI). It works in conjunction with the Pulumi service to deploy changes to your cloud apps and infrastructure. It keeps a history of who updated what in your team and when. This CLI has been designed for great inner loop productivity, in addition to continuous integration and delivery scenarios.",
+  "pathExecutable": "pulumi",
+  "tasks": [
+    {
+      "help": "Show a preview of updates to a stacks resources",
+      "postfix": "Preview",
+      "definiteArgument": "preview",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Config",
+            "type": "List<string>",
+            "format": "--config {value}",
+            "help": "Config to use during the preview"
+          }
+        ]
+      }
+    }
+  ],
+  "commonTaskProperties": [
+    {
+      "name": "Color",
+      "type": "ColorizeOutput",
+      "format": "--color {value}",
+      "help": "Colorize output. Choices are: always, never, raw, auto (default is auto)"
+    },
+    {
+      "name": "Cwd",
+      "type": "string",
+      "format": "--cwd {value}",
+      "help": "Run pulumi as if it had been started in another directory"
+    },
+    {
+      "name": "DisableIntegrityChecking",
+      "type": "bool",
+      "format": "--disable-integrity-checking",
+      "help": "Disable integrity checking of checkpoint files"
+    },
+    {
+      "name": "Emoji",
+      "type": "bool",
+      "format": "--emoji",
+      "help": "Enable emojis in the output (default is true)"
+    }
+  ],
+  "enumerations": [
+    {
+      "name": "ColorizeOutput",
+      "values": [
+        "always",
+        "never",
+        "raw",
+        "auto"
+      ]
+    }
+  ]
+}
