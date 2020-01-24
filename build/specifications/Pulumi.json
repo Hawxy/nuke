@@ -22,6 +22,26 @@
           }
         ]
       }
+    },
+    {
+      "help": "Show a stacks output properties",
+      "postfix": "StackOutput",
+      "definiteArgument": "stack output",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "PropertyName",
+            "type": "string",
+            "format": "{value}",
+            "help": "Show value of specific property"
+          },
+          {
+            "name": "Json",
+            "type": "bool",
+            "format": "--json"
+          }
+        ]
+      }
     }
   ],
   "commonTaskProperties": [
@@ -48,6 +68,48 @@
       "type": "bool",
       "format": "--emoji",
       "help": "Enable emojis in the output (default is true)"
+    },
+    {
+      "name": "Help",
+      "type": "bool",
+      "format": "--help",
+      "help": "Help for Pulumi"
+    },
+    {
+      "name": "LogFlow",
+      "type": "bool",
+      "format": "--logflow",
+      "help": "Flow log settings to child processes (like plugins)"
+    },
+    {
+      "name": "LogToStderr",
+      "type": "bool",
+      "format": "--logtostderr",
+      "help": "Log to stderr instead of to files"
+    },
+    {
+      "name": "NonInteractive",
+      "type": "bool",
+      "format": "--non-interactive",
+      "help": "Disable interactive mode for all commands"
+    },
+    {
+      "name": "Profiling",
+      "type": "string",
+      "format": "--profiling {value}",
+      "help": "Emit CPU and memory profiles and an execution trace to '[filename].[pid].{cpu,mem,trace}', respectively"
+    },
+    {
+      "name": "Tracing",
+      "type": "string",
+      "format": "--tracing {value}",
+      "help": "Emit tracing to the specified endpoint. Use the file: scheme to write tracing data to a local file"
+    },
+    {
+      "name": "Verbose",
+      "type": "int",
+      "format": "--verbose {value}",
+      "help": "Enable verbose logging (e.g., v=3); anything >3 is very verbose"
     }
   ],
   "enumerations": [
