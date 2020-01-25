@@ -110,6 +110,7 @@ partial class Build : NukeBuild
     Target Restore => _ => _
         .Executes(() =>
         {
+            TeamCity?.AddBuildProblem(string.Empty);
             DotNetRestore(_ => _
                 .SetProjectFile(Solution)
                 .SetIgnoreFailedSources(IgnoreFailedSources));
