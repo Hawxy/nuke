@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
-using System.Text;
+using JetBrains.Annotations;
 using Newtonsoft.Json;
 using Nuke.Common.Tooling;
 using Nuke.Common.Utilities;
@@ -11,11 +10,21 @@ namespace Nuke.Common.Tools.Pulumi
 {
     public partial class PulumiTasks
     {
-        public static T GetStackOutput<T>(PulumiStackOutputSettings toolSettings = null)
+        public static IReadOnlyDictionary<string, object> GetStackOutput(PulumiStackOutputSettings toolSettings = null)
         {
             toolSettings ??= new PulumiStackOutputSettings();
-            var process = ProcessTasks.StartProcess(toolSettings.EnableJson()); 
-            process.AssertZeroExitCode();
+            return ParseJson<IReadOnlyDictionary<string, object>>(toolSettings.EnableJson().DisableLogOutput());
+        }
+
+        public static IReadOnlyDictionary<string, PulumiConfig> GetConfigOutput(PulumiConfigSettings toolSettings = null)
+        {
+            toolSettings ??= new PulumiConfigSettings();
+            return ParseJson<IReadOnlyDictionary<string, PulumiConfig>>(toolSettings.EnableJson().DisableLogOutput());
+        }
+
+        private static T ParseJson<T>(ToolSettings toolSettings)
+        {
+            var process = ProcessTasks.StartProcess(toolSettings);
             var output = process.Output.EnsureOnlyStd().Select(x => x.Text).ToList();
             try
             {
@@ -29,5 +38,13 @@ namespace Nuke.Common.Tools.Pulumi
                     exception);
             }
         }
-    }
+    } 
+    
+    
+   public class PulumiConfig
+   {
+       [CanBeNull] 
+       public string Value { get; set; }
+       public bool Secret { get; set; }
+   }
 }

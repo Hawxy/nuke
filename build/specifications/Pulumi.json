@@ -11,7 +11,6 @@
     {
       "help": "Cancel a stacks currently running update, if any",
       "postfix": "Cancel",
-      "commonPropertySets": ["yes"],
       "definiteArgument": "cancel",
       "settingsClass": {
         "properties": [
@@ -20,6 +19,148 @@
             "type": "string",
             "format": "{value}",
             "help": "The name of the stack to operate on. Defaults to the current stack"
+          },
+          {
+            "name": "Yes",
+            "type": "bool",
+            "format": "--yes",
+            "help": "Skip confirmation prompts, and proceed with cancellation anyway"
+          }
+        ]
+      }
+    },
+    {
+      "help": "Lists all configuration values for a specific stack",
+      "postfix": "Config",
+      "commonPropertySets": [
+        "stackSelect",
+        "configFile"
+      ],
+      "definiteArgument": "config",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Json",
+            "type": "bool",
+            "format": "--json"
+          },
+          {
+            "name": "ShowSecrets",
+            "type": "bool",
+            "format": "--show-secrets",
+            "help": "Show secret values when listing config instead of displaying blinded values"
+          }
+        ]
+      }
+    },
+    {
+      "help": "Get a single configuration value",
+      "postfix": "ConfigGet",
+      "commonPropertySets": [
+        "stackSelect",
+        "configFile"
+      ],
+      "definiteArgument": "config get",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Value",
+            "type": "string",
+            "format": "{value}",
+            "help": "The configuration value to get"
+          },
+          {
+            "name": "Json",
+            "type": "bool",
+            "format": "--json",
+            "help": "Emit output as JSON"
+          },
+          {
+            "name": "Path",
+            "type": "string",
+            "format": "--path {value}",
+            "help": "The key contains a path to a property in a map or list to get"
+          }
+        ]
+      }
+    },
+    {
+      "help": "Update the local configuration based on the most recent deployment of the stack",
+      "postfix": "ConfigRefresh",
+      "commonPropertySets": [
+        "stackSelect",
+        "configFile"
+      ],
+      "definiteArgument": "config refresh",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Force",
+            "type": "bool",
+            "format": "--force",
+            "help": "Overwrite configuration file, if it exists, without creating a backup"
+          }
+        ]
+      }
+    },
+    {
+      "help": "Remove configuration value",
+      "postfix": "ConfigRemove",
+      "commonPropertySets": [
+        "stackSelect",
+        "configFile"
+      ],
+      "definiteArgument": "config rm",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Value",
+            "type": "string",
+            "format": "{value}",
+            "help": "The configuration value to remove"
+          },
+          {
+            "name": "Path",
+            "type": "string",
+            "format": "--path {value}",
+            "help": "The key contains a path to a property in a map or list to remove"
+          }
+        ]
+      }
+    },
+    {
+      "help": "Set configuration value",
+      "postfix": "ConfigSet",
+      "commonPropertySets": [
+        "stackSelect",
+        "configFile"
+      ],
+      "definiteArgument": "config rm",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Value",
+            "type": "string",
+            "format": "{value}",
+            "help": "The configuration value to set"
+          },
+          {
+            "name": "Path",
+            "type": "string",
+            "format": "--path {value}",
+            "help": "The key contains a path to a property in a map or list to set"
+          },
+          {
+            "name": "Plaintext",
+            "type": "bool",
+            "format": "--plaintext",
+            "help": "Save the value as plaintext (unencrypted)"
+          },
+          {
+            "name": "Secret",
+            "type": "bool",
+            "format": "--secret",
+            "help": "Encrypt the value instead of storing it in plaintext"
           }
         ]
       }
@@ -43,7 +184,8 @@
       "help": "Manage stacks",
       "postfix": "Stack",
       "commonPropertySets": [
-        "stack"
+        "stackSelect",
+        "stackInherit"
       ],
       "definiteArgument": "stack",
       "settingsClass": {}
@@ -52,7 +194,8 @@
       "help": "Show a stacks output properties",
       "postfix": "StackOutput",
       "commonPropertySets": [
-        "stack"
+        "stackSelect",
+        "stackInherit"
       ],
       "definiteArgument": "stack output",
       "settingsClass": {
@@ -66,7 +209,8 @@
           {
             "name": "Json",
             "type": "bool",
-            "format": "--json"
+            "format": "--json",
+            "help": "Emit output as JSON"
           }
         ]
       }
@@ -141,15 +285,23 @@
     }
   ],
   "commonTaskPropertySets": {
-    "yes": [
+    "stackSelect": [
       {
-        "name": "Yes",
-        "type": "bool",
-        "format": "--yes",
-        "help": "Skip confirmation prompts, and proceed anyway"
+        "name": "Stack",
+        "type": "string",
+        "format": "--stack {value}",
+        "help": "The name of the stack to operate on. Defaults to the current stack"
       }
     ],
-    "stack": [
+    "configFile": [
+      {
+        "name": "ConfigFile",
+        "type": "string",
+        "format": "--config-file {value}",
+        "help": "Use the configuration values in the specified file rather than detecting the file name"
+      }
+    ],
+    "stackInherit": [
       {
         "name": "ShowIds",
         "type": "bool",
@@ -167,12 +319,6 @@
         "type": "bool",
         "format": "--show-urns",
         "help": "Display each resource's Pulumi-assigned globally unique URN"
-      },
-      {
-        "name": "Stack",
-        "type": "string",
-        "format": "--stack {value}",
-        "help": "The name of the stack to operate on. Defaults to the current stack"
       }
     ]
   },
@@ -180,10 +326,10 @@
     {
       "name": "ColorizeOutput",
       "values": [
-        "always",
-        "never",
-        "raw",
-        "auto"
+        "Always",
+        "Never",
+        "Raw",
+        "Auto"
       ]
     }
   ]
