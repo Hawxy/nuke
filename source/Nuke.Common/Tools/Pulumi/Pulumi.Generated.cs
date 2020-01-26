@@ -686,6 +686,258 @@ namespace Nuke.Common.Tools.Pulumi
             return configurator.Invoke(PulumiDestroy, PulumiLogger, degreeOfParallelism, completeOnFailure);
         }
         /// <summary>
+        ///   <p>Update history for a stack</p>
+        ///   <p>For more details, visit the <a href="https://www.pulumi.com/">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--color</c> via <see cref="PulumiHistorySettings.Color"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiHistorySettings.Cwd"/></li>
+        ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiHistorySettings.DisableIntegrityChecking"/></li>
+        ///     <li><c>--emoji</c> via <see cref="PulumiHistorySettings.Emoji"/></li>
+        ///     <li><c>--help</c> via <see cref="PulumiHistorySettings.Help"/></li>
+        ///     <li><c>--json</c> via <see cref="PulumiHistorySettings.Json"/></li>
+        ///     <li><c>--logflow</c> via <see cref="PulumiHistorySettings.LogFlow"/></li>
+        ///     <li><c>--logtostderr</c> via <see cref="PulumiHistorySettings.LogToStderr"/></li>
+        ///     <li><c>--non-interactive</c> via <see cref="PulumiHistorySettings.NonInteractive"/></li>
+        ///     <li><c>--profiling</c> via <see cref="PulumiHistorySettings.Profiling"/></li>
+        ///     <li><c>--show-secrets</c> via <see cref="PulumiHistorySettings.ShowSecrets"/></li>
+        ///     <li><c>--stack</c> via <see cref="PulumiHistorySettings.Stack"/></li>
+        ///     <li><c>--tracing</c> via <see cref="PulumiHistorySettings.Tracing"/></li>
+        ///     <li><c>--verbose</c> via <see cref="PulumiHistorySettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> PulumiHistory(PulumiHistorySettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new PulumiHistorySettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Update history for a stack</p>
+        ///   <p>For more details, visit the <a href="https://www.pulumi.com/">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--color</c> via <see cref="PulumiHistorySettings.Color"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiHistorySettings.Cwd"/></li>
+        ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiHistorySettings.DisableIntegrityChecking"/></li>
+        ///     <li><c>--emoji</c> via <see cref="PulumiHistorySettings.Emoji"/></li>
+        ///     <li><c>--help</c> via <see cref="PulumiHistorySettings.Help"/></li>
+        ///     <li><c>--json</c> via <see cref="PulumiHistorySettings.Json"/></li>
+        ///     <li><c>--logflow</c> via <see cref="PulumiHistorySettings.LogFlow"/></li>
+        ///     <li><c>--logtostderr</c> via <see cref="PulumiHistorySettings.LogToStderr"/></li>
+        ///     <li><c>--non-interactive</c> via <see cref="PulumiHistorySettings.NonInteractive"/></li>
+        ///     <li><c>--profiling</c> via <see cref="PulumiHistorySettings.Profiling"/></li>
+        ///     <li><c>--show-secrets</c> via <see cref="PulumiHistorySettings.ShowSecrets"/></li>
+        ///     <li><c>--stack</c> via <see cref="PulumiHistorySettings.Stack"/></li>
+        ///     <li><c>--tracing</c> via <see cref="PulumiHistorySettings.Tracing"/></li>
+        ///     <li><c>--verbose</c> via <see cref="PulumiHistorySettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> PulumiHistory(Configure<PulumiHistorySettings> configurator)
+        {
+            return PulumiHistory(configurator(new PulumiHistorySettings()));
+        }
+        /// <summary>
+        ///   <p>Update history for a stack</p>
+        ///   <p>For more details, visit the <a href="https://www.pulumi.com/">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--color</c> via <see cref="PulumiHistorySettings.Color"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiHistorySettings.Cwd"/></li>
+        ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiHistorySettings.DisableIntegrityChecking"/></li>
+        ///     <li><c>--emoji</c> via <see cref="PulumiHistorySettings.Emoji"/></li>
+        ///     <li><c>--help</c> via <see cref="PulumiHistorySettings.Help"/></li>
+        ///     <li><c>--json</c> via <see cref="PulumiHistorySettings.Json"/></li>
+        ///     <li><c>--logflow</c> via <see cref="PulumiHistorySettings.LogFlow"/></li>
+        ///     <li><c>--logtostderr</c> via <see cref="PulumiHistorySettings.LogToStderr"/></li>
+        ///     <li><c>--non-interactive</c> via <see cref="PulumiHistorySettings.NonInteractive"/></li>
+        ///     <li><c>--profiling</c> via <see cref="PulumiHistorySettings.Profiling"/></li>
+        ///     <li><c>--show-secrets</c> via <see cref="PulumiHistorySettings.ShowSecrets"/></li>
+        ///     <li><c>--stack</c> via <see cref="PulumiHistorySettings.Stack"/></li>
+        ///     <li><c>--tracing</c> via <see cref="PulumiHistorySettings.Tracing"/></li>
+        ///     <li><c>--verbose</c> via <see cref="PulumiHistorySettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(PulumiHistorySettings Settings, IReadOnlyCollection<Output> Output)> PulumiHistory(CombinatorialConfigure<PulumiHistorySettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(PulumiHistory, PulumiLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Log onto the Pulumi stack. For CI/CD scenarios, an env variable of <c>PULUMI_ACCESS_TOKEN</c> should be set</p>
+        ///   <p>For more details, visit the <a href="https://www.pulumi.com/">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>&lt;location&gt;</c> via <see cref="PulumiLoginSettings.Location"/></li>
+        ///     <li><c>--cloud-url</c> via <see cref="PulumiLoginSettings.CloudUrl"/></li>
+        ///     <li><c>--color</c> via <see cref="PulumiLoginSettings.Color"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiLoginSettings.Cwd"/></li>
+        ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiLoginSettings.DisableIntegrityChecking"/></li>
+        ///     <li><c>--emoji</c> via <see cref="PulumiLoginSettings.Emoji"/></li>
+        ///     <li><c>--help</c> via <see cref="PulumiLoginSettings.Help"/></li>
+        ///     <li><c>--local</c> via <see cref="PulumiLoginSettings.Local"/></li>
+        ///     <li><c>--logflow</c> via <see cref="PulumiLoginSettings.LogFlow"/></li>
+        ///     <li><c>--logtostderr</c> via <see cref="PulumiLoginSettings.LogToStderr"/></li>
+        ///     <li><c>--non-interactive</c> via <see cref="PulumiLoginSettings.NonInteractive"/></li>
+        ///     <li><c>--profiling</c> via <see cref="PulumiLoginSettings.Profiling"/></li>
+        ///     <li><c>--tracing</c> via <see cref="PulumiLoginSettings.Tracing"/></li>
+        ///     <li><c>--verbose</c> via <see cref="PulumiLoginSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> PulumiLogin(PulumiLoginSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new PulumiLoginSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Log onto the Pulumi stack. For CI/CD scenarios, an env variable of <c>PULUMI_ACCESS_TOKEN</c> should be set</p>
+        ///   <p>For more details, visit the <a href="https://www.pulumi.com/">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>&lt;location&gt;</c> via <see cref="PulumiLoginSettings.Location"/></li>
+        ///     <li><c>--cloud-url</c> via <see cref="PulumiLoginSettings.CloudUrl"/></li>
+        ///     <li><c>--color</c> via <see cref="PulumiLoginSettings.Color"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiLoginSettings.Cwd"/></li>
+        ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiLoginSettings.DisableIntegrityChecking"/></li>
+        ///     <li><c>--emoji</c> via <see cref="PulumiLoginSettings.Emoji"/></li>
+        ///     <li><c>--help</c> via <see cref="PulumiLoginSettings.Help"/></li>
+        ///     <li><c>--local</c> via <see cref="PulumiLoginSettings.Local"/></li>
+        ///     <li><c>--logflow</c> via <see cref="PulumiLoginSettings.LogFlow"/></li>
+        ///     <li><c>--logtostderr</c> via <see cref="PulumiLoginSettings.LogToStderr"/></li>
+        ///     <li><c>--non-interactive</c> via <see cref="PulumiLoginSettings.NonInteractive"/></li>
+        ///     <li><c>--profiling</c> via <see cref="PulumiLoginSettings.Profiling"/></li>
+        ///     <li><c>--tracing</c> via <see cref="PulumiLoginSettings.Tracing"/></li>
+        ///     <li><c>--verbose</c> via <see cref="PulumiLoginSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> PulumiLogin(Configure<PulumiLoginSettings> configurator)
+        {
+            return PulumiLogin(configurator(new PulumiLoginSettings()));
+        }
+        /// <summary>
+        ///   <p>Log onto the Pulumi stack. For CI/CD scenarios, an env variable of <c>PULUMI_ACCESS_TOKEN</c> should be set</p>
+        ///   <p>For more details, visit the <a href="https://www.pulumi.com/">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>&lt;location&gt;</c> via <see cref="PulumiLoginSettings.Location"/></li>
+        ///     <li><c>--cloud-url</c> via <see cref="PulumiLoginSettings.CloudUrl"/></li>
+        ///     <li><c>--color</c> via <see cref="PulumiLoginSettings.Color"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiLoginSettings.Cwd"/></li>
+        ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiLoginSettings.DisableIntegrityChecking"/></li>
+        ///     <li><c>--emoji</c> via <see cref="PulumiLoginSettings.Emoji"/></li>
+        ///     <li><c>--help</c> via <see cref="PulumiLoginSettings.Help"/></li>
+        ///     <li><c>--local</c> via <see cref="PulumiLoginSettings.Local"/></li>
+        ///     <li><c>--logflow</c> via <see cref="PulumiLoginSettings.LogFlow"/></li>
+        ///     <li><c>--logtostderr</c> via <see cref="PulumiLoginSettings.LogToStderr"/></li>
+        ///     <li><c>--non-interactive</c> via <see cref="PulumiLoginSettings.NonInteractive"/></li>
+        ///     <li><c>--profiling</c> via <see cref="PulumiLoginSettings.Profiling"/></li>
+        ///     <li><c>--tracing</c> via <see cref="PulumiLoginSettings.Tracing"/></li>
+        ///     <li><c>--verbose</c> via <see cref="PulumiLoginSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(PulumiLoginSettings Settings, IReadOnlyCollection<Output> Output)> PulumiLogin(CombinatorialConfigure<PulumiLoginSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(PulumiLogin, PulumiLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Log out of the Pulumi service</p>
+        ///   <p>For more details, visit the <a href="https://www.pulumi.com/">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>&lt;location&gt;</c> via <see cref="PulumiLogoutSettings.Location"/></li>
+        ///     <li><c>--cloud-url</c> via <see cref="PulumiLogoutSettings.CloudUrl"/></li>
+        ///     <li><c>--color</c> via <see cref="PulumiLogoutSettings.Color"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiLogoutSettings.Cwd"/></li>
+        ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiLogoutSettings.DisableIntegrityChecking"/></li>
+        ///     <li><c>--emoji</c> via <see cref="PulumiLogoutSettings.Emoji"/></li>
+        ///     <li><c>--help</c> via <see cref="PulumiLogoutSettings.Help"/></li>
+        ///     <li><c>--local</c> via <see cref="PulumiLogoutSettings.Local"/></li>
+        ///     <li><c>--logflow</c> via <see cref="PulumiLogoutSettings.LogFlow"/></li>
+        ///     <li><c>--logtostderr</c> via <see cref="PulumiLogoutSettings.LogToStderr"/></li>
+        ///     <li><c>--non-interactive</c> via <see cref="PulumiLogoutSettings.NonInteractive"/></li>
+        ///     <li><c>--profiling</c> via <see cref="PulumiLogoutSettings.Profiling"/></li>
+        ///     <li><c>--tracing</c> via <see cref="PulumiLogoutSettings.Tracing"/></li>
+        ///     <li><c>--verbose</c> via <see cref="PulumiLogoutSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> PulumiLogout(PulumiLogoutSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new PulumiLogoutSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Log out of the Pulumi service</p>
+        ///   <p>For more details, visit the <a href="https://www.pulumi.com/">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>&lt;location&gt;</c> via <see cref="PulumiLogoutSettings.Location"/></li>
+        ///     <li><c>--cloud-url</c> via <see cref="PulumiLogoutSettings.CloudUrl"/></li>
+        ///     <li><c>--color</c> via <see cref="PulumiLogoutSettings.Color"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiLogoutSettings.Cwd"/></li>
+        ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiLogoutSettings.DisableIntegrityChecking"/></li>
+        ///     <li><c>--emoji</c> via <see cref="PulumiLogoutSettings.Emoji"/></li>
+        ///     <li><c>--help</c> via <see cref="PulumiLogoutSettings.Help"/></li>
+        ///     <li><c>--local</c> via <see cref="PulumiLogoutSettings.Local"/></li>
+        ///     <li><c>--logflow</c> via <see cref="PulumiLogoutSettings.LogFlow"/></li>
+        ///     <li><c>--logtostderr</c> via <see cref="PulumiLogoutSettings.LogToStderr"/></li>
+        ///     <li><c>--non-interactive</c> via <see cref="PulumiLogoutSettings.NonInteractive"/></li>
+        ///     <li><c>--profiling</c> via <see cref="PulumiLogoutSettings.Profiling"/></li>
+        ///     <li><c>--tracing</c> via <see cref="PulumiLogoutSettings.Tracing"/></li>
+        ///     <li><c>--verbose</c> via <see cref="PulumiLogoutSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> PulumiLogout(Configure<PulumiLogoutSettings> configurator)
+        {
+            return PulumiLogout(configurator(new PulumiLogoutSettings()));
+        }
+        /// <summary>
+        ///   <p>Log out of the Pulumi service</p>
+        ///   <p>For more details, visit the <a href="https://www.pulumi.com/">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>&lt;location&gt;</c> via <see cref="PulumiLogoutSettings.Location"/></li>
+        ///     <li><c>--cloud-url</c> via <see cref="PulumiLogoutSettings.CloudUrl"/></li>
+        ///     <li><c>--color</c> via <see cref="PulumiLogoutSettings.Color"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiLogoutSettings.Cwd"/></li>
+        ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiLogoutSettings.DisableIntegrityChecking"/></li>
+        ///     <li><c>--emoji</c> via <see cref="PulumiLogoutSettings.Emoji"/></li>
+        ///     <li><c>--help</c> via <see cref="PulumiLogoutSettings.Help"/></li>
+        ///     <li><c>--local</c> via <see cref="PulumiLogoutSettings.Local"/></li>
+        ///     <li><c>--logflow</c> via <see cref="PulumiLogoutSettings.LogFlow"/></li>
+        ///     <li><c>--logtostderr</c> via <see cref="PulumiLogoutSettings.LogToStderr"/></li>
+        ///     <li><c>--non-interactive</c> via <see cref="PulumiLogoutSettings.NonInteractive"/></li>
+        ///     <li><c>--profiling</c> via <see cref="PulumiLogoutSettings.Profiling"/></li>
+        ///     <li><c>--tracing</c> via <see cref="PulumiLogoutSettings.Tracing"/></li>
+        ///     <li><c>--verbose</c> via <see cref="PulumiLogoutSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(PulumiLogoutSettings Settings, IReadOnlyCollection<Output> Output)> PulumiLogout(CombinatorialConfigure<PulumiLogoutSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(PulumiLogout, PulumiLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
         ///   <p>Show a preview of updates to a stacks resources</p>
         ///   <p>For more details, visit the <a href="https://www.pulumi.com/">official website</a>.</p>
         /// </summary>
@@ -1660,6 +1912,282 @@ namespace Nuke.Common.Tools.Pulumi
               .Add("--yes", Yes)
               .Add("--stack {value}", Stack)
               .Add("--config-file {value}", ConfigFile)
+              .Add("--color {value}", Color)
+              .Add("--cwd {value}", Cwd)
+              .Add("--disable-integrity-checking", DisableIntegrityChecking)
+              .Add("--emoji", Emoji)
+              .Add("--help", Help)
+              .Add("--logflow", LogFlow)
+              .Add("--logtostderr", LogToStderr)
+              .Add("--non-interactive", NonInteractive)
+              .Add("--profiling {value}", Profiling)
+              .Add("--tracing {value}", Tracing)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region PulumiHistorySettings
+    /// <summary>
+    ///   Used within <see cref="PulumiTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class PulumiHistorySettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the Pulumi executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? PulumiTasks.PulumiPath;
+        public override Action<OutputType, string> CustomLogger => PulumiTasks.PulumiLogger;
+        /// <summary>
+        ///   Emit output as JSON
+        /// </summary>
+        public virtual bool? Json { get; internal set; }
+        /// <summary>
+        ///   Show secret values when listing config instead of displaying blinded values
+        /// </summary>
+        public virtual bool? ShowSecrets { get; internal set; }
+        /// <summary>
+        ///   The name of the stack to operate on. Defaults to the current stack
+        /// </summary>
+        public virtual string Stack { get; internal set; }
+        /// <summary>
+        ///   Colorize output. Choices are: always, never, raw, auto (default is auto)
+        /// </summary>
+        public virtual ColorizeOutput Color { get; internal set; }
+        /// <summary>
+        ///   Run pulumi as if it had been started in another directory
+        /// </summary>
+        public virtual string Cwd { get; internal set; }
+        /// <summary>
+        ///   Disable integrity checking of checkpoint files
+        /// </summary>
+        public virtual bool? DisableIntegrityChecking { get; internal set; }
+        /// <summary>
+        ///   Enable emojis in the output (default is true)
+        /// </summary>
+        public virtual bool? Emoji { get; internal set; }
+        /// <summary>
+        ///   Help for Pulumi
+        /// </summary>
+        public virtual bool? Help { get; internal set; }
+        /// <summary>
+        ///   Flow log settings to child processes (like plugins)
+        /// </summary>
+        public virtual bool? LogFlow { get; internal set; }
+        /// <summary>
+        ///   Log to stderr instead of to files
+        /// </summary>
+        public virtual bool? LogToStderr { get; internal set; }
+        /// <summary>
+        ///   Disable interactive mode for all commands
+        /// </summary>
+        public virtual bool? NonInteractive { get; internal set; }
+        /// <summary>
+        ///   Emit CPU and memory profiles and an execution trace to '[filename].[pid].{cpu,mem,trace}', respectively
+        /// </summary>
+        public virtual string Profiling { get; internal set; }
+        /// <summary>
+        ///   Emit tracing to the specified endpoint. Use the file: scheme to write tracing data to a local file
+        /// </summary>
+        public virtual string Tracing { get; internal set; }
+        /// <summary>
+        ///   Enable verbose logging (e.g., v=3); anything >3 is very verbose
+        /// </summary>
+        public virtual int? Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("history")
+              .Add("--json", Json)
+              .Add("--show-secrets", ShowSecrets)
+              .Add("--stack {value}", Stack)
+              .Add("--color {value}", Color)
+              .Add("--cwd {value}", Cwd)
+              .Add("--disable-integrity-checking", DisableIntegrityChecking)
+              .Add("--emoji", Emoji)
+              .Add("--help", Help)
+              .Add("--logflow", LogFlow)
+              .Add("--logtostderr", LogToStderr)
+              .Add("--non-interactive", NonInteractive)
+              .Add("--profiling {value}", Profiling)
+              .Add("--tracing {value}", Tracing)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region PulumiLoginSettings
+    /// <summary>
+    ///   Used within <see cref="PulumiTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class PulumiLoginSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the Pulumi executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? PulumiTasks.PulumiPath;
+        public override Action<OutputType, string> CustomLogger => PulumiTasks.PulumiLogger;
+        /// <summary>
+        ///   Specify a URL or a local/cloud path to the Pulumi instance you wish to use. Defaults to app.pulumi.com
+        /// </summary>
+        public virtual string Location { get; internal set; }
+        /// <summary>
+        ///   A cloud URL to log into. This is the same as specifying a location
+        /// </summary>
+        public virtual string CloudUrl { get; internal set; }
+        /// <summary>
+        ///   Use Pulumi in local-only mode
+        /// </summary>
+        public virtual bool? Local { get; internal set; }
+        /// <summary>
+        ///   Colorize output. Choices are: always, never, raw, auto (default is auto)
+        /// </summary>
+        public virtual ColorizeOutput Color { get; internal set; }
+        /// <summary>
+        ///   Run pulumi as if it had been started in another directory
+        /// </summary>
+        public virtual string Cwd { get; internal set; }
+        /// <summary>
+        ///   Disable integrity checking of checkpoint files
+        /// </summary>
+        public virtual bool? DisableIntegrityChecking { get; internal set; }
+        /// <summary>
+        ///   Enable emojis in the output (default is true)
+        /// </summary>
+        public virtual bool? Emoji { get; internal set; }
+        /// <summary>
+        ///   Help for Pulumi
+        /// </summary>
+        public virtual bool? Help { get; internal set; }
+        /// <summary>
+        ///   Flow log settings to child processes (like plugins)
+        /// </summary>
+        public virtual bool? LogFlow { get; internal set; }
+        /// <summary>
+        ///   Log to stderr instead of to files
+        /// </summary>
+        public virtual bool? LogToStderr { get; internal set; }
+        /// <summary>
+        ///   Disable interactive mode for all commands
+        /// </summary>
+        public virtual bool? NonInteractive { get; internal set; }
+        /// <summary>
+        ///   Emit CPU and memory profiles and an execution trace to '[filename].[pid].{cpu,mem,trace}', respectively
+        /// </summary>
+        public virtual string Profiling { get; internal set; }
+        /// <summary>
+        ///   Emit tracing to the specified endpoint. Use the file: scheme to write tracing data to a local file
+        /// </summary>
+        public virtual string Tracing { get; internal set; }
+        /// <summary>
+        ///   Enable verbose logging (e.g., v=3); anything >3 is very verbose
+        /// </summary>
+        public virtual int? Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("login")
+              .Add("{value}", Location)
+              .Add("--cloud-url {value}", CloudUrl)
+              .Add("--local", Local)
+              .Add("--color {value}", Color)
+              .Add("--cwd {value}", Cwd)
+              .Add("--disable-integrity-checking", DisableIntegrityChecking)
+              .Add("--emoji", Emoji)
+              .Add("--help", Help)
+              .Add("--logflow", LogFlow)
+              .Add("--logtostderr", LogToStderr)
+              .Add("--non-interactive", NonInteractive)
+              .Add("--profiling {value}", Profiling)
+              .Add("--tracing {value}", Tracing)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region PulumiLogoutSettings
+    /// <summary>
+    ///   Used within <see cref="PulumiTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class PulumiLogoutSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the Pulumi executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? PulumiTasks.PulumiPath;
+        public override Action<OutputType, string> CustomLogger => PulumiTasks.PulumiLogger;
+        /// <summary>
+        ///   Specify a URL or a local/cloud path to the Pulumi instance you wish to logout from. If no URL is provided, you will be logged out of the current backend.
+        /// </summary>
+        public virtual string Location { get; internal set; }
+        /// <summary>
+        ///    A cloud URL to log out of (defaults to current cloud). This is the same as specifying a location
+        /// </summary>
+        public virtual string CloudUrl { get; internal set; }
+        /// <summary>
+        ///   Log out of using local mode
+        /// </summary>
+        public virtual bool? Local { get; internal set; }
+        /// <summary>
+        ///   Colorize output. Choices are: always, never, raw, auto (default is auto)
+        /// </summary>
+        public virtual ColorizeOutput Color { get; internal set; }
+        /// <summary>
+        ///   Run pulumi as if it had been started in another directory
+        /// </summary>
+        public virtual string Cwd { get; internal set; }
+        /// <summary>
+        ///   Disable integrity checking of checkpoint files
+        /// </summary>
+        public virtual bool? DisableIntegrityChecking { get; internal set; }
+        /// <summary>
+        ///   Enable emojis in the output (default is true)
+        /// </summary>
+        public virtual bool? Emoji { get; internal set; }
+        /// <summary>
+        ///   Help for Pulumi
+        /// </summary>
+        public virtual bool? Help { get; internal set; }
+        /// <summary>
+        ///   Flow log settings to child processes (like plugins)
+        /// </summary>
+        public virtual bool? LogFlow { get; internal set; }
+        /// <summary>
+        ///   Log to stderr instead of to files
+        /// </summary>
+        public virtual bool? LogToStderr { get; internal set; }
+        /// <summary>
+        ///   Disable interactive mode for all commands
+        /// </summary>
+        public virtual bool? NonInteractive { get; internal set; }
+        /// <summary>
+        ///   Emit CPU and memory profiles and an execution trace to '[filename].[pid].{cpu,mem,trace}', respectively
+        /// </summary>
+        public virtual string Profiling { get; internal set; }
+        /// <summary>
+        ///   Emit tracing to the specified endpoint. Use the file: scheme to write tracing data to a local file
+        /// </summary>
+        public virtual string Tracing { get; internal set; }
+        /// <summary>
+        ///   Enable verbose logging (e.g., v=3); anything >3 is very verbose
+        /// </summary>
+        public virtual int? Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("logout")
+              .Add("{value}", Location)
+              .Add("--cloud-url {value}", CloudUrl)
+              .Add("--local", Local)
               .Add("--color {value}", Color)
               .Add("--cwd {value}", Cwd)
               .Add("--disable-integrity-checking", DisableIntegrityChecking)
@@ -6750,6 +7278,1770 @@ namespace Nuke.Common.Tools.Pulumi
         /// </summary>
         [Pure]
         public static PulumiDestroySettings ResetVerbose(this PulumiDestroySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region PulumiHistorySettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="PulumiTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class PulumiHistorySettingsExtensions
+    {
+        #region Json
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiHistorySettings.Json"/></em></p>
+        ///   <p>Emit output as JSON</p>
+        /// </summary>
+        [Pure]
+        public static PulumiHistorySettings SetJson(this PulumiHistorySettings toolSettings, bool? json)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Json = json;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiHistorySettings.Json"/></em></p>
+        ///   <p>Emit output as JSON</p>
+        /// </summary>
+        [Pure]
+        public static PulumiHistorySettings ResetJson(this PulumiHistorySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Json = null;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Enables <see cref="PulumiHistorySettings.Json"/></em></p>
+        ///   <p>Emit output as JSON</p>
+        /// </summary>
+        [Pure]
+        public static PulumiHistorySettings EnableJson(this PulumiHistorySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Json = true;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Disables <see cref="PulumiHistorySettings.Json"/></em></p>
+        ///   <p>Emit output as JSON</p>
+        /// </summary>
+        [Pure]
+        public static PulumiHistorySettings DisableJson(this PulumiHistorySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Json = false;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Toggles <see cref="PulumiHistorySettings.Json"/></em></p>
+        ///   <p>Emit output as JSON</p>
+        /// </summary>
+        [Pure]
+        public static PulumiHistorySettings ToggleJson(this PulumiHistorySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Json = !toolSettings.Json;
+            return toolSettings;
+        }
+        #endregion
+        #region ShowSecrets
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiHistorySettings.ShowSecrets"/></em></p>
+        ///   <p>Show secret values when listing config instead of displaying blinded values</p>
+        /// </summary>
+        [Pure]
+        public static PulumiHistorySettings SetShowSecrets(this PulumiHistorySettings toolSettings, bool? showSecrets)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ShowSecrets = showSecrets;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiHistorySettings.ShowSecrets"/></em></p>
+        ///   <p>Show secret values when listing config instead of displaying blinded values</p>
+        /// </summary>
+        [Pure]
+        public static PulumiHistorySettings ResetShowSecrets(this PulumiHistorySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ShowSecrets = null;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Enables <see cref="PulumiHistorySettings.ShowSecrets"/></em></p>
+        ///   <p>Show secret values when listing config instead of displaying blinded values</p>
+        /// </summary>
+        [Pure]
+        public static PulumiHistorySettings EnableShowSecrets(this PulumiHistorySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ShowSecrets = true;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Disables <see cref="PulumiHistorySettings.ShowSecrets"/></em></p>
+        ///   <p>Show secret values when listing config instead of displaying blinded values</p>
+        /// </summary>
+        [Pure]
+        public static PulumiHistorySettings DisableShowSecrets(this PulumiHistorySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ShowSecrets = false;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Toggles <see cref="PulumiHistorySettings.ShowSecrets"/></em></p>
+        ///   <p>Show secret values when listing config instead of displaying blinded values</p>
+        /// </summary>
+        [Pure]
+        public static PulumiHistorySettings ToggleShowSecrets(this PulumiHistorySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ShowSecrets = !toolSettings.ShowSecrets;
+            return toolSettings;
+        }
+        #endregion
+        #region Stack
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiHistorySettings.Stack"/></em></p>
+        ///   <p>The name of the stack to operate on. Defaults to the current stack</p>
+        /// </summary>
+        [Pure]
+        public static PulumiHistorySettings SetStack(this PulumiHistorySettings toolSettings, string stack)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Stack = stack;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiHistorySettings.Stack"/></em></p>
+        ///   <p>The name of the stack to operate on. Defaults to the current stack</p>
+        /// </summary>
+        [Pure]
+        public static PulumiHistorySettings ResetStack(this PulumiHistorySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Stack = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Color
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiHistorySettings.Color"/></em></p>
+        ///   <p>Colorize output. Choices are: always, never, raw, auto (default is auto)</p>
+        /// </summary>
+        [Pure]
+        public static PulumiHistorySettings SetColor(this PulumiHistorySettings toolSettings, ColorizeOutput color)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Color = color;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiHistorySettings.Color"/></em></p>
+        ///   <p>Colorize output. Choices are: always, never, raw, auto (default is auto)</p>
+        /// </summary>
+        [Pure]
+        public static PulumiHistorySettings ResetColor(this PulumiHistorySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Color = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Cwd
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiHistorySettings.Cwd"/></em></p>
+        ///   <p>Run pulumi as if it had been started in another directory</p>
+        /// </summary>
+        [Pure]
+        public static PulumiHistorySettings SetCwd(this PulumiHistorySettings toolSettings, string cwd)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Cwd = cwd;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiHistorySettings.Cwd"/></em></p>
+        ///   <p>Run pulumi as if it had been started in another directory</p>
+        /// </summary>
+        [Pure]
+        public static PulumiHistorySettings ResetCwd(this PulumiHistorySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Cwd = null;
+            return toolSettings;
+        }
+        #endregion
+        #region DisableIntegrityChecking
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiHistorySettings.DisableIntegrityChecking"/></em></p>
+        ///   <p>Disable integrity checking of checkpoint files</p>
+        /// </summary>
+        [Pure]
+        public static PulumiHistorySettings SetDisableIntegrityChecking(this PulumiHistorySettings toolSettings, bool? disableIntegrityChecking)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DisableIntegrityChecking = disableIntegrityChecking;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiHistorySettings.DisableIntegrityChecking"/></em></p>
+        ///   <p>Disable integrity checking of checkpoint files</p>
+        /// </summary>
+        [Pure]
+        public static PulumiHistorySettings ResetDisableIntegrityChecking(this PulumiHistorySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DisableIntegrityChecking = null;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Enables <see cref="PulumiHistorySettings.DisableIntegrityChecking"/></em></p>
+        ///   <p>Disable integrity checking of checkpoint files</p>
+        /// </summary>
+        [Pure]
+        public static PulumiHistorySettings EnableDisableIntegrityChecking(this PulumiHistorySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DisableIntegrityChecking = true;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Disables <see cref="PulumiHistorySettings.DisableIntegrityChecking"/></em></p>
+        ///   <p>Disable integrity checking of checkpoint files</p>
+        /// </summary>
+        [Pure]
+        public static PulumiHistorySettings DisableDisableIntegrityChecking(this PulumiHistorySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DisableIntegrityChecking = false;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Toggles <see cref="PulumiHistorySettings.DisableIntegrityChecking"/></em></p>
+        ///   <p>Disable integrity checking of checkpoint files</p>
+        /// </summary>
+        [Pure]
+        public static PulumiHistorySettings ToggleDisableIntegrityChecking(this PulumiHistorySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DisableIntegrityChecking = !toolSettings.DisableIntegrityChecking;
+            return toolSettings;
+        }
+        #endregion
+        #region Emoji
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiHistorySettings.Emoji"/></em></p>
+        ///   <p>Enable emojis in the output (default is true)</p>
+        /// </summary>
+        [Pure]
+        public static PulumiHistorySettings SetEmoji(this PulumiHistorySettings toolSettings, bool? emoji)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Emoji = emoji;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiHistorySettings.Emoji"/></em></p>
+        ///   <p>Enable emojis in the output (default is true)</p>
+        /// </summary>
+        [Pure]
+        public static PulumiHistorySettings ResetEmoji(this PulumiHistorySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Emoji = null;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Enables <see cref="PulumiHistorySettings.Emoji"/></em></p>
+        ///   <p>Enable emojis in the output (default is true)</p>
+        /// </summary>
+        [Pure]
+        public static PulumiHistorySettings EnableEmoji(this PulumiHistorySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Emoji = true;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Disables <see cref="PulumiHistorySettings.Emoji"/></em></p>
+        ///   <p>Enable emojis in the output (default is true)</p>
+        /// </summary>
+        [Pure]
+        public static PulumiHistorySettings DisableEmoji(this PulumiHistorySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Emoji = false;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Toggles <see cref="PulumiHistorySettings.Emoji"/></em></p>
+        ///   <p>Enable emojis in the output (default is true)</p>
+        /// </summary>
+        [Pure]
+        public static PulumiHistorySettings ToggleEmoji(this PulumiHistorySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Emoji = !toolSettings.Emoji;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiHistorySettings.Help"/></em></p>
+        ///   <p>Help for Pulumi</p>
+        /// </summary>
+        [Pure]
+        public static PulumiHistorySettings SetHelp(this PulumiHistorySettings toolSettings, bool? help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiHistorySettings.Help"/></em></p>
+        ///   <p>Help for Pulumi</p>
+        /// </summary>
+        [Pure]
+        public static PulumiHistorySettings ResetHelp(this PulumiHistorySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Enables <see cref="PulumiHistorySettings.Help"/></em></p>
+        ///   <p>Help for Pulumi</p>
+        /// </summary>
+        [Pure]
+        public static PulumiHistorySettings EnableHelp(this PulumiHistorySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = true;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Disables <see cref="PulumiHistorySettings.Help"/></em></p>
+        ///   <p>Help for Pulumi</p>
+        /// </summary>
+        [Pure]
+        public static PulumiHistorySettings DisableHelp(this PulumiHistorySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = false;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Toggles <see cref="PulumiHistorySettings.Help"/></em></p>
+        ///   <p>Help for Pulumi</p>
+        /// </summary>
+        [Pure]
+        public static PulumiHistorySettings ToggleHelp(this PulumiHistorySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = !toolSettings.Help;
+            return toolSettings;
+        }
+        #endregion
+        #region LogFlow
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiHistorySettings.LogFlow"/></em></p>
+        ///   <p>Flow log settings to child processes (like plugins)</p>
+        /// </summary>
+        [Pure]
+        public static PulumiHistorySettings SetLogFlow(this PulumiHistorySettings toolSettings, bool? logFlow)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LogFlow = logFlow;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiHistorySettings.LogFlow"/></em></p>
+        ///   <p>Flow log settings to child processes (like plugins)</p>
+        /// </summary>
+        [Pure]
+        public static PulumiHistorySettings ResetLogFlow(this PulumiHistorySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LogFlow = null;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Enables <see cref="PulumiHistorySettings.LogFlow"/></em></p>
+        ///   <p>Flow log settings to child processes (like plugins)</p>
+        /// </summary>
+        [Pure]
+        public static PulumiHistorySettings EnableLogFlow(this PulumiHistorySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LogFlow = true;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Disables <see cref="PulumiHistorySettings.LogFlow"/></em></p>
+        ///   <p>Flow log settings to child processes (like plugins)</p>
+        /// </summary>
+        [Pure]
+        public static PulumiHistorySettings DisableLogFlow(this PulumiHistorySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LogFlow = false;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Toggles <see cref="PulumiHistorySettings.LogFlow"/></em></p>
+        ///   <p>Flow log settings to child processes (like plugins)</p>
+        /// </summary>
+        [Pure]
+        public static PulumiHistorySettings ToggleLogFlow(this PulumiHistorySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LogFlow = !toolSettings.LogFlow;
+            return toolSettings;
+        }
+        #endregion
+        #region LogToStderr
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiHistorySettings.LogToStderr"/></em></p>
+        ///   <p>Log to stderr instead of to files</p>
+        /// </summary>
+        [Pure]
+        public static PulumiHistorySettings SetLogToStderr(this PulumiHistorySettings toolSettings, bool? logToStderr)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LogToStderr = logToStderr;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiHistorySettings.LogToStderr"/></em></p>
+        ///   <p>Log to stderr instead of to files</p>
+        /// </summary>
+        [Pure]
+        public static PulumiHistorySettings ResetLogToStderr(this PulumiHistorySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LogToStderr = null;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Enables <see cref="PulumiHistorySettings.LogToStderr"/></em></p>
+        ///   <p>Log to stderr instead of to files</p>
+        /// </summary>
+        [Pure]
+        public static PulumiHistorySettings EnableLogToStderr(this PulumiHistorySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LogToStderr = true;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Disables <see cref="PulumiHistorySettings.LogToStderr"/></em></p>
+        ///   <p>Log to stderr instead of to files</p>
+        /// </summary>
+        [Pure]
+        public static PulumiHistorySettings DisableLogToStderr(this PulumiHistorySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LogToStderr = false;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Toggles <see cref="PulumiHistorySettings.LogToStderr"/></em></p>
+        ///   <p>Log to stderr instead of to files</p>
+        /// </summary>
+        [Pure]
+        public static PulumiHistorySettings ToggleLogToStderr(this PulumiHistorySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LogToStderr = !toolSettings.LogToStderr;
+            return toolSettings;
+        }
+        #endregion
+        #region NonInteractive
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiHistorySettings.NonInteractive"/></em></p>
+        ///   <p>Disable interactive mode for all commands</p>
+        /// </summary>
+        [Pure]
+        public static PulumiHistorySettings SetNonInteractive(this PulumiHistorySettings toolSettings, bool? nonInteractive)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NonInteractive = nonInteractive;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiHistorySettings.NonInteractive"/></em></p>
+        ///   <p>Disable interactive mode for all commands</p>
+        /// </summary>
+        [Pure]
+        public static PulumiHistorySettings ResetNonInteractive(this PulumiHistorySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NonInteractive = null;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Enables <see cref="PulumiHistorySettings.NonInteractive"/></em></p>
+        ///   <p>Disable interactive mode for all commands</p>
+        /// </summary>
+        [Pure]
+        public static PulumiHistorySettings EnableNonInteractive(this PulumiHistorySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NonInteractive = true;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Disables <see cref="PulumiHistorySettings.NonInteractive"/></em></p>
+        ///   <p>Disable interactive mode for all commands</p>
+        /// </summary>
+        [Pure]
+        public static PulumiHistorySettings DisableNonInteractive(this PulumiHistorySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NonInteractive = false;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Toggles <see cref="PulumiHistorySettings.NonInteractive"/></em></p>
+        ///   <p>Disable interactive mode for all commands</p>
+        /// </summary>
+        [Pure]
+        public static PulumiHistorySettings ToggleNonInteractive(this PulumiHistorySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NonInteractive = !toolSettings.NonInteractive;
+            return toolSettings;
+        }
+        #endregion
+        #region Profiling
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiHistorySettings.Profiling"/></em></p>
+        ///   <p>Emit CPU and memory profiles and an execution trace to '[filename].[pid].{cpu,mem,trace}', respectively</p>
+        /// </summary>
+        [Pure]
+        public static PulumiHistorySettings SetProfiling(this PulumiHistorySettings toolSettings, string profiling)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Profiling = profiling;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiHistorySettings.Profiling"/></em></p>
+        ///   <p>Emit CPU and memory profiles and an execution trace to '[filename].[pid].{cpu,mem,trace}', respectively</p>
+        /// </summary>
+        [Pure]
+        public static PulumiHistorySettings ResetProfiling(this PulumiHistorySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Profiling = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Tracing
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiHistorySettings.Tracing"/></em></p>
+        ///   <p>Emit tracing to the specified endpoint. Use the file: scheme to write tracing data to a local file</p>
+        /// </summary>
+        [Pure]
+        public static PulumiHistorySettings SetTracing(this PulumiHistorySettings toolSettings, string tracing)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tracing = tracing;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiHistorySettings.Tracing"/></em></p>
+        ///   <p>Emit tracing to the specified endpoint. Use the file: scheme to write tracing data to a local file</p>
+        /// </summary>
+        [Pure]
+        public static PulumiHistorySettings ResetTracing(this PulumiHistorySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tracing = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiHistorySettings.Verbose"/></em></p>
+        ///   <p>Enable verbose logging (e.g., v=3); anything >3 is very verbose</p>
+        /// </summary>
+        [Pure]
+        public static PulumiHistorySettings SetVerbose(this PulumiHistorySettings toolSettings, int? verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiHistorySettings.Verbose"/></em></p>
+        ///   <p>Enable verbose logging (e.g., v=3); anything >3 is very verbose</p>
+        /// </summary>
+        [Pure]
+        public static PulumiHistorySettings ResetVerbose(this PulumiHistorySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region PulumiLoginSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="PulumiTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class PulumiLoginSettingsExtensions
+    {
+        #region Location
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiLoginSettings.Location"/></em></p>
+        ///   <p>Specify a URL or a local/cloud path to the Pulumi instance you wish to use. Defaults to app.pulumi.com</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLoginSettings SetLocation(this PulumiLoginSettings toolSettings, string location)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Location = location;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiLoginSettings.Location"/></em></p>
+        ///   <p>Specify a URL or a local/cloud path to the Pulumi instance you wish to use. Defaults to app.pulumi.com</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLoginSettings ResetLocation(this PulumiLoginSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Location = null;
+            return toolSettings;
+        }
+        #endregion
+        #region CloudUrl
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiLoginSettings.CloudUrl"/></em></p>
+        ///   <p>A cloud URL to log into. This is the same as specifying a location</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLoginSettings SetCloudUrl(this PulumiLoginSettings toolSettings, string cloudUrl)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.CloudUrl = cloudUrl;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiLoginSettings.CloudUrl"/></em></p>
+        ///   <p>A cloud URL to log into. This is the same as specifying a location</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLoginSettings ResetCloudUrl(this PulumiLoginSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.CloudUrl = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Local
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiLoginSettings.Local"/></em></p>
+        ///   <p>Use Pulumi in local-only mode</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLoginSettings SetLocal(this PulumiLoginSettings toolSettings, bool? local)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Local = local;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiLoginSettings.Local"/></em></p>
+        ///   <p>Use Pulumi in local-only mode</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLoginSettings ResetLocal(this PulumiLoginSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Local = null;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Enables <see cref="PulumiLoginSettings.Local"/></em></p>
+        ///   <p>Use Pulumi in local-only mode</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLoginSettings EnableLocal(this PulumiLoginSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Local = true;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Disables <see cref="PulumiLoginSettings.Local"/></em></p>
+        ///   <p>Use Pulumi in local-only mode</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLoginSettings DisableLocal(this PulumiLoginSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Local = false;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Toggles <see cref="PulumiLoginSettings.Local"/></em></p>
+        ///   <p>Use Pulumi in local-only mode</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLoginSettings ToggleLocal(this PulumiLoginSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Local = !toolSettings.Local;
+            return toolSettings;
+        }
+        #endregion
+        #region Color
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiLoginSettings.Color"/></em></p>
+        ///   <p>Colorize output. Choices are: always, never, raw, auto (default is auto)</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLoginSettings SetColor(this PulumiLoginSettings toolSettings, ColorizeOutput color)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Color = color;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiLoginSettings.Color"/></em></p>
+        ///   <p>Colorize output. Choices are: always, never, raw, auto (default is auto)</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLoginSettings ResetColor(this PulumiLoginSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Color = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Cwd
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiLoginSettings.Cwd"/></em></p>
+        ///   <p>Run pulumi as if it had been started in another directory</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLoginSettings SetCwd(this PulumiLoginSettings toolSettings, string cwd)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Cwd = cwd;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiLoginSettings.Cwd"/></em></p>
+        ///   <p>Run pulumi as if it had been started in another directory</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLoginSettings ResetCwd(this PulumiLoginSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Cwd = null;
+            return toolSettings;
+        }
+        #endregion
+        #region DisableIntegrityChecking
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiLoginSettings.DisableIntegrityChecking"/></em></p>
+        ///   <p>Disable integrity checking of checkpoint files</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLoginSettings SetDisableIntegrityChecking(this PulumiLoginSettings toolSettings, bool? disableIntegrityChecking)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DisableIntegrityChecking = disableIntegrityChecking;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiLoginSettings.DisableIntegrityChecking"/></em></p>
+        ///   <p>Disable integrity checking of checkpoint files</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLoginSettings ResetDisableIntegrityChecking(this PulumiLoginSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DisableIntegrityChecking = null;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Enables <see cref="PulumiLoginSettings.DisableIntegrityChecking"/></em></p>
+        ///   <p>Disable integrity checking of checkpoint files</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLoginSettings EnableDisableIntegrityChecking(this PulumiLoginSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DisableIntegrityChecking = true;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Disables <see cref="PulumiLoginSettings.DisableIntegrityChecking"/></em></p>
+        ///   <p>Disable integrity checking of checkpoint files</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLoginSettings DisableDisableIntegrityChecking(this PulumiLoginSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DisableIntegrityChecking = false;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Toggles <see cref="PulumiLoginSettings.DisableIntegrityChecking"/></em></p>
+        ///   <p>Disable integrity checking of checkpoint files</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLoginSettings ToggleDisableIntegrityChecking(this PulumiLoginSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DisableIntegrityChecking = !toolSettings.DisableIntegrityChecking;
+            return toolSettings;
+        }
+        #endregion
+        #region Emoji
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiLoginSettings.Emoji"/></em></p>
+        ///   <p>Enable emojis in the output (default is true)</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLoginSettings SetEmoji(this PulumiLoginSettings toolSettings, bool? emoji)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Emoji = emoji;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiLoginSettings.Emoji"/></em></p>
+        ///   <p>Enable emojis in the output (default is true)</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLoginSettings ResetEmoji(this PulumiLoginSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Emoji = null;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Enables <see cref="PulumiLoginSettings.Emoji"/></em></p>
+        ///   <p>Enable emojis in the output (default is true)</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLoginSettings EnableEmoji(this PulumiLoginSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Emoji = true;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Disables <see cref="PulumiLoginSettings.Emoji"/></em></p>
+        ///   <p>Enable emojis in the output (default is true)</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLoginSettings DisableEmoji(this PulumiLoginSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Emoji = false;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Toggles <see cref="PulumiLoginSettings.Emoji"/></em></p>
+        ///   <p>Enable emojis in the output (default is true)</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLoginSettings ToggleEmoji(this PulumiLoginSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Emoji = !toolSettings.Emoji;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiLoginSettings.Help"/></em></p>
+        ///   <p>Help for Pulumi</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLoginSettings SetHelp(this PulumiLoginSettings toolSettings, bool? help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiLoginSettings.Help"/></em></p>
+        ///   <p>Help for Pulumi</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLoginSettings ResetHelp(this PulumiLoginSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Enables <see cref="PulumiLoginSettings.Help"/></em></p>
+        ///   <p>Help for Pulumi</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLoginSettings EnableHelp(this PulumiLoginSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = true;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Disables <see cref="PulumiLoginSettings.Help"/></em></p>
+        ///   <p>Help for Pulumi</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLoginSettings DisableHelp(this PulumiLoginSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = false;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Toggles <see cref="PulumiLoginSettings.Help"/></em></p>
+        ///   <p>Help for Pulumi</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLoginSettings ToggleHelp(this PulumiLoginSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = !toolSettings.Help;
+            return toolSettings;
+        }
+        #endregion
+        #region LogFlow
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiLoginSettings.LogFlow"/></em></p>
+        ///   <p>Flow log settings to child processes (like plugins)</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLoginSettings SetLogFlow(this PulumiLoginSettings toolSettings, bool? logFlow)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LogFlow = logFlow;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiLoginSettings.LogFlow"/></em></p>
+        ///   <p>Flow log settings to child processes (like plugins)</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLoginSettings ResetLogFlow(this PulumiLoginSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LogFlow = null;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Enables <see cref="PulumiLoginSettings.LogFlow"/></em></p>
+        ///   <p>Flow log settings to child processes (like plugins)</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLoginSettings EnableLogFlow(this PulumiLoginSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LogFlow = true;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Disables <see cref="PulumiLoginSettings.LogFlow"/></em></p>
+        ///   <p>Flow log settings to child processes (like plugins)</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLoginSettings DisableLogFlow(this PulumiLoginSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LogFlow = false;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Toggles <see cref="PulumiLoginSettings.LogFlow"/></em></p>
+        ///   <p>Flow log settings to child processes (like plugins)</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLoginSettings ToggleLogFlow(this PulumiLoginSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LogFlow = !toolSettings.LogFlow;
+            return toolSettings;
+        }
+        #endregion
+        #region LogToStderr
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiLoginSettings.LogToStderr"/></em></p>
+        ///   <p>Log to stderr instead of to files</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLoginSettings SetLogToStderr(this PulumiLoginSettings toolSettings, bool? logToStderr)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LogToStderr = logToStderr;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiLoginSettings.LogToStderr"/></em></p>
+        ///   <p>Log to stderr instead of to files</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLoginSettings ResetLogToStderr(this PulumiLoginSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LogToStderr = null;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Enables <see cref="PulumiLoginSettings.LogToStderr"/></em></p>
+        ///   <p>Log to stderr instead of to files</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLoginSettings EnableLogToStderr(this PulumiLoginSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LogToStderr = true;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Disables <see cref="PulumiLoginSettings.LogToStderr"/></em></p>
+        ///   <p>Log to stderr instead of to files</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLoginSettings DisableLogToStderr(this PulumiLoginSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LogToStderr = false;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Toggles <see cref="PulumiLoginSettings.LogToStderr"/></em></p>
+        ///   <p>Log to stderr instead of to files</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLoginSettings ToggleLogToStderr(this PulumiLoginSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LogToStderr = !toolSettings.LogToStderr;
+            return toolSettings;
+        }
+        #endregion
+        #region NonInteractive
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiLoginSettings.NonInteractive"/></em></p>
+        ///   <p>Disable interactive mode for all commands</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLoginSettings SetNonInteractive(this PulumiLoginSettings toolSettings, bool? nonInteractive)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NonInteractive = nonInteractive;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiLoginSettings.NonInteractive"/></em></p>
+        ///   <p>Disable interactive mode for all commands</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLoginSettings ResetNonInteractive(this PulumiLoginSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NonInteractive = null;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Enables <see cref="PulumiLoginSettings.NonInteractive"/></em></p>
+        ///   <p>Disable interactive mode for all commands</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLoginSettings EnableNonInteractive(this PulumiLoginSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NonInteractive = true;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Disables <see cref="PulumiLoginSettings.NonInteractive"/></em></p>
+        ///   <p>Disable interactive mode for all commands</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLoginSettings DisableNonInteractive(this PulumiLoginSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NonInteractive = false;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Toggles <see cref="PulumiLoginSettings.NonInteractive"/></em></p>
+        ///   <p>Disable interactive mode for all commands</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLoginSettings ToggleNonInteractive(this PulumiLoginSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NonInteractive = !toolSettings.NonInteractive;
+            return toolSettings;
+        }
+        #endregion
+        #region Profiling
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiLoginSettings.Profiling"/></em></p>
+        ///   <p>Emit CPU and memory profiles and an execution trace to '[filename].[pid].{cpu,mem,trace}', respectively</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLoginSettings SetProfiling(this PulumiLoginSettings toolSettings, string profiling)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Profiling = profiling;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiLoginSettings.Profiling"/></em></p>
+        ///   <p>Emit CPU and memory profiles and an execution trace to '[filename].[pid].{cpu,mem,trace}', respectively</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLoginSettings ResetProfiling(this PulumiLoginSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Profiling = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Tracing
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiLoginSettings.Tracing"/></em></p>
+        ///   <p>Emit tracing to the specified endpoint. Use the file: scheme to write tracing data to a local file</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLoginSettings SetTracing(this PulumiLoginSettings toolSettings, string tracing)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tracing = tracing;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiLoginSettings.Tracing"/></em></p>
+        ///   <p>Emit tracing to the specified endpoint. Use the file: scheme to write tracing data to a local file</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLoginSettings ResetTracing(this PulumiLoginSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tracing = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiLoginSettings.Verbose"/></em></p>
+        ///   <p>Enable verbose logging (e.g., v=3); anything >3 is very verbose</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLoginSettings SetVerbose(this PulumiLoginSettings toolSettings, int? verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiLoginSettings.Verbose"/></em></p>
+        ///   <p>Enable verbose logging (e.g., v=3); anything >3 is very verbose</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLoginSettings ResetVerbose(this PulumiLoginSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region PulumiLogoutSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="PulumiTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class PulumiLogoutSettingsExtensions
+    {
+        #region Location
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiLogoutSettings.Location"/></em></p>
+        ///   <p>Specify a URL or a local/cloud path to the Pulumi instance you wish to logout from. If no URL is provided, you will be logged out of the current backend.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLogoutSettings SetLocation(this PulumiLogoutSettings toolSettings, string location)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Location = location;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiLogoutSettings.Location"/></em></p>
+        ///   <p>Specify a URL or a local/cloud path to the Pulumi instance you wish to logout from. If no URL is provided, you will be logged out of the current backend.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLogoutSettings ResetLocation(this PulumiLogoutSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Location = null;
+            return toolSettings;
+        }
+        #endregion
+        #region CloudUrl
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiLogoutSettings.CloudUrl"/></em></p>
+        ///   <p> A cloud URL to log out of (defaults to current cloud). This is the same as specifying a location</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLogoutSettings SetCloudUrl(this PulumiLogoutSettings toolSettings, string cloudUrl)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.CloudUrl = cloudUrl;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiLogoutSettings.CloudUrl"/></em></p>
+        ///   <p> A cloud URL to log out of (defaults to current cloud). This is the same as specifying a location</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLogoutSettings ResetCloudUrl(this PulumiLogoutSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.CloudUrl = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Local
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiLogoutSettings.Local"/></em></p>
+        ///   <p>Log out of using local mode</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLogoutSettings SetLocal(this PulumiLogoutSettings toolSettings, bool? local)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Local = local;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiLogoutSettings.Local"/></em></p>
+        ///   <p>Log out of using local mode</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLogoutSettings ResetLocal(this PulumiLogoutSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Local = null;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Enables <see cref="PulumiLogoutSettings.Local"/></em></p>
+        ///   <p>Log out of using local mode</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLogoutSettings EnableLocal(this PulumiLogoutSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Local = true;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Disables <see cref="PulumiLogoutSettings.Local"/></em></p>
+        ///   <p>Log out of using local mode</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLogoutSettings DisableLocal(this PulumiLogoutSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Local = false;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Toggles <see cref="PulumiLogoutSettings.Local"/></em></p>
+        ///   <p>Log out of using local mode</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLogoutSettings ToggleLocal(this PulumiLogoutSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Local = !toolSettings.Local;
+            return toolSettings;
+        }
+        #endregion
+        #region Color
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiLogoutSettings.Color"/></em></p>
+        ///   <p>Colorize output. Choices are: always, never, raw, auto (default is auto)</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLogoutSettings SetColor(this PulumiLogoutSettings toolSettings, ColorizeOutput color)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Color = color;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiLogoutSettings.Color"/></em></p>
+        ///   <p>Colorize output. Choices are: always, never, raw, auto (default is auto)</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLogoutSettings ResetColor(this PulumiLogoutSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Color = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Cwd
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiLogoutSettings.Cwd"/></em></p>
+        ///   <p>Run pulumi as if it had been started in another directory</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLogoutSettings SetCwd(this PulumiLogoutSettings toolSettings, string cwd)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Cwd = cwd;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiLogoutSettings.Cwd"/></em></p>
+        ///   <p>Run pulumi as if it had been started in another directory</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLogoutSettings ResetCwd(this PulumiLogoutSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Cwd = null;
+            return toolSettings;
+        }
+        #endregion
+        #region DisableIntegrityChecking
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiLogoutSettings.DisableIntegrityChecking"/></em></p>
+        ///   <p>Disable integrity checking of checkpoint files</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLogoutSettings SetDisableIntegrityChecking(this PulumiLogoutSettings toolSettings, bool? disableIntegrityChecking)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DisableIntegrityChecking = disableIntegrityChecking;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiLogoutSettings.DisableIntegrityChecking"/></em></p>
+        ///   <p>Disable integrity checking of checkpoint files</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLogoutSettings ResetDisableIntegrityChecking(this PulumiLogoutSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DisableIntegrityChecking = null;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Enables <see cref="PulumiLogoutSettings.DisableIntegrityChecking"/></em></p>
+        ///   <p>Disable integrity checking of checkpoint files</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLogoutSettings EnableDisableIntegrityChecking(this PulumiLogoutSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DisableIntegrityChecking = true;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Disables <see cref="PulumiLogoutSettings.DisableIntegrityChecking"/></em></p>
+        ///   <p>Disable integrity checking of checkpoint files</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLogoutSettings DisableDisableIntegrityChecking(this PulumiLogoutSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DisableIntegrityChecking = false;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Toggles <see cref="PulumiLogoutSettings.DisableIntegrityChecking"/></em></p>
+        ///   <p>Disable integrity checking of checkpoint files</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLogoutSettings ToggleDisableIntegrityChecking(this PulumiLogoutSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DisableIntegrityChecking = !toolSettings.DisableIntegrityChecking;
+            return toolSettings;
+        }
+        #endregion
+        #region Emoji
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiLogoutSettings.Emoji"/></em></p>
+        ///   <p>Enable emojis in the output (default is true)</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLogoutSettings SetEmoji(this PulumiLogoutSettings toolSettings, bool? emoji)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Emoji = emoji;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiLogoutSettings.Emoji"/></em></p>
+        ///   <p>Enable emojis in the output (default is true)</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLogoutSettings ResetEmoji(this PulumiLogoutSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Emoji = null;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Enables <see cref="PulumiLogoutSettings.Emoji"/></em></p>
+        ///   <p>Enable emojis in the output (default is true)</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLogoutSettings EnableEmoji(this PulumiLogoutSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Emoji = true;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Disables <see cref="PulumiLogoutSettings.Emoji"/></em></p>
+        ///   <p>Enable emojis in the output (default is true)</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLogoutSettings DisableEmoji(this PulumiLogoutSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Emoji = false;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Toggles <see cref="PulumiLogoutSettings.Emoji"/></em></p>
+        ///   <p>Enable emojis in the output (default is true)</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLogoutSettings ToggleEmoji(this PulumiLogoutSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Emoji = !toolSettings.Emoji;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiLogoutSettings.Help"/></em></p>
+        ///   <p>Help for Pulumi</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLogoutSettings SetHelp(this PulumiLogoutSettings toolSettings, bool? help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiLogoutSettings.Help"/></em></p>
+        ///   <p>Help for Pulumi</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLogoutSettings ResetHelp(this PulumiLogoutSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Enables <see cref="PulumiLogoutSettings.Help"/></em></p>
+        ///   <p>Help for Pulumi</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLogoutSettings EnableHelp(this PulumiLogoutSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = true;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Disables <see cref="PulumiLogoutSettings.Help"/></em></p>
+        ///   <p>Help for Pulumi</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLogoutSettings DisableHelp(this PulumiLogoutSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = false;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Toggles <see cref="PulumiLogoutSettings.Help"/></em></p>
+        ///   <p>Help for Pulumi</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLogoutSettings ToggleHelp(this PulumiLogoutSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = !toolSettings.Help;
+            return toolSettings;
+        }
+        #endregion
+        #region LogFlow
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiLogoutSettings.LogFlow"/></em></p>
+        ///   <p>Flow log settings to child processes (like plugins)</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLogoutSettings SetLogFlow(this PulumiLogoutSettings toolSettings, bool? logFlow)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LogFlow = logFlow;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiLogoutSettings.LogFlow"/></em></p>
+        ///   <p>Flow log settings to child processes (like plugins)</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLogoutSettings ResetLogFlow(this PulumiLogoutSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LogFlow = null;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Enables <see cref="PulumiLogoutSettings.LogFlow"/></em></p>
+        ///   <p>Flow log settings to child processes (like plugins)</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLogoutSettings EnableLogFlow(this PulumiLogoutSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LogFlow = true;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Disables <see cref="PulumiLogoutSettings.LogFlow"/></em></p>
+        ///   <p>Flow log settings to child processes (like plugins)</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLogoutSettings DisableLogFlow(this PulumiLogoutSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LogFlow = false;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Toggles <see cref="PulumiLogoutSettings.LogFlow"/></em></p>
+        ///   <p>Flow log settings to child processes (like plugins)</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLogoutSettings ToggleLogFlow(this PulumiLogoutSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LogFlow = !toolSettings.LogFlow;
+            return toolSettings;
+        }
+        #endregion
+        #region LogToStderr
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiLogoutSettings.LogToStderr"/></em></p>
+        ///   <p>Log to stderr instead of to files</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLogoutSettings SetLogToStderr(this PulumiLogoutSettings toolSettings, bool? logToStderr)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LogToStderr = logToStderr;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiLogoutSettings.LogToStderr"/></em></p>
+        ///   <p>Log to stderr instead of to files</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLogoutSettings ResetLogToStderr(this PulumiLogoutSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LogToStderr = null;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Enables <see cref="PulumiLogoutSettings.LogToStderr"/></em></p>
+        ///   <p>Log to stderr instead of to files</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLogoutSettings EnableLogToStderr(this PulumiLogoutSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LogToStderr = true;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Disables <see cref="PulumiLogoutSettings.LogToStderr"/></em></p>
+        ///   <p>Log to stderr instead of to files</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLogoutSettings DisableLogToStderr(this PulumiLogoutSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LogToStderr = false;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Toggles <see cref="PulumiLogoutSettings.LogToStderr"/></em></p>
+        ///   <p>Log to stderr instead of to files</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLogoutSettings ToggleLogToStderr(this PulumiLogoutSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LogToStderr = !toolSettings.LogToStderr;
+            return toolSettings;
+        }
+        #endregion
+        #region NonInteractive
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiLogoutSettings.NonInteractive"/></em></p>
+        ///   <p>Disable interactive mode for all commands</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLogoutSettings SetNonInteractive(this PulumiLogoutSettings toolSettings, bool? nonInteractive)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NonInteractive = nonInteractive;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiLogoutSettings.NonInteractive"/></em></p>
+        ///   <p>Disable interactive mode for all commands</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLogoutSettings ResetNonInteractive(this PulumiLogoutSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NonInteractive = null;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Enables <see cref="PulumiLogoutSettings.NonInteractive"/></em></p>
+        ///   <p>Disable interactive mode for all commands</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLogoutSettings EnableNonInteractive(this PulumiLogoutSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NonInteractive = true;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Disables <see cref="PulumiLogoutSettings.NonInteractive"/></em></p>
+        ///   <p>Disable interactive mode for all commands</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLogoutSettings DisableNonInteractive(this PulumiLogoutSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NonInteractive = false;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Toggles <see cref="PulumiLogoutSettings.NonInteractive"/></em></p>
+        ///   <p>Disable interactive mode for all commands</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLogoutSettings ToggleNonInteractive(this PulumiLogoutSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NonInteractive = !toolSettings.NonInteractive;
+            return toolSettings;
+        }
+        #endregion
+        #region Profiling
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiLogoutSettings.Profiling"/></em></p>
+        ///   <p>Emit CPU and memory profiles and an execution trace to '[filename].[pid].{cpu,mem,trace}', respectively</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLogoutSettings SetProfiling(this PulumiLogoutSettings toolSettings, string profiling)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Profiling = profiling;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiLogoutSettings.Profiling"/></em></p>
+        ///   <p>Emit CPU and memory profiles and an execution trace to '[filename].[pid].{cpu,mem,trace}', respectively</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLogoutSettings ResetProfiling(this PulumiLogoutSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Profiling = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Tracing
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiLogoutSettings.Tracing"/></em></p>
+        ///   <p>Emit tracing to the specified endpoint. Use the file: scheme to write tracing data to a local file</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLogoutSettings SetTracing(this PulumiLogoutSettings toolSettings, string tracing)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tracing = tracing;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiLogoutSettings.Tracing"/></em></p>
+        ///   <p>Emit tracing to the specified endpoint. Use the file: scheme to write tracing data to a local file</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLogoutSettings ResetTracing(this PulumiLogoutSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tracing = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiLogoutSettings.Verbose"/></em></p>
+        ///   <p>Enable verbose logging (e.g., v=3); anything >3 is very verbose</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLogoutSettings SetVerbose(this PulumiLogoutSettings toolSettings, int? verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiLogoutSettings.Verbose"/></em></p>
+        ///   <p>Enable verbose logging (e.g., v=3); anything >3 is very verbose</p>
+        /// </summary>
+        [Pure]
+        public static PulumiLogoutSettings ResetVerbose(this PulumiLogoutSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;

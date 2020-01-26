@@ -257,6 +257,84 @@
       }
     },
     {
+      "help": "Update history for a stack",
+      "postfix": "History",
+      "commonPropertySets": [
+        "stackSelect"
+      ],
+      "definiteArgument": "history",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Json",
+            "type": "bool",
+            "format": "--json",
+            "help": "Emit output as JSON"
+          },
+          {
+            "name": "ShowSecrets",
+            "type": "bool",
+            "format": "--show-secrets",
+            "help": "Show secret values when listing config instead of displaying blinded values"
+          }
+        ]
+      }
+    },
+    {
+      "help": "Log onto the Pulumi stack. For CI/CD scenarios, an env variable of <c>PULUMI_ACCESS_TOKEN</c> should be set",
+      "postfix": "Login",
+      "definiteArgument": "login",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Location",
+            "type": "string",
+            "format": "{value}",
+            "help": "Specify a URL or a local/cloud path to the Pulumi instance you wish to use. Defaults to app.pulumi.com"
+          },
+          {
+            "name": "CloudUrl",
+            "type": "string",
+            "format": "--cloud-url {value}",
+            "help": "A cloud URL to log into. This is the same as specifying a location"
+          },
+          {
+            "name": "Local",
+            "type": "bool",
+            "format": "--local",
+            "help": "Use Pulumi in local-only mode"
+          }
+        ]
+      }
+    },
+    {
+      "help": "Log out of the Pulumi service",
+      "postfix": "Logout",
+      "definiteArgument": "logout",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Location",
+            "type": "string",
+            "format": "{value}",
+            "help": "Specify a URL or a local/cloud path to the Pulumi instance you wish to logout from. If no URL is provided, you will be logged out of the current backend."
+          },
+          {
+            "name": "CloudUrl",
+            "type": "string",
+            "format": "--cloud-url {value}",
+            "help": " A cloud URL to log out of (defaults to current cloud). This is the same as specifying a location"
+          },
+          {
+            "name": "Local",
+            "type": "bool",
+            "format": "--local",
+            "help": "Log out of using local mode"
+          }
+        ]
+      }
+    },
+    {
       "help": "Show a preview of updates to a stacks resources",
       "postfix": "Preview",
       "definiteArgument": "preview",
