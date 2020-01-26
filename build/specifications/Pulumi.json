@@ -166,6 +166,97 @@
       }
     },
     {
+      "help": "Destroy an existing stack and its resources. Warning: this command is generally irreversible and should be used with great care",
+      "postfix": "Destroy",
+      "commonPropertySets": [
+        "stackSelect",
+        "configFile"
+      ],
+      "definiteArgument": "destroy",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Debug",
+            "type": "bool",
+            "format": "--debug",
+            "help": "Print detailed debugging output during resource operations"
+          },
+          {
+            "name": "Diff",
+            "type": "bool",
+            "format": "--diff",
+            "help": "Display operation as a rich diff showing the overall change"
+          },
+          {
+            "name": "Message",
+            "type": "string",
+            "format": "--message {value}",
+            "help": "Optional message to associate with the destroy operation"
+          },
+          {
+            "name": "Parallel",
+            "type": "int",
+            "format": "--parallel {value}",
+            "help": "Allow P resource operations to run in parallel at once (1 for no parallelism). Defaults to unbounded. (default 2147483647)"
+          },
+          {
+            "name": "Refresh",
+            "type": "bool",
+            "format": "--refresh",
+            "help": "Refresh the state of the stack's resources before this update"
+          },
+          {
+            "name": "ShowConfig",
+            "type": "bool",
+            "format": "--show-config",
+            "help": "Show configuration keys and variables"
+          },
+          {
+            "name": "ShowReplacementSteps",
+            "type": "bool",
+            "format": "--show-replacement-steps",
+            "help": "Show detailed resource replacement creates and deletes instead of a single step"
+          },
+          {
+            "name": "ShowSames",
+            "type": "bool",
+            "format": "--show-sames",
+            "help": "Show resources that don't need to be updated because they haven't changed, alongside those that do"
+          },
+          {
+            "name": "SkipPreview",
+            "type": "bool",
+            "format": "--skip-preview",
+            "help": "Do not perform a preview before performing the destroy"
+          },
+          {
+            "name": "SupressOutputs",
+            "type": "bool",
+            "format": "--supress-outputs",
+            "help": "Suppress display of stack outputs (in case they contain sensitive values)"
+          },
+          {
+            "name": "Target",
+            "type": "string",
+            "format": "--target {value}",
+            "help": "Specify a single resource URN to destroy. All resources necessary to destroy this target will also be destroyed. Multiple resources can be specified using: --target urn1 --target urn2"
+          },
+          {
+            "name": "TargetDependents",
+            "type": "bool",
+            "format": "--target-dependents {value}",
+            "help": "Allows destroying of dependent targets discovered but not specified in --target list"
+          },
+          {
+            "name": "Yes",
+            "type": "bool",
+            "format": "--yes",
+            "help": "Automatically approve and perform the destroy after previewing it"
+          }
+        ]
+      }
+    },
+    {
       "help": "Show a preview of updates to a stacks resources",
       "postfix": "Preview",
       "definiteArgument": "preview",

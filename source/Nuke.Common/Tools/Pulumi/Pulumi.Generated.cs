@@ -566,6 +566,126 @@ namespace Nuke.Common.Tools.Pulumi
             return configurator.Invoke(PulumiConfigSet, PulumiLogger, degreeOfParallelism, completeOnFailure);
         }
         /// <summary>
+        ///   <p>Destroy an existing stack and its resources. Warning: this command is generally irreversible and should be used with great care</p>
+        ///   <p>For more details, visit the <a href="https://www.pulumi.com/">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--color</c> via <see cref="PulumiDestroySettings.Color"/></li>
+        ///     <li><c>--config-file</c> via <see cref="PulumiDestroySettings.ConfigFile"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiDestroySettings.Cwd"/></li>
+        ///     <li><c>--debug</c> via <see cref="PulumiDestroySettings.Debug"/></li>
+        ///     <li><c>--diff</c> via <see cref="PulumiDestroySettings.Diff"/></li>
+        ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiDestroySettings.DisableIntegrityChecking"/></li>
+        ///     <li><c>--emoji</c> via <see cref="PulumiDestroySettings.Emoji"/></li>
+        ///     <li><c>--help</c> via <see cref="PulumiDestroySettings.Help"/></li>
+        ///     <li><c>--logflow</c> via <see cref="PulumiDestroySettings.LogFlow"/></li>
+        ///     <li><c>--logtostderr</c> via <see cref="PulumiDestroySettings.LogToStderr"/></li>
+        ///     <li><c>--message</c> via <see cref="PulumiDestroySettings.Message"/></li>
+        ///     <li><c>--non-interactive</c> via <see cref="PulumiDestroySettings.NonInteractive"/></li>
+        ///     <li><c>--parallel</c> via <see cref="PulumiDestroySettings.Parallel"/></li>
+        ///     <li><c>--profiling</c> via <see cref="PulumiDestroySettings.Profiling"/></li>
+        ///     <li><c>--refresh</c> via <see cref="PulumiDestroySettings.Refresh"/></li>
+        ///     <li><c>--show-config</c> via <see cref="PulumiDestroySettings.ShowConfig"/></li>
+        ///     <li><c>--show-replacement-steps</c> via <see cref="PulumiDestroySettings.ShowReplacementSteps"/></li>
+        ///     <li><c>--show-sames</c> via <see cref="PulumiDestroySettings.ShowSames"/></li>
+        ///     <li><c>--skip-preview</c> via <see cref="PulumiDestroySettings.SkipPreview"/></li>
+        ///     <li><c>--stack</c> via <see cref="PulumiDestroySettings.Stack"/></li>
+        ///     <li><c>--supress-outputs</c> via <see cref="PulumiDestroySettings.SupressOutputs"/></li>
+        ///     <li><c>--target</c> via <see cref="PulumiDestroySettings.Target"/></li>
+        ///     <li><c>--target-dependents</c> via <see cref="PulumiDestroySettings.TargetDependents"/></li>
+        ///     <li><c>--tracing</c> via <see cref="PulumiDestroySettings.Tracing"/></li>
+        ///     <li><c>--verbose</c> via <see cref="PulumiDestroySettings.Verbose"/></li>
+        ///     <li><c>--yes</c> via <see cref="PulumiDestroySettings.Yes"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> PulumiDestroy(PulumiDestroySettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new PulumiDestroySettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Destroy an existing stack and its resources. Warning: this command is generally irreversible and should be used with great care</p>
+        ///   <p>For more details, visit the <a href="https://www.pulumi.com/">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--color</c> via <see cref="PulumiDestroySettings.Color"/></li>
+        ///     <li><c>--config-file</c> via <see cref="PulumiDestroySettings.ConfigFile"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiDestroySettings.Cwd"/></li>
+        ///     <li><c>--debug</c> via <see cref="PulumiDestroySettings.Debug"/></li>
+        ///     <li><c>--diff</c> via <see cref="PulumiDestroySettings.Diff"/></li>
+        ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiDestroySettings.DisableIntegrityChecking"/></li>
+        ///     <li><c>--emoji</c> via <see cref="PulumiDestroySettings.Emoji"/></li>
+        ///     <li><c>--help</c> via <see cref="PulumiDestroySettings.Help"/></li>
+        ///     <li><c>--logflow</c> via <see cref="PulumiDestroySettings.LogFlow"/></li>
+        ///     <li><c>--logtostderr</c> via <see cref="PulumiDestroySettings.LogToStderr"/></li>
+        ///     <li><c>--message</c> via <see cref="PulumiDestroySettings.Message"/></li>
+        ///     <li><c>--non-interactive</c> via <see cref="PulumiDestroySettings.NonInteractive"/></li>
+        ///     <li><c>--parallel</c> via <see cref="PulumiDestroySettings.Parallel"/></li>
+        ///     <li><c>--profiling</c> via <see cref="PulumiDestroySettings.Profiling"/></li>
+        ///     <li><c>--refresh</c> via <see cref="PulumiDestroySettings.Refresh"/></li>
+        ///     <li><c>--show-config</c> via <see cref="PulumiDestroySettings.ShowConfig"/></li>
+        ///     <li><c>--show-replacement-steps</c> via <see cref="PulumiDestroySettings.ShowReplacementSteps"/></li>
+        ///     <li><c>--show-sames</c> via <see cref="PulumiDestroySettings.ShowSames"/></li>
+        ///     <li><c>--skip-preview</c> via <see cref="PulumiDestroySettings.SkipPreview"/></li>
+        ///     <li><c>--stack</c> via <see cref="PulumiDestroySettings.Stack"/></li>
+        ///     <li><c>--supress-outputs</c> via <see cref="PulumiDestroySettings.SupressOutputs"/></li>
+        ///     <li><c>--target</c> via <see cref="PulumiDestroySettings.Target"/></li>
+        ///     <li><c>--target-dependents</c> via <see cref="PulumiDestroySettings.TargetDependents"/></li>
+        ///     <li><c>--tracing</c> via <see cref="PulumiDestroySettings.Tracing"/></li>
+        ///     <li><c>--verbose</c> via <see cref="PulumiDestroySettings.Verbose"/></li>
+        ///     <li><c>--yes</c> via <see cref="PulumiDestroySettings.Yes"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> PulumiDestroy(Configure<PulumiDestroySettings> configurator)
+        {
+            return PulumiDestroy(configurator(new PulumiDestroySettings()));
+        }
+        /// <summary>
+        ///   <p>Destroy an existing stack and its resources. Warning: this command is generally irreversible and should be used with great care</p>
+        ///   <p>For more details, visit the <a href="https://www.pulumi.com/">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--color</c> via <see cref="PulumiDestroySettings.Color"/></li>
+        ///     <li><c>--config-file</c> via <see cref="PulumiDestroySettings.ConfigFile"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiDestroySettings.Cwd"/></li>
+        ///     <li><c>--debug</c> via <see cref="PulumiDestroySettings.Debug"/></li>
+        ///     <li><c>--diff</c> via <see cref="PulumiDestroySettings.Diff"/></li>
+        ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiDestroySettings.DisableIntegrityChecking"/></li>
+        ///     <li><c>--emoji</c> via <see cref="PulumiDestroySettings.Emoji"/></li>
+        ///     <li><c>--help</c> via <see cref="PulumiDestroySettings.Help"/></li>
+        ///     <li><c>--logflow</c> via <see cref="PulumiDestroySettings.LogFlow"/></li>
+        ///     <li><c>--logtostderr</c> via <see cref="PulumiDestroySettings.LogToStderr"/></li>
+        ///     <li><c>--message</c> via <see cref="PulumiDestroySettings.Message"/></li>
+        ///     <li><c>--non-interactive</c> via <see cref="PulumiDestroySettings.NonInteractive"/></li>
+        ///     <li><c>--parallel</c> via <see cref="PulumiDestroySettings.Parallel"/></li>
+        ///     <li><c>--profiling</c> via <see cref="PulumiDestroySettings.Profiling"/></li>
+        ///     <li><c>--refresh</c> via <see cref="PulumiDestroySettings.Refresh"/></li>
+        ///     <li><c>--show-config</c> via <see cref="PulumiDestroySettings.ShowConfig"/></li>
+        ///     <li><c>--show-replacement-steps</c> via <see cref="PulumiDestroySettings.ShowReplacementSteps"/></li>
+        ///     <li><c>--show-sames</c> via <see cref="PulumiDestroySettings.ShowSames"/></li>
+        ///     <li><c>--skip-preview</c> via <see cref="PulumiDestroySettings.SkipPreview"/></li>
+        ///     <li><c>--stack</c> via <see cref="PulumiDestroySettings.Stack"/></li>
+        ///     <li><c>--supress-outputs</c> via <see cref="PulumiDestroySettings.SupressOutputs"/></li>
+        ///     <li><c>--target</c> via <see cref="PulumiDestroySettings.Target"/></li>
+        ///     <li><c>--target-dependents</c> via <see cref="PulumiDestroySettings.TargetDependents"/></li>
+        ///     <li><c>--tracing</c> via <see cref="PulumiDestroySettings.Tracing"/></li>
+        ///     <li><c>--verbose</c> via <see cref="PulumiDestroySettings.Verbose"/></li>
+        ///     <li><c>--yes</c> via <see cref="PulumiDestroySettings.Yes"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(PulumiDestroySettings Settings, IReadOnlyCollection<Output> Output)> PulumiDestroy(CombinatorialConfigure<PulumiDestroySettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(PulumiDestroy, PulumiLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
         ///   <p>Show a preview of updates to a stacks resources</p>
         ///   <p>For more details, visit the <a href="https://www.pulumi.com/">official website</a>.</p>
         /// </summary>
@@ -1386,6 +1506,158 @@ namespace Nuke.Common.Tools.Pulumi
               .Add("--path {value}", Path)
               .Add("--plaintext", Plaintext)
               .Add("--secret", Secret)
+              .Add("--stack {value}", Stack)
+              .Add("--config-file {value}", ConfigFile)
+              .Add("--color {value}", Color)
+              .Add("--cwd {value}", Cwd)
+              .Add("--disable-integrity-checking", DisableIntegrityChecking)
+              .Add("--emoji", Emoji)
+              .Add("--help", Help)
+              .Add("--logflow", LogFlow)
+              .Add("--logtostderr", LogToStderr)
+              .Add("--non-interactive", NonInteractive)
+              .Add("--profiling {value}", Profiling)
+              .Add("--tracing {value}", Tracing)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region PulumiDestroySettings
+    /// <summary>
+    ///   Used within <see cref="PulumiTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class PulumiDestroySettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the Pulumi executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? PulumiTasks.PulumiPath;
+        public override Action<OutputType, string> CustomLogger => PulumiTasks.PulumiLogger;
+        /// <summary>
+        ///   Print detailed debugging output during resource operations
+        /// </summary>
+        public virtual bool? Debug { get; internal set; }
+        /// <summary>
+        ///   Display operation as a rich diff showing the overall change
+        /// </summary>
+        public virtual bool? Diff { get; internal set; }
+        /// <summary>
+        ///   Optional message to associate with the destroy operation
+        /// </summary>
+        public virtual string Message { get; internal set; }
+        /// <summary>
+        ///   Allow P resource operations to run in parallel at once (1 for no parallelism). Defaults to unbounded. (default 2147483647)
+        /// </summary>
+        public virtual int? Parallel { get; internal set; }
+        /// <summary>
+        ///   Refresh the state of the stack's resources before this update
+        /// </summary>
+        public virtual bool? Refresh { get; internal set; }
+        /// <summary>
+        ///   Show configuration keys and variables
+        /// </summary>
+        public virtual bool? ShowConfig { get; internal set; }
+        /// <summary>
+        ///   Show detailed resource replacement creates and deletes instead of a single step
+        /// </summary>
+        public virtual bool? ShowReplacementSteps { get; internal set; }
+        /// <summary>
+        ///   Show resources that don't need to be updated because they haven't changed, alongside those that do
+        /// </summary>
+        public virtual bool? ShowSames { get; internal set; }
+        /// <summary>
+        ///   Do not perform a preview before performing the destroy
+        /// </summary>
+        public virtual bool? SkipPreview { get; internal set; }
+        /// <summary>
+        ///   Suppress display of stack outputs (in case they contain sensitive values)
+        /// </summary>
+        public virtual bool? SupressOutputs { get; internal set; }
+        /// <summary>
+        ///   Specify a single resource URN to destroy. All resources necessary to destroy this target will also be destroyed. Multiple resources can be specified using: --target urn1 --target urn2
+        /// </summary>
+        public virtual string Target { get; internal set; }
+        /// <summary>
+        ///   Allows destroying of dependent targets discovered but not specified in --target list
+        /// </summary>
+        public virtual bool? TargetDependents { get; internal set; }
+        /// <summary>
+        ///   Automatically approve and perform the destroy after previewing it
+        /// </summary>
+        public virtual bool? Yes { get; internal set; }
+        /// <summary>
+        ///   The name of the stack to operate on. Defaults to the current stack
+        /// </summary>
+        public virtual string Stack { get; internal set; }
+        /// <summary>
+        ///   Use the configuration values in the specified file rather than detecting the file name
+        /// </summary>
+        public virtual string ConfigFile { get; internal set; }
+        /// <summary>
+        ///   Colorize output. Choices are: always, never, raw, auto (default is auto)
+        /// </summary>
+        public virtual ColorizeOutput Color { get; internal set; }
+        /// <summary>
+        ///   Run pulumi as if it had been started in another directory
+        /// </summary>
+        public virtual string Cwd { get; internal set; }
+        /// <summary>
+        ///   Disable integrity checking of checkpoint files
+        /// </summary>
+        public virtual bool? DisableIntegrityChecking { get; internal set; }
+        /// <summary>
+        ///   Enable emojis in the output (default is true)
+        /// </summary>
+        public virtual bool? Emoji { get; internal set; }
+        /// <summary>
+        ///   Help for Pulumi
+        /// </summary>
+        public virtual bool? Help { get; internal set; }
+        /// <summary>
+        ///   Flow log settings to child processes (like plugins)
+        /// </summary>
+        public virtual bool? LogFlow { get; internal set; }
+        /// <summary>
+        ///   Log to stderr instead of to files
+        /// </summary>
+        public virtual bool? LogToStderr { get; internal set; }
+        /// <summary>
+        ///   Disable interactive mode for all commands
+        /// </summary>
+        public virtual bool? NonInteractive { get; internal set; }
+        /// <summary>
+        ///   Emit CPU and memory profiles and an execution trace to '[filename].[pid].{cpu,mem,trace}', respectively
+        /// </summary>
+        public virtual string Profiling { get; internal set; }
+        /// <summary>
+        ///   Emit tracing to the specified endpoint. Use the file: scheme to write tracing data to a local file
+        /// </summary>
+        public virtual string Tracing { get; internal set; }
+        /// <summary>
+        ///   Enable verbose logging (e.g., v=3); anything >3 is very verbose
+        /// </summary>
+        public virtual int? Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("destroy")
+              .Add("--debug", Debug)
+              .Add("--diff", Diff)
+              .Add("--message {value}", Message)
+              .Add("--parallel {value}", Parallel)
+              .Add("--refresh", Refresh)
+              .Add("--show-config", ShowConfig)
+              .Add("--show-replacement-steps", ShowReplacementSteps)
+              .Add("--show-sames", ShowSames)
+              .Add("--skip-preview", SkipPreview)
+              .Add("--supress-outputs", SupressOutputs)
+              .Add("--target {value}", Target)
+              .Add("--target-dependents {value}", TargetDependents)
+              .Add("--yes", Yes)
               .Add("--stack {value}", Stack)
               .Add("--config-file {value}", ConfigFile)
               .Add("--color {value}", Color)
@@ -5316,6 +5588,1168 @@ namespace Nuke.Common.Tools.Pulumi
         /// </summary>
         [Pure]
         public static PulumiConfigSetSettings ResetVerbose(this PulumiConfigSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region PulumiDestroySettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="PulumiTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class PulumiDestroySettingsExtensions
+    {
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiDestroySettings.Debug"/></em></p>
+        ///   <p>Print detailed debugging output during resource operations</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings SetDebug(this PulumiDestroySettings toolSettings, bool? debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiDestroySettings.Debug"/></em></p>
+        ///   <p>Print detailed debugging output during resource operations</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings ResetDebug(this PulumiDestroySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Enables <see cref="PulumiDestroySettings.Debug"/></em></p>
+        ///   <p>Print detailed debugging output during resource operations</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings EnableDebug(this PulumiDestroySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = true;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Disables <see cref="PulumiDestroySettings.Debug"/></em></p>
+        ///   <p>Print detailed debugging output during resource operations</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings DisableDebug(this PulumiDestroySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = false;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Toggles <see cref="PulumiDestroySettings.Debug"/></em></p>
+        ///   <p>Print detailed debugging output during resource operations</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings ToggleDebug(this PulumiDestroySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = !toolSettings.Debug;
+            return toolSettings;
+        }
+        #endregion
+        #region Diff
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiDestroySettings.Diff"/></em></p>
+        ///   <p>Display operation as a rich diff showing the overall change</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings SetDiff(this PulumiDestroySettings toolSettings, bool? diff)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Diff = diff;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiDestroySettings.Diff"/></em></p>
+        ///   <p>Display operation as a rich diff showing the overall change</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings ResetDiff(this PulumiDestroySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Diff = null;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Enables <see cref="PulumiDestroySettings.Diff"/></em></p>
+        ///   <p>Display operation as a rich diff showing the overall change</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings EnableDiff(this PulumiDestroySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Diff = true;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Disables <see cref="PulumiDestroySettings.Diff"/></em></p>
+        ///   <p>Display operation as a rich diff showing the overall change</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings DisableDiff(this PulumiDestroySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Diff = false;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Toggles <see cref="PulumiDestroySettings.Diff"/></em></p>
+        ///   <p>Display operation as a rich diff showing the overall change</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings ToggleDiff(this PulumiDestroySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Diff = !toolSettings.Diff;
+            return toolSettings;
+        }
+        #endregion
+        #region Message
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiDestroySettings.Message"/></em></p>
+        ///   <p>Optional message to associate with the destroy operation</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings SetMessage(this PulumiDestroySettings toolSettings, string message)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Message = message;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiDestroySettings.Message"/></em></p>
+        ///   <p>Optional message to associate with the destroy operation</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings ResetMessage(this PulumiDestroySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Message = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Parallel
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiDestroySettings.Parallel"/></em></p>
+        ///   <p>Allow P resource operations to run in parallel at once (1 for no parallelism). Defaults to unbounded. (default 2147483647)</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings SetParallel(this PulumiDestroySettings toolSettings, int? parallel)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Parallel = parallel;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiDestroySettings.Parallel"/></em></p>
+        ///   <p>Allow P resource operations to run in parallel at once (1 for no parallelism). Defaults to unbounded. (default 2147483647)</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings ResetParallel(this PulumiDestroySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Parallel = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Refresh
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiDestroySettings.Refresh"/></em></p>
+        ///   <p>Refresh the state of the stack's resources before this update</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings SetRefresh(this PulumiDestroySettings toolSettings, bool? refresh)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Refresh = refresh;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiDestroySettings.Refresh"/></em></p>
+        ///   <p>Refresh the state of the stack's resources before this update</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings ResetRefresh(this PulumiDestroySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Refresh = null;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Enables <see cref="PulumiDestroySettings.Refresh"/></em></p>
+        ///   <p>Refresh the state of the stack's resources before this update</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings EnableRefresh(this PulumiDestroySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Refresh = true;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Disables <see cref="PulumiDestroySettings.Refresh"/></em></p>
+        ///   <p>Refresh the state of the stack's resources before this update</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings DisableRefresh(this PulumiDestroySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Refresh = false;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Toggles <see cref="PulumiDestroySettings.Refresh"/></em></p>
+        ///   <p>Refresh the state of the stack's resources before this update</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings ToggleRefresh(this PulumiDestroySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Refresh = !toolSettings.Refresh;
+            return toolSettings;
+        }
+        #endregion
+        #region ShowConfig
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiDestroySettings.ShowConfig"/></em></p>
+        ///   <p>Show configuration keys and variables</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings SetShowConfig(this PulumiDestroySettings toolSettings, bool? showConfig)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ShowConfig = showConfig;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiDestroySettings.ShowConfig"/></em></p>
+        ///   <p>Show configuration keys and variables</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings ResetShowConfig(this PulumiDestroySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ShowConfig = null;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Enables <see cref="PulumiDestroySettings.ShowConfig"/></em></p>
+        ///   <p>Show configuration keys and variables</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings EnableShowConfig(this PulumiDestroySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ShowConfig = true;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Disables <see cref="PulumiDestroySettings.ShowConfig"/></em></p>
+        ///   <p>Show configuration keys and variables</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings DisableShowConfig(this PulumiDestroySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ShowConfig = false;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Toggles <see cref="PulumiDestroySettings.ShowConfig"/></em></p>
+        ///   <p>Show configuration keys and variables</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings ToggleShowConfig(this PulumiDestroySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ShowConfig = !toolSettings.ShowConfig;
+            return toolSettings;
+        }
+        #endregion
+        #region ShowReplacementSteps
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiDestroySettings.ShowReplacementSteps"/></em></p>
+        ///   <p>Show detailed resource replacement creates and deletes instead of a single step</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings SetShowReplacementSteps(this PulumiDestroySettings toolSettings, bool? showReplacementSteps)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ShowReplacementSteps = showReplacementSteps;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiDestroySettings.ShowReplacementSteps"/></em></p>
+        ///   <p>Show detailed resource replacement creates and deletes instead of a single step</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings ResetShowReplacementSteps(this PulumiDestroySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ShowReplacementSteps = null;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Enables <see cref="PulumiDestroySettings.ShowReplacementSteps"/></em></p>
+        ///   <p>Show detailed resource replacement creates and deletes instead of a single step</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings EnableShowReplacementSteps(this PulumiDestroySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ShowReplacementSteps = true;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Disables <see cref="PulumiDestroySettings.ShowReplacementSteps"/></em></p>
+        ///   <p>Show detailed resource replacement creates and deletes instead of a single step</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings DisableShowReplacementSteps(this PulumiDestroySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ShowReplacementSteps = false;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Toggles <see cref="PulumiDestroySettings.ShowReplacementSteps"/></em></p>
+        ///   <p>Show detailed resource replacement creates and deletes instead of a single step</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings ToggleShowReplacementSteps(this PulumiDestroySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ShowReplacementSteps = !toolSettings.ShowReplacementSteps;
+            return toolSettings;
+        }
+        #endregion
+        #region ShowSames
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiDestroySettings.ShowSames"/></em></p>
+        ///   <p>Show resources that don't need to be updated because they haven't changed, alongside those that do</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings SetShowSames(this PulumiDestroySettings toolSettings, bool? showSames)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ShowSames = showSames;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiDestroySettings.ShowSames"/></em></p>
+        ///   <p>Show resources that don't need to be updated because they haven't changed, alongside those that do</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings ResetShowSames(this PulumiDestroySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ShowSames = null;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Enables <see cref="PulumiDestroySettings.ShowSames"/></em></p>
+        ///   <p>Show resources that don't need to be updated because they haven't changed, alongside those that do</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings EnableShowSames(this PulumiDestroySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ShowSames = true;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Disables <see cref="PulumiDestroySettings.ShowSames"/></em></p>
+        ///   <p>Show resources that don't need to be updated because they haven't changed, alongside those that do</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings DisableShowSames(this PulumiDestroySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ShowSames = false;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Toggles <see cref="PulumiDestroySettings.ShowSames"/></em></p>
+        ///   <p>Show resources that don't need to be updated because they haven't changed, alongside those that do</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings ToggleShowSames(this PulumiDestroySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ShowSames = !toolSettings.ShowSames;
+            return toolSettings;
+        }
+        #endregion
+        #region SkipPreview
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiDestroySettings.SkipPreview"/></em></p>
+        ///   <p>Do not perform a preview before performing the destroy</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings SetSkipPreview(this PulumiDestroySettings toolSettings, bool? skipPreview)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SkipPreview = skipPreview;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiDestroySettings.SkipPreview"/></em></p>
+        ///   <p>Do not perform a preview before performing the destroy</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings ResetSkipPreview(this PulumiDestroySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SkipPreview = null;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Enables <see cref="PulumiDestroySettings.SkipPreview"/></em></p>
+        ///   <p>Do not perform a preview before performing the destroy</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings EnableSkipPreview(this PulumiDestroySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SkipPreview = true;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Disables <see cref="PulumiDestroySettings.SkipPreview"/></em></p>
+        ///   <p>Do not perform a preview before performing the destroy</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings DisableSkipPreview(this PulumiDestroySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SkipPreview = false;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Toggles <see cref="PulumiDestroySettings.SkipPreview"/></em></p>
+        ///   <p>Do not perform a preview before performing the destroy</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings ToggleSkipPreview(this PulumiDestroySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SkipPreview = !toolSettings.SkipPreview;
+            return toolSettings;
+        }
+        #endregion
+        #region SupressOutputs
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiDestroySettings.SupressOutputs"/></em></p>
+        ///   <p>Suppress display of stack outputs (in case they contain sensitive values)</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings SetSupressOutputs(this PulumiDestroySettings toolSettings, bool? supressOutputs)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SupressOutputs = supressOutputs;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiDestroySettings.SupressOutputs"/></em></p>
+        ///   <p>Suppress display of stack outputs (in case they contain sensitive values)</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings ResetSupressOutputs(this PulumiDestroySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SupressOutputs = null;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Enables <see cref="PulumiDestroySettings.SupressOutputs"/></em></p>
+        ///   <p>Suppress display of stack outputs (in case they contain sensitive values)</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings EnableSupressOutputs(this PulumiDestroySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SupressOutputs = true;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Disables <see cref="PulumiDestroySettings.SupressOutputs"/></em></p>
+        ///   <p>Suppress display of stack outputs (in case they contain sensitive values)</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings DisableSupressOutputs(this PulumiDestroySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SupressOutputs = false;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Toggles <see cref="PulumiDestroySettings.SupressOutputs"/></em></p>
+        ///   <p>Suppress display of stack outputs (in case they contain sensitive values)</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings ToggleSupressOutputs(this PulumiDestroySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SupressOutputs = !toolSettings.SupressOutputs;
+            return toolSettings;
+        }
+        #endregion
+        #region Target
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiDestroySettings.Target"/></em></p>
+        ///   <p>Specify a single resource URN to destroy. All resources necessary to destroy this target will also be destroyed. Multiple resources can be specified using: --target urn1 --target urn2</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings SetTarget(this PulumiDestroySettings toolSettings, string target)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Target = target;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiDestroySettings.Target"/></em></p>
+        ///   <p>Specify a single resource URN to destroy. All resources necessary to destroy this target will also be destroyed. Multiple resources can be specified using: --target urn1 --target urn2</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings ResetTarget(this PulumiDestroySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Target = null;
+            return toolSettings;
+        }
+        #endregion
+        #region TargetDependents
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiDestroySettings.TargetDependents"/></em></p>
+        ///   <p>Allows destroying of dependent targets discovered but not specified in --target list</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings SetTargetDependents(this PulumiDestroySettings toolSettings, bool? targetDependents)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TargetDependents = targetDependents;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiDestroySettings.TargetDependents"/></em></p>
+        ///   <p>Allows destroying of dependent targets discovered but not specified in --target list</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings ResetTargetDependents(this PulumiDestroySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TargetDependents = null;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Enables <see cref="PulumiDestroySettings.TargetDependents"/></em></p>
+        ///   <p>Allows destroying of dependent targets discovered but not specified in --target list</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings EnableTargetDependents(this PulumiDestroySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TargetDependents = true;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Disables <see cref="PulumiDestroySettings.TargetDependents"/></em></p>
+        ///   <p>Allows destroying of dependent targets discovered but not specified in --target list</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings DisableTargetDependents(this PulumiDestroySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TargetDependents = false;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Toggles <see cref="PulumiDestroySettings.TargetDependents"/></em></p>
+        ///   <p>Allows destroying of dependent targets discovered but not specified in --target list</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings ToggleTargetDependents(this PulumiDestroySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TargetDependents = !toolSettings.TargetDependents;
+            return toolSettings;
+        }
+        #endregion
+        #region Yes
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiDestroySettings.Yes"/></em></p>
+        ///   <p>Automatically approve and perform the destroy after previewing it</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings SetYes(this PulumiDestroySettings toolSettings, bool? yes)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Yes = yes;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiDestroySettings.Yes"/></em></p>
+        ///   <p>Automatically approve and perform the destroy after previewing it</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings ResetYes(this PulumiDestroySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Yes = null;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Enables <see cref="PulumiDestroySettings.Yes"/></em></p>
+        ///   <p>Automatically approve and perform the destroy after previewing it</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings EnableYes(this PulumiDestroySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Yes = true;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Disables <see cref="PulumiDestroySettings.Yes"/></em></p>
+        ///   <p>Automatically approve and perform the destroy after previewing it</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings DisableYes(this PulumiDestroySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Yes = false;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Toggles <see cref="PulumiDestroySettings.Yes"/></em></p>
+        ///   <p>Automatically approve and perform the destroy after previewing it</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings ToggleYes(this PulumiDestroySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Yes = !toolSettings.Yes;
+            return toolSettings;
+        }
+        #endregion
+        #region Stack
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiDestroySettings.Stack"/></em></p>
+        ///   <p>The name of the stack to operate on. Defaults to the current stack</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings SetStack(this PulumiDestroySettings toolSettings, string stack)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Stack = stack;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiDestroySettings.Stack"/></em></p>
+        ///   <p>The name of the stack to operate on. Defaults to the current stack</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings ResetStack(this PulumiDestroySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Stack = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ConfigFile
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiDestroySettings.ConfigFile"/></em></p>
+        ///   <p>Use the configuration values in the specified file rather than detecting the file name</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings SetConfigFile(this PulumiDestroySettings toolSettings, string configFile)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ConfigFile = configFile;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiDestroySettings.ConfigFile"/></em></p>
+        ///   <p>Use the configuration values in the specified file rather than detecting the file name</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings ResetConfigFile(this PulumiDestroySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ConfigFile = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Color
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiDestroySettings.Color"/></em></p>
+        ///   <p>Colorize output. Choices are: always, never, raw, auto (default is auto)</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings SetColor(this PulumiDestroySettings toolSettings, ColorizeOutput color)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Color = color;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiDestroySettings.Color"/></em></p>
+        ///   <p>Colorize output. Choices are: always, never, raw, auto (default is auto)</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings ResetColor(this PulumiDestroySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Color = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Cwd
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiDestroySettings.Cwd"/></em></p>
+        ///   <p>Run pulumi as if it had been started in another directory</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings SetCwd(this PulumiDestroySettings toolSettings, string cwd)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Cwd = cwd;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiDestroySettings.Cwd"/></em></p>
+        ///   <p>Run pulumi as if it had been started in another directory</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings ResetCwd(this PulumiDestroySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Cwd = null;
+            return toolSettings;
+        }
+        #endregion
+        #region DisableIntegrityChecking
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiDestroySettings.DisableIntegrityChecking"/></em></p>
+        ///   <p>Disable integrity checking of checkpoint files</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings SetDisableIntegrityChecking(this PulumiDestroySettings toolSettings, bool? disableIntegrityChecking)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DisableIntegrityChecking = disableIntegrityChecking;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiDestroySettings.DisableIntegrityChecking"/></em></p>
+        ///   <p>Disable integrity checking of checkpoint files</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings ResetDisableIntegrityChecking(this PulumiDestroySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DisableIntegrityChecking = null;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Enables <see cref="PulumiDestroySettings.DisableIntegrityChecking"/></em></p>
+        ///   <p>Disable integrity checking of checkpoint files</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings EnableDisableIntegrityChecking(this PulumiDestroySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DisableIntegrityChecking = true;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Disables <see cref="PulumiDestroySettings.DisableIntegrityChecking"/></em></p>
+        ///   <p>Disable integrity checking of checkpoint files</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings DisableDisableIntegrityChecking(this PulumiDestroySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DisableIntegrityChecking = false;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Toggles <see cref="PulumiDestroySettings.DisableIntegrityChecking"/></em></p>
+        ///   <p>Disable integrity checking of checkpoint files</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings ToggleDisableIntegrityChecking(this PulumiDestroySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DisableIntegrityChecking = !toolSettings.DisableIntegrityChecking;
+            return toolSettings;
+        }
+        #endregion
+        #region Emoji
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiDestroySettings.Emoji"/></em></p>
+        ///   <p>Enable emojis in the output (default is true)</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings SetEmoji(this PulumiDestroySettings toolSettings, bool? emoji)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Emoji = emoji;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiDestroySettings.Emoji"/></em></p>
+        ///   <p>Enable emojis in the output (default is true)</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings ResetEmoji(this PulumiDestroySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Emoji = null;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Enables <see cref="PulumiDestroySettings.Emoji"/></em></p>
+        ///   <p>Enable emojis in the output (default is true)</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings EnableEmoji(this PulumiDestroySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Emoji = true;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Disables <see cref="PulumiDestroySettings.Emoji"/></em></p>
+        ///   <p>Enable emojis in the output (default is true)</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings DisableEmoji(this PulumiDestroySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Emoji = false;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Toggles <see cref="PulumiDestroySettings.Emoji"/></em></p>
+        ///   <p>Enable emojis in the output (default is true)</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings ToggleEmoji(this PulumiDestroySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Emoji = !toolSettings.Emoji;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiDestroySettings.Help"/></em></p>
+        ///   <p>Help for Pulumi</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings SetHelp(this PulumiDestroySettings toolSettings, bool? help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiDestroySettings.Help"/></em></p>
+        ///   <p>Help for Pulumi</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings ResetHelp(this PulumiDestroySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Enables <see cref="PulumiDestroySettings.Help"/></em></p>
+        ///   <p>Help for Pulumi</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings EnableHelp(this PulumiDestroySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = true;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Disables <see cref="PulumiDestroySettings.Help"/></em></p>
+        ///   <p>Help for Pulumi</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings DisableHelp(this PulumiDestroySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = false;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Toggles <see cref="PulumiDestroySettings.Help"/></em></p>
+        ///   <p>Help for Pulumi</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings ToggleHelp(this PulumiDestroySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = !toolSettings.Help;
+            return toolSettings;
+        }
+        #endregion
+        #region LogFlow
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiDestroySettings.LogFlow"/></em></p>
+        ///   <p>Flow log settings to child processes (like plugins)</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings SetLogFlow(this PulumiDestroySettings toolSettings, bool? logFlow)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LogFlow = logFlow;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiDestroySettings.LogFlow"/></em></p>
+        ///   <p>Flow log settings to child processes (like plugins)</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings ResetLogFlow(this PulumiDestroySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LogFlow = null;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Enables <see cref="PulumiDestroySettings.LogFlow"/></em></p>
+        ///   <p>Flow log settings to child processes (like plugins)</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings EnableLogFlow(this PulumiDestroySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LogFlow = true;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Disables <see cref="PulumiDestroySettings.LogFlow"/></em></p>
+        ///   <p>Flow log settings to child processes (like plugins)</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings DisableLogFlow(this PulumiDestroySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LogFlow = false;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Toggles <see cref="PulumiDestroySettings.LogFlow"/></em></p>
+        ///   <p>Flow log settings to child processes (like plugins)</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings ToggleLogFlow(this PulumiDestroySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LogFlow = !toolSettings.LogFlow;
+            return toolSettings;
+        }
+        #endregion
+        #region LogToStderr
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiDestroySettings.LogToStderr"/></em></p>
+        ///   <p>Log to stderr instead of to files</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings SetLogToStderr(this PulumiDestroySettings toolSettings, bool? logToStderr)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LogToStderr = logToStderr;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiDestroySettings.LogToStderr"/></em></p>
+        ///   <p>Log to stderr instead of to files</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings ResetLogToStderr(this PulumiDestroySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LogToStderr = null;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Enables <see cref="PulumiDestroySettings.LogToStderr"/></em></p>
+        ///   <p>Log to stderr instead of to files</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings EnableLogToStderr(this PulumiDestroySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LogToStderr = true;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Disables <see cref="PulumiDestroySettings.LogToStderr"/></em></p>
+        ///   <p>Log to stderr instead of to files</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings DisableLogToStderr(this PulumiDestroySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LogToStderr = false;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Toggles <see cref="PulumiDestroySettings.LogToStderr"/></em></p>
+        ///   <p>Log to stderr instead of to files</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings ToggleLogToStderr(this PulumiDestroySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LogToStderr = !toolSettings.LogToStderr;
+            return toolSettings;
+        }
+        #endregion
+        #region NonInteractive
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiDestroySettings.NonInteractive"/></em></p>
+        ///   <p>Disable interactive mode for all commands</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings SetNonInteractive(this PulumiDestroySettings toolSettings, bool? nonInteractive)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NonInteractive = nonInteractive;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiDestroySettings.NonInteractive"/></em></p>
+        ///   <p>Disable interactive mode for all commands</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings ResetNonInteractive(this PulumiDestroySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NonInteractive = null;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Enables <see cref="PulumiDestroySettings.NonInteractive"/></em></p>
+        ///   <p>Disable interactive mode for all commands</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings EnableNonInteractive(this PulumiDestroySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NonInteractive = true;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Disables <see cref="PulumiDestroySettings.NonInteractive"/></em></p>
+        ///   <p>Disable interactive mode for all commands</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings DisableNonInteractive(this PulumiDestroySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NonInteractive = false;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Toggles <see cref="PulumiDestroySettings.NonInteractive"/></em></p>
+        ///   <p>Disable interactive mode for all commands</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings ToggleNonInteractive(this PulumiDestroySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NonInteractive = !toolSettings.NonInteractive;
+            return toolSettings;
+        }
+        #endregion
+        #region Profiling
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiDestroySettings.Profiling"/></em></p>
+        ///   <p>Emit CPU and memory profiles and an execution trace to '[filename].[pid].{cpu,mem,trace}', respectively</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings SetProfiling(this PulumiDestroySettings toolSettings, string profiling)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Profiling = profiling;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiDestroySettings.Profiling"/></em></p>
+        ///   <p>Emit CPU and memory profiles and an execution trace to '[filename].[pid].{cpu,mem,trace}', respectively</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings ResetProfiling(this PulumiDestroySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Profiling = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Tracing
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiDestroySettings.Tracing"/></em></p>
+        ///   <p>Emit tracing to the specified endpoint. Use the file: scheme to write tracing data to a local file</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings SetTracing(this PulumiDestroySettings toolSettings, string tracing)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tracing = tracing;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiDestroySettings.Tracing"/></em></p>
+        ///   <p>Emit tracing to the specified endpoint. Use the file: scheme to write tracing data to a local file</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings ResetTracing(this PulumiDestroySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tracing = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiDestroySettings.Verbose"/></em></p>
+        ///   <p>Enable verbose logging (e.g., v=3); anything >3 is very verbose</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings SetVerbose(this PulumiDestroySettings toolSettings, int? verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiDestroySettings.Verbose"/></em></p>
+        ///   <p>Enable verbose logging (e.g., v=3); anything >3 is very verbose</p>
+        /// </summary>
+        [Pure]
+        public static PulumiDestroySettings ResetVerbose(this PulumiDestroySettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
