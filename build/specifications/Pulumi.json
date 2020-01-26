@@ -335,7 +335,131 @@
       }
     },
     {
-      "help": "Show a preview of updates to a stacks resources",
+      "help": "Show aggregated logs for a stack",
+      "postfix": "Logs",
+      "commonPropertySets": [
+        "stackSelect",
+        "configFile"
+      ],
+      "definiteArgument": "logs",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Follow",
+            "type": "bool",
+            "format": "--follow",
+            "help": "Follow the log stream in real time (like tail -f)."
+          },
+          {
+            "name": "Json",
+            "type": "bool",
+            "format": "--json",
+            "help": "Emit output as JSON."
+          },
+          {
+            "name": "Resource",
+            "type": "string",
+            "format": "--resource {value}",
+            "help": "Only return logs for the requested resource ('name', 'type::name' or full URN).  Defaults to returning all logs."
+          },
+          {
+            "name": "Since",
+            "type": "string",
+            "format": "--since {value}",
+            "help": "Only return logs newer than a relative duration ('5s', '2m', '3h') or absolute timestamp.  Defaults to returning the last 1 hour of logs. (default 1h)."
+          }
+        ]
+      }
+    },
+    {
+      "help": "Install one or more plugins",
+      "postfix": "PluginInstall",
+      "definiteArgument": "plugin install",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "KindNameVersion",
+            "type": "string",
+            "format": "{value}",
+            "help": "Installation may be run either with a specific KIND, NAME, and VERSION, or by omitting these and letting Pulumi compute the set of plugins that may be required by the current project. VERSION cannot be a range: it must be a specific number."
+          },
+          {
+            "name": "Exact",
+            "type": "bool",
+            "format": "--exact",
+            "help": "Force installation of an exact version match (usually >= is accepted)."
+          },
+          {
+            "name": "File",
+            "type": "string",
+            "format": "--file {value}",
+            "help": "Install a plugin from a tarball file, instead of downloading it."
+          },
+          {
+            "name": "Reinstall",
+            "type": "bool",
+            "format": "--reinstall",
+            "help": "Reinstall a plugin even if it already exists."
+          },
+          {
+            "name": "Server",
+            "type": "string",
+            "format": "--server {value}",
+            "help": "A URL to download plugins from."
+          }
+        ]
+      }
+    },
+    {
+      "help": "List plugins",
+      "postfix": "PluginList",
+      "definiteArgument": "plugin ls",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Json",
+            "type": "bool",
+            "format": "--json",
+            "help": "Emit output as JSON."
+          },
+          {
+            "name": "Project",
+            "type": "bool",
+            "format": "--project",
+            "help": "List only the plugins used by the current project."
+          }
+        ]
+      }
+    },
+    {
+      "help": "Remove plugins",
+      "postfix": "PluginRemove",
+      "definiteArgument": "plugin rm",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "KindNameVersion",
+            "type": "string",
+            "format": "{value}",
+            "help": "Specify KIND, NAME, and/or VERSION to narrow down what will be removed. If none are specified, the entire cache will be cleared. If only KIND and NAME are specified, but not VERSION, all versions of the plugin with the given KIND and NAME will be removed. VERSION may be a range."
+          },
+          {
+            "name": "All",
+            "type": "bool",
+            "format": "--all",
+            "help": "Remove all plugins."
+          },
+          {
+            "name": "Yes",
+            "type": "bool",
+            "format": "--yes",
+            "help": "Skip confirmation prompts, and proceed with removal anyway."
+          }
+        ]
+      }
+    },
+    {
+      "help": "Show a preview of updates to a stacks resources.",
       "postfix": "Preview",
       "definiteArgument": "preview",
       "settingsClass": {
@@ -344,13 +468,13 @@
             "name": "Config",
             "type": "List<string>",
             "format": "--config {value}",
-            "help": "Config to use during the preview"
+            "help": "Config to use during the preview."
           }
         ]
       }
     },
     {
-      "help": "Manage stacks",
+      "help": "Manage stacks.",
       "postfix": "Stack",
       "commonPropertySets": [
         "stackSelect",
@@ -360,7 +484,7 @@
       "settingsClass": {}
     },
     {
-      "help": "Show a stacks output properties",
+      "help": "Show a stacks output properties.",
       "postfix": "StackOutput",
       "commonPropertySets": [
         "stackSelect",
@@ -373,13 +497,13 @@
             "name": "PropertyName",
             "type": "string",
             "format": "{value}",
-            "help": "Show value of specific property"
+            "help": "Show value of specific property."
           },
           {
             "name": "Json",
             "type": "bool",
             "format": "--json",
-            "help": "Emit output as JSON"
+            "help": "Emit output as JSON."
           }
         ]
       }
@@ -393,7 +517,7 @@
       "help": "Colorize output. Choices are: always, never, raw, auto (default is auto)"
     },
     {
-      "name": "Cwd",
+      "name": "WorkingDirectory",
       "type": "string",
       "format": "--cwd {value}",
       "help": "Run pulumi as if it had been started in another directory"

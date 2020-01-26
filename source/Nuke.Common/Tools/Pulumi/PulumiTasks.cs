@@ -10,6 +10,24 @@ namespace Nuke.Common.Tools.Pulumi
 {
     public partial class PulumiTasks
     {
+        public static void EnsureInstalled()
+        {
+            try
+            {
+                ToolPathResolver.GetPathExecutable("pulumi");
+            }
+            catch (Exception)
+            {
+                if (EnvironmentInfo.IsWin)
+                {
+                    var psScript = @"-NoProfile -InputFormat None -ExecutionPolicy Bypass -Command ""[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; iex ((New-Object System.Net.WebClient).DownloadString('https://get.pulumi.com/install.ps1'))""";
+                    ProcessTasks.StartProcess(ToolPathResolver.GetPathExecutable("powershell"), psScript).AssertZeroExitCode();
+                }
+                else
+                    ProcessTasks.StartProcess(ToolPathResolver.GetPathExecutable("bash"), "curl -fsSL https://get.pulumi.com | sh").AssertZeroExitCode();
+            }
+        }
+
         public static IReadOnlyDictionary<string, object> GetStackOutput(PulumiStackOutputSettings toolSettings = null)
         {
             toolSettings ??= new PulumiStackOutputSettings();
