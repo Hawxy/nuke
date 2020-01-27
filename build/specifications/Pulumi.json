@@ -9,7 +9,7 @@
   "pathExecutable": "pulumi",
   "tasks": [
     {
-      "help": "Cancel a stacks currently running update, if any",
+      "help": "Cancel a stacks currently running update, if any.",
       "postfix": "Cancel",
       "definiteArgument": "cancel",
       "settingsClass": {
@@ -18,19 +18,19 @@
             "name": "Stack",
             "type": "string",
             "format": "{value}",
-            "help": "The name of the stack to operate on. Defaults to the current stack"
+            "help": "The name of the stack to operate on. Defaults to the current stack."
           },
           {
             "name": "Yes",
             "type": "bool",
             "format": "--yes",
-            "help": "Skip confirmation prompts, and proceed with cancellation anyway"
+            "help": "Skip confirmation prompts, and proceed with cancellation anyway."
           }
         ]
       }
     },
     {
-      "help": "Lists all configuration values for a specific stack",
+      "help": "Lists all configuration values for a specific stack.",
       "postfix": "Config",
       "commonPropertySets": [
         "stackSelect",
@@ -42,19 +42,20 @@
           {
             "name": "Json",
             "type": "bool",
-            "format": "--json"
+            "format": "--json",
+            "help": " Emit output as JSON."
           },
           {
             "name": "ShowSecrets",
             "type": "bool",
             "format": "--show-secrets",
-            "help": "Show secret values when listing config instead of displaying blinded values"
+            "help": "Show secret values when listing config instead of displaying blinded values."
           }
         ]
       }
     },
     {
-      "help": "Get a single configuration value",
+      "help": "Get a single configuration value.",
       "postfix": "ConfigGet",
       "commonPropertySets": [
         "stackSelect",
@@ -67,25 +68,25 @@
             "name": "Value",
             "type": "string",
             "format": "{value}",
-            "help": "The configuration value to get"
+            "help": "The configuration value to get."
           },
           {
             "name": "Json",
             "type": "bool",
             "format": "--json",
-            "help": "Emit output as JSON"
+            "help": "Emit output as JSON."
           },
           {
             "name": "Path",
             "type": "string",
             "format": "--path {value}",
-            "help": "The key contains a path to a property in a map or list to get"
+            "help": "The key contains a path to a property in a map or list to get."
           }
         ]
       }
     },
     {
-      "help": "Update the local configuration based on the most recent deployment of the stack",
+      "help": "Update the local configuration based on the most recent deployment of the stack.",
       "postfix": "ConfigRefresh",
       "commonPropertySets": [
         "stackSelect",
@@ -98,13 +99,13 @@
             "name": "Force",
             "type": "bool",
             "format": "--force",
-            "help": "Overwrite configuration file, if it exists, without creating a backup"
+            "help": "Overwrite configuration file, if it exists, without creating a backup."
           }
         ]
       }
     },
     {
-      "help": "Remove configuration value",
+      "help": "Remove configuration value.",
       "postfix": "ConfigRemove",
       "commonPropertySets": [
         "stackSelect",
@@ -117,19 +118,19 @@
             "name": "Value",
             "type": "string",
             "format": "{value}",
-            "help": "The configuration value to remove"
+            "help": "The configuration value to remove."
           },
           {
             "name": "Path",
             "type": "string",
             "format": "--path {value}",
-            "help": "The key contains a path to a property in a map or list to remove"
+            "help": "The key contains a path to a property in a map or list to remove."
           }
         ]
       }
     },
     {
-      "help": "Set configuration value",
+      "help": "Set configuration value.",
       "postfix": "ConfigSet",
       "commonPropertySets": [
         "stackSelect",
@@ -142,31 +143,31 @@
             "name": "Value",
             "type": "string",
             "format": "{value}",
-            "help": "The configuration value to set"
+            "help": "The configuration value to set."
           },
           {
             "name": "Path",
             "type": "string",
             "format": "--path {value}",
-            "help": "The key contains a path to a property in a map or list to set"
+            "help": "The key contains a path to a property in a map or list to set."
           },
           {
             "name": "Plaintext",
             "type": "bool",
             "format": "--plaintext",
-            "help": "Save the value as plaintext (unencrypted)"
+            "help": "Save the value as plaintext (unencrypted)."
           },
           {
             "name": "Secret",
             "type": "bool",
             "format": "--secret",
-            "help": "Encrypt the value instead of storing it in plaintext"
+            "help": "Encrypt the value instead of storing it in plaintext."
           }
         ]
       }
     },
     {
-      "help": "Destroy an existing stack and its resources. Warning: this command is generally irreversible and should be used with great care",
+      "help": "Destroy an existing stack and its resources. Warning: this command is generally irreversible and should be used with great care.",
       "postfix": "Destroy",
       "commonPropertySets": [
         "stackSelect",
@@ -179,85 +180,85 @@
             "name": "Debug",
             "type": "bool",
             "format": "--debug",
-            "help": "Print detailed debugging output during resource operations"
+            "help": "Print detailed debugging output during resource operations."
           },
           {
             "name": "Diff",
             "type": "bool",
             "format": "--diff",
-            "help": "Display operation as a rich diff showing the overall change"
+            "help": "Display operation as a rich diff showing the overall change."
           },
           {
             "name": "Message",
             "type": "string",
             "format": "--message {value}",
-            "help": "Optional message to associate with the destroy operation"
+            "help": "Optional message to associate with the destroy operation."
           },
           {
             "name": "Parallel",
             "type": "int",
             "format": "--parallel {value}",
-            "help": "Allow P resource operations to run in parallel at once (1 for no parallelism). Defaults to unbounded. (default 2147483647)"
+            "help": "Allow P resource operations to run in parallel at once (1 for no parallelism). Defaults to unbounded. (default 2147483647)."
           },
           {
             "name": "Refresh",
             "type": "bool",
             "format": "--refresh",
-            "help": "Refresh the state of the stack's resources before this update"
+            "help": "Refresh the state of the stack's resources before this update."
           },
           {
             "name": "ShowConfig",
             "type": "bool",
             "format": "--show-config",
-            "help": "Show configuration keys and variables"
+            "help": "Show configuration keys and variables."
           },
           {
             "name": "ShowReplacementSteps",
             "type": "bool",
             "format": "--show-replacement-steps",
-            "help": "Show detailed resource replacement creates and deletes instead of a single step"
+            "help": "Show detailed resource replacement creates and deletes instead of a single step."
           },
           {
             "name": "ShowSames",
             "type": "bool",
             "format": "--show-sames",
-            "help": "Show resources that don't need to be updated because they haven't changed, alongside those that do"
+            "help": "Show resources that don't need to be updated because they haven't changed, alongside those that do."
           },
           {
             "name": "SkipPreview",
             "type": "bool",
             "format": "--skip-preview",
-            "help": "Do not perform a preview before performing the destroy"
+            "help": "Do not perform a preview before performing the destroy."
           },
           {
-            "name": "SupressOutputs",
+            "name": "SuppressOutputs",
             "type": "bool",
-            "format": "--supress-outputs",
-            "help": "Suppress display of stack outputs (in case they contain sensitive values)"
+            "format": "--suppress-outputs",
+            "help": "Suppress display of stack outputs (in case they contain sensitive values)."
           },
           {
             "name": "Target",
             "type": "string",
             "format": "--target {value}",
-            "help": "Specify a single resource URN to destroy. All resources necessary to destroy this target will also be destroyed. Multiple resources can be specified using: --target urn1 --target urn2"
+            "help": "Specify a single resource URN to destroy. All resources necessary to destroy this target will also be destroyed. Multiple resources can be specified using: --target urn1 --target urn2."
           },
           {
             "name": "TargetDependents",
             "type": "bool",
             "format": "--target-dependents {value}",
-            "help": "Allows destroying of dependent targets discovered but not specified in --target list"
+            "help": "Allows destroying of dependent targets discovered but not specified in --target list."
           },
           {
             "name": "Yes",
             "type": "bool",
             "format": "--yes",
-            "help": "Automatically approve and perform the destroy after previewing it"
+            "help": "Automatically approve and perform the destroy after previewing it."
           }
         ]
       }
     },
     {
-      "help": "Update history for a stack",
+      "help": "Update history for a stack.",
       "postfix": "History",
       "commonPropertySets": [
         "stackSelect"
@@ -269,19 +270,19 @@
             "name": "Json",
             "type": "bool",
             "format": "--json",
-            "help": "Emit output as JSON"
+            "help": "Emit output as JSON."
           },
           {
             "name": "ShowSecrets",
             "type": "bool",
             "format": "--show-secrets",
-            "help": "Show secret values when listing config instead of displaying blinded values"
+            "help": "Show secret values when listing config instead of displaying blinded values."
           }
         ]
       }
     },
     {
-      "help": "Log onto the Pulumi stack. For CI/CD scenarios, an env variable of <c>PULUMI_ACCESS_TOKEN</c> should be set",
+      "help": "Log onto the Pulumi stack. For CI/CD scenarios, an env variable of <c>PULUMI_ACCESS_TOKEN</c> should be set.",
       "postfix": "Login",
       "definiteArgument": "login",
       "settingsClass": {
@@ -290,25 +291,25 @@
             "name": "Location",
             "type": "string",
             "format": "{value}",
-            "help": "Specify a URL or a local/cloud path to the Pulumi instance you wish to use. Defaults to app.pulumi.com"
+            "help": "Specify a URL or a local/cloud path to the Pulumi instance you wish to use. Defaults to app.pulumi.com."
           },
           {
             "name": "CloudUrl",
             "type": "string",
             "format": "--cloud-url {value}",
-            "help": "A cloud URL to log into. This is the same as specifying a location"
+            "help": "A cloud URL to log into. This is the same as specifying a location."
           },
           {
             "name": "Local",
             "type": "bool",
             "format": "--local",
-            "help": "Use Pulumi in local-only mode"
+            "help": "Use Pulumi in local-only mode."
           }
         ]
       }
     },
     {
-      "help": "Log out of the Pulumi service",
+      "help": "Log out of the Pulumi service.",
       "postfix": "Logout",
       "definiteArgument": "logout",
       "settingsClass": {
@@ -323,19 +324,19 @@
             "name": "CloudUrl",
             "type": "string",
             "format": "--cloud-url {value}",
-            "help": " A cloud URL to log out of (defaults to current cloud). This is the same as specifying a location"
+            "help": " A cloud URL to log out of (defaults to current cloud). This is the same as specifying a location."
           },
           {
             "name": "Local",
             "type": "bool",
             "format": "--local",
-            "help": "Log out of using local mode"
+            "help": "Log out of using local mode."
           }
         ]
       }
     },
     {
-      "help": "Show aggregated logs for a stack",
+      "help": "Show aggregated logs for a stack.",
       "postfix": "Logs",
       "commonPropertySets": [
         "stackSelect",
@@ -372,7 +373,7 @@
       }
     },
     {
-      "help": "Install one or more plugins",
+      "help": "Install one or more plugins.",
       "postfix": "PluginInstall",
       "definiteArgument": "plugin install",
       "settingsClass": {
@@ -411,7 +412,7 @@
       }
     },
     {
-      "help": "List plugins",
+      "help": "List plugins.",
       "postfix": "PluginList",
       "definiteArgument": "plugin ls",
       "settingsClass": {
@@ -432,7 +433,7 @@
       }
     },
     {
-      "help": "Remove plugins",
+      "help": "Remove plugins.",
       "postfix": "PluginRemove",
       "definiteArgument": "plugin rm",
       "settingsClass": {
@@ -459,8 +460,12 @@
       }
     },
     {
-      "help": "Show a preview of updates to a stacks resources.",
+      "help": "Show a preview of updates to a stack's resources.",
       "postfix": "Preview",
+      "commonPropertySets": [
+        "stackSelect",
+        "configFile"
+      ],
       "definiteArgument": "preview",
       "settingsClass": {
         "properties": [
@@ -468,7 +473,181 @@
             "name": "Config",
             "type": "List<string>",
             "format": "--config {value}",
+            "separator": ",",
             "help": "Config to use during the preview."
+          },
+          {
+            "name": "ConfigPath",
+            "type": "bool",
+            "format": "--config-path",
+            "help": "Config keys contain a path to a property in a map or list to set."
+          },
+          {
+            "name": "Debug",
+            "type": "bool",
+            "format": "--debug",
+            "help": "Print detailed debugging output during resource operations."
+          },
+          {
+            "name": "Diff",
+            "type": "bool",
+            "format": "--diff",
+            "help": "Display operation as a rich diff showing the overall chang.e"
+          },
+          {
+            "name": "ExpectNoChanges",
+            "type": "bool",
+            "format": "--expect-no-changes",
+            "help": "Return an error if any changes are proposed by this preview."
+          },
+          {
+            "name": "Json",
+            "type": "bool",
+            "format": "--json",
+            "help": "Serialize the preview diffs, operations, and overall output as JSON."
+          },
+          {
+            "name": "Message",
+            "type": "string",
+            "format": "--message {value}",
+            "help": "Optional message to associate with the preview operation."
+          },
+          {
+            "name": "Parallel",
+            "type": "int",
+            "format": "--parallel {value}",
+            "help": "Allow P resource operations to run in parallel at once (1 for no parallelism). Defaults to unbounded. (default 2147483647)."
+          },
+          {
+            "name": "Refresh",
+            "type": "bool",
+            "format": "--refresh",
+            "help": "Refresh the state of the stack's resources before this update."
+          },
+          {
+            "name": "Replace",
+            "type": "List<string>",
+            "format": "--replace",
+            "separator": ",",
+            "help": "Refresh the state of the stack's resources before this update."
+          },
+          {
+            "name": "ShowConfig",
+            "type": "bool",
+            "format": "--show-config",
+            "help": "Show configuration keys and variables."
+          },
+          {
+            "name": "ShowReplacementSteps",
+            "type": "bool",
+            "format": "--show-replacement-steps",
+            "help": "Show detailed resource replacement creates and deletes instead of a single step."
+          },
+          {
+            "name": "ShowSames",
+            "type": "bool",
+            "format": "--show-sames",
+            "help": "Show resources that don't need to be updated because they haven't changed, alongside those that do."
+          },
+          {
+            "name": "SuppressOutputs",
+            "type": "bool",
+            "format": "--suppress-outputs",
+            "help": "Suppress display of stack outputs (in case they contain sensitive values)."
+          },
+          {
+            "name": "Target",
+            "type": "List<string>",
+            "format": "--target {value}",
+            "separator": ",",
+            "help": "Specify a single resource URN to update. Other resources will not be updated. Multiple resources can be specified using --target urn1 --target urn2."
+          },
+          {
+            "name": "TargetDependents",
+            "type": "bool",
+            "format": "--target-dependents {value}",
+            "help": "Allows updating of dependent targets discovered but not specified in --target list."
+          },
+          {
+            "name": "TargetReplace",
+            "type": "List<string>",
+            "format": "--target-replace {value}",
+            "separator": ",",
+            "help": "Specify a single resource URN to replace. Other resources will not be updated. Shorthand for --target urn --replace urn."
+          }
+        ]
+      }
+    },
+    {
+      "help": "Refresh the resources in a stack.",
+      "postfix": "Refresh",
+      "commonPropertySets": [
+        "stackSelect",
+        "configFile"
+      ],
+      "definiteArgument": "preview",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Debug",
+            "type": "bool",
+            "format": "--debug",
+            "help": "Print detailed debugging output during resource operations."
+          },
+          {
+            "name": "Diff",
+            "type": "bool",
+            "format": "--diff",
+            "help": "Display operation as a rich diff showing the overall change."
+          },
+          {
+            "name": "ExpectNoChanges",
+            "type": "bool",
+            "format": "--expect-no-changes",
+            "help": "Return an error if any changes occur during this update."
+          },
+          {
+            "name": "Message",
+            "type": "string",
+            "format": "--message {value}",
+            "help": "Optional message to associate with the update operation."
+          },
+          {
+            "name": "Parallel",
+            "type": "int",
+            "format": "--parallel {value}",
+            "help": "Allow P resource operations to run in parallel at once (1 for no parallelism). Defaults to unbounded. (default 2147483647)."
+          },
+          {
+            "name": "ShowReplacementSteps",
+            "type": "bool",
+            "format": "--show-replacement-steps",
+            "help": "Show detailed resource replacement creates and deletes instead of a single step."
+          },
+          {
+            "name": "ShowSames",
+            "type": "bool",
+            "format": "--show-sames",
+            "help": "Show resources that don't need to be updated because they haven't changed, alongside those that do."
+          },
+          {
+            "name": "SuppressOutputs",
+            "type": "bool",
+            "format": "--suppress-outputs",
+            "help": "Suppress display of stack outputs (in case they contain sensitive values)."
+          },
+          {
+            "name": "Target",
+            "type": "List<string>",
+            "format": "--target {value}",
+            "separator": ",",
+            "help": "Specify a single resource URN to refresh. Multiple resources can be specified using --target urn1 --target urn2."
+          },
+          {
+            "name": "Yes",
+            "type": "bool",
+            "format": "--yes",
+            "help": "Automatically approve and perform the refresh after previewing it."
           }
         ]
       }

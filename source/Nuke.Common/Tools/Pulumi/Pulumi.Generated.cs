@@ -44,7 +44,7 @@ namespace Nuke.Common.Tools.Pulumi
             return process.Output;
         }
         /// <summary>
-        ///   <p>Cancel a stacks currently running update, if any</p>
+        ///   <p>Cancel a stacks currently running update, if any.</p>
         ///   <p>For more details, visit the <a href="https://www.pulumi.com/">official website</a>.</p>
         /// </summary>
         /// <remarks>
@@ -73,7 +73,7 @@ namespace Nuke.Common.Tools.Pulumi
             return process.Output;
         }
         /// <summary>
-        ///   <p>Cancel a stacks currently running update, if any</p>
+        ///   <p>Cancel a stacks currently running update, if any.</p>
         ///   <p>For more details, visit the <a href="https://www.pulumi.com/">official website</a>.</p>
         /// </summary>
         /// <remarks>
@@ -99,7 +99,7 @@ namespace Nuke.Common.Tools.Pulumi
             return PulumiCancel(configurator(new PulumiCancelSettings()));
         }
         /// <summary>
-        ///   <p>Cancel a stacks currently running update, if any</p>
+        ///   <p>Cancel a stacks currently running update, if any.</p>
         ///   <p>For more details, visit the <a href="https://www.pulumi.com/">official website</a>.</p>
         /// </summary>
         /// <remarks>
@@ -125,7 +125,7 @@ namespace Nuke.Common.Tools.Pulumi
             return configurator.Invoke(PulumiCancel, PulumiLogger, degreeOfParallelism, completeOnFailure);
         }
         /// <summary>
-        ///   <p>Lists all configuration values for a specific stack</p>
+        ///   <p>Lists all configuration values for a specific stack.</p>
         ///   <p>For more details, visit the <a href="https://www.pulumi.com/">official website</a>.</p>
         /// </summary>
         /// <remarks>
@@ -156,7 +156,7 @@ namespace Nuke.Common.Tools.Pulumi
             return process.Output;
         }
         /// <summary>
-        ///   <p>Lists all configuration values for a specific stack</p>
+        ///   <p>Lists all configuration values for a specific stack.</p>
         ///   <p>For more details, visit the <a href="https://www.pulumi.com/">official website</a>.</p>
         /// </summary>
         /// <remarks>
@@ -184,7 +184,7 @@ namespace Nuke.Common.Tools.Pulumi
             return PulumiConfig(configurator(new PulumiConfigSettings()));
         }
         /// <summary>
-        ///   <p>Lists all configuration values for a specific stack</p>
+        ///   <p>Lists all configuration values for a specific stack.</p>
         ///   <p>For more details, visit the <a href="https://www.pulumi.com/">official website</a>.</p>
         /// </summary>
         /// <remarks>
@@ -212,7 +212,7 @@ namespace Nuke.Common.Tools.Pulumi
             return configurator.Invoke(PulumiConfig, PulumiLogger, degreeOfParallelism, completeOnFailure);
         }
         /// <summary>
-        ///   <p>Get a single configuration value</p>
+        ///   <p>Get a single configuration value.</p>
         ///   <p>For more details, visit the <a href="https://www.pulumi.com/">official website</a>.</p>
         /// </summary>
         /// <remarks>
@@ -244,7 +244,7 @@ namespace Nuke.Common.Tools.Pulumi
             return process.Output;
         }
         /// <summary>
-        ///   <p>Get a single configuration value</p>
+        ///   <p>Get a single configuration value.</p>
         ///   <p>For more details, visit the <a href="https://www.pulumi.com/">official website</a>.</p>
         /// </summary>
         /// <remarks>
@@ -273,7 +273,7 @@ namespace Nuke.Common.Tools.Pulumi
             return PulumiConfigGet(configurator(new PulumiConfigGetSettings()));
         }
         /// <summary>
-        ///   <p>Get a single configuration value</p>
+        ///   <p>Get a single configuration value.</p>
         ///   <p>For more details, visit the <a href="https://www.pulumi.com/">official website</a>.</p>
         /// </summary>
         /// <remarks>
@@ -302,7 +302,7 @@ namespace Nuke.Common.Tools.Pulumi
             return configurator.Invoke(PulumiConfigGet, PulumiLogger, degreeOfParallelism, completeOnFailure);
         }
         /// <summary>
-        ///   <p>Update the local configuration based on the most recent deployment of the stack</p>
+        ///   <p>Update the local configuration based on the most recent deployment of the stack.</p>
         ///   <p>For more details, visit the <a href="https://www.pulumi.com/">official website</a>.</p>
         /// </summary>
         /// <remarks>
@@ -332,7 +332,7 @@ namespace Nuke.Common.Tools.Pulumi
             return process.Output;
         }
         /// <summary>
-        ///   <p>Update the local configuration based on the most recent deployment of the stack</p>
+        ///   <p>Update the local configuration based on the most recent deployment of the stack.</p>
         ///   <p>For more details, visit the <a href="https://www.pulumi.com/">official website</a>.</p>
         /// </summary>
         /// <remarks>
@@ -359,7 +359,7 @@ namespace Nuke.Common.Tools.Pulumi
             return PulumiConfigRefresh(configurator(new PulumiConfigRefreshSettings()));
         }
         /// <summary>
-        ///   <p>Update the local configuration based on the most recent deployment of the stack</p>
+        ///   <p>Update the local configuration based on the most recent deployment of the stack.</p>
         ///   <p>For more details, visit the <a href="https://www.pulumi.com/">official website</a>.</p>
         /// </summary>
         /// <remarks>
@@ -386,7 +386,7 @@ namespace Nuke.Common.Tools.Pulumi
             return configurator.Invoke(PulumiConfigRefresh, PulumiLogger, degreeOfParallelism, completeOnFailure);
         }
         /// <summary>
-        ///   <p>Remove configuration value</p>
+        ///   <p>Remove configuration value.</p>
         ///   <p>For more details, visit the <a href="https://www.pulumi.com/">official website</a>.</p>
         /// </summary>
         /// <remarks>
@@ -417,7 +417,7 @@ namespace Nuke.Common.Tools.Pulumi
             return process.Output;
         }
         /// <summary>
-        ///   <p>Remove configuration value</p>
+        ///   <p>Remove configuration value.</p>
         ///   <p>For more details, visit the <a href="https://www.pulumi.com/">official website</a>.</p>
         /// </summary>
         /// <remarks>
@@ -445,7 +445,7 @@ namespace Nuke.Common.Tools.Pulumi
             return PulumiConfigRemove(configurator(new PulumiConfigRemoveSettings()));
         }
         /// <summary>
-        ///   <p>Remove configuration value</p>
+        ///   <p>Remove configuration value.</p>
         ///   <p>For more details, visit the <a href="https://www.pulumi.com/">official website</a>.</p>
         /// </summary>
         /// <remarks>
@@ -473,7 +473,7 @@ namespace Nuke.Common.Tools.Pulumi
             return configurator.Invoke(PulumiConfigRemove, PulumiLogger, degreeOfParallelism, completeOnFailure);
         }
         /// <summary>
-        ///   <p>Set configuration value</p>
+        ///   <p>Set configuration value.</p>
         ///   <p>For more details, visit the <a href="https://www.pulumi.com/">official website</a>.</p>
         /// </summary>
         /// <remarks>
@@ -506,7 +506,7 @@ namespace Nuke.Common.Tools.Pulumi
             return process.Output;
         }
         /// <summary>
-        ///   <p>Set configuration value</p>
+        ///   <p>Set configuration value.</p>
         ///   <p>For more details, visit the <a href="https://www.pulumi.com/">official website</a>.</p>
         /// </summary>
         /// <remarks>
@@ -536,7 +536,7 @@ namespace Nuke.Common.Tools.Pulumi
             return PulumiConfigSet(configurator(new PulumiConfigSetSettings()));
         }
         /// <summary>
-        ///   <p>Set configuration value</p>
+        ///   <p>Set configuration value.</p>
         ///   <p>For more details, visit the <a href="https://www.pulumi.com/">official website</a>.</p>
         /// </summary>
         /// <remarks>
@@ -566,7 +566,7 @@ namespace Nuke.Common.Tools.Pulumi
             return configurator.Invoke(PulumiConfigSet, PulumiLogger, degreeOfParallelism, completeOnFailure);
         }
         /// <summary>
-        ///   <p>Destroy an existing stack and its resources. Warning: this command is generally irreversible and should be used with great care</p>
+        ///   <p>Destroy an existing stack and its resources. Warning: this command is generally irreversible and should be used with great care.</p>
         ///   <p>For more details, visit the <a href="https://www.pulumi.com/">official website</a>.</p>
         /// </summary>
         /// <remarks>
@@ -592,7 +592,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///     <li><c>--show-sames</c> via <see cref="PulumiDestroySettings.ShowSames"/></li>
         ///     <li><c>--skip-preview</c> via <see cref="PulumiDestroySettings.SkipPreview"/></li>
         ///     <li><c>--stack</c> via <see cref="PulumiDestroySettings.Stack"/></li>
-        ///     <li><c>--supress-outputs</c> via <see cref="PulumiDestroySettings.SupressOutputs"/></li>
+        ///     <li><c>--suppress-outputs</c> via <see cref="PulumiDestroySettings.SuppressOutputs"/></li>
         ///     <li><c>--target</c> via <see cref="PulumiDestroySettings.Target"/></li>
         ///     <li><c>--target-dependents</c> via <see cref="PulumiDestroySettings.TargetDependents"/></li>
         ///     <li><c>--tracing</c> via <see cref="PulumiDestroySettings.Tracing"/></li>
@@ -608,7 +608,7 @@ namespace Nuke.Common.Tools.Pulumi
             return process.Output;
         }
         /// <summary>
-        ///   <p>Destroy an existing stack and its resources. Warning: this command is generally irreversible and should be used with great care</p>
+        ///   <p>Destroy an existing stack and its resources. Warning: this command is generally irreversible and should be used with great care.</p>
         ///   <p>For more details, visit the <a href="https://www.pulumi.com/">official website</a>.</p>
         /// </summary>
         /// <remarks>
@@ -634,7 +634,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///     <li><c>--show-sames</c> via <see cref="PulumiDestroySettings.ShowSames"/></li>
         ///     <li><c>--skip-preview</c> via <see cref="PulumiDestroySettings.SkipPreview"/></li>
         ///     <li><c>--stack</c> via <see cref="PulumiDestroySettings.Stack"/></li>
-        ///     <li><c>--supress-outputs</c> via <see cref="PulumiDestroySettings.SupressOutputs"/></li>
+        ///     <li><c>--suppress-outputs</c> via <see cref="PulumiDestroySettings.SuppressOutputs"/></li>
         ///     <li><c>--target</c> via <see cref="PulumiDestroySettings.Target"/></li>
         ///     <li><c>--target-dependents</c> via <see cref="PulumiDestroySettings.TargetDependents"/></li>
         ///     <li><c>--tracing</c> via <see cref="PulumiDestroySettings.Tracing"/></li>
@@ -647,7 +647,7 @@ namespace Nuke.Common.Tools.Pulumi
             return PulumiDestroy(configurator(new PulumiDestroySettings()));
         }
         /// <summary>
-        ///   <p>Destroy an existing stack and its resources. Warning: this command is generally irreversible and should be used with great care</p>
+        ///   <p>Destroy an existing stack and its resources. Warning: this command is generally irreversible and should be used with great care.</p>
         ///   <p>For more details, visit the <a href="https://www.pulumi.com/">official website</a>.</p>
         /// </summary>
         /// <remarks>
@@ -673,7 +673,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///     <li><c>--show-sames</c> via <see cref="PulumiDestroySettings.ShowSames"/></li>
         ///     <li><c>--skip-preview</c> via <see cref="PulumiDestroySettings.SkipPreview"/></li>
         ///     <li><c>--stack</c> via <see cref="PulumiDestroySettings.Stack"/></li>
-        ///     <li><c>--supress-outputs</c> via <see cref="PulumiDestroySettings.SupressOutputs"/></li>
+        ///     <li><c>--suppress-outputs</c> via <see cref="PulumiDestroySettings.SuppressOutputs"/></li>
         ///     <li><c>--target</c> via <see cref="PulumiDestroySettings.Target"/></li>
         ///     <li><c>--target-dependents</c> via <see cref="PulumiDestroySettings.TargetDependents"/></li>
         ///     <li><c>--tracing</c> via <see cref="PulumiDestroySettings.Tracing"/></li>
@@ -686,7 +686,7 @@ namespace Nuke.Common.Tools.Pulumi
             return configurator.Invoke(PulumiDestroy, PulumiLogger, degreeOfParallelism, completeOnFailure);
         }
         /// <summary>
-        ///   <p>Update history for a stack</p>
+        ///   <p>Update history for a stack.</p>
         ///   <p>For more details, visit the <a href="https://www.pulumi.com/">official website</a>.</p>
         /// </summary>
         /// <remarks>
@@ -716,7 +716,7 @@ namespace Nuke.Common.Tools.Pulumi
             return process.Output;
         }
         /// <summary>
-        ///   <p>Update history for a stack</p>
+        ///   <p>Update history for a stack.</p>
         ///   <p>For more details, visit the <a href="https://www.pulumi.com/">official website</a>.</p>
         /// </summary>
         /// <remarks>
@@ -743,7 +743,7 @@ namespace Nuke.Common.Tools.Pulumi
             return PulumiHistory(configurator(new PulumiHistorySettings()));
         }
         /// <summary>
-        ///   <p>Update history for a stack</p>
+        ///   <p>Update history for a stack.</p>
         ///   <p>For more details, visit the <a href="https://www.pulumi.com/">official website</a>.</p>
         /// </summary>
         /// <remarks>
@@ -770,7 +770,7 @@ namespace Nuke.Common.Tools.Pulumi
             return configurator.Invoke(PulumiHistory, PulumiLogger, degreeOfParallelism, completeOnFailure);
         }
         /// <summary>
-        ///   <p>Log onto the Pulumi stack. For CI/CD scenarios, an env variable of <c>PULUMI_ACCESS_TOKEN</c> should be set</p>
+        ///   <p>Log onto the Pulumi stack. For CI/CD scenarios, an env variable of <c>PULUMI_ACCESS_TOKEN</c> should be set.</p>
         ///   <p>For more details, visit the <a href="https://www.pulumi.com/">official website</a>.</p>
         /// </summary>
         /// <remarks>
@@ -800,7 +800,7 @@ namespace Nuke.Common.Tools.Pulumi
             return process.Output;
         }
         /// <summary>
-        ///   <p>Log onto the Pulumi stack. For CI/CD scenarios, an env variable of <c>PULUMI_ACCESS_TOKEN</c> should be set</p>
+        ///   <p>Log onto the Pulumi stack. For CI/CD scenarios, an env variable of <c>PULUMI_ACCESS_TOKEN</c> should be set.</p>
         ///   <p>For more details, visit the <a href="https://www.pulumi.com/">official website</a>.</p>
         /// </summary>
         /// <remarks>
@@ -827,7 +827,7 @@ namespace Nuke.Common.Tools.Pulumi
             return PulumiLogin(configurator(new PulumiLoginSettings()));
         }
         /// <summary>
-        ///   <p>Log onto the Pulumi stack. For CI/CD scenarios, an env variable of <c>PULUMI_ACCESS_TOKEN</c> should be set</p>
+        ///   <p>Log onto the Pulumi stack. For CI/CD scenarios, an env variable of <c>PULUMI_ACCESS_TOKEN</c> should be set.</p>
         ///   <p>For more details, visit the <a href="https://www.pulumi.com/">official website</a>.</p>
         /// </summary>
         /// <remarks>
@@ -854,7 +854,7 @@ namespace Nuke.Common.Tools.Pulumi
             return configurator.Invoke(PulumiLogin, PulumiLogger, degreeOfParallelism, completeOnFailure);
         }
         /// <summary>
-        ///   <p>Log out of the Pulumi service</p>
+        ///   <p>Log out of the Pulumi service.</p>
         ///   <p>For more details, visit the <a href="https://www.pulumi.com/">official website</a>.</p>
         /// </summary>
         /// <remarks>
@@ -884,7 +884,7 @@ namespace Nuke.Common.Tools.Pulumi
             return process.Output;
         }
         /// <summary>
-        ///   <p>Log out of the Pulumi service</p>
+        ///   <p>Log out of the Pulumi service.</p>
         ///   <p>For more details, visit the <a href="https://www.pulumi.com/">official website</a>.</p>
         /// </summary>
         /// <remarks>
@@ -911,7 +911,7 @@ namespace Nuke.Common.Tools.Pulumi
             return PulumiLogout(configurator(new PulumiLogoutSettings()));
         }
         /// <summary>
-        ///   <p>Log out of the Pulumi service</p>
+        ///   <p>Log out of the Pulumi service.</p>
         ///   <p>For more details, visit the <a href="https://www.pulumi.com/">official website</a>.</p>
         /// </summary>
         /// <remarks>
@@ -938,7 +938,7 @@ namespace Nuke.Common.Tools.Pulumi
             return configurator.Invoke(PulumiLogout, PulumiLogger, degreeOfParallelism, completeOnFailure);
         }
         /// <summary>
-        ///   <p>Show aggregated logs for a stack</p>
+        ///   <p>Show aggregated logs for a stack.</p>
         ///   <p>For more details, visit the <a href="https://www.pulumi.com/">official website</a>.</p>
         /// </summary>
         /// <remarks>
@@ -971,7 +971,7 @@ namespace Nuke.Common.Tools.Pulumi
             return process.Output;
         }
         /// <summary>
-        ///   <p>Show aggregated logs for a stack</p>
+        ///   <p>Show aggregated logs for a stack.</p>
         ///   <p>For more details, visit the <a href="https://www.pulumi.com/">official website</a>.</p>
         /// </summary>
         /// <remarks>
@@ -1001,7 +1001,7 @@ namespace Nuke.Common.Tools.Pulumi
             return PulumiLogs(configurator(new PulumiLogsSettings()));
         }
         /// <summary>
-        ///   <p>Show aggregated logs for a stack</p>
+        ///   <p>Show aggregated logs for a stack.</p>
         ///   <p>For more details, visit the <a href="https://www.pulumi.com/">official website</a>.</p>
         /// </summary>
         /// <remarks>
@@ -1031,7 +1031,7 @@ namespace Nuke.Common.Tools.Pulumi
             return configurator.Invoke(PulumiLogs, PulumiLogger, degreeOfParallelism, completeOnFailure);
         }
         /// <summary>
-        ///   <p>Install one or more plugins</p>
+        ///   <p>Install one or more plugins.</p>
         ///   <p>For more details, visit the <a href="https://www.pulumi.com/">official website</a>.</p>
         /// </summary>
         /// <remarks>
@@ -1063,7 +1063,7 @@ namespace Nuke.Common.Tools.Pulumi
             return process.Output;
         }
         /// <summary>
-        ///   <p>Install one or more plugins</p>
+        ///   <p>Install one or more plugins.</p>
         ///   <p>For more details, visit the <a href="https://www.pulumi.com/">official website</a>.</p>
         /// </summary>
         /// <remarks>
@@ -1092,7 +1092,7 @@ namespace Nuke.Common.Tools.Pulumi
             return PulumiPluginInstall(configurator(new PulumiPluginInstallSettings()));
         }
         /// <summary>
-        ///   <p>Install one or more plugins</p>
+        ///   <p>Install one or more plugins.</p>
         ///   <p>For more details, visit the <a href="https://www.pulumi.com/">official website</a>.</p>
         /// </summary>
         /// <remarks>
@@ -1121,7 +1121,7 @@ namespace Nuke.Common.Tools.Pulumi
             return configurator.Invoke(PulumiPluginInstall, PulumiLogger, degreeOfParallelism, completeOnFailure);
         }
         /// <summary>
-        ///   <p>List plugins</p>
+        ///   <p>List plugins.</p>
         ///   <p>For more details, visit the <a href="https://www.pulumi.com/">official website</a>.</p>
         /// </summary>
         /// <remarks>
@@ -1150,7 +1150,7 @@ namespace Nuke.Common.Tools.Pulumi
             return process.Output;
         }
         /// <summary>
-        ///   <p>List plugins</p>
+        ///   <p>List plugins.</p>
         ///   <p>For more details, visit the <a href="https://www.pulumi.com/">official website</a>.</p>
         /// </summary>
         /// <remarks>
@@ -1176,7 +1176,7 @@ namespace Nuke.Common.Tools.Pulumi
             return PulumiPluginList(configurator(new PulumiPluginListSettings()));
         }
         /// <summary>
-        ///   <p>List plugins</p>
+        ///   <p>List plugins.</p>
         ///   <p>For more details, visit the <a href="https://www.pulumi.com/">official website</a>.</p>
         /// </summary>
         /// <remarks>
@@ -1202,7 +1202,7 @@ namespace Nuke.Common.Tools.Pulumi
             return configurator.Invoke(PulumiPluginList, PulumiLogger, degreeOfParallelism, completeOnFailure);
         }
         /// <summary>
-        ///   <p>Remove plugins</p>
+        ///   <p>Remove plugins.</p>
         ///   <p>For more details, visit the <a href="https://www.pulumi.com/">official website</a>.</p>
         /// </summary>
         /// <remarks>
@@ -1232,7 +1232,7 @@ namespace Nuke.Common.Tools.Pulumi
             return process.Output;
         }
         /// <summary>
-        ///   <p>Remove plugins</p>
+        ///   <p>Remove plugins.</p>
         ///   <p>For more details, visit the <a href="https://www.pulumi.com/">official website</a>.</p>
         /// </summary>
         /// <remarks>
@@ -1259,7 +1259,7 @@ namespace Nuke.Common.Tools.Pulumi
             return PulumiPluginRemove(configurator(new PulumiPluginRemoveSettings()));
         }
         /// <summary>
-        ///   <p>Remove plugins</p>
+        ///   <p>Remove plugins.</p>
         ///   <p>For more details, visit the <a href="https://www.pulumi.com/">official website</a>.</p>
         /// </summary>
         /// <remarks>
@@ -1286,7 +1286,7 @@ namespace Nuke.Common.Tools.Pulumi
             return configurator.Invoke(PulumiPluginRemove, PulumiLogger, degreeOfParallelism, completeOnFailure);
         }
         /// <summary>
-        ///   <p>Show a preview of updates to a stacks resources.</p>
+        ///   <p>Show a preview of updates to a stack's resources.</p>
         ///   <p>For more details, visit the <a href="https://www.pulumi.com/">official website</a>.</p>
         /// </summary>
         /// <remarks>
@@ -1294,14 +1294,32 @@ namespace Nuke.Common.Tools.Pulumi
         ///   <ul>
         ///     <li><c>--color</c> via <see cref="PulumiPreviewSettings.Color"/></li>
         ///     <li><c>--config</c> via <see cref="PulumiPreviewSettings.Config"/></li>
+        ///     <li><c>--config-file</c> via <see cref="PulumiPreviewSettings.ConfigFile"/></li>
+        ///     <li><c>--config-path</c> via <see cref="PulumiPreviewSettings.ConfigPath"/></li>
         ///     <li><c>--cwd</c> via <see cref="PulumiPreviewSettings.WorkingDirectory"/></li>
+        ///     <li><c>--debug</c> via <see cref="PulumiPreviewSettings.Debug"/></li>
+        ///     <li><c>--diff</c> via <see cref="PulumiPreviewSettings.Diff"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiPreviewSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiPreviewSettings.Emoji"/></li>
+        ///     <li><c>--expect-no-changes</c> via <see cref="PulumiPreviewSettings.ExpectNoChanges"/></li>
         ///     <li><c>--help</c> via <see cref="PulumiPreviewSettings.Help"/></li>
+        ///     <li><c>--json</c> via <see cref="PulumiPreviewSettings.Json"/></li>
         ///     <li><c>--logflow</c> via <see cref="PulumiPreviewSettings.LogFlow"/></li>
         ///     <li><c>--logtostderr</c> via <see cref="PulumiPreviewSettings.LogToStderr"/></li>
+        ///     <li><c>--message</c> via <see cref="PulumiPreviewSettings.Message"/></li>
         ///     <li><c>--non-interactive</c> via <see cref="PulumiPreviewSettings.NonInteractive"/></li>
+        ///     <li><c>--parallel</c> via <see cref="PulumiPreviewSettings.Parallel"/></li>
         ///     <li><c>--profiling</c> via <see cref="PulumiPreviewSettings.Profiling"/></li>
+        ///     <li><c>--refresh</c> via <see cref="PulumiPreviewSettings.Refresh"/></li>
+        ///     <li><c>--replace</c> via <see cref="PulumiPreviewSettings.Replace"/></li>
+        ///     <li><c>--show-config</c> via <see cref="PulumiPreviewSettings.ShowConfig"/></li>
+        ///     <li><c>--show-replacement-steps</c> via <see cref="PulumiPreviewSettings.ShowReplacementSteps"/></li>
+        ///     <li><c>--show-sames</c> via <see cref="PulumiPreviewSettings.ShowSames"/></li>
+        ///     <li><c>--stack</c> via <see cref="PulumiPreviewSettings.Stack"/></li>
+        ///     <li><c>--suppress-outputs</c> via <see cref="PulumiPreviewSettings.SuppressOutputs"/></li>
+        ///     <li><c>--target</c> via <see cref="PulumiPreviewSettings.Target"/></li>
+        ///     <li><c>--target-dependents</c> via <see cref="PulumiPreviewSettings.TargetDependents"/></li>
+        ///     <li><c>--target-replace</c> via <see cref="PulumiPreviewSettings.TargetReplace"/></li>
         ///     <li><c>--tracing</c> via <see cref="PulumiPreviewSettings.Tracing"/></li>
         ///     <li><c>--verbose</c> via <see cref="PulumiPreviewSettings.Verbose"/></li>
         ///   </ul>
@@ -1314,7 +1332,7 @@ namespace Nuke.Common.Tools.Pulumi
             return process.Output;
         }
         /// <summary>
-        ///   <p>Show a preview of updates to a stacks resources.</p>
+        ///   <p>Show a preview of updates to a stack's resources.</p>
         ///   <p>For more details, visit the <a href="https://www.pulumi.com/">official website</a>.</p>
         /// </summary>
         /// <remarks>
@@ -1322,14 +1340,32 @@ namespace Nuke.Common.Tools.Pulumi
         ///   <ul>
         ///     <li><c>--color</c> via <see cref="PulumiPreviewSettings.Color"/></li>
         ///     <li><c>--config</c> via <see cref="PulumiPreviewSettings.Config"/></li>
+        ///     <li><c>--config-file</c> via <see cref="PulumiPreviewSettings.ConfigFile"/></li>
+        ///     <li><c>--config-path</c> via <see cref="PulumiPreviewSettings.ConfigPath"/></li>
         ///     <li><c>--cwd</c> via <see cref="PulumiPreviewSettings.WorkingDirectory"/></li>
+        ///     <li><c>--debug</c> via <see cref="PulumiPreviewSettings.Debug"/></li>
+        ///     <li><c>--diff</c> via <see cref="PulumiPreviewSettings.Diff"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiPreviewSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiPreviewSettings.Emoji"/></li>
+        ///     <li><c>--expect-no-changes</c> via <see cref="PulumiPreviewSettings.ExpectNoChanges"/></li>
         ///     <li><c>--help</c> via <see cref="PulumiPreviewSettings.Help"/></li>
+        ///     <li><c>--json</c> via <see cref="PulumiPreviewSettings.Json"/></li>
         ///     <li><c>--logflow</c> via <see cref="PulumiPreviewSettings.LogFlow"/></li>
         ///     <li><c>--logtostderr</c> via <see cref="PulumiPreviewSettings.LogToStderr"/></li>
+        ///     <li><c>--message</c> via <see cref="PulumiPreviewSettings.Message"/></li>
         ///     <li><c>--non-interactive</c> via <see cref="PulumiPreviewSettings.NonInteractive"/></li>
+        ///     <li><c>--parallel</c> via <see cref="PulumiPreviewSettings.Parallel"/></li>
         ///     <li><c>--profiling</c> via <see cref="PulumiPreviewSettings.Profiling"/></li>
+        ///     <li><c>--refresh</c> via <see cref="PulumiPreviewSettings.Refresh"/></li>
+        ///     <li><c>--replace</c> via <see cref="PulumiPreviewSettings.Replace"/></li>
+        ///     <li><c>--show-config</c> via <see cref="PulumiPreviewSettings.ShowConfig"/></li>
+        ///     <li><c>--show-replacement-steps</c> via <see cref="PulumiPreviewSettings.ShowReplacementSteps"/></li>
+        ///     <li><c>--show-sames</c> via <see cref="PulumiPreviewSettings.ShowSames"/></li>
+        ///     <li><c>--stack</c> via <see cref="PulumiPreviewSettings.Stack"/></li>
+        ///     <li><c>--suppress-outputs</c> via <see cref="PulumiPreviewSettings.SuppressOutputs"/></li>
+        ///     <li><c>--target</c> via <see cref="PulumiPreviewSettings.Target"/></li>
+        ///     <li><c>--target-dependents</c> via <see cref="PulumiPreviewSettings.TargetDependents"/></li>
+        ///     <li><c>--target-replace</c> via <see cref="PulumiPreviewSettings.TargetReplace"/></li>
         ///     <li><c>--tracing</c> via <see cref="PulumiPreviewSettings.Tracing"/></li>
         ///     <li><c>--verbose</c> via <see cref="PulumiPreviewSettings.Verbose"/></li>
         ///   </ul>
@@ -1339,7 +1375,7 @@ namespace Nuke.Common.Tools.Pulumi
             return PulumiPreview(configurator(new PulumiPreviewSettings()));
         }
         /// <summary>
-        ///   <p>Show a preview of updates to a stacks resources.</p>
+        ///   <p>Show a preview of updates to a stack's resources.</p>
         ///   <p>For more details, visit the <a href="https://www.pulumi.com/">official website</a>.</p>
         /// </summary>
         /// <remarks>
@@ -1347,14 +1383,32 @@ namespace Nuke.Common.Tools.Pulumi
         ///   <ul>
         ///     <li><c>--color</c> via <see cref="PulumiPreviewSettings.Color"/></li>
         ///     <li><c>--config</c> via <see cref="PulumiPreviewSettings.Config"/></li>
+        ///     <li><c>--config-file</c> via <see cref="PulumiPreviewSettings.ConfigFile"/></li>
+        ///     <li><c>--config-path</c> via <see cref="PulumiPreviewSettings.ConfigPath"/></li>
         ///     <li><c>--cwd</c> via <see cref="PulumiPreviewSettings.WorkingDirectory"/></li>
+        ///     <li><c>--debug</c> via <see cref="PulumiPreviewSettings.Debug"/></li>
+        ///     <li><c>--diff</c> via <see cref="PulumiPreviewSettings.Diff"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiPreviewSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiPreviewSettings.Emoji"/></li>
+        ///     <li><c>--expect-no-changes</c> via <see cref="PulumiPreviewSettings.ExpectNoChanges"/></li>
         ///     <li><c>--help</c> via <see cref="PulumiPreviewSettings.Help"/></li>
+        ///     <li><c>--json</c> via <see cref="PulumiPreviewSettings.Json"/></li>
         ///     <li><c>--logflow</c> via <see cref="PulumiPreviewSettings.LogFlow"/></li>
         ///     <li><c>--logtostderr</c> via <see cref="PulumiPreviewSettings.LogToStderr"/></li>
+        ///     <li><c>--message</c> via <see cref="PulumiPreviewSettings.Message"/></li>
         ///     <li><c>--non-interactive</c> via <see cref="PulumiPreviewSettings.NonInteractive"/></li>
+        ///     <li><c>--parallel</c> via <see cref="PulumiPreviewSettings.Parallel"/></li>
         ///     <li><c>--profiling</c> via <see cref="PulumiPreviewSettings.Profiling"/></li>
+        ///     <li><c>--refresh</c> via <see cref="PulumiPreviewSettings.Refresh"/></li>
+        ///     <li><c>--replace</c> via <see cref="PulumiPreviewSettings.Replace"/></li>
+        ///     <li><c>--show-config</c> via <see cref="PulumiPreviewSettings.ShowConfig"/></li>
+        ///     <li><c>--show-replacement-steps</c> via <see cref="PulumiPreviewSettings.ShowReplacementSteps"/></li>
+        ///     <li><c>--show-sames</c> via <see cref="PulumiPreviewSettings.ShowSames"/></li>
+        ///     <li><c>--stack</c> via <see cref="PulumiPreviewSettings.Stack"/></li>
+        ///     <li><c>--suppress-outputs</c> via <see cref="PulumiPreviewSettings.SuppressOutputs"/></li>
+        ///     <li><c>--target</c> via <see cref="PulumiPreviewSettings.Target"/></li>
+        ///     <li><c>--target-dependents</c> via <see cref="PulumiPreviewSettings.TargetDependents"/></li>
+        ///     <li><c>--target-replace</c> via <see cref="PulumiPreviewSettings.TargetReplace"/></li>
         ///     <li><c>--tracing</c> via <see cref="PulumiPreviewSettings.Tracing"/></li>
         ///     <li><c>--verbose</c> via <see cref="PulumiPreviewSettings.Verbose"/></li>
         ///   </ul>
@@ -1362,6 +1416,117 @@ namespace Nuke.Common.Tools.Pulumi
         public static IEnumerable<(PulumiPreviewSettings Settings, IReadOnlyCollection<Output> Output)> PulumiPreview(CombinatorialConfigure<PulumiPreviewSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
         {
             return configurator.Invoke(PulumiPreview, PulumiLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Refresh the resources in a stack.</p>
+        ///   <p>For more details, visit the <a href="https://www.pulumi.com/">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--color</c> via <see cref="PulumiRefreshSettings.Color"/></li>
+        ///     <li><c>--config-file</c> via <see cref="PulumiRefreshSettings.ConfigFile"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiRefreshSettings.WorkingDirectory"/></li>
+        ///     <li><c>--debug</c> via <see cref="PulumiRefreshSettings.Debug"/></li>
+        ///     <li><c>--diff</c> via <see cref="PulumiRefreshSettings.Diff"/></li>
+        ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiRefreshSettings.DisableIntegrityChecking"/></li>
+        ///     <li><c>--emoji</c> via <see cref="PulumiRefreshSettings.Emoji"/></li>
+        ///     <li><c>--expect-no-changes</c> via <see cref="PulumiRefreshSettings.ExpectNoChanges"/></li>
+        ///     <li><c>--help</c> via <see cref="PulumiRefreshSettings.Help"/></li>
+        ///     <li><c>--logflow</c> via <see cref="PulumiRefreshSettings.LogFlow"/></li>
+        ///     <li><c>--logtostderr</c> via <see cref="PulumiRefreshSettings.LogToStderr"/></li>
+        ///     <li><c>--message</c> via <see cref="PulumiRefreshSettings.Message"/></li>
+        ///     <li><c>--non-interactive</c> via <see cref="PulumiRefreshSettings.NonInteractive"/></li>
+        ///     <li><c>--parallel</c> via <see cref="PulumiRefreshSettings.Parallel"/></li>
+        ///     <li><c>--profiling</c> via <see cref="PulumiRefreshSettings.Profiling"/></li>
+        ///     <li><c>--show-replacement-steps</c> via <see cref="PulumiRefreshSettings.ShowReplacementSteps"/></li>
+        ///     <li><c>--show-sames</c> via <see cref="PulumiRefreshSettings.ShowSames"/></li>
+        ///     <li><c>--stack</c> via <see cref="PulumiRefreshSettings.Stack"/></li>
+        ///     <li><c>--suppress-outputs</c> via <see cref="PulumiRefreshSettings.SuppressOutputs"/></li>
+        ///     <li><c>--target</c> via <see cref="PulumiRefreshSettings.Target"/></li>
+        ///     <li><c>--tracing</c> via <see cref="PulumiRefreshSettings.Tracing"/></li>
+        ///     <li><c>--verbose</c> via <see cref="PulumiRefreshSettings.Verbose"/></li>
+        ///     <li><c>--yes</c> via <see cref="PulumiRefreshSettings.Yes"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> PulumiRefresh(PulumiRefreshSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new PulumiRefreshSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Refresh the resources in a stack.</p>
+        ///   <p>For more details, visit the <a href="https://www.pulumi.com/">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--color</c> via <see cref="PulumiRefreshSettings.Color"/></li>
+        ///     <li><c>--config-file</c> via <see cref="PulumiRefreshSettings.ConfigFile"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiRefreshSettings.WorkingDirectory"/></li>
+        ///     <li><c>--debug</c> via <see cref="PulumiRefreshSettings.Debug"/></li>
+        ///     <li><c>--diff</c> via <see cref="PulumiRefreshSettings.Diff"/></li>
+        ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiRefreshSettings.DisableIntegrityChecking"/></li>
+        ///     <li><c>--emoji</c> via <see cref="PulumiRefreshSettings.Emoji"/></li>
+        ///     <li><c>--expect-no-changes</c> via <see cref="PulumiRefreshSettings.ExpectNoChanges"/></li>
+        ///     <li><c>--help</c> via <see cref="PulumiRefreshSettings.Help"/></li>
+        ///     <li><c>--logflow</c> via <see cref="PulumiRefreshSettings.LogFlow"/></li>
+        ///     <li><c>--logtostderr</c> via <see cref="PulumiRefreshSettings.LogToStderr"/></li>
+        ///     <li><c>--message</c> via <see cref="PulumiRefreshSettings.Message"/></li>
+        ///     <li><c>--non-interactive</c> via <see cref="PulumiRefreshSettings.NonInteractive"/></li>
+        ///     <li><c>--parallel</c> via <see cref="PulumiRefreshSettings.Parallel"/></li>
+        ///     <li><c>--profiling</c> via <see cref="PulumiRefreshSettings.Profiling"/></li>
+        ///     <li><c>--show-replacement-steps</c> via <see cref="PulumiRefreshSettings.ShowReplacementSteps"/></li>
+        ///     <li><c>--show-sames</c> via <see cref="PulumiRefreshSettings.ShowSames"/></li>
+        ///     <li><c>--stack</c> via <see cref="PulumiRefreshSettings.Stack"/></li>
+        ///     <li><c>--suppress-outputs</c> via <see cref="PulumiRefreshSettings.SuppressOutputs"/></li>
+        ///     <li><c>--target</c> via <see cref="PulumiRefreshSettings.Target"/></li>
+        ///     <li><c>--tracing</c> via <see cref="PulumiRefreshSettings.Tracing"/></li>
+        ///     <li><c>--verbose</c> via <see cref="PulumiRefreshSettings.Verbose"/></li>
+        ///     <li><c>--yes</c> via <see cref="PulumiRefreshSettings.Yes"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> PulumiRefresh(Configure<PulumiRefreshSettings> configurator)
+        {
+            return PulumiRefresh(configurator(new PulumiRefreshSettings()));
+        }
+        /// <summary>
+        ///   <p>Refresh the resources in a stack.</p>
+        ///   <p>For more details, visit the <a href="https://www.pulumi.com/">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--color</c> via <see cref="PulumiRefreshSettings.Color"/></li>
+        ///     <li><c>--config-file</c> via <see cref="PulumiRefreshSettings.ConfigFile"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiRefreshSettings.WorkingDirectory"/></li>
+        ///     <li><c>--debug</c> via <see cref="PulumiRefreshSettings.Debug"/></li>
+        ///     <li><c>--diff</c> via <see cref="PulumiRefreshSettings.Diff"/></li>
+        ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiRefreshSettings.DisableIntegrityChecking"/></li>
+        ///     <li><c>--emoji</c> via <see cref="PulumiRefreshSettings.Emoji"/></li>
+        ///     <li><c>--expect-no-changes</c> via <see cref="PulumiRefreshSettings.ExpectNoChanges"/></li>
+        ///     <li><c>--help</c> via <see cref="PulumiRefreshSettings.Help"/></li>
+        ///     <li><c>--logflow</c> via <see cref="PulumiRefreshSettings.LogFlow"/></li>
+        ///     <li><c>--logtostderr</c> via <see cref="PulumiRefreshSettings.LogToStderr"/></li>
+        ///     <li><c>--message</c> via <see cref="PulumiRefreshSettings.Message"/></li>
+        ///     <li><c>--non-interactive</c> via <see cref="PulumiRefreshSettings.NonInteractive"/></li>
+        ///     <li><c>--parallel</c> via <see cref="PulumiRefreshSettings.Parallel"/></li>
+        ///     <li><c>--profiling</c> via <see cref="PulumiRefreshSettings.Profiling"/></li>
+        ///     <li><c>--show-replacement-steps</c> via <see cref="PulumiRefreshSettings.ShowReplacementSteps"/></li>
+        ///     <li><c>--show-sames</c> via <see cref="PulumiRefreshSettings.ShowSames"/></li>
+        ///     <li><c>--stack</c> via <see cref="PulumiRefreshSettings.Stack"/></li>
+        ///     <li><c>--suppress-outputs</c> via <see cref="PulumiRefreshSettings.SuppressOutputs"/></li>
+        ///     <li><c>--target</c> via <see cref="PulumiRefreshSettings.Target"/></li>
+        ///     <li><c>--tracing</c> via <see cref="PulumiRefreshSettings.Tracing"/></li>
+        ///     <li><c>--verbose</c> via <see cref="PulumiRefreshSettings.Verbose"/></li>
+        ///     <li><c>--yes</c> via <see cref="PulumiRefreshSettings.Yes"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(PulumiRefreshSettings Settings, IReadOnlyCollection<Output> Output)> PulumiRefresh(CombinatorialConfigure<PulumiRefreshSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(PulumiRefresh, PulumiLogger, degreeOfParallelism, completeOnFailure);
         }
         /// <summary>
         ///   <p>Manage stacks.</p>
@@ -1559,11 +1724,11 @@ namespace Nuke.Common.Tools.Pulumi
         public override string ToolPath => base.ToolPath ?? PulumiTasks.PulumiPath;
         public override Action<OutputType, string> CustomLogger => PulumiTasks.PulumiLogger;
         /// <summary>
-        ///   The name of the stack to operate on. Defaults to the current stack
+        ///   The name of the stack to operate on. Defaults to the current stack.
         /// </summary>
         public virtual string Stack { get; internal set; }
         /// <summary>
-        ///   Skip confirmation prompts, and proceed with cancellation anyway
+        ///   Skip confirmation prompts, and proceed with cancellation anyway.
         /// </summary>
         public virtual bool? Yes { get; internal set; }
         /// <summary>
@@ -1645,9 +1810,12 @@ namespace Nuke.Common.Tools.Pulumi
         /// </summary>
         public override string ToolPath => base.ToolPath ?? PulumiTasks.PulumiPath;
         public override Action<OutputType, string> CustomLogger => PulumiTasks.PulumiLogger;
+        /// <summary>
+        ///    Emit output as JSON.
+        /// </summary>
         public virtual bool? Json { get; internal set; }
         /// <summary>
-        ///   Show secret values when listing config instead of displaying blinded values
+        ///   Show secret values when listing config instead of displaying blinded values.
         /// </summary>
         public virtual bool? ShowSecrets { get; internal set; }
         /// <summary>
@@ -1740,15 +1908,15 @@ namespace Nuke.Common.Tools.Pulumi
         public override string ToolPath => base.ToolPath ?? PulumiTasks.PulumiPath;
         public override Action<OutputType, string> CustomLogger => PulumiTasks.PulumiLogger;
         /// <summary>
-        ///   The configuration value to get
+        ///   The configuration value to get.
         /// </summary>
         public virtual string Value { get; internal set; }
         /// <summary>
-        ///   Emit output as JSON
+        ///   Emit output as JSON.
         /// </summary>
         public virtual bool? Json { get; internal set; }
         /// <summary>
-        ///   The key contains a path to a property in a map or list to get
+        ///   The key contains a path to a property in a map or list to get.
         /// </summary>
         public virtual string Path { get; internal set; }
         /// <summary>
@@ -1842,7 +2010,7 @@ namespace Nuke.Common.Tools.Pulumi
         public override string ToolPath => base.ToolPath ?? PulumiTasks.PulumiPath;
         public override Action<OutputType, string> CustomLogger => PulumiTasks.PulumiLogger;
         /// <summary>
-        ///   Overwrite configuration file, if it exists, without creating a backup
+        ///   Overwrite configuration file, if it exists, without creating a backup.
         /// </summary>
         public virtual bool? Force { get; internal set; }
         /// <summary>
@@ -1934,11 +2102,11 @@ namespace Nuke.Common.Tools.Pulumi
         public override string ToolPath => base.ToolPath ?? PulumiTasks.PulumiPath;
         public override Action<OutputType, string> CustomLogger => PulumiTasks.PulumiLogger;
         /// <summary>
-        ///   The configuration value to remove
+        ///   The configuration value to remove.
         /// </summary>
         public virtual string Value { get; internal set; }
         /// <summary>
-        ///   The key contains a path to a property in a map or list to remove
+        ///   The key contains a path to a property in a map or list to remove.
         /// </summary>
         public virtual string Path { get; internal set; }
         /// <summary>
@@ -2031,19 +2199,19 @@ namespace Nuke.Common.Tools.Pulumi
         public override string ToolPath => base.ToolPath ?? PulumiTasks.PulumiPath;
         public override Action<OutputType, string> CustomLogger => PulumiTasks.PulumiLogger;
         /// <summary>
-        ///   The configuration value to set
+        ///   The configuration value to set.
         /// </summary>
         public virtual string Value { get; internal set; }
         /// <summary>
-        ///   The key contains a path to a property in a map or list to set
+        ///   The key contains a path to a property in a map or list to set.
         /// </summary>
         public virtual string Path { get; internal set; }
         /// <summary>
-        ///   Save the value as plaintext (unencrypted)
+        ///   Save the value as plaintext (unencrypted).
         /// </summary>
         public virtual bool? Plaintext { get; internal set; }
         /// <summary>
-        ///   Encrypt the value instead of storing it in plaintext
+        ///   Encrypt the value instead of storing it in plaintext.
         /// </summary>
         public virtual bool? Secret { get; internal set; }
         /// <summary>
@@ -2138,55 +2306,55 @@ namespace Nuke.Common.Tools.Pulumi
         public override string ToolPath => base.ToolPath ?? PulumiTasks.PulumiPath;
         public override Action<OutputType, string> CustomLogger => PulumiTasks.PulumiLogger;
         /// <summary>
-        ///   Print detailed debugging output during resource operations
+        ///   Print detailed debugging output during resource operations.
         /// </summary>
         public virtual bool? Debug { get; internal set; }
         /// <summary>
-        ///   Display operation as a rich diff showing the overall change
+        ///   Display operation as a rich diff showing the overall change.
         /// </summary>
         public virtual bool? Diff { get; internal set; }
         /// <summary>
-        ///   Optional message to associate with the destroy operation
+        ///   Optional message to associate with the destroy operation.
         /// </summary>
         public virtual string Message { get; internal set; }
         /// <summary>
-        ///   Allow P resource operations to run in parallel at once (1 for no parallelism). Defaults to unbounded. (default 2147483647)
+        ///   Allow P resource operations to run in parallel at once (1 for no parallelism). Defaults to unbounded. (default 2147483647).
         /// </summary>
         public virtual int? Parallel { get; internal set; }
         /// <summary>
-        ///   Refresh the state of the stack's resources before this update
+        ///   Refresh the state of the stack's resources before this update.
         /// </summary>
         public virtual bool? Refresh { get; internal set; }
         /// <summary>
-        ///   Show configuration keys and variables
+        ///   Show configuration keys and variables.
         /// </summary>
         public virtual bool? ShowConfig { get; internal set; }
         /// <summary>
-        ///   Show detailed resource replacement creates and deletes instead of a single step
+        ///   Show detailed resource replacement creates and deletes instead of a single step.
         /// </summary>
         public virtual bool? ShowReplacementSteps { get; internal set; }
         /// <summary>
-        ///   Show resources that don't need to be updated because they haven't changed, alongside those that do
+        ///   Show resources that don't need to be updated because they haven't changed, alongside those that do.
         /// </summary>
         public virtual bool? ShowSames { get; internal set; }
         /// <summary>
-        ///   Do not perform a preview before performing the destroy
+        ///   Do not perform a preview before performing the destroy.
         /// </summary>
         public virtual bool? SkipPreview { get; internal set; }
         /// <summary>
-        ///   Suppress display of stack outputs (in case they contain sensitive values)
+        ///   Suppress display of stack outputs (in case they contain sensitive values).
         /// </summary>
-        public virtual bool? SupressOutputs { get; internal set; }
+        public virtual bool? SuppressOutputs { get; internal set; }
         /// <summary>
-        ///   Specify a single resource URN to destroy. All resources necessary to destroy this target will also be destroyed. Multiple resources can be specified using: --target urn1 --target urn2
+        ///   Specify a single resource URN to destroy. All resources necessary to destroy this target will also be destroyed. Multiple resources can be specified using: --target urn1 --target urn2.
         /// </summary>
         public virtual string Target { get; internal set; }
         /// <summary>
-        ///   Allows destroying of dependent targets discovered but not specified in --target list
+        ///   Allows destroying of dependent targets discovered but not specified in --target list.
         /// </summary>
         public virtual bool? TargetDependents { get; internal set; }
         /// <summary>
-        ///   Automatically approve and perform the destroy after previewing it
+        ///   Automatically approve and perform the destroy after previewing it.
         /// </summary>
         public virtual bool? Yes { get; internal set; }
         /// <summary>
@@ -2254,7 +2422,7 @@ namespace Nuke.Common.Tools.Pulumi
               .Add("--show-replacement-steps", ShowReplacementSteps)
               .Add("--show-sames", ShowSames)
               .Add("--skip-preview", SkipPreview)
-              .Add("--supress-outputs", SupressOutputs)
+              .Add("--suppress-outputs", SuppressOutputs)
               .Add("--target {value}", Target)
               .Add("--target-dependents {value}", TargetDependents)
               .Add("--yes", Yes)
@@ -2290,11 +2458,11 @@ namespace Nuke.Common.Tools.Pulumi
         public override string ToolPath => base.ToolPath ?? PulumiTasks.PulumiPath;
         public override Action<OutputType, string> CustomLogger => PulumiTasks.PulumiLogger;
         /// <summary>
-        ///   Emit output as JSON
+        ///   Emit output as JSON.
         /// </summary>
         public virtual bool? Json { get; internal set; }
         /// <summary>
-        ///   Show secret values when listing config instead of displaying blinded values
+        ///   Show secret values when listing config instead of displaying blinded values.
         /// </summary>
         public virtual bool? ShowSecrets { get; internal set; }
         /// <summary>
@@ -2382,15 +2550,15 @@ namespace Nuke.Common.Tools.Pulumi
         public override string ToolPath => base.ToolPath ?? PulumiTasks.PulumiPath;
         public override Action<OutputType, string> CustomLogger => PulumiTasks.PulumiLogger;
         /// <summary>
-        ///   Specify a URL or a local/cloud path to the Pulumi instance you wish to use. Defaults to app.pulumi.com
+        ///   Specify a URL or a local/cloud path to the Pulumi instance you wish to use. Defaults to app.pulumi.com.
         /// </summary>
         public virtual string Location { get; internal set; }
         /// <summary>
-        ///   A cloud URL to log into. This is the same as specifying a location
+        ///   A cloud URL to log into. This is the same as specifying a location.
         /// </summary>
         public virtual string CloudUrl { get; internal set; }
         /// <summary>
-        ///   Use Pulumi in local-only mode
+        ///   Use Pulumi in local-only mode.
         /// </summary>
         public virtual bool? Local { get; internal set; }
         /// <summary>
@@ -2478,11 +2646,11 @@ namespace Nuke.Common.Tools.Pulumi
         /// </summary>
         public virtual string Location { get; internal set; }
         /// <summary>
-        ///    A cloud URL to log out of (defaults to current cloud). This is the same as specifying a location
+        ///    A cloud URL to log out of (defaults to current cloud). This is the same as specifying a location.
         /// </summary>
         public virtual string CloudUrl { get; internal set; }
         /// <summary>
-        ///   Log out of using local mode
+        ///   Log out of using local mode.
         /// </summary>
         public virtual bool? Local { get; internal set; }
         /// <summary>
@@ -2959,6 +3127,81 @@ namespace Nuke.Common.Tools.Pulumi
         public virtual IReadOnlyList<string> Config => ConfigInternal.AsReadOnly();
         internal List<string> ConfigInternal { get; set; } = new List<string>();
         /// <summary>
+        ///   Config keys contain a path to a property in a map or list to set.
+        /// </summary>
+        public virtual bool? ConfigPath { get; internal set; }
+        /// <summary>
+        ///   Print detailed debugging output during resource operations.
+        /// </summary>
+        public virtual bool? Debug { get; internal set; }
+        /// <summary>
+        ///   Display operation as a rich diff showing the overall chang.e
+        /// </summary>
+        public virtual bool? Diff { get; internal set; }
+        /// <summary>
+        ///   Return an error if any changes are proposed by this preview.
+        /// </summary>
+        public virtual bool? ExpectNoChanges { get; internal set; }
+        /// <summary>
+        ///   Serialize the preview diffs, operations, and overall output as JSON.
+        /// </summary>
+        public virtual bool? Json { get; internal set; }
+        /// <summary>
+        ///   Optional message to associate with the preview operation.
+        /// </summary>
+        public virtual string Message { get; internal set; }
+        /// <summary>
+        ///   Allow P resource operations to run in parallel at once (1 for no parallelism). Defaults to unbounded. (default 2147483647).
+        /// </summary>
+        public virtual int? Parallel { get; internal set; }
+        /// <summary>
+        ///   Refresh the state of the stack's resources before this update.
+        /// </summary>
+        public virtual bool? Refresh { get; internal set; }
+        /// <summary>
+        ///   Refresh the state of the stack's resources before this update.
+        /// </summary>
+        public virtual IReadOnlyList<string> Replace => ReplaceInternal.AsReadOnly();
+        internal List<string> ReplaceInternal { get; set; } = new List<string>();
+        /// <summary>
+        ///   Show configuration keys and variables.
+        /// </summary>
+        public virtual bool? ShowConfig { get; internal set; }
+        /// <summary>
+        ///   Show detailed resource replacement creates and deletes instead of a single step.
+        /// </summary>
+        public virtual bool? ShowReplacementSteps { get; internal set; }
+        /// <summary>
+        ///   Show resources that don't need to be updated because they haven't changed, alongside those that do.
+        /// </summary>
+        public virtual bool? ShowSames { get; internal set; }
+        /// <summary>
+        ///   Suppress display of stack outputs (in case they contain sensitive values).
+        /// </summary>
+        public virtual bool? SuppressOutputs { get; internal set; }
+        /// <summary>
+        ///   Specify a single resource URN to update. Other resources will not be updated. Multiple resources can be specified using --target urn1 --target urn2.
+        /// </summary>
+        public virtual IReadOnlyList<string> Target => TargetInternal.AsReadOnly();
+        internal List<string> TargetInternal { get; set; } = new List<string>();
+        /// <summary>
+        ///   Allows updating of dependent targets discovered but not specified in --target list.
+        /// </summary>
+        public virtual bool? TargetDependents { get; internal set; }
+        /// <summary>
+        ///   Specify a single resource URN to replace. Other resources will not be updated. Shorthand for --target urn --replace urn.
+        /// </summary>
+        public virtual IReadOnlyList<string> TargetReplace => TargetReplaceInternal.AsReadOnly();
+        internal List<string> TargetReplaceInternal { get; set; } = new List<string>();
+        /// <summary>
+        ///   The name of the stack to operate on. Defaults to the current stack
+        /// </summary>
+        public virtual string Stack { get; internal set; }
+        /// <summary>
+        ///   Use the configuration values in the specified file rather than detecting the file name
+        /// </summary>
+        public virtual string ConfigFile { get; internal set; }
+        /// <summary>
         ///   Colorize output. Choices are: always, never, raw, auto (default is auto)
         /// </summary>
         public virtual ColorizeOutput Color { get; internal set; }
@@ -3006,7 +3249,163 @@ namespace Nuke.Common.Tools.Pulumi
         {
             arguments
               .Add("preview")
-              .Add("--config {value}", Config)
+              .Add("--config {value}", Config, separator: ',')
+              .Add("--config-path", ConfigPath)
+              .Add("--debug", Debug)
+              .Add("--diff", Diff)
+              .Add("--expect-no-changes", ExpectNoChanges)
+              .Add("--json", Json)
+              .Add("--message {value}", Message)
+              .Add("--parallel {value}", Parallel)
+              .Add("--refresh", Refresh)
+              .Add("--replace", Replace, separator: ',')
+              .Add("--show-config", ShowConfig)
+              .Add("--show-replacement-steps", ShowReplacementSteps)
+              .Add("--show-sames", ShowSames)
+              .Add("--suppress-outputs", SuppressOutputs)
+              .Add("--target {value}", Target, separator: ',')
+              .Add("--target-dependents {value}", TargetDependents)
+              .Add("--target-replace {value}", TargetReplace, separator: ',')
+              .Add("--stack {value}", Stack)
+              .Add("--config-file {value}", ConfigFile)
+              .Add("--color {value}", Color)
+              .Add("--cwd {value}", WorkingDirectory)
+              .Add("--disable-integrity-checking", DisableIntegrityChecking)
+              .Add("--emoji", Emoji)
+              .Add("--help", Help)
+              .Add("--logflow", LogFlow)
+              .Add("--logtostderr", LogToStderr)
+              .Add("--non-interactive", NonInteractive)
+              .Add("--profiling {value}", Profiling)
+              .Add("--tracing {value}", Tracing)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region PulumiRefreshSettings
+    /// <summary>
+    ///   Used within <see cref="PulumiTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class PulumiRefreshSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the Pulumi executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? PulumiTasks.PulumiPath;
+        public override Action<OutputType, string> CustomLogger => PulumiTasks.PulumiLogger;
+        /// <summary>
+        ///   Print detailed debugging output during resource operations.
+        /// </summary>
+        public virtual bool? Debug { get; internal set; }
+        /// <summary>
+        ///   Display operation as a rich diff showing the overall change.
+        /// </summary>
+        public virtual bool? Diff { get; internal set; }
+        /// <summary>
+        ///   Return an error if any changes occur during this update.
+        /// </summary>
+        public virtual bool? ExpectNoChanges { get; internal set; }
+        /// <summary>
+        ///   Optional message to associate with the update operation.
+        /// </summary>
+        public virtual string Message { get; internal set; }
+        /// <summary>
+        ///   Allow P resource operations to run in parallel at once (1 for no parallelism). Defaults to unbounded. (default 2147483647).
+        /// </summary>
+        public virtual int? Parallel { get; internal set; }
+        /// <summary>
+        ///   Show detailed resource replacement creates and deletes instead of a single step.
+        /// </summary>
+        public virtual bool? ShowReplacementSteps { get; internal set; }
+        /// <summary>
+        ///   Show resources that don't need to be updated because they haven't changed, alongside those that do.
+        /// </summary>
+        public virtual bool? ShowSames { get; internal set; }
+        /// <summary>
+        ///   Suppress display of stack outputs (in case they contain sensitive values).
+        /// </summary>
+        public virtual bool? SuppressOutputs { get; internal set; }
+        /// <summary>
+        ///   Specify a single resource URN to refresh. Multiple resources can be specified using --target urn1 --target urn2.
+        /// </summary>
+        public virtual IReadOnlyList<string> Target => TargetInternal.AsReadOnly();
+        internal List<string> TargetInternal { get; set; } = new List<string>();
+        /// <summary>
+        ///   Automatically approve and perform the refresh after previewing it.
+        /// </summary>
+        public virtual bool? Yes { get; internal set; }
+        /// <summary>
+        ///   The name of the stack to operate on. Defaults to the current stack
+        /// </summary>
+        public virtual string Stack { get; internal set; }
+        /// <summary>
+        ///   Use the configuration values in the specified file rather than detecting the file name
+        /// </summary>
+        public virtual string ConfigFile { get; internal set; }
+        /// <summary>
+        ///   Colorize output. Choices are: always, never, raw, auto (default is auto)
+        /// </summary>
+        public virtual ColorizeOutput Color { get; internal set; }
+        /// <summary>
+        ///   Run pulumi as if it had been started in another directory
+        /// </summary>
+        public virtual string WorkingDirectory { get; internal set; }
+        /// <summary>
+        ///   Disable integrity checking of checkpoint files
+        /// </summary>
+        public virtual bool? DisableIntegrityChecking { get; internal set; }
+        /// <summary>
+        ///   Enable emojis in the output (default is true)
+        /// </summary>
+        public virtual bool? Emoji { get; internal set; }
+        /// <summary>
+        ///   Help for Pulumi
+        /// </summary>
+        public virtual bool? Help { get; internal set; }
+        /// <summary>
+        ///   Flow log settings to child processes (like plugins)
+        /// </summary>
+        public virtual bool? LogFlow { get; internal set; }
+        /// <summary>
+        ///   Log to stderr instead of to files
+        /// </summary>
+        public virtual bool? LogToStderr { get; internal set; }
+        /// <summary>
+        ///   Disable interactive mode for all commands
+        /// </summary>
+        public virtual bool? NonInteractive { get; internal set; }
+        /// <summary>
+        ///   Emit CPU and memory profiles and an execution trace to '[filename].[pid].{cpu,mem,trace}', respectively
+        /// </summary>
+        public virtual string Profiling { get; internal set; }
+        /// <summary>
+        ///   Emit tracing to the specified endpoint. Use the file: scheme to write tracing data to a local file
+        /// </summary>
+        public virtual string Tracing { get; internal set; }
+        /// <summary>
+        ///   Enable verbose logging (e.g., v=3); anything >3 is very verbose
+        /// </summary>
+        public virtual int? Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("preview")
+              .Add("--debug", Debug)
+              .Add("--diff", Diff)
+              .Add("--expect-no-changes", ExpectNoChanges)
+              .Add("--message {value}", Message)
+              .Add("--parallel {value}", Parallel)
+              .Add("--show-replacement-steps", ShowReplacementSteps)
+              .Add("--show-sames", ShowSames)
+              .Add("--suppress-outputs", SuppressOutputs)
+              .Add("--target {value}", Target, separator: ',')
+              .Add("--yes", Yes)
+              .Add("--stack {value}", Stack)
+              .Add("--config-file {value}", ConfigFile)
               .Add("--color {value}", Color)
               .Add("--cwd {value}", WorkingDirectory)
               .Add("--disable-integrity-checking", DisableIntegrityChecking)
@@ -3237,7 +3636,7 @@ namespace Nuke.Common.Tools.Pulumi
         #region Stack
         /// <summary>
         ///   <p><em>Sets <see cref="PulumiCancelSettings.Stack"/></em></p>
-        ///   <p>The name of the stack to operate on. Defaults to the current stack</p>
+        ///   <p>The name of the stack to operate on. Defaults to the current stack.</p>
         /// </summary>
         [Pure]
         public static PulumiCancelSettings SetStack(this PulumiCancelSettings toolSettings, string stack)
@@ -3248,7 +3647,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Resets <see cref="PulumiCancelSettings.Stack"/></em></p>
-        ///   <p>The name of the stack to operate on. Defaults to the current stack</p>
+        ///   <p>The name of the stack to operate on. Defaults to the current stack.</p>
         /// </summary>
         [Pure]
         public static PulumiCancelSettings ResetStack(this PulumiCancelSettings toolSettings)
@@ -3261,7 +3660,7 @@ namespace Nuke.Common.Tools.Pulumi
         #region Yes
         /// <summary>
         ///   <p><em>Sets <see cref="PulumiCancelSettings.Yes"/></em></p>
-        ///   <p>Skip confirmation prompts, and proceed with cancellation anyway</p>
+        ///   <p>Skip confirmation prompts, and proceed with cancellation anyway.</p>
         /// </summary>
         [Pure]
         public static PulumiCancelSettings SetYes(this PulumiCancelSettings toolSettings, bool? yes)
@@ -3272,7 +3671,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Resets <see cref="PulumiCancelSettings.Yes"/></em></p>
-        ///   <p>Skip confirmation prompts, and proceed with cancellation anyway</p>
+        ///   <p>Skip confirmation prompts, and proceed with cancellation anyway.</p>
         /// </summary>
         [Pure]
         public static PulumiCancelSettings ResetYes(this PulumiCancelSettings toolSettings)
@@ -3283,7 +3682,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Enables <see cref="PulumiCancelSettings.Yes"/></em></p>
-        ///   <p>Skip confirmation prompts, and proceed with cancellation anyway</p>
+        ///   <p>Skip confirmation prompts, and proceed with cancellation anyway.</p>
         /// </summary>
         [Pure]
         public static PulumiCancelSettings EnableYes(this PulumiCancelSettings toolSettings)
@@ -3294,7 +3693,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Disables <see cref="PulumiCancelSettings.Yes"/></em></p>
-        ///   <p>Skip confirmation prompts, and proceed with cancellation anyway</p>
+        ///   <p>Skip confirmation prompts, and proceed with cancellation anyway.</p>
         /// </summary>
         [Pure]
         public static PulumiCancelSettings DisableYes(this PulumiCancelSettings toolSettings)
@@ -3305,7 +3704,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Toggles <see cref="PulumiCancelSettings.Yes"/></em></p>
-        ///   <p>Skip confirmation prompts, and proceed with cancellation anyway</p>
+        ///   <p>Skip confirmation prompts, and proceed with cancellation anyway.</p>
         /// </summary>
         [Pure]
         public static PulumiCancelSettings ToggleYes(this PulumiCancelSettings toolSettings)
@@ -3790,6 +4189,7 @@ namespace Nuke.Common.Tools.Pulumi
         #region Json
         /// <summary>
         ///   <p><em>Sets <see cref="PulumiConfigSettings.Json"/></em></p>
+        ///   <p> Emit output as JSON.</p>
         /// </summary>
         [Pure]
         public static PulumiConfigSettings SetJson(this PulumiConfigSettings toolSettings, bool? json)
@@ -3800,6 +4200,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Resets <see cref="PulumiConfigSettings.Json"/></em></p>
+        ///   <p> Emit output as JSON.</p>
         /// </summary>
         [Pure]
         public static PulumiConfigSettings ResetJson(this PulumiConfigSettings toolSettings)
@@ -3810,6 +4211,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Enables <see cref="PulumiConfigSettings.Json"/></em></p>
+        ///   <p> Emit output as JSON.</p>
         /// </summary>
         [Pure]
         public static PulumiConfigSettings EnableJson(this PulumiConfigSettings toolSettings)
@@ -3820,6 +4222,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Disables <see cref="PulumiConfigSettings.Json"/></em></p>
+        ///   <p> Emit output as JSON.</p>
         /// </summary>
         [Pure]
         public static PulumiConfigSettings DisableJson(this PulumiConfigSettings toolSettings)
@@ -3830,6 +4233,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Toggles <see cref="PulumiConfigSettings.Json"/></em></p>
+        ///   <p> Emit output as JSON.</p>
         /// </summary>
         [Pure]
         public static PulumiConfigSettings ToggleJson(this PulumiConfigSettings toolSettings)
@@ -3842,7 +4246,7 @@ namespace Nuke.Common.Tools.Pulumi
         #region ShowSecrets
         /// <summary>
         ///   <p><em>Sets <see cref="PulumiConfigSettings.ShowSecrets"/></em></p>
-        ///   <p>Show secret values when listing config instead of displaying blinded values</p>
+        ///   <p>Show secret values when listing config instead of displaying blinded values.</p>
         /// </summary>
         [Pure]
         public static PulumiConfigSettings SetShowSecrets(this PulumiConfigSettings toolSettings, bool? showSecrets)
@@ -3853,7 +4257,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Resets <see cref="PulumiConfigSettings.ShowSecrets"/></em></p>
-        ///   <p>Show secret values when listing config instead of displaying blinded values</p>
+        ///   <p>Show secret values when listing config instead of displaying blinded values.</p>
         /// </summary>
         [Pure]
         public static PulumiConfigSettings ResetShowSecrets(this PulumiConfigSettings toolSettings)
@@ -3864,7 +4268,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Enables <see cref="PulumiConfigSettings.ShowSecrets"/></em></p>
-        ///   <p>Show secret values when listing config instead of displaying blinded values</p>
+        ///   <p>Show secret values when listing config instead of displaying blinded values.</p>
         /// </summary>
         [Pure]
         public static PulumiConfigSettings EnableShowSecrets(this PulumiConfigSettings toolSettings)
@@ -3875,7 +4279,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Disables <see cref="PulumiConfigSettings.ShowSecrets"/></em></p>
-        ///   <p>Show secret values when listing config instead of displaying blinded values</p>
+        ///   <p>Show secret values when listing config instead of displaying blinded values.</p>
         /// </summary>
         [Pure]
         public static PulumiConfigSettings DisableShowSecrets(this PulumiConfigSettings toolSettings)
@@ -3886,7 +4290,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Toggles <see cref="PulumiConfigSettings.ShowSecrets"/></em></p>
-        ///   <p>Show secret values when listing config instead of displaying blinded values</p>
+        ///   <p>Show secret values when listing config instead of displaying blinded values.</p>
         /// </summary>
         [Pure]
         public static PulumiConfigSettings ToggleShowSecrets(this PulumiConfigSettings toolSettings)
@@ -4419,7 +4823,7 @@ namespace Nuke.Common.Tools.Pulumi
         #region Value
         /// <summary>
         ///   <p><em>Sets <see cref="PulumiConfigGetSettings.Value"/></em></p>
-        ///   <p>The configuration value to get</p>
+        ///   <p>The configuration value to get.</p>
         /// </summary>
         [Pure]
         public static PulumiConfigGetSettings SetValue(this PulumiConfigGetSettings toolSettings, string value)
@@ -4430,7 +4834,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Resets <see cref="PulumiConfigGetSettings.Value"/></em></p>
-        ///   <p>The configuration value to get</p>
+        ///   <p>The configuration value to get.</p>
         /// </summary>
         [Pure]
         public static PulumiConfigGetSettings ResetValue(this PulumiConfigGetSettings toolSettings)
@@ -4443,7 +4847,7 @@ namespace Nuke.Common.Tools.Pulumi
         #region Json
         /// <summary>
         ///   <p><em>Sets <see cref="PulumiConfigGetSettings.Json"/></em></p>
-        ///   <p>Emit output as JSON</p>
+        ///   <p>Emit output as JSON.</p>
         /// </summary>
         [Pure]
         public static PulumiConfigGetSettings SetJson(this PulumiConfigGetSettings toolSettings, bool? json)
@@ -4454,7 +4858,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Resets <see cref="PulumiConfigGetSettings.Json"/></em></p>
-        ///   <p>Emit output as JSON</p>
+        ///   <p>Emit output as JSON.</p>
         /// </summary>
         [Pure]
         public static PulumiConfigGetSettings ResetJson(this PulumiConfigGetSettings toolSettings)
@@ -4465,7 +4869,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Enables <see cref="PulumiConfigGetSettings.Json"/></em></p>
-        ///   <p>Emit output as JSON</p>
+        ///   <p>Emit output as JSON.</p>
         /// </summary>
         [Pure]
         public static PulumiConfigGetSettings EnableJson(this PulumiConfigGetSettings toolSettings)
@@ -4476,7 +4880,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Disables <see cref="PulumiConfigGetSettings.Json"/></em></p>
-        ///   <p>Emit output as JSON</p>
+        ///   <p>Emit output as JSON.</p>
         /// </summary>
         [Pure]
         public static PulumiConfigGetSettings DisableJson(this PulumiConfigGetSettings toolSettings)
@@ -4487,7 +4891,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Toggles <see cref="PulumiConfigGetSettings.Json"/></em></p>
-        ///   <p>Emit output as JSON</p>
+        ///   <p>Emit output as JSON.</p>
         /// </summary>
         [Pure]
         public static PulumiConfigGetSettings ToggleJson(this PulumiConfigGetSettings toolSettings)
@@ -4500,7 +4904,7 @@ namespace Nuke.Common.Tools.Pulumi
         #region Path
         /// <summary>
         ///   <p><em>Sets <see cref="PulumiConfigGetSettings.Path"/></em></p>
-        ///   <p>The key contains a path to a property in a map or list to get</p>
+        ///   <p>The key contains a path to a property in a map or list to get.</p>
         /// </summary>
         [Pure]
         public static PulumiConfigGetSettings SetPath(this PulumiConfigGetSettings toolSettings, string path)
@@ -4511,7 +4915,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Resets <see cref="PulumiConfigGetSettings.Path"/></em></p>
-        ///   <p>The key contains a path to a property in a map or list to get</p>
+        ///   <p>The key contains a path to a property in a map or list to get.</p>
         /// </summary>
         [Pure]
         public static PulumiConfigGetSettings ResetPath(this PulumiConfigGetSettings toolSettings)
@@ -5044,7 +5448,7 @@ namespace Nuke.Common.Tools.Pulumi
         #region Force
         /// <summary>
         ///   <p><em>Sets <see cref="PulumiConfigRefreshSettings.Force"/></em></p>
-        ///   <p>Overwrite configuration file, if it exists, without creating a backup</p>
+        ///   <p>Overwrite configuration file, if it exists, without creating a backup.</p>
         /// </summary>
         [Pure]
         public static PulumiConfigRefreshSettings SetForce(this PulumiConfigRefreshSettings toolSettings, bool? force)
@@ -5055,7 +5459,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Resets <see cref="PulumiConfigRefreshSettings.Force"/></em></p>
-        ///   <p>Overwrite configuration file, if it exists, without creating a backup</p>
+        ///   <p>Overwrite configuration file, if it exists, without creating a backup.</p>
         /// </summary>
         [Pure]
         public static PulumiConfigRefreshSettings ResetForce(this PulumiConfigRefreshSettings toolSettings)
@@ -5066,7 +5470,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Enables <see cref="PulumiConfigRefreshSettings.Force"/></em></p>
-        ///   <p>Overwrite configuration file, if it exists, without creating a backup</p>
+        ///   <p>Overwrite configuration file, if it exists, without creating a backup.</p>
         /// </summary>
         [Pure]
         public static PulumiConfigRefreshSettings EnableForce(this PulumiConfigRefreshSettings toolSettings)
@@ -5077,7 +5481,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Disables <see cref="PulumiConfigRefreshSettings.Force"/></em></p>
-        ///   <p>Overwrite configuration file, if it exists, without creating a backup</p>
+        ///   <p>Overwrite configuration file, if it exists, without creating a backup.</p>
         /// </summary>
         [Pure]
         public static PulumiConfigRefreshSettings DisableForce(this PulumiConfigRefreshSettings toolSettings)
@@ -5088,7 +5492,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Toggles <see cref="PulumiConfigRefreshSettings.Force"/></em></p>
-        ///   <p>Overwrite configuration file, if it exists, without creating a backup</p>
+        ///   <p>Overwrite configuration file, if it exists, without creating a backup.</p>
         /// </summary>
         [Pure]
         public static PulumiConfigRefreshSettings ToggleForce(this PulumiConfigRefreshSettings toolSettings)
@@ -5621,7 +6025,7 @@ namespace Nuke.Common.Tools.Pulumi
         #region Value
         /// <summary>
         ///   <p><em>Sets <see cref="PulumiConfigRemoveSettings.Value"/></em></p>
-        ///   <p>The configuration value to remove</p>
+        ///   <p>The configuration value to remove.</p>
         /// </summary>
         [Pure]
         public static PulumiConfigRemoveSettings SetValue(this PulumiConfigRemoveSettings toolSettings, string value)
@@ -5632,7 +6036,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Resets <see cref="PulumiConfigRemoveSettings.Value"/></em></p>
-        ///   <p>The configuration value to remove</p>
+        ///   <p>The configuration value to remove.</p>
         /// </summary>
         [Pure]
         public static PulumiConfigRemoveSettings ResetValue(this PulumiConfigRemoveSettings toolSettings)
@@ -5645,7 +6049,7 @@ namespace Nuke.Common.Tools.Pulumi
         #region Path
         /// <summary>
         ///   <p><em>Sets <see cref="PulumiConfigRemoveSettings.Path"/></em></p>
-        ///   <p>The key contains a path to a property in a map or list to remove</p>
+        ///   <p>The key contains a path to a property in a map or list to remove.</p>
         /// </summary>
         [Pure]
         public static PulumiConfigRemoveSettings SetPath(this PulumiConfigRemoveSettings toolSettings, string path)
@@ -5656,7 +6060,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Resets <see cref="PulumiConfigRemoveSettings.Path"/></em></p>
-        ///   <p>The key contains a path to a property in a map or list to remove</p>
+        ///   <p>The key contains a path to a property in a map or list to remove.</p>
         /// </summary>
         [Pure]
         public static PulumiConfigRemoveSettings ResetPath(this PulumiConfigRemoveSettings toolSettings)
@@ -6189,7 +6593,7 @@ namespace Nuke.Common.Tools.Pulumi
         #region Value
         /// <summary>
         ///   <p><em>Sets <see cref="PulumiConfigSetSettings.Value"/></em></p>
-        ///   <p>The configuration value to set</p>
+        ///   <p>The configuration value to set.</p>
         /// </summary>
         [Pure]
         public static PulumiConfigSetSettings SetValue(this PulumiConfigSetSettings toolSettings, string value)
@@ -6200,7 +6604,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Resets <see cref="PulumiConfigSetSettings.Value"/></em></p>
-        ///   <p>The configuration value to set</p>
+        ///   <p>The configuration value to set.</p>
         /// </summary>
         [Pure]
         public static PulumiConfigSetSettings ResetValue(this PulumiConfigSetSettings toolSettings)
@@ -6213,7 +6617,7 @@ namespace Nuke.Common.Tools.Pulumi
         #region Path
         /// <summary>
         ///   <p><em>Sets <see cref="PulumiConfigSetSettings.Path"/></em></p>
-        ///   <p>The key contains a path to a property in a map or list to set</p>
+        ///   <p>The key contains a path to a property in a map or list to set.</p>
         /// </summary>
         [Pure]
         public static PulumiConfigSetSettings SetPath(this PulumiConfigSetSettings toolSettings, string path)
@@ -6224,7 +6628,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Resets <see cref="PulumiConfigSetSettings.Path"/></em></p>
-        ///   <p>The key contains a path to a property in a map or list to set</p>
+        ///   <p>The key contains a path to a property in a map or list to set.</p>
         /// </summary>
         [Pure]
         public static PulumiConfigSetSettings ResetPath(this PulumiConfigSetSettings toolSettings)
@@ -6237,7 +6641,7 @@ namespace Nuke.Common.Tools.Pulumi
         #region Plaintext
         /// <summary>
         ///   <p><em>Sets <see cref="PulumiConfigSetSettings.Plaintext"/></em></p>
-        ///   <p>Save the value as plaintext (unencrypted)</p>
+        ///   <p>Save the value as plaintext (unencrypted).</p>
         /// </summary>
         [Pure]
         public static PulumiConfigSetSettings SetPlaintext(this PulumiConfigSetSettings toolSettings, bool? plaintext)
@@ -6248,7 +6652,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Resets <see cref="PulumiConfigSetSettings.Plaintext"/></em></p>
-        ///   <p>Save the value as plaintext (unencrypted)</p>
+        ///   <p>Save the value as plaintext (unencrypted).</p>
         /// </summary>
         [Pure]
         public static PulumiConfigSetSettings ResetPlaintext(this PulumiConfigSetSettings toolSettings)
@@ -6259,7 +6663,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Enables <see cref="PulumiConfigSetSettings.Plaintext"/></em></p>
-        ///   <p>Save the value as plaintext (unencrypted)</p>
+        ///   <p>Save the value as plaintext (unencrypted).</p>
         /// </summary>
         [Pure]
         public static PulumiConfigSetSettings EnablePlaintext(this PulumiConfigSetSettings toolSettings)
@@ -6270,7 +6674,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Disables <see cref="PulumiConfigSetSettings.Plaintext"/></em></p>
-        ///   <p>Save the value as plaintext (unencrypted)</p>
+        ///   <p>Save the value as plaintext (unencrypted).</p>
         /// </summary>
         [Pure]
         public static PulumiConfigSetSettings DisablePlaintext(this PulumiConfigSetSettings toolSettings)
@@ -6281,7 +6685,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Toggles <see cref="PulumiConfigSetSettings.Plaintext"/></em></p>
-        ///   <p>Save the value as plaintext (unencrypted)</p>
+        ///   <p>Save the value as plaintext (unencrypted).</p>
         /// </summary>
         [Pure]
         public static PulumiConfigSetSettings TogglePlaintext(this PulumiConfigSetSettings toolSettings)
@@ -6294,7 +6698,7 @@ namespace Nuke.Common.Tools.Pulumi
         #region Secret
         /// <summary>
         ///   <p><em>Sets <see cref="PulumiConfigSetSettings.Secret"/></em></p>
-        ///   <p>Encrypt the value instead of storing it in plaintext</p>
+        ///   <p>Encrypt the value instead of storing it in plaintext.</p>
         /// </summary>
         [Pure]
         public static PulumiConfigSetSettings SetSecret(this PulumiConfigSetSettings toolSettings, bool? secret)
@@ -6305,7 +6709,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Resets <see cref="PulumiConfigSetSettings.Secret"/></em></p>
-        ///   <p>Encrypt the value instead of storing it in plaintext</p>
+        ///   <p>Encrypt the value instead of storing it in plaintext.</p>
         /// </summary>
         [Pure]
         public static PulumiConfigSetSettings ResetSecret(this PulumiConfigSetSettings toolSettings)
@@ -6316,7 +6720,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Enables <see cref="PulumiConfigSetSettings.Secret"/></em></p>
-        ///   <p>Encrypt the value instead of storing it in plaintext</p>
+        ///   <p>Encrypt the value instead of storing it in plaintext.</p>
         /// </summary>
         [Pure]
         public static PulumiConfigSetSettings EnableSecret(this PulumiConfigSetSettings toolSettings)
@@ -6327,7 +6731,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Disables <see cref="PulumiConfigSetSettings.Secret"/></em></p>
-        ///   <p>Encrypt the value instead of storing it in plaintext</p>
+        ///   <p>Encrypt the value instead of storing it in plaintext.</p>
         /// </summary>
         [Pure]
         public static PulumiConfigSetSettings DisableSecret(this PulumiConfigSetSettings toolSettings)
@@ -6338,7 +6742,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Toggles <see cref="PulumiConfigSetSettings.Secret"/></em></p>
-        ///   <p>Encrypt the value instead of storing it in plaintext</p>
+        ///   <p>Encrypt the value instead of storing it in plaintext.</p>
         /// </summary>
         [Pure]
         public static PulumiConfigSetSettings ToggleSecret(this PulumiConfigSetSettings toolSettings)
@@ -6871,7 +7275,7 @@ namespace Nuke.Common.Tools.Pulumi
         #region Debug
         /// <summary>
         ///   <p><em>Sets <see cref="PulumiDestroySettings.Debug"/></em></p>
-        ///   <p>Print detailed debugging output during resource operations</p>
+        ///   <p>Print detailed debugging output during resource operations.</p>
         /// </summary>
         [Pure]
         public static PulumiDestroySettings SetDebug(this PulumiDestroySettings toolSettings, bool? debug)
@@ -6882,7 +7286,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Resets <see cref="PulumiDestroySettings.Debug"/></em></p>
-        ///   <p>Print detailed debugging output during resource operations</p>
+        ///   <p>Print detailed debugging output during resource operations.</p>
         /// </summary>
         [Pure]
         public static PulumiDestroySettings ResetDebug(this PulumiDestroySettings toolSettings)
@@ -6893,7 +7297,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Enables <see cref="PulumiDestroySettings.Debug"/></em></p>
-        ///   <p>Print detailed debugging output during resource operations</p>
+        ///   <p>Print detailed debugging output during resource operations.</p>
         /// </summary>
         [Pure]
         public static PulumiDestroySettings EnableDebug(this PulumiDestroySettings toolSettings)
@@ -6904,7 +7308,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Disables <see cref="PulumiDestroySettings.Debug"/></em></p>
-        ///   <p>Print detailed debugging output during resource operations</p>
+        ///   <p>Print detailed debugging output during resource operations.</p>
         /// </summary>
         [Pure]
         public static PulumiDestroySettings DisableDebug(this PulumiDestroySettings toolSettings)
@@ -6915,7 +7319,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Toggles <see cref="PulumiDestroySettings.Debug"/></em></p>
-        ///   <p>Print detailed debugging output during resource operations</p>
+        ///   <p>Print detailed debugging output during resource operations.</p>
         /// </summary>
         [Pure]
         public static PulumiDestroySettings ToggleDebug(this PulumiDestroySettings toolSettings)
@@ -6928,7 +7332,7 @@ namespace Nuke.Common.Tools.Pulumi
         #region Diff
         /// <summary>
         ///   <p><em>Sets <see cref="PulumiDestroySettings.Diff"/></em></p>
-        ///   <p>Display operation as a rich diff showing the overall change</p>
+        ///   <p>Display operation as a rich diff showing the overall change.</p>
         /// </summary>
         [Pure]
         public static PulumiDestroySettings SetDiff(this PulumiDestroySettings toolSettings, bool? diff)
@@ -6939,7 +7343,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Resets <see cref="PulumiDestroySettings.Diff"/></em></p>
-        ///   <p>Display operation as a rich diff showing the overall change</p>
+        ///   <p>Display operation as a rich diff showing the overall change.</p>
         /// </summary>
         [Pure]
         public static PulumiDestroySettings ResetDiff(this PulumiDestroySettings toolSettings)
@@ -6950,7 +7354,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Enables <see cref="PulumiDestroySettings.Diff"/></em></p>
-        ///   <p>Display operation as a rich diff showing the overall change</p>
+        ///   <p>Display operation as a rich diff showing the overall change.</p>
         /// </summary>
         [Pure]
         public static PulumiDestroySettings EnableDiff(this PulumiDestroySettings toolSettings)
@@ -6961,7 +7365,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Disables <see cref="PulumiDestroySettings.Diff"/></em></p>
-        ///   <p>Display operation as a rich diff showing the overall change</p>
+        ///   <p>Display operation as a rich diff showing the overall change.</p>
         /// </summary>
         [Pure]
         public static PulumiDestroySettings DisableDiff(this PulumiDestroySettings toolSettings)
@@ -6972,7 +7376,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Toggles <see cref="PulumiDestroySettings.Diff"/></em></p>
-        ///   <p>Display operation as a rich diff showing the overall change</p>
+        ///   <p>Display operation as a rich diff showing the overall change.</p>
         /// </summary>
         [Pure]
         public static PulumiDestroySettings ToggleDiff(this PulumiDestroySettings toolSettings)
@@ -6985,7 +7389,7 @@ namespace Nuke.Common.Tools.Pulumi
         #region Message
         /// <summary>
         ///   <p><em>Sets <see cref="PulumiDestroySettings.Message"/></em></p>
-        ///   <p>Optional message to associate with the destroy operation</p>
+        ///   <p>Optional message to associate with the destroy operation.</p>
         /// </summary>
         [Pure]
         public static PulumiDestroySettings SetMessage(this PulumiDestroySettings toolSettings, string message)
@@ -6996,7 +7400,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Resets <see cref="PulumiDestroySettings.Message"/></em></p>
-        ///   <p>Optional message to associate with the destroy operation</p>
+        ///   <p>Optional message to associate with the destroy operation.</p>
         /// </summary>
         [Pure]
         public static PulumiDestroySettings ResetMessage(this PulumiDestroySettings toolSettings)
@@ -7009,7 +7413,7 @@ namespace Nuke.Common.Tools.Pulumi
         #region Parallel
         /// <summary>
         ///   <p><em>Sets <see cref="PulumiDestroySettings.Parallel"/></em></p>
-        ///   <p>Allow P resource operations to run in parallel at once (1 for no parallelism). Defaults to unbounded. (default 2147483647)</p>
+        ///   <p>Allow P resource operations to run in parallel at once (1 for no parallelism). Defaults to unbounded. (default 2147483647).</p>
         /// </summary>
         [Pure]
         public static PulumiDestroySettings SetParallel(this PulumiDestroySettings toolSettings, int? parallel)
@@ -7020,7 +7424,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Resets <see cref="PulumiDestroySettings.Parallel"/></em></p>
-        ///   <p>Allow P resource operations to run in parallel at once (1 for no parallelism). Defaults to unbounded. (default 2147483647)</p>
+        ///   <p>Allow P resource operations to run in parallel at once (1 for no parallelism). Defaults to unbounded. (default 2147483647).</p>
         /// </summary>
         [Pure]
         public static PulumiDestroySettings ResetParallel(this PulumiDestroySettings toolSettings)
@@ -7033,7 +7437,7 @@ namespace Nuke.Common.Tools.Pulumi
         #region Refresh
         /// <summary>
         ///   <p><em>Sets <see cref="PulumiDestroySettings.Refresh"/></em></p>
-        ///   <p>Refresh the state of the stack's resources before this update</p>
+        ///   <p>Refresh the state of the stack's resources before this update.</p>
         /// </summary>
         [Pure]
         public static PulumiDestroySettings SetRefresh(this PulumiDestroySettings toolSettings, bool? refresh)
@@ -7044,7 +7448,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Resets <see cref="PulumiDestroySettings.Refresh"/></em></p>
-        ///   <p>Refresh the state of the stack's resources before this update</p>
+        ///   <p>Refresh the state of the stack's resources before this update.</p>
         /// </summary>
         [Pure]
         public static PulumiDestroySettings ResetRefresh(this PulumiDestroySettings toolSettings)
@@ -7055,7 +7459,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Enables <see cref="PulumiDestroySettings.Refresh"/></em></p>
-        ///   <p>Refresh the state of the stack's resources before this update</p>
+        ///   <p>Refresh the state of the stack's resources before this update.</p>
         /// </summary>
         [Pure]
         public static PulumiDestroySettings EnableRefresh(this PulumiDestroySettings toolSettings)
@@ -7066,7 +7470,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Disables <see cref="PulumiDestroySettings.Refresh"/></em></p>
-        ///   <p>Refresh the state of the stack's resources before this update</p>
+        ///   <p>Refresh the state of the stack's resources before this update.</p>
         /// </summary>
         [Pure]
         public static PulumiDestroySettings DisableRefresh(this PulumiDestroySettings toolSettings)
@@ -7077,7 +7481,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Toggles <see cref="PulumiDestroySettings.Refresh"/></em></p>
-        ///   <p>Refresh the state of the stack's resources before this update</p>
+        ///   <p>Refresh the state of the stack's resources before this update.</p>
         /// </summary>
         [Pure]
         public static PulumiDestroySettings ToggleRefresh(this PulumiDestroySettings toolSettings)
@@ -7090,7 +7494,7 @@ namespace Nuke.Common.Tools.Pulumi
         #region ShowConfig
         /// <summary>
         ///   <p><em>Sets <see cref="PulumiDestroySettings.ShowConfig"/></em></p>
-        ///   <p>Show configuration keys and variables</p>
+        ///   <p>Show configuration keys and variables.</p>
         /// </summary>
         [Pure]
         public static PulumiDestroySettings SetShowConfig(this PulumiDestroySettings toolSettings, bool? showConfig)
@@ -7101,7 +7505,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Resets <see cref="PulumiDestroySettings.ShowConfig"/></em></p>
-        ///   <p>Show configuration keys and variables</p>
+        ///   <p>Show configuration keys and variables.</p>
         /// </summary>
         [Pure]
         public static PulumiDestroySettings ResetShowConfig(this PulumiDestroySettings toolSettings)
@@ -7112,7 +7516,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Enables <see cref="PulumiDestroySettings.ShowConfig"/></em></p>
-        ///   <p>Show configuration keys and variables</p>
+        ///   <p>Show configuration keys and variables.</p>
         /// </summary>
         [Pure]
         public static PulumiDestroySettings EnableShowConfig(this PulumiDestroySettings toolSettings)
@@ -7123,7 +7527,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Disables <see cref="PulumiDestroySettings.ShowConfig"/></em></p>
-        ///   <p>Show configuration keys and variables</p>
+        ///   <p>Show configuration keys and variables.</p>
         /// </summary>
         [Pure]
         public static PulumiDestroySettings DisableShowConfig(this PulumiDestroySettings toolSettings)
@@ -7134,7 +7538,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Toggles <see cref="PulumiDestroySettings.ShowConfig"/></em></p>
-        ///   <p>Show configuration keys and variables</p>
+        ///   <p>Show configuration keys and variables.</p>
         /// </summary>
         [Pure]
         public static PulumiDestroySettings ToggleShowConfig(this PulumiDestroySettings toolSettings)
@@ -7147,7 +7551,7 @@ namespace Nuke.Common.Tools.Pulumi
         #region ShowReplacementSteps
         /// <summary>
         ///   <p><em>Sets <see cref="PulumiDestroySettings.ShowReplacementSteps"/></em></p>
-        ///   <p>Show detailed resource replacement creates and deletes instead of a single step</p>
+        ///   <p>Show detailed resource replacement creates and deletes instead of a single step.</p>
         /// </summary>
         [Pure]
         public static PulumiDestroySettings SetShowReplacementSteps(this PulumiDestroySettings toolSettings, bool? showReplacementSteps)
@@ -7158,7 +7562,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Resets <see cref="PulumiDestroySettings.ShowReplacementSteps"/></em></p>
-        ///   <p>Show detailed resource replacement creates and deletes instead of a single step</p>
+        ///   <p>Show detailed resource replacement creates and deletes instead of a single step.</p>
         /// </summary>
         [Pure]
         public static PulumiDestroySettings ResetShowReplacementSteps(this PulumiDestroySettings toolSettings)
@@ -7169,7 +7573,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Enables <see cref="PulumiDestroySettings.ShowReplacementSteps"/></em></p>
-        ///   <p>Show detailed resource replacement creates and deletes instead of a single step</p>
+        ///   <p>Show detailed resource replacement creates and deletes instead of a single step.</p>
         /// </summary>
         [Pure]
         public static PulumiDestroySettings EnableShowReplacementSteps(this PulumiDestroySettings toolSettings)
@@ -7180,7 +7584,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Disables <see cref="PulumiDestroySettings.ShowReplacementSteps"/></em></p>
-        ///   <p>Show detailed resource replacement creates and deletes instead of a single step</p>
+        ///   <p>Show detailed resource replacement creates and deletes instead of a single step.</p>
         /// </summary>
         [Pure]
         public static PulumiDestroySettings DisableShowReplacementSteps(this PulumiDestroySettings toolSettings)
@@ -7191,7 +7595,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Toggles <see cref="PulumiDestroySettings.ShowReplacementSteps"/></em></p>
-        ///   <p>Show detailed resource replacement creates and deletes instead of a single step</p>
+        ///   <p>Show detailed resource replacement creates and deletes instead of a single step.</p>
         /// </summary>
         [Pure]
         public static PulumiDestroySettings ToggleShowReplacementSteps(this PulumiDestroySettings toolSettings)
@@ -7204,7 +7608,7 @@ namespace Nuke.Common.Tools.Pulumi
         #region ShowSames
         /// <summary>
         ///   <p><em>Sets <see cref="PulumiDestroySettings.ShowSames"/></em></p>
-        ///   <p>Show resources that don't need to be updated because they haven't changed, alongside those that do</p>
+        ///   <p>Show resources that don't need to be updated because they haven't changed, alongside those that do.</p>
         /// </summary>
         [Pure]
         public static PulumiDestroySettings SetShowSames(this PulumiDestroySettings toolSettings, bool? showSames)
@@ -7215,7 +7619,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Resets <see cref="PulumiDestroySettings.ShowSames"/></em></p>
-        ///   <p>Show resources that don't need to be updated because they haven't changed, alongside those that do</p>
+        ///   <p>Show resources that don't need to be updated because they haven't changed, alongside those that do.</p>
         /// </summary>
         [Pure]
         public static PulumiDestroySettings ResetShowSames(this PulumiDestroySettings toolSettings)
@@ -7226,7 +7630,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Enables <see cref="PulumiDestroySettings.ShowSames"/></em></p>
-        ///   <p>Show resources that don't need to be updated because they haven't changed, alongside those that do</p>
+        ///   <p>Show resources that don't need to be updated because they haven't changed, alongside those that do.</p>
         /// </summary>
         [Pure]
         public static PulumiDestroySettings EnableShowSames(this PulumiDestroySettings toolSettings)
@@ -7237,7 +7641,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Disables <see cref="PulumiDestroySettings.ShowSames"/></em></p>
-        ///   <p>Show resources that don't need to be updated because they haven't changed, alongside those that do</p>
+        ///   <p>Show resources that don't need to be updated because they haven't changed, alongside those that do.</p>
         /// </summary>
         [Pure]
         public static PulumiDestroySettings DisableShowSames(this PulumiDestroySettings toolSettings)
@@ -7248,7 +7652,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Toggles <see cref="PulumiDestroySettings.ShowSames"/></em></p>
-        ///   <p>Show resources that don't need to be updated because they haven't changed, alongside those that do</p>
+        ///   <p>Show resources that don't need to be updated because they haven't changed, alongside those that do.</p>
         /// </summary>
         [Pure]
         public static PulumiDestroySettings ToggleShowSames(this PulumiDestroySettings toolSettings)
@@ -7261,7 +7665,7 @@ namespace Nuke.Common.Tools.Pulumi
         #region SkipPreview
         /// <summary>
         ///   <p><em>Sets <see cref="PulumiDestroySettings.SkipPreview"/></em></p>
-        ///   <p>Do not perform a preview before performing the destroy</p>
+        ///   <p>Do not perform a preview before performing the destroy.</p>
         /// </summary>
         [Pure]
         public static PulumiDestroySettings SetSkipPreview(this PulumiDestroySettings toolSettings, bool? skipPreview)
@@ -7272,7 +7676,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Resets <see cref="PulumiDestroySettings.SkipPreview"/></em></p>
-        ///   <p>Do not perform a preview before performing the destroy</p>
+        ///   <p>Do not perform a preview before performing the destroy.</p>
         /// </summary>
         [Pure]
         public static PulumiDestroySettings ResetSkipPreview(this PulumiDestroySettings toolSettings)
@@ -7283,7 +7687,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Enables <see cref="PulumiDestroySettings.SkipPreview"/></em></p>
-        ///   <p>Do not perform a preview before performing the destroy</p>
+        ///   <p>Do not perform a preview before performing the destroy.</p>
         /// </summary>
         [Pure]
         public static PulumiDestroySettings EnableSkipPreview(this PulumiDestroySettings toolSettings)
@@ -7294,7 +7698,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Disables <see cref="PulumiDestroySettings.SkipPreview"/></em></p>
-        ///   <p>Do not perform a preview before performing the destroy</p>
+        ///   <p>Do not perform a preview before performing the destroy.</p>
         /// </summary>
         [Pure]
         public static PulumiDestroySettings DisableSkipPreview(this PulumiDestroySettings toolSettings)
@@ -7305,7 +7709,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Toggles <see cref="PulumiDestroySettings.SkipPreview"/></em></p>
-        ///   <p>Do not perform a preview before performing the destroy</p>
+        ///   <p>Do not perform a preview before performing the destroy.</p>
         /// </summary>
         [Pure]
         public static PulumiDestroySettings ToggleSkipPreview(this PulumiDestroySettings toolSettings)
@@ -7315,67 +7719,67 @@ namespace Nuke.Common.Tools.Pulumi
             return toolSettings;
         }
         #endregion
-        #region SupressOutputs
+        #region SuppressOutputs
         /// <summary>
-        ///   <p><em>Sets <see cref="PulumiDestroySettings.SupressOutputs"/></em></p>
-        ///   <p>Suppress display of stack outputs (in case they contain sensitive values)</p>
+        ///   <p><em>Sets <see cref="PulumiDestroySettings.SuppressOutputs"/></em></p>
+        ///   <p>Suppress display of stack outputs (in case they contain sensitive values).</p>
         /// </summary>
         [Pure]
-        public static PulumiDestroySettings SetSupressOutputs(this PulumiDestroySettings toolSettings, bool? supressOutputs)
+        public static PulumiDestroySettings SetSuppressOutputs(this PulumiDestroySettings toolSettings, bool? suppressOutputs)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.SupressOutputs = supressOutputs;
+            toolSettings.SuppressOutputs = suppressOutputs;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="PulumiDestroySettings.SupressOutputs"/></em></p>
-        ///   <p>Suppress display of stack outputs (in case they contain sensitive values)</p>
+        ///   <p><em>Resets <see cref="PulumiDestroySettings.SuppressOutputs"/></em></p>
+        ///   <p>Suppress display of stack outputs (in case they contain sensitive values).</p>
         /// </summary>
         [Pure]
-        public static PulumiDestroySettings ResetSupressOutputs(this PulumiDestroySettings toolSettings)
+        public static PulumiDestroySettings ResetSuppressOutputs(this PulumiDestroySettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.SupressOutputs = null;
+            toolSettings.SuppressOutputs = null;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Enables <see cref="PulumiDestroySettings.SupressOutputs"/></em></p>
-        ///   <p>Suppress display of stack outputs (in case they contain sensitive values)</p>
+        ///   <p><em>Enables <see cref="PulumiDestroySettings.SuppressOutputs"/></em></p>
+        ///   <p>Suppress display of stack outputs (in case they contain sensitive values).</p>
         /// </summary>
         [Pure]
-        public static PulumiDestroySettings EnableSupressOutputs(this PulumiDestroySettings toolSettings)
+        public static PulumiDestroySettings EnableSuppressOutputs(this PulumiDestroySettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.SupressOutputs = true;
+            toolSettings.SuppressOutputs = true;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Disables <see cref="PulumiDestroySettings.SupressOutputs"/></em></p>
-        ///   <p>Suppress display of stack outputs (in case they contain sensitive values)</p>
+        ///   <p><em>Disables <see cref="PulumiDestroySettings.SuppressOutputs"/></em></p>
+        ///   <p>Suppress display of stack outputs (in case they contain sensitive values).</p>
         /// </summary>
         [Pure]
-        public static PulumiDestroySettings DisableSupressOutputs(this PulumiDestroySettings toolSettings)
+        public static PulumiDestroySettings DisableSuppressOutputs(this PulumiDestroySettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.SupressOutputs = false;
+            toolSettings.SuppressOutputs = false;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Toggles <see cref="PulumiDestroySettings.SupressOutputs"/></em></p>
-        ///   <p>Suppress display of stack outputs (in case they contain sensitive values)</p>
+        ///   <p><em>Toggles <see cref="PulumiDestroySettings.SuppressOutputs"/></em></p>
+        ///   <p>Suppress display of stack outputs (in case they contain sensitive values).</p>
         /// </summary>
         [Pure]
-        public static PulumiDestroySettings ToggleSupressOutputs(this PulumiDestroySettings toolSettings)
+        public static PulumiDestroySettings ToggleSuppressOutputs(this PulumiDestroySettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.SupressOutputs = !toolSettings.SupressOutputs;
+            toolSettings.SuppressOutputs = !toolSettings.SuppressOutputs;
             return toolSettings;
         }
         #endregion
         #region Target
         /// <summary>
         ///   <p><em>Sets <see cref="PulumiDestroySettings.Target"/></em></p>
-        ///   <p>Specify a single resource URN to destroy. All resources necessary to destroy this target will also be destroyed. Multiple resources can be specified using: --target urn1 --target urn2</p>
+        ///   <p>Specify a single resource URN to destroy. All resources necessary to destroy this target will also be destroyed. Multiple resources can be specified using: --target urn1 --target urn2.</p>
         /// </summary>
         [Pure]
         public static PulumiDestroySettings SetTarget(this PulumiDestroySettings toolSettings, string target)
@@ -7386,7 +7790,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Resets <see cref="PulumiDestroySettings.Target"/></em></p>
-        ///   <p>Specify a single resource URN to destroy. All resources necessary to destroy this target will also be destroyed. Multiple resources can be specified using: --target urn1 --target urn2</p>
+        ///   <p>Specify a single resource URN to destroy. All resources necessary to destroy this target will also be destroyed. Multiple resources can be specified using: --target urn1 --target urn2.</p>
         /// </summary>
         [Pure]
         public static PulumiDestroySettings ResetTarget(this PulumiDestroySettings toolSettings)
@@ -7399,7 +7803,7 @@ namespace Nuke.Common.Tools.Pulumi
         #region TargetDependents
         /// <summary>
         ///   <p><em>Sets <see cref="PulumiDestroySettings.TargetDependents"/></em></p>
-        ///   <p>Allows destroying of dependent targets discovered but not specified in --target list</p>
+        ///   <p>Allows destroying of dependent targets discovered but not specified in --target list.</p>
         /// </summary>
         [Pure]
         public static PulumiDestroySettings SetTargetDependents(this PulumiDestroySettings toolSettings, bool? targetDependents)
@@ -7410,7 +7814,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Resets <see cref="PulumiDestroySettings.TargetDependents"/></em></p>
-        ///   <p>Allows destroying of dependent targets discovered but not specified in --target list</p>
+        ///   <p>Allows destroying of dependent targets discovered but not specified in --target list.</p>
         /// </summary>
         [Pure]
         public static PulumiDestroySettings ResetTargetDependents(this PulumiDestroySettings toolSettings)
@@ -7421,7 +7825,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Enables <see cref="PulumiDestroySettings.TargetDependents"/></em></p>
-        ///   <p>Allows destroying of dependent targets discovered but not specified in --target list</p>
+        ///   <p>Allows destroying of dependent targets discovered but not specified in --target list.</p>
         /// </summary>
         [Pure]
         public static PulumiDestroySettings EnableTargetDependents(this PulumiDestroySettings toolSettings)
@@ -7432,7 +7836,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Disables <see cref="PulumiDestroySettings.TargetDependents"/></em></p>
-        ///   <p>Allows destroying of dependent targets discovered but not specified in --target list</p>
+        ///   <p>Allows destroying of dependent targets discovered but not specified in --target list.</p>
         /// </summary>
         [Pure]
         public static PulumiDestroySettings DisableTargetDependents(this PulumiDestroySettings toolSettings)
@@ -7443,7 +7847,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Toggles <see cref="PulumiDestroySettings.TargetDependents"/></em></p>
-        ///   <p>Allows destroying of dependent targets discovered but not specified in --target list</p>
+        ///   <p>Allows destroying of dependent targets discovered but not specified in --target list.</p>
         /// </summary>
         [Pure]
         public static PulumiDestroySettings ToggleTargetDependents(this PulumiDestroySettings toolSettings)
@@ -7456,7 +7860,7 @@ namespace Nuke.Common.Tools.Pulumi
         #region Yes
         /// <summary>
         ///   <p><em>Sets <see cref="PulumiDestroySettings.Yes"/></em></p>
-        ///   <p>Automatically approve and perform the destroy after previewing it</p>
+        ///   <p>Automatically approve and perform the destroy after previewing it.</p>
         /// </summary>
         [Pure]
         public static PulumiDestroySettings SetYes(this PulumiDestroySettings toolSettings, bool? yes)
@@ -7467,7 +7871,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Resets <see cref="PulumiDestroySettings.Yes"/></em></p>
-        ///   <p>Automatically approve and perform the destroy after previewing it</p>
+        ///   <p>Automatically approve and perform the destroy after previewing it.</p>
         /// </summary>
         [Pure]
         public static PulumiDestroySettings ResetYes(this PulumiDestroySettings toolSettings)
@@ -7478,7 +7882,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Enables <see cref="PulumiDestroySettings.Yes"/></em></p>
-        ///   <p>Automatically approve and perform the destroy after previewing it</p>
+        ///   <p>Automatically approve and perform the destroy after previewing it.</p>
         /// </summary>
         [Pure]
         public static PulumiDestroySettings EnableYes(this PulumiDestroySettings toolSettings)
@@ -7489,7 +7893,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Disables <see cref="PulumiDestroySettings.Yes"/></em></p>
-        ///   <p>Automatically approve and perform the destroy after previewing it</p>
+        ///   <p>Automatically approve and perform the destroy after previewing it.</p>
         /// </summary>
         [Pure]
         public static PulumiDestroySettings DisableYes(this PulumiDestroySettings toolSettings)
@@ -7500,7 +7904,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Toggles <see cref="PulumiDestroySettings.Yes"/></em></p>
-        ///   <p>Automatically approve and perform the destroy after previewing it</p>
+        ///   <p>Automatically approve and perform the destroy after previewing it.</p>
         /// </summary>
         [Pure]
         public static PulumiDestroySettings ToggleYes(this PulumiDestroySettings toolSettings)
@@ -8033,7 +8437,7 @@ namespace Nuke.Common.Tools.Pulumi
         #region Json
         /// <summary>
         ///   <p><em>Sets <see cref="PulumiHistorySettings.Json"/></em></p>
-        ///   <p>Emit output as JSON</p>
+        ///   <p>Emit output as JSON.</p>
         /// </summary>
         [Pure]
         public static PulumiHistorySettings SetJson(this PulumiHistorySettings toolSettings, bool? json)
@@ -8044,7 +8448,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Resets <see cref="PulumiHistorySettings.Json"/></em></p>
-        ///   <p>Emit output as JSON</p>
+        ///   <p>Emit output as JSON.</p>
         /// </summary>
         [Pure]
         public static PulumiHistorySettings ResetJson(this PulumiHistorySettings toolSettings)
@@ -8055,7 +8459,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Enables <see cref="PulumiHistorySettings.Json"/></em></p>
-        ///   <p>Emit output as JSON</p>
+        ///   <p>Emit output as JSON.</p>
         /// </summary>
         [Pure]
         public static PulumiHistorySettings EnableJson(this PulumiHistorySettings toolSettings)
@@ -8066,7 +8470,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Disables <see cref="PulumiHistorySettings.Json"/></em></p>
-        ///   <p>Emit output as JSON</p>
+        ///   <p>Emit output as JSON.</p>
         /// </summary>
         [Pure]
         public static PulumiHistorySettings DisableJson(this PulumiHistorySettings toolSettings)
@@ -8077,7 +8481,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Toggles <see cref="PulumiHistorySettings.Json"/></em></p>
-        ///   <p>Emit output as JSON</p>
+        ///   <p>Emit output as JSON.</p>
         /// </summary>
         [Pure]
         public static PulumiHistorySettings ToggleJson(this PulumiHistorySettings toolSettings)
@@ -8090,7 +8494,7 @@ namespace Nuke.Common.Tools.Pulumi
         #region ShowSecrets
         /// <summary>
         ///   <p><em>Sets <see cref="PulumiHistorySettings.ShowSecrets"/></em></p>
-        ///   <p>Show secret values when listing config instead of displaying blinded values</p>
+        ///   <p>Show secret values when listing config instead of displaying blinded values.</p>
         /// </summary>
         [Pure]
         public static PulumiHistorySettings SetShowSecrets(this PulumiHistorySettings toolSettings, bool? showSecrets)
@@ -8101,7 +8505,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Resets <see cref="PulumiHistorySettings.ShowSecrets"/></em></p>
-        ///   <p>Show secret values when listing config instead of displaying blinded values</p>
+        ///   <p>Show secret values when listing config instead of displaying blinded values.</p>
         /// </summary>
         [Pure]
         public static PulumiHistorySettings ResetShowSecrets(this PulumiHistorySettings toolSettings)
@@ -8112,7 +8516,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Enables <see cref="PulumiHistorySettings.ShowSecrets"/></em></p>
-        ///   <p>Show secret values when listing config instead of displaying blinded values</p>
+        ///   <p>Show secret values when listing config instead of displaying blinded values.</p>
         /// </summary>
         [Pure]
         public static PulumiHistorySettings EnableShowSecrets(this PulumiHistorySettings toolSettings)
@@ -8123,7 +8527,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Disables <see cref="PulumiHistorySettings.ShowSecrets"/></em></p>
-        ///   <p>Show secret values when listing config instead of displaying blinded values</p>
+        ///   <p>Show secret values when listing config instead of displaying blinded values.</p>
         /// </summary>
         [Pure]
         public static PulumiHistorySettings DisableShowSecrets(this PulumiHistorySettings toolSettings)
@@ -8134,7 +8538,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Toggles <see cref="PulumiHistorySettings.ShowSecrets"/></em></p>
-        ///   <p>Show secret values when listing config instead of displaying blinded values</p>
+        ///   <p>Show secret values when listing config instead of displaying blinded values.</p>
         /// </summary>
         [Pure]
         public static PulumiHistorySettings ToggleShowSecrets(this PulumiHistorySettings toolSettings)
@@ -8643,7 +9047,7 @@ namespace Nuke.Common.Tools.Pulumi
         #region Location
         /// <summary>
         ///   <p><em>Sets <see cref="PulumiLoginSettings.Location"/></em></p>
-        ///   <p>Specify a URL or a local/cloud path to the Pulumi instance you wish to use. Defaults to app.pulumi.com</p>
+        ///   <p>Specify a URL or a local/cloud path to the Pulumi instance you wish to use. Defaults to app.pulumi.com.</p>
         /// </summary>
         [Pure]
         public static PulumiLoginSettings SetLocation(this PulumiLoginSettings toolSettings, string location)
@@ -8654,7 +9058,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Resets <see cref="PulumiLoginSettings.Location"/></em></p>
-        ///   <p>Specify a URL or a local/cloud path to the Pulumi instance you wish to use. Defaults to app.pulumi.com</p>
+        ///   <p>Specify a URL or a local/cloud path to the Pulumi instance you wish to use. Defaults to app.pulumi.com.</p>
         /// </summary>
         [Pure]
         public static PulumiLoginSettings ResetLocation(this PulumiLoginSettings toolSettings)
@@ -8667,7 +9071,7 @@ namespace Nuke.Common.Tools.Pulumi
         #region CloudUrl
         /// <summary>
         ///   <p><em>Sets <see cref="PulumiLoginSettings.CloudUrl"/></em></p>
-        ///   <p>A cloud URL to log into. This is the same as specifying a location</p>
+        ///   <p>A cloud URL to log into. This is the same as specifying a location.</p>
         /// </summary>
         [Pure]
         public static PulumiLoginSettings SetCloudUrl(this PulumiLoginSettings toolSettings, string cloudUrl)
@@ -8678,7 +9082,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Resets <see cref="PulumiLoginSettings.CloudUrl"/></em></p>
-        ///   <p>A cloud URL to log into. This is the same as specifying a location</p>
+        ///   <p>A cloud URL to log into. This is the same as specifying a location.</p>
         /// </summary>
         [Pure]
         public static PulumiLoginSettings ResetCloudUrl(this PulumiLoginSettings toolSettings)
@@ -8691,7 +9095,7 @@ namespace Nuke.Common.Tools.Pulumi
         #region Local
         /// <summary>
         ///   <p><em>Sets <see cref="PulumiLoginSettings.Local"/></em></p>
-        ///   <p>Use Pulumi in local-only mode</p>
+        ///   <p>Use Pulumi in local-only mode.</p>
         /// </summary>
         [Pure]
         public static PulumiLoginSettings SetLocal(this PulumiLoginSettings toolSettings, bool? local)
@@ -8702,7 +9106,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Resets <see cref="PulumiLoginSettings.Local"/></em></p>
-        ///   <p>Use Pulumi in local-only mode</p>
+        ///   <p>Use Pulumi in local-only mode.</p>
         /// </summary>
         [Pure]
         public static PulumiLoginSettings ResetLocal(this PulumiLoginSettings toolSettings)
@@ -8713,7 +9117,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Enables <see cref="PulumiLoginSettings.Local"/></em></p>
-        ///   <p>Use Pulumi in local-only mode</p>
+        ///   <p>Use Pulumi in local-only mode.</p>
         /// </summary>
         [Pure]
         public static PulumiLoginSettings EnableLocal(this PulumiLoginSettings toolSettings)
@@ -8724,7 +9128,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Disables <see cref="PulumiLoginSettings.Local"/></em></p>
-        ///   <p>Use Pulumi in local-only mode</p>
+        ///   <p>Use Pulumi in local-only mode.</p>
         /// </summary>
         [Pure]
         public static PulumiLoginSettings DisableLocal(this PulumiLoginSettings toolSettings)
@@ -8735,7 +9139,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Toggles <see cref="PulumiLoginSettings.Local"/></em></p>
-        ///   <p>Use Pulumi in local-only mode</p>
+        ///   <p>Use Pulumi in local-only mode.</p>
         /// </summary>
         [Pure]
         public static PulumiLoginSettings ToggleLocal(this PulumiLoginSettings toolSettings)
@@ -9244,7 +9648,7 @@ namespace Nuke.Common.Tools.Pulumi
         #region CloudUrl
         /// <summary>
         ///   <p><em>Sets <see cref="PulumiLogoutSettings.CloudUrl"/></em></p>
-        ///   <p> A cloud URL to log out of (defaults to current cloud). This is the same as specifying a location</p>
+        ///   <p> A cloud URL to log out of (defaults to current cloud). This is the same as specifying a location.</p>
         /// </summary>
         [Pure]
         public static PulumiLogoutSettings SetCloudUrl(this PulumiLogoutSettings toolSettings, string cloudUrl)
@@ -9255,7 +9659,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Resets <see cref="PulumiLogoutSettings.CloudUrl"/></em></p>
-        ///   <p> A cloud URL to log out of (defaults to current cloud). This is the same as specifying a location</p>
+        ///   <p> A cloud URL to log out of (defaults to current cloud). This is the same as specifying a location.</p>
         /// </summary>
         [Pure]
         public static PulumiLogoutSettings ResetCloudUrl(this PulumiLogoutSettings toolSettings)
@@ -9268,7 +9672,7 @@ namespace Nuke.Common.Tools.Pulumi
         #region Local
         /// <summary>
         ///   <p><em>Sets <see cref="PulumiLogoutSettings.Local"/></em></p>
-        ///   <p>Log out of using local mode</p>
+        ///   <p>Log out of using local mode.</p>
         /// </summary>
         [Pure]
         public static PulumiLogoutSettings SetLocal(this PulumiLogoutSettings toolSettings, bool? local)
@@ -9279,7 +9683,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Resets <see cref="PulumiLogoutSettings.Local"/></em></p>
-        ///   <p>Log out of using local mode</p>
+        ///   <p>Log out of using local mode.</p>
         /// </summary>
         [Pure]
         public static PulumiLogoutSettings ResetLocal(this PulumiLogoutSettings toolSettings)
@@ -9290,7 +9694,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Enables <see cref="PulumiLogoutSettings.Local"/></em></p>
-        ///   <p>Log out of using local mode</p>
+        ///   <p>Log out of using local mode.</p>
         /// </summary>
         [Pure]
         public static PulumiLogoutSettings EnableLocal(this PulumiLogoutSettings toolSettings)
@@ -9301,7 +9705,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Disables <see cref="PulumiLogoutSettings.Local"/></em></p>
-        ///   <p>Log out of using local mode</p>
+        ///   <p>Log out of using local mode.</p>
         /// </summary>
         [Pure]
         public static PulumiLogoutSettings DisableLocal(this PulumiLogoutSettings toolSettings)
@@ -9312,7 +9716,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Toggles <see cref="PulumiLogoutSettings.Local"/></em></p>
-        ///   <p>Log out of using local mode</p>
+        ///   <p>Log out of using local mode.</p>
         /// </summary>
         [Pure]
         public static PulumiLogoutSettings ToggleLocal(this PulumiLogoutSettings toolSettings)
@@ -12411,6 +12815,972 @@ namespace Nuke.Common.Tools.Pulumi
             return toolSettings;
         }
         #endregion
+        #region ConfigPath
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiPreviewSettings.ConfigPath"/></em></p>
+        ///   <p>Config keys contain a path to a property in a map or list to set.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings SetConfigPath(this PulumiPreviewSettings toolSettings, bool? configPath)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ConfigPath = configPath;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiPreviewSettings.ConfigPath"/></em></p>
+        ///   <p>Config keys contain a path to a property in a map or list to set.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings ResetConfigPath(this PulumiPreviewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ConfigPath = null;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Enables <see cref="PulumiPreviewSettings.ConfigPath"/></em></p>
+        ///   <p>Config keys contain a path to a property in a map or list to set.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings EnableConfigPath(this PulumiPreviewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ConfigPath = true;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Disables <see cref="PulumiPreviewSettings.ConfigPath"/></em></p>
+        ///   <p>Config keys contain a path to a property in a map or list to set.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings DisableConfigPath(this PulumiPreviewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ConfigPath = false;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Toggles <see cref="PulumiPreviewSettings.ConfigPath"/></em></p>
+        ///   <p>Config keys contain a path to a property in a map or list to set.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings ToggleConfigPath(this PulumiPreviewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ConfigPath = !toolSettings.ConfigPath;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiPreviewSettings.Debug"/></em></p>
+        ///   <p>Print detailed debugging output during resource operations.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings SetDebug(this PulumiPreviewSettings toolSettings, bool? debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiPreviewSettings.Debug"/></em></p>
+        ///   <p>Print detailed debugging output during resource operations.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings ResetDebug(this PulumiPreviewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Enables <see cref="PulumiPreviewSettings.Debug"/></em></p>
+        ///   <p>Print detailed debugging output during resource operations.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings EnableDebug(this PulumiPreviewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = true;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Disables <see cref="PulumiPreviewSettings.Debug"/></em></p>
+        ///   <p>Print detailed debugging output during resource operations.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings DisableDebug(this PulumiPreviewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = false;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Toggles <see cref="PulumiPreviewSettings.Debug"/></em></p>
+        ///   <p>Print detailed debugging output during resource operations.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings ToggleDebug(this PulumiPreviewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = !toolSettings.Debug;
+            return toolSettings;
+        }
+        #endregion
+        #region Diff
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiPreviewSettings.Diff"/></em></p>
+        ///   <p>Display operation as a rich diff showing the overall chang.e</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings SetDiff(this PulumiPreviewSettings toolSettings, bool? diff)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Diff = diff;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiPreviewSettings.Diff"/></em></p>
+        ///   <p>Display operation as a rich diff showing the overall chang.e</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings ResetDiff(this PulumiPreviewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Diff = null;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Enables <see cref="PulumiPreviewSettings.Diff"/></em></p>
+        ///   <p>Display operation as a rich diff showing the overall chang.e</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings EnableDiff(this PulumiPreviewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Diff = true;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Disables <see cref="PulumiPreviewSettings.Diff"/></em></p>
+        ///   <p>Display operation as a rich diff showing the overall chang.e</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings DisableDiff(this PulumiPreviewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Diff = false;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Toggles <see cref="PulumiPreviewSettings.Diff"/></em></p>
+        ///   <p>Display operation as a rich diff showing the overall chang.e</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings ToggleDiff(this PulumiPreviewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Diff = !toolSettings.Diff;
+            return toolSettings;
+        }
+        #endregion
+        #region ExpectNoChanges
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiPreviewSettings.ExpectNoChanges"/></em></p>
+        ///   <p>Return an error if any changes are proposed by this preview.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings SetExpectNoChanges(this PulumiPreviewSettings toolSettings, bool? expectNoChanges)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ExpectNoChanges = expectNoChanges;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiPreviewSettings.ExpectNoChanges"/></em></p>
+        ///   <p>Return an error if any changes are proposed by this preview.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings ResetExpectNoChanges(this PulumiPreviewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ExpectNoChanges = null;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Enables <see cref="PulumiPreviewSettings.ExpectNoChanges"/></em></p>
+        ///   <p>Return an error if any changes are proposed by this preview.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings EnableExpectNoChanges(this PulumiPreviewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ExpectNoChanges = true;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Disables <see cref="PulumiPreviewSettings.ExpectNoChanges"/></em></p>
+        ///   <p>Return an error if any changes are proposed by this preview.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings DisableExpectNoChanges(this PulumiPreviewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ExpectNoChanges = false;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Toggles <see cref="PulumiPreviewSettings.ExpectNoChanges"/></em></p>
+        ///   <p>Return an error if any changes are proposed by this preview.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings ToggleExpectNoChanges(this PulumiPreviewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ExpectNoChanges = !toolSettings.ExpectNoChanges;
+            return toolSettings;
+        }
+        #endregion
+        #region Json
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiPreviewSettings.Json"/></em></p>
+        ///   <p>Serialize the preview diffs, operations, and overall output as JSON.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings SetJson(this PulumiPreviewSettings toolSettings, bool? json)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Json = json;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiPreviewSettings.Json"/></em></p>
+        ///   <p>Serialize the preview diffs, operations, and overall output as JSON.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings ResetJson(this PulumiPreviewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Json = null;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Enables <see cref="PulumiPreviewSettings.Json"/></em></p>
+        ///   <p>Serialize the preview diffs, operations, and overall output as JSON.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings EnableJson(this PulumiPreviewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Json = true;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Disables <see cref="PulumiPreviewSettings.Json"/></em></p>
+        ///   <p>Serialize the preview diffs, operations, and overall output as JSON.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings DisableJson(this PulumiPreviewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Json = false;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Toggles <see cref="PulumiPreviewSettings.Json"/></em></p>
+        ///   <p>Serialize the preview diffs, operations, and overall output as JSON.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings ToggleJson(this PulumiPreviewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Json = !toolSettings.Json;
+            return toolSettings;
+        }
+        #endregion
+        #region Message
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiPreviewSettings.Message"/></em></p>
+        ///   <p>Optional message to associate with the preview operation.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings SetMessage(this PulumiPreviewSettings toolSettings, string message)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Message = message;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiPreviewSettings.Message"/></em></p>
+        ///   <p>Optional message to associate with the preview operation.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings ResetMessage(this PulumiPreviewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Message = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Parallel
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiPreviewSettings.Parallel"/></em></p>
+        ///   <p>Allow P resource operations to run in parallel at once (1 for no parallelism). Defaults to unbounded. (default 2147483647).</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings SetParallel(this PulumiPreviewSettings toolSettings, int? parallel)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Parallel = parallel;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiPreviewSettings.Parallel"/></em></p>
+        ///   <p>Allow P resource operations to run in parallel at once (1 for no parallelism). Defaults to unbounded. (default 2147483647).</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings ResetParallel(this PulumiPreviewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Parallel = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Refresh
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiPreviewSettings.Refresh"/></em></p>
+        ///   <p>Refresh the state of the stack's resources before this update.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings SetRefresh(this PulumiPreviewSettings toolSettings, bool? refresh)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Refresh = refresh;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiPreviewSettings.Refresh"/></em></p>
+        ///   <p>Refresh the state of the stack's resources before this update.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings ResetRefresh(this PulumiPreviewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Refresh = null;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Enables <see cref="PulumiPreviewSettings.Refresh"/></em></p>
+        ///   <p>Refresh the state of the stack's resources before this update.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings EnableRefresh(this PulumiPreviewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Refresh = true;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Disables <see cref="PulumiPreviewSettings.Refresh"/></em></p>
+        ///   <p>Refresh the state of the stack's resources before this update.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings DisableRefresh(this PulumiPreviewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Refresh = false;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Toggles <see cref="PulumiPreviewSettings.Refresh"/></em></p>
+        ///   <p>Refresh the state of the stack's resources before this update.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings ToggleRefresh(this PulumiPreviewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Refresh = !toolSettings.Refresh;
+            return toolSettings;
+        }
+        #endregion
+        #region Replace
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiPreviewSettings.Replace"/> to a new list</em></p>
+        ///   <p>Refresh the state of the stack's resources before this update.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings SetReplace(this PulumiPreviewSettings toolSettings, params string[] replace)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ReplaceInternal = replace.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiPreviewSettings.Replace"/> to a new list</em></p>
+        ///   <p>Refresh the state of the stack's resources before this update.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings SetReplace(this PulumiPreviewSettings toolSettings, IEnumerable<string> replace)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ReplaceInternal = replace.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="PulumiPreviewSettings.Replace"/></em></p>
+        ///   <p>Refresh the state of the stack's resources before this update.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings AddReplace(this PulumiPreviewSettings toolSettings, params string[] replace)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ReplaceInternal.AddRange(replace);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="PulumiPreviewSettings.Replace"/></em></p>
+        ///   <p>Refresh the state of the stack's resources before this update.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings AddReplace(this PulumiPreviewSettings toolSettings, IEnumerable<string> replace)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ReplaceInternal.AddRange(replace);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Clears <see cref="PulumiPreviewSettings.Replace"/></em></p>
+        ///   <p>Refresh the state of the stack's resources before this update.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings ClearReplace(this PulumiPreviewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ReplaceInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="PulumiPreviewSettings.Replace"/></em></p>
+        ///   <p>Refresh the state of the stack's resources before this update.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings RemoveReplace(this PulumiPreviewSettings toolSettings, params string[] replace)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(replace);
+            toolSettings.ReplaceInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="PulumiPreviewSettings.Replace"/></em></p>
+        ///   <p>Refresh the state of the stack's resources before this update.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings RemoveReplace(this PulumiPreviewSettings toolSettings, IEnumerable<string> replace)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(replace);
+            toolSettings.ReplaceInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region ShowConfig
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiPreviewSettings.ShowConfig"/></em></p>
+        ///   <p>Show configuration keys and variables.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings SetShowConfig(this PulumiPreviewSettings toolSettings, bool? showConfig)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ShowConfig = showConfig;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiPreviewSettings.ShowConfig"/></em></p>
+        ///   <p>Show configuration keys and variables.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings ResetShowConfig(this PulumiPreviewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ShowConfig = null;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Enables <see cref="PulumiPreviewSettings.ShowConfig"/></em></p>
+        ///   <p>Show configuration keys and variables.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings EnableShowConfig(this PulumiPreviewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ShowConfig = true;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Disables <see cref="PulumiPreviewSettings.ShowConfig"/></em></p>
+        ///   <p>Show configuration keys and variables.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings DisableShowConfig(this PulumiPreviewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ShowConfig = false;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Toggles <see cref="PulumiPreviewSettings.ShowConfig"/></em></p>
+        ///   <p>Show configuration keys and variables.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings ToggleShowConfig(this PulumiPreviewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ShowConfig = !toolSettings.ShowConfig;
+            return toolSettings;
+        }
+        #endregion
+        #region ShowReplacementSteps
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiPreviewSettings.ShowReplacementSteps"/></em></p>
+        ///   <p>Show detailed resource replacement creates and deletes instead of a single step.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings SetShowReplacementSteps(this PulumiPreviewSettings toolSettings, bool? showReplacementSteps)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ShowReplacementSteps = showReplacementSteps;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiPreviewSettings.ShowReplacementSteps"/></em></p>
+        ///   <p>Show detailed resource replacement creates and deletes instead of a single step.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings ResetShowReplacementSteps(this PulumiPreviewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ShowReplacementSteps = null;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Enables <see cref="PulumiPreviewSettings.ShowReplacementSteps"/></em></p>
+        ///   <p>Show detailed resource replacement creates and deletes instead of a single step.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings EnableShowReplacementSteps(this PulumiPreviewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ShowReplacementSteps = true;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Disables <see cref="PulumiPreviewSettings.ShowReplacementSteps"/></em></p>
+        ///   <p>Show detailed resource replacement creates and deletes instead of a single step.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings DisableShowReplacementSteps(this PulumiPreviewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ShowReplacementSteps = false;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Toggles <see cref="PulumiPreviewSettings.ShowReplacementSteps"/></em></p>
+        ///   <p>Show detailed resource replacement creates and deletes instead of a single step.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings ToggleShowReplacementSteps(this PulumiPreviewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ShowReplacementSteps = !toolSettings.ShowReplacementSteps;
+            return toolSettings;
+        }
+        #endregion
+        #region ShowSames
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiPreviewSettings.ShowSames"/></em></p>
+        ///   <p>Show resources that don't need to be updated because they haven't changed, alongside those that do.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings SetShowSames(this PulumiPreviewSettings toolSettings, bool? showSames)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ShowSames = showSames;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiPreviewSettings.ShowSames"/></em></p>
+        ///   <p>Show resources that don't need to be updated because they haven't changed, alongside those that do.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings ResetShowSames(this PulumiPreviewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ShowSames = null;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Enables <see cref="PulumiPreviewSettings.ShowSames"/></em></p>
+        ///   <p>Show resources that don't need to be updated because they haven't changed, alongside those that do.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings EnableShowSames(this PulumiPreviewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ShowSames = true;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Disables <see cref="PulumiPreviewSettings.ShowSames"/></em></p>
+        ///   <p>Show resources that don't need to be updated because they haven't changed, alongside those that do.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings DisableShowSames(this PulumiPreviewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ShowSames = false;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Toggles <see cref="PulumiPreviewSettings.ShowSames"/></em></p>
+        ///   <p>Show resources that don't need to be updated because they haven't changed, alongside those that do.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings ToggleShowSames(this PulumiPreviewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ShowSames = !toolSettings.ShowSames;
+            return toolSettings;
+        }
+        #endregion
+        #region SuppressOutputs
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiPreviewSettings.SuppressOutputs"/></em></p>
+        ///   <p>Suppress display of stack outputs (in case they contain sensitive values).</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings SetSuppressOutputs(this PulumiPreviewSettings toolSettings, bool? suppressOutputs)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SuppressOutputs = suppressOutputs;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiPreviewSettings.SuppressOutputs"/></em></p>
+        ///   <p>Suppress display of stack outputs (in case they contain sensitive values).</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings ResetSuppressOutputs(this PulumiPreviewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SuppressOutputs = null;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Enables <see cref="PulumiPreviewSettings.SuppressOutputs"/></em></p>
+        ///   <p>Suppress display of stack outputs (in case they contain sensitive values).</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings EnableSuppressOutputs(this PulumiPreviewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SuppressOutputs = true;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Disables <see cref="PulumiPreviewSettings.SuppressOutputs"/></em></p>
+        ///   <p>Suppress display of stack outputs (in case they contain sensitive values).</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings DisableSuppressOutputs(this PulumiPreviewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SuppressOutputs = false;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Toggles <see cref="PulumiPreviewSettings.SuppressOutputs"/></em></p>
+        ///   <p>Suppress display of stack outputs (in case they contain sensitive values).</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings ToggleSuppressOutputs(this PulumiPreviewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SuppressOutputs = !toolSettings.SuppressOutputs;
+            return toolSettings;
+        }
+        #endregion
+        #region Target
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiPreviewSettings.Target"/> to a new list</em></p>
+        ///   <p>Specify a single resource URN to update. Other resources will not be updated. Multiple resources can be specified using --target urn1 --target urn2.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings SetTarget(this PulumiPreviewSettings toolSettings, params string[] target)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TargetInternal = target.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiPreviewSettings.Target"/> to a new list</em></p>
+        ///   <p>Specify a single resource URN to update. Other resources will not be updated. Multiple resources can be specified using --target urn1 --target urn2.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings SetTarget(this PulumiPreviewSettings toolSettings, IEnumerable<string> target)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TargetInternal = target.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="PulumiPreviewSettings.Target"/></em></p>
+        ///   <p>Specify a single resource URN to update. Other resources will not be updated. Multiple resources can be specified using --target urn1 --target urn2.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings AddTarget(this PulumiPreviewSettings toolSettings, params string[] target)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TargetInternal.AddRange(target);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="PulumiPreviewSettings.Target"/></em></p>
+        ///   <p>Specify a single resource URN to update. Other resources will not be updated. Multiple resources can be specified using --target urn1 --target urn2.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings AddTarget(this PulumiPreviewSettings toolSettings, IEnumerable<string> target)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TargetInternal.AddRange(target);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Clears <see cref="PulumiPreviewSettings.Target"/></em></p>
+        ///   <p>Specify a single resource URN to update. Other resources will not be updated. Multiple resources can be specified using --target urn1 --target urn2.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings ClearTarget(this PulumiPreviewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TargetInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="PulumiPreviewSettings.Target"/></em></p>
+        ///   <p>Specify a single resource URN to update. Other resources will not be updated. Multiple resources can be specified using --target urn1 --target urn2.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings RemoveTarget(this PulumiPreviewSettings toolSettings, params string[] target)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(target);
+            toolSettings.TargetInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="PulumiPreviewSettings.Target"/></em></p>
+        ///   <p>Specify a single resource URN to update. Other resources will not be updated. Multiple resources can be specified using --target urn1 --target urn2.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings RemoveTarget(this PulumiPreviewSettings toolSettings, IEnumerable<string> target)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(target);
+            toolSettings.TargetInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region TargetDependents
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiPreviewSettings.TargetDependents"/></em></p>
+        ///   <p>Allows updating of dependent targets discovered but not specified in --target list.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings SetTargetDependents(this PulumiPreviewSettings toolSettings, bool? targetDependents)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TargetDependents = targetDependents;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiPreviewSettings.TargetDependents"/></em></p>
+        ///   <p>Allows updating of dependent targets discovered but not specified in --target list.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings ResetTargetDependents(this PulumiPreviewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TargetDependents = null;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Enables <see cref="PulumiPreviewSettings.TargetDependents"/></em></p>
+        ///   <p>Allows updating of dependent targets discovered but not specified in --target list.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings EnableTargetDependents(this PulumiPreviewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TargetDependents = true;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Disables <see cref="PulumiPreviewSettings.TargetDependents"/></em></p>
+        ///   <p>Allows updating of dependent targets discovered but not specified in --target list.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings DisableTargetDependents(this PulumiPreviewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TargetDependents = false;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Toggles <see cref="PulumiPreviewSettings.TargetDependents"/></em></p>
+        ///   <p>Allows updating of dependent targets discovered but not specified in --target list.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings ToggleTargetDependents(this PulumiPreviewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TargetDependents = !toolSettings.TargetDependents;
+            return toolSettings;
+        }
+        #endregion
+        #region TargetReplace
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiPreviewSettings.TargetReplace"/> to a new list</em></p>
+        ///   <p>Specify a single resource URN to replace. Other resources will not be updated. Shorthand for --target urn --replace urn.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings SetTargetReplace(this PulumiPreviewSettings toolSettings, params string[] targetReplace)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TargetReplaceInternal = targetReplace.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiPreviewSettings.TargetReplace"/> to a new list</em></p>
+        ///   <p>Specify a single resource URN to replace. Other resources will not be updated. Shorthand for --target urn --replace urn.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings SetTargetReplace(this PulumiPreviewSettings toolSettings, IEnumerable<string> targetReplace)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TargetReplaceInternal = targetReplace.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="PulumiPreviewSettings.TargetReplace"/></em></p>
+        ///   <p>Specify a single resource URN to replace. Other resources will not be updated. Shorthand for --target urn --replace urn.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings AddTargetReplace(this PulumiPreviewSettings toolSettings, params string[] targetReplace)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TargetReplaceInternal.AddRange(targetReplace);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="PulumiPreviewSettings.TargetReplace"/></em></p>
+        ///   <p>Specify a single resource URN to replace. Other resources will not be updated. Shorthand for --target urn --replace urn.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings AddTargetReplace(this PulumiPreviewSettings toolSettings, IEnumerable<string> targetReplace)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TargetReplaceInternal.AddRange(targetReplace);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Clears <see cref="PulumiPreviewSettings.TargetReplace"/></em></p>
+        ///   <p>Specify a single resource URN to replace. Other resources will not be updated. Shorthand for --target urn --replace urn.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings ClearTargetReplace(this PulumiPreviewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TargetReplaceInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="PulumiPreviewSettings.TargetReplace"/></em></p>
+        ///   <p>Specify a single resource URN to replace. Other resources will not be updated. Shorthand for --target urn --replace urn.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings RemoveTargetReplace(this PulumiPreviewSettings toolSettings, params string[] targetReplace)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(targetReplace);
+            toolSettings.TargetReplaceInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="PulumiPreviewSettings.TargetReplace"/></em></p>
+        ///   <p>Specify a single resource URN to replace. Other resources will not be updated. Shorthand for --target urn --replace urn.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings RemoveTargetReplace(this PulumiPreviewSettings toolSettings, IEnumerable<string> targetReplace)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(targetReplace);
+            toolSettings.TargetReplaceInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Stack
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiPreviewSettings.Stack"/></em></p>
+        ///   <p>The name of the stack to operate on. Defaults to the current stack</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings SetStack(this PulumiPreviewSettings toolSettings, string stack)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Stack = stack;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiPreviewSettings.Stack"/></em></p>
+        ///   <p>The name of the stack to operate on. Defaults to the current stack</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings ResetStack(this PulumiPreviewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Stack = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ConfigFile
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiPreviewSettings.ConfigFile"/></em></p>
+        ///   <p>Use the configuration values in the specified file rather than detecting the file name</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings SetConfigFile(this PulumiPreviewSettings toolSettings, string configFile)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ConfigFile = configFile;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiPreviewSettings.ConfigFile"/></em></p>
+        ///   <p>Use the configuration values in the specified file rather than detecting the file name</p>
+        /// </summary>
+        [Pure]
+        public static PulumiPreviewSettings ResetConfigFile(this PulumiPreviewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ConfigFile = null;
+            return toolSettings;
+        }
+        #endregion
         #region Color
         /// <summary>
         ///   <p><em>Sets <see cref="PulumiPreviewSettings.Color"/></em></p>
@@ -12867,6 +14237,1054 @@ namespace Nuke.Common.Tools.Pulumi
         /// </summary>
         [Pure]
         public static PulumiPreviewSettings ResetVerbose(this PulumiPreviewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region PulumiRefreshSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="PulumiTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class PulumiRefreshSettingsExtensions
+    {
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiRefreshSettings.Debug"/></em></p>
+        ///   <p>Print detailed debugging output during resource operations.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings SetDebug(this PulumiRefreshSettings toolSettings, bool? debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiRefreshSettings.Debug"/></em></p>
+        ///   <p>Print detailed debugging output during resource operations.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings ResetDebug(this PulumiRefreshSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Enables <see cref="PulumiRefreshSettings.Debug"/></em></p>
+        ///   <p>Print detailed debugging output during resource operations.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings EnableDebug(this PulumiRefreshSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = true;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Disables <see cref="PulumiRefreshSettings.Debug"/></em></p>
+        ///   <p>Print detailed debugging output during resource operations.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings DisableDebug(this PulumiRefreshSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = false;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Toggles <see cref="PulumiRefreshSettings.Debug"/></em></p>
+        ///   <p>Print detailed debugging output during resource operations.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings ToggleDebug(this PulumiRefreshSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = !toolSettings.Debug;
+            return toolSettings;
+        }
+        #endregion
+        #region Diff
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiRefreshSettings.Diff"/></em></p>
+        ///   <p>Display operation as a rich diff showing the overall change.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings SetDiff(this PulumiRefreshSettings toolSettings, bool? diff)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Diff = diff;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiRefreshSettings.Diff"/></em></p>
+        ///   <p>Display operation as a rich diff showing the overall change.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings ResetDiff(this PulumiRefreshSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Diff = null;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Enables <see cref="PulumiRefreshSettings.Diff"/></em></p>
+        ///   <p>Display operation as a rich diff showing the overall change.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings EnableDiff(this PulumiRefreshSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Diff = true;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Disables <see cref="PulumiRefreshSettings.Diff"/></em></p>
+        ///   <p>Display operation as a rich diff showing the overall change.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings DisableDiff(this PulumiRefreshSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Diff = false;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Toggles <see cref="PulumiRefreshSettings.Diff"/></em></p>
+        ///   <p>Display operation as a rich diff showing the overall change.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings ToggleDiff(this PulumiRefreshSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Diff = !toolSettings.Diff;
+            return toolSettings;
+        }
+        #endregion
+        #region ExpectNoChanges
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiRefreshSettings.ExpectNoChanges"/></em></p>
+        ///   <p>Return an error if any changes occur during this update.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings SetExpectNoChanges(this PulumiRefreshSettings toolSettings, bool? expectNoChanges)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ExpectNoChanges = expectNoChanges;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiRefreshSettings.ExpectNoChanges"/></em></p>
+        ///   <p>Return an error if any changes occur during this update.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings ResetExpectNoChanges(this PulumiRefreshSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ExpectNoChanges = null;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Enables <see cref="PulumiRefreshSettings.ExpectNoChanges"/></em></p>
+        ///   <p>Return an error if any changes occur during this update.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings EnableExpectNoChanges(this PulumiRefreshSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ExpectNoChanges = true;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Disables <see cref="PulumiRefreshSettings.ExpectNoChanges"/></em></p>
+        ///   <p>Return an error if any changes occur during this update.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings DisableExpectNoChanges(this PulumiRefreshSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ExpectNoChanges = false;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Toggles <see cref="PulumiRefreshSettings.ExpectNoChanges"/></em></p>
+        ///   <p>Return an error if any changes occur during this update.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings ToggleExpectNoChanges(this PulumiRefreshSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ExpectNoChanges = !toolSettings.ExpectNoChanges;
+            return toolSettings;
+        }
+        #endregion
+        #region Message
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiRefreshSettings.Message"/></em></p>
+        ///   <p>Optional message to associate with the update operation.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings SetMessage(this PulumiRefreshSettings toolSettings, string message)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Message = message;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiRefreshSettings.Message"/></em></p>
+        ///   <p>Optional message to associate with the update operation.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings ResetMessage(this PulumiRefreshSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Message = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Parallel
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiRefreshSettings.Parallel"/></em></p>
+        ///   <p>Allow P resource operations to run in parallel at once (1 for no parallelism). Defaults to unbounded. (default 2147483647).</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings SetParallel(this PulumiRefreshSettings toolSettings, int? parallel)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Parallel = parallel;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiRefreshSettings.Parallel"/></em></p>
+        ///   <p>Allow P resource operations to run in parallel at once (1 for no parallelism). Defaults to unbounded. (default 2147483647).</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings ResetParallel(this PulumiRefreshSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Parallel = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ShowReplacementSteps
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiRefreshSettings.ShowReplacementSteps"/></em></p>
+        ///   <p>Show detailed resource replacement creates and deletes instead of a single step.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings SetShowReplacementSteps(this PulumiRefreshSettings toolSettings, bool? showReplacementSteps)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ShowReplacementSteps = showReplacementSteps;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiRefreshSettings.ShowReplacementSteps"/></em></p>
+        ///   <p>Show detailed resource replacement creates and deletes instead of a single step.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings ResetShowReplacementSteps(this PulumiRefreshSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ShowReplacementSteps = null;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Enables <see cref="PulumiRefreshSettings.ShowReplacementSteps"/></em></p>
+        ///   <p>Show detailed resource replacement creates and deletes instead of a single step.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings EnableShowReplacementSteps(this PulumiRefreshSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ShowReplacementSteps = true;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Disables <see cref="PulumiRefreshSettings.ShowReplacementSteps"/></em></p>
+        ///   <p>Show detailed resource replacement creates and deletes instead of a single step.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings DisableShowReplacementSteps(this PulumiRefreshSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ShowReplacementSteps = false;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Toggles <see cref="PulumiRefreshSettings.ShowReplacementSteps"/></em></p>
+        ///   <p>Show detailed resource replacement creates and deletes instead of a single step.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings ToggleShowReplacementSteps(this PulumiRefreshSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ShowReplacementSteps = !toolSettings.ShowReplacementSteps;
+            return toolSettings;
+        }
+        #endregion
+        #region ShowSames
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiRefreshSettings.ShowSames"/></em></p>
+        ///   <p>Show resources that don't need to be updated because they haven't changed, alongside those that do.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings SetShowSames(this PulumiRefreshSettings toolSettings, bool? showSames)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ShowSames = showSames;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiRefreshSettings.ShowSames"/></em></p>
+        ///   <p>Show resources that don't need to be updated because they haven't changed, alongside those that do.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings ResetShowSames(this PulumiRefreshSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ShowSames = null;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Enables <see cref="PulumiRefreshSettings.ShowSames"/></em></p>
+        ///   <p>Show resources that don't need to be updated because they haven't changed, alongside those that do.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings EnableShowSames(this PulumiRefreshSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ShowSames = true;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Disables <see cref="PulumiRefreshSettings.ShowSames"/></em></p>
+        ///   <p>Show resources that don't need to be updated because they haven't changed, alongside those that do.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings DisableShowSames(this PulumiRefreshSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ShowSames = false;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Toggles <see cref="PulumiRefreshSettings.ShowSames"/></em></p>
+        ///   <p>Show resources that don't need to be updated because they haven't changed, alongside those that do.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings ToggleShowSames(this PulumiRefreshSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ShowSames = !toolSettings.ShowSames;
+            return toolSettings;
+        }
+        #endregion
+        #region SuppressOutputs
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiRefreshSettings.SuppressOutputs"/></em></p>
+        ///   <p>Suppress display of stack outputs (in case they contain sensitive values).</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings SetSuppressOutputs(this PulumiRefreshSettings toolSettings, bool? suppressOutputs)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SuppressOutputs = suppressOutputs;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiRefreshSettings.SuppressOutputs"/></em></p>
+        ///   <p>Suppress display of stack outputs (in case they contain sensitive values).</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings ResetSuppressOutputs(this PulumiRefreshSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SuppressOutputs = null;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Enables <see cref="PulumiRefreshSettings.SuppressOutputs"/></em></p>
+        ///   <p>Suppress display of stack outputs (in case they contain sensitive values).</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings EnableSuppressOutputs(this PulumiRefreshSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SuppressOutputs = true;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Disables <see cref="PulumiRefreshSettings.SuppressOutputs"/></em></p>
+        ///   <p>Suppress display of stack outputs (in case they contain sensitive values).</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings DisableSuppressOutputs(this PulumiRefreshSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SuppressOutputs = false;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Toggles <see cref="PulumiRefreshSettings.SuppressOutputs"/></em></p>
+        ///   <p>Suppress display of stack outputs (in case they contain sensitive values).</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings ToggleSuppressOutputs(this PulumiRefreshSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SuppressOutputs = !toolSettings.SuppressOutputs;
+            return toolSettings;
+        }
+        #endregion
+        #region Target
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiRefreshSettings.Target"/> to a new list</em></p>
+        ///   <p>Specify a single resource URN to refresh. Multiple resources can be specified using --target urn1 --target urn2.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings SetTarget(this PulumiRefreshSettings toolSettings, params string[] target)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TargetInternal = target.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiRefreshSettings.Target"/> to a new list</em></p>
+        ///   <p>Specify a single resource URN to refresh. Multiple resources can be specified using --target urn1 --target urn2.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings SetTarget(this PulumiRefreshSettings toolSettings, IEnumerable<string> target)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TargetInternal = target.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="PulumiRefreshSettings.Target"/></em></p>
+        ///   <p>Specify a single resource URN to refresh. Multiple resources can be specified using --target urn1 --target urn2.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings AddTarget(this PulumiRefreshSettings toolSettings, params string[] target)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TargetInternal.AddRange(target);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="PulumiRefreshSettings.Target"/></em></p>
+        ///   <p>Specify a single resource URN to refresh. Multiple resources can be specified using --target urn1 --target urn2.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings AddTarget(this PulumiRefreshSettings toolSettings, IEnumerable<string> target)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TargetInternal.AddRange(target);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Clears <see cref="PulumiRefreshSettings.Target"/></em></p>
+        ///   <p>Specify a single resource URN to refresh. Multiple resources can be specified using --target urn1 --target urn2.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings ClearTarget(this PulumiRefreshSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TargetInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="PulumiRefreshSettings.Target"/></em></p>
+        ///   <p>Specify a single resource URN to refresh. Multiple resources can be specified using --target urn1 --target urn2.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings RemoveTarget(this PulumiRefreshSettings toolSettings, params string[] target)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(target);
+            toolSettings.TargetInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="PulumiRefreshSettings.Target"/></em></p>
+        ///   <p>Specify a single resource URN to refresh. Multiple resources can be specified using --target urn1 --target urn2.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings RemoveTarget(this PulumiRefreshSettings toolSettings, IEnumerable<string> target)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(target);
+            toolSettings.TargetInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Yes
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiRefreshSettings.Yes"/></em></p>
+        ///   <p>Automatically approve and perform the refresh after previewing it.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings SetYes(this PulumiRefreshSettings toolSettings, bool? yes)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Yes = yes;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiRefreshSettings.Yes"/></em></p>
+        ///   <p>Automatically approve and perform the refresh after previewing it.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings ResetYes(this PulumiRefreshSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Yes = null;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Enables <see cref="PulumiRefreshSettings.Yes"/></em></p>
+        ///   <p>Automatically approve and perform the refresh after previewing it.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings EnableYes(this PulumiRefreshSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Yes = true;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Disables <see cref="PulumiRefreshSettings.Yes"/></em></p>
+        ///   <p>Automatically approve and perform the refresh after previewing it.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings DisableYes(this PulumiRefreshSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Yes = false;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Toggles <see cref="PulumiRefreshSettings.Yes"/></em></p>
+        ///   <p>Automatically approve and perform the refresh after previewing it.</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings ToggleYes(this PulumiRefreshSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Yes = !toolSettings.Yes;
+            return toolSettings;
+        }
+        #endregion
+        #region Stack
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiRefreshSettings.Stack"/></em></p>
+        ///   <p>The name of the stack to operate on. Defaults to the current stack</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings SetStack(this PulumiRefreshSettings toolSettings, string stack)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Stack = stack;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiRefreshSettings.Stack"/></em></p>
+        ///   <p>The name of the stack to operate on. Defaults to the current stack</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings ResetStack(this PulumiRefreshSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Stack = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ConfigFile
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiRefreshSettings.ConfigFile"/></em></p>
+        ///   <p>Use the configuration values in the specified file rather than detecting the file name</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings SetConfigFile(this PulumiRefreshSettings toolSettings, string configFile)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ConfigFile = configFile;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiRefreshSettings.ConfigFile"/></em></p>
+        ///   <p>Use the configuration values in the specified file rather than detecting the file name</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings ResetConfigFile(this PulumiRefreshSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ConfigFile = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Color
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiRefreshSettings.Color"/></em></p>
+        ///   <p>Colorize output. Choices are: always, never, raw, auto (default is auto)</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings SetColor(this PulumiRefreshSettings toolSettings, ColorizeOutput color)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Color = color;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiRefreshSettings.Color"/></em></p>
+        ///   <p>Colorize output. Choices are: always, never, raw, auto (default is auto)</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings ResetColor(this PulumiRefreshSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Color = null;
+            return toolSettings;
+        }
+        #endregion
+        #region WorkingDirectory
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiRefreshSettings.WorkingDirectory"/></em></p>
+        ///   <p>Run pulumi as if it had been started in another directory</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings SetWorkingDirectory(this PulumiRefreshSettings toolSettings, string workingDirectory)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.WorkingDirectory = workingDirectory;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiRefreshSettings.WorkingDirectory"/></em></p>
+        ///   <p>Run pulumi as if it had been started in another directory</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings ResetWorkingDirectory(this PulumiRefreshSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.WorkingDirectory = null;
+            return toolSettings;
+        }
+        #endregion
+        #region DisableIntegrityChecking
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiRefreshSettings.DisableIntegrityChecking"/></em></p>
+        ///   <p>Disable integrity checking of checkpoint files</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings SetDisableIntegrityChecking(this PulumiRefreshSettings toolSettings, bool? disableIntegrityChecking)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DisableIntegrityChecking = disableIntegrityChecking;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiRefreshSettings.DisableIntegrityChecking"/></em></p>
+        ///   <p>Disable integrity checking of checkpoint files</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings ResetDisableIntegrityChecking(this PulumiRefreshSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DisableIntegrityChecking = null;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Enables <see cref="PulumiRefreshSettings.DisableIntegrityChecking"/></em></p>
+        ///   <p>Disable integrity checking of checkpoint files</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings EnableDisableIntegrityChecking(this PulumiRefreshSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DisableIntegrityChecking = true;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Disables <see cref="PulumiRefreshSettings.DisableIntegrityChecking"/></em></p>
+        ///   <p>Disable integrity checking of checkpoint files</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings DisableDisableIntegrityChecking(this PulumiRefreshSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DisableIntegrityChecking = false;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Toggles <see cref="PulumiRefreshSettings.DisableIntegrityChecking"/></em></p>
+        ///   <p>Disable integrity checking of checkpoint files</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings ToggleDisableIntegrityChecking(this PulumiRefreshSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DisableIntegrityChecking = !toolSettings.DisableIntegrityChecking;
+            return toolSettings;
+        }
+        #endregion
+        #region Emoji
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiRefreshSettings.Emoji"/></em></p>
+        ///   <p>Enable emojis in the output (default is true)</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings SetEmoji(this PulumiRefreshSettings toolSettings, bool? emoji)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Emoji = emoji;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiRefreshSettings.Emoji"/></em></p>
+        ///   <p>Enable emojis in the output (default is true)</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings ResetEmoji(this PulumiRefreshSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Emoji = null;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Enables <see cref="PulumiRefreshSettings.Emoji"/></em></p>
+        ///   <p>Enable emojis in the output (default is true)</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings EnableEmoji(this PulumiRefreshSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Emoji = true;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Disables <see cref="PulumiRefreshSettings.Emoji"/></em></p>
+        ///   <p>Enable emojis in the output (default is true)</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings DisableEmoji(this PulumiRefreshSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Emoji = false;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Toggles <see cref="PulumiRefreshSettings.Emoji"/></em></p>
+        ///   <p>Enable emojis in the output (default is true)</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings ToggleEmoji(this PulumiRefreshSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Emoji = !toolSettings.Emoji;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiRefreshSettings.Help"/></em></p>
+        ///   <p>Help for Pulumi</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings SetHelp(this PulumiRefreshSettings toolSettings, bool? help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiRefreshSettings.Help"/></em></p>
+        ///   <p>Help for Pulumi</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings ResetHelp(this PulumiRefreshSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Enables <see cref="PulumiRefreshSettings.Help"/></em></p>
+        ///   <p>Help for Pulumi</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings EnableHelp(this PulumiRefreshSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = true;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Disables <see cref="PulumiRefreshSettings.Help"/></em></p>
+        ///   <p>Help for Pulumi</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings DisableHelp(this PulumiRefreshSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = false;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Toggles <see cref="PulumiRefreshSettings.Help"/></em></p>
+        ///   <p>Help for Pulumi</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings ToggleHelp(this PulumiRefreshSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = !toolSettings.Help;
+            return toolSettings;
+        }
+        #endregion
+        #region LogFlow
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiRefreshSettings.LogFlow"/></em></p>
+        ///   <p>Flow log settings to child processes (like plugins)</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings SetLogFlow(this PulumiRefreshSettings toolSettings, bool? logFlow)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LogFlow = logFlow;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiRefreshSettings.LogFlow"/></em></p>
+        ///   <p>Flow log settings to child processes (like plugins)</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings ResetLogFlow(this PulumiRefreshSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LogFlow = null;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Enables <see cref="PulumiRefreshSettings.LogFlow"/></em></p>
+        ///   <p>Flow log settings to child processes (like plugins)</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings EnableLogFlow(this PulumiRefreshSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LogFlow = true;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Disables <see cref="PulumiRefreshSettings.LogFlow"/></em></p>
+        ///   <p>Flow log settings to child processes (like plugins)</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings DisableLogFlow(this PulumiRefreshSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LogFlow = false;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Toggles <see cref="PulumiRefreshSettings.LogFlow"/></em></p>
+        ///   <p>Flow log settings to child processes (like plugins)</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings ToggleLogFlow(this PulumiRefreshSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LogFlow = !toolSettings.LogFlow;
+            return toolSettings;
+        }
+        #endregion
+        #region LogToStderr
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiRefreshSettings.LogToStderr"/></em></p>
+        ///   <p>Log to stderr instead of to files</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings SetLogToStderr(this PulumiRefreshSettings toolSettings, bool? logToStderr)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LogToStderr = logToStderr;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiRefreshSettings.LogToStderr"/></em></p>
+        ///   <p>Log to stderr instead of to files</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings ResetLogToStderr(this PulumiRefreshSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LogToStderr = null;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Enables <see cref="PulumiRefreshSettings.LogToStderr"/></em></p>
+        ///   <p>Log to stderr instead of to files</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings EnableLogToStderr(this PulumiRefreshSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LogToStderr = true;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Disables <see cref="PulumiRefreshSettings.LogToStderr"/></em></p>
+        ///   <p>Log to stderr instead of to files</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings DisableLogToStderr(this PulumiRefreshSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LogToStderr = false;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Toggles <see cref="PulumiRefreshSettings.LogToStderr"/></em></p>
+        ///   <p>Log to stderr instead of to files</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings ToggleLogToStderr(this PulumiRefreshSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LogToStderr = !toolSettings.LogToStderr;
+            return toolSettings;
+        }
+        #endregion
+        #region NonInteractive
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiRefreshSettings.NonInteractive"/></em></p>
+        ///   <p>Disable interactive mode for all commands</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings SetNonInteractive(this PulumiRefreshSettings toolSettings, bool? nonInteractive)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NonInteractive = nonInteractive;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiRefreshSettings.NonInteractive"/></em></p>
+        ///   <p>Disable interactive mode for all commands</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings ResetNonInteractive(this PulumiRefreshSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NonInteractive = null;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Enables <see cref="PulumiRefreshSettings.NonInteractive"/></em></p>
+        ///   <p>Disable interactive mode for all commands</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings EnableNonInteractive(this PulumiRefreshSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NonInteractive = true;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Disables <see cref="PulumiRefreshSettings.NonInteractive"/></em></p>
+        ///   <p>Disable interactive mode for all commands</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings DisableNonInteractive(this PulumiRefreshSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NonInteractive = false;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Toggles <see cref="PulumiRefreshSettings.NonInteractive"/></em></p>
+        ///   <p>Disable interactive mode for all commands</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings ToggleNonInteractive(this PulumiRefreshSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NonInteractive = !toolSettings.NonInteractive;
+            return toolSettings;
+        }
+        #endregion
+        #region Profiling
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiRefreshSettings.Profiling"/></em></p>
+        ///   <p>Emit CPU and memory profiles and an execution trace to '[filename].[pid].{cpu,mem,trace}', respectively</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings SetProfiling(this PulumiRefreshSettings toolSettings, string profiling)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Profiling = profiling;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiRefreshSettings.Profiling"/></em></p>
+        ///   <p>Emit CPU and memory profiles and an execution trace to '[filename].[pid].{cpu,mem,trace}', respectively</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings ResetProfiling(this PulumiRefreshSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Profiling = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Tracing
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiRefreshSettings.Tracing"/></em></p>
+        ///   <p>Emit tracing to the specified endpoint. Use the file: scheme to write tracing data to a local file</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings SetTracing(this PulumiRefreshSettings toolSettings, string tracing)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tracing = tracing;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiRefreshSettings.Tracing"/></em></p>
+        ///   <p>Emit tracing to the specified endpoint. Use the file: scheme to write tracing data to a local file</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings ResetTracing(this PulumiRefreshSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tracing = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="PulumiRefreshSettings.Verbose"/></em></p>
+        ///   <p>Enable verbose logging (e.g., v=3); anything >3 is very verbose</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings SetVerbose(this PulumiRefreshSettings toolSettings, int? verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="PulumiRefreshSettings.Verbose"/></em></p>
+        ///   <p>Enable verbose logging (e.g., v=3); anything >3 is very verbose</p>
+        /// </summary>
+        [Pure]
+        public static PulumiRefreshSettings ResetVerbose(this PulumiRefreshSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
