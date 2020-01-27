@@ -831,7 +831,7 @@
             "name": "PropertyName",
             "type": "string",
             "format": "{value}",
-            "help": "Show value of specific property."
+            "help": "Show output of a specific property."
           },
           {
             "name": "Json",
@@ -857,6 +857,144 @@
             "type": "string",
             "format": "{value}",
             "help": "The name of the new stack."
+          }
+        ]
+      }
+    },
+    {
+      "help": "Remove a stack and its configuration.",
+      "postfix": "StackRemove",
+      "commonPropertySets": [
+        "stackSelect",
+        "stackInherit"
+      ],
+      "definiteArgument": "stack rm",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "{value}",
+            "help": "The name of the stack to remove."
+          },
+          {
+            "name": "Force",
+            "type": "bool",
+            "format": "--force",
+            "help": "Forces deletion of the stack, leaving behind any resources managed by the stack."
+          },
+          {
+            "name": "PreserveConfig",
+            "type": "bool",
+            "format": "--preserve-config",
+            "help": "Do not delete the corresponding Pulumi.<stack-name>.yaml configuration file for the stack."
+          },
+          {
+            "name": "Yes",
+            "type": "bool",
+            "format": "--yes",
+            "help": "Skip confirmation prompts, and proceed with removal anyway."
+          }
+        ]
+      }
+    },
+    {
+      "help": "Switch the current workspace to the given stack.",
+      "postfix": "StackSelect",
+      "commonPropertySets": [
+        "stackSelect",
+        "stackInherit"
+      ],
+      "definiteArgument": "stack select",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "{value}",
+            "help": "The name of the new stack."
+          }
+        ]
+      }
+    },
+    {
+      "help": "Get a single stack tag value.",
+      "postfix": "StackTagGet",
+      "commonPropertySets": [
+        "stackSelect",
+        "stackInherit"
+      ],
+      "definiteArgument": "stack tag get",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "{value}",
+            "help": "The name of the tag."
+          }
+        ]
+      }
+    },
+    {
+      "help": "List all stack tags.",
+      "postfix": "StackTagList",
+      "commonPropertySets": [
+        "stackSelect",
+        "stackInherit"
+      ],
+      "definiteArgument": "stack tag ls",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Json",
+            "type": "bool",
+            "format": "--json",
+            "help": "Emit output as JSON."
+          }
+        ]
+      }
+    },
+    {
+      "help": "Remove a stack tag.",
+      "postfix": "StackTagRemove",
+      "commonPropertySets": [
+        "stackSelect",
+        "stackInherit"
+      ],
+      "definiteArgument": "stack tag rm",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "{value}",
+            "help": "The name of the tag."
+          }
+        ]
+      }
+    },
+    {
+      "help": "Set a stack tag.",
+      "postfix": "StackTagSet",
+      "commonPropertySets": [
+        "stackSelect",
+        "stackInherit"
+      ],
+      "definiteArgument": "stack tag set",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "{value}",
+            "help": "The name of the tag."
+          },
+          {
+            "name": "Value",
+            "type": "string",
+            "format": "{value}",
+            "help": "The value of the tag."
           }
         ]
       }
