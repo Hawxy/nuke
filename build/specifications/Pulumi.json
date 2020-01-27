@@ -492,7 +492,7 @@
             "name": "Diff",
             "type": "bool",
             "format": "--diff",
-            "help": "Display operation as a rich diff showing the overall chang.e"
+            "help": "Display operation as a rich diff showing the overall change."
           },
           {
             "name": "ExpectNoChanges",
@@ -527,7 +527,7 @@
           {
             "name": "Replace",
             "type": "List<string>",
-            "format": "--replace",
+            "format": "--replace {value}",
             "separator": ",",
             "help": "Refresh the state of the stack's resources before this update."
           },
@@ -585,7 +585,7 @@
         "stackSelect",
         "configFile"
       ],
-      "definiteArgument": "preview",
+      "definiteArgument": "refresh",
       "settingsClass": {
         "properties": [
           {
@@ -995,6 +995,203 @@
             "type": "string",
             "format": "{value}",
             "help": "The value of the tag."
+          }
+        ]
+      }
+    },
+    {
+      "help": "Delete a resource from a stack's state.",
+      "postfix": "StateDelete",
+      "commonPropertySets": [
+        "stackSelect"
+      ],
+      "definiteArgument": "state delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ResourceURN",
+            "type": "string",
+            "format": "{value}",
+            "help": "The resource as specified by its Pulumi URN (use <c>pulumi stack �show-urns</c> to get it)."
+          },
+          {
+            "name": "Force",
+            "type": "bool",
+            "format": "--force",
+            "help": "Force deletion of protected resources."
+          },
+          {
+            "name": "Yes",
+            "type": "bool",
+            "format": "--Yes",
+            "help": "Skip confirmation prompts."
+          }
+        ]
+      }
+    },
+    {
+      "help": "Unprotect resources in a stack's state.",
+      "postfix": "StateUnprotect",
+      "commonPropertySets": [
+        "stackSelect"
+      ],
+      "definiteArgument": "state unprotect",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ResourceURN",
+            "type": "string",
+            "format": "{value}",
+            "help": "The resource as specified by its Pulumi URN (use <c>pulumi stack �show-urns</c> to get it)."
+          },
+          {
+            "name": "All",
+            "type": "bool",
+            "format": "--all",
+            "help": "Unprotect all resources in the checkpoint."
+          },
+          {
+            "name": "Yes",
+            "type": "bool",
+            "format": "--Yes",
+            "help": "Skip confirmation prompts."
+          }
+        ]
+      }
+    },
+    {
+      "help": "Create or update the resources in a stack.",
+      "postfix": "Up",
+      "commonPropertySets": [
+        "stackSelect",
+        "configFile"
+      ],
+      "definiteArgument": "up",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Config",
+            "type": "List<string>",
+            "format": "--config {value}",
+            "separator": ",",
+            "help": "Config to use during the update."
+          },
+          {
+            "name": "ConfigPath",
+            "type": "bool",
+            "format": "--config-path",
+            "help": "Config keys contain a path to a property in a map or list to set."
+          },
+          {
+            "name": "Debug",
+            "type": "bool",
+            "format": "--debug",
+            "help": "Print detailed debugging output during resource operations."
+          },
+          {
+            "name": "Diff",
+            "type": "bool",
+            "format": "--diff",
+            "help": "Display operation as a rich diff showing the overall change."
+          },
+          {
+            "name": "ExpectNoChanges",
+            "type": "bool",
+            "format": "--expect-no-changes",
+            "help": "Return an error if any changes are proposed by this update."
+          },
+          {
+            "name": "Message",
+            "type": "string",
+            "format": "--message {value}",
+            "help": "Optional message to associate with the update operation."
+          },
+          {
+            "name": "Parallel",
+            "type": "int",
+            "format": "--parallel {value}",
+            "help": "Allow P resource operations to run in parallel at once (1 for no parallelism). Defaults to unbounded. (default 2147483647)."
+          },
+          {
+            "name": "Refresh",
+            "type": "bool",
+            "format": "--refresh",
+            "help": "Refresh the state of the stack's resources before this update."
+          },
+          {
+            "name": "Replace",
+            "type": "List<string>",
+            "format": "--replace {value}",
+            "separator": ",",
+            "help": "Refresh the state of the stack's resources before this update."
+          },
+          {
+            "name": "SecretsProvider",
+            "type": "string",
+            "format": "--secrets-provider {value}",
+            "help": "The type of the provider that should be used to encrypt and decrypt secrets (possible choices: default, passphrase, awskms, azurekeyvault, gcpkms, hashivault). Only used when creating a new stack from an existing template (default: default)."
+          },
+          {
+            "name": "ShowConfig",
+            "type": "bool",
+            "format": "--show-config",
+            "help": "Show configuration keys and variables."
+          },
+          {
+            "name": "ShowReads",
+            "type": "bool",
+            "format": "--show-reads",
+            "help": "Show resources that are being read in, alongside those being managed directly in the stack."
+          },
+          {
+            "name": "ShowReplacementSteps",
+            "type": "bool",
+            "format": "--show-replacement-steps",
+            "help": "Show detailed resource replacement creates and deletes instead of a single step."
+          },
+          {
+            "name": "ShowSames",
+            "type": "bool",
+            "format": "--show-sames",
+            "help": "Show resources that don't need to be updated because they haven't changed, alongside those that do."
+          },
+          {
+            "name": "SkipPreview",
+            "type": "bool",
+            "format": "--skip-preview",
+            "help": "Do not perform a preview before performing the update."
+          },
+          {
+            "name": "SuppressOutputs",
+            "type": "bool",
+            "format": "--suppress-outputs",
+            "help": "Suppress display of stack outputs (in case they contain sensitive values)."
+          },
+          {
+            "name": "Target",
+            "type": "List<string>",
+            "format": "--target {value}",
+            "separator": ",",
+            "help": "Specify a single resource URN to update. Other resources will not be updated. Multiple resources can be specified using --target urn1 --target urn2."
+          },
+          {
+            "name": "TargetDependents",
+            "type": "bool",
+            "format": "--target-dependents {value}",
+            "help": "Allows updating of dependent targets discovered but not specified in --target list."
+          },
+          {
+            "name": "TargetReplace",
+            "type": "List<string>",
+            "format": "--target-replace {value}",
+            "separator": ",",
+            "help": "Specify a single resource URN to replace. Other resources will not be updated. Shorthand for --target urn --replace urn."
+          },
+          {
+            "name": "Yes",
+            "type": "bool",
+            "format": "--yes",
+            "help": "Automatically approve and perform the update after previewing it."
           }
         ]
       }
