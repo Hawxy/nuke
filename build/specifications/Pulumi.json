@@ -663,6 +663,161 @@
       "settingsClass": {}
     },
     {
+      "help": "Export a stack's deployment to standard out.",
+      "postfix": "StackExport",
+      "commonPropertySets": [
+        "stackSelect",
+        "stackInherit"
+      ],
+      "definiteArgument": "stack export",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "File",
+            "type": "string",
+            "format": "--file {value}",
+            "help": "A filename to write stack output to."
+          }
+        ]
+      }
+    },
+    {
+      "help": "Export a stack's dependency graph to a file.",
+      "postfix": "StackGraph",
+      "commonPropertySets": [
+        "stackSelect",
+        "stackInherit"
+      ],
+      "definiteArgument": "stack graph",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "File",
+            "type": "string",
+            "format": "{value}",
+            "help": "The file to export to."
+          },
+          {
+            "name": "DependencyEdgeColor",
+            "type": "string",
+            "format": "--dependency-edge-color {value}",
+            "help": "Sets the color of dependency edges in the graph (default <c>#246C60</c>)."
+          },
+          {
+            "name": "IgnoreDependencyEdges",
+            "type": "bool",
+            "format": "--ignore-dependency-edges",
+            "help": "Ignores edges introduced by dependency resource relationships."
+          },
+          {
+            "name": "IgnoreParentEdges",
+            "type": "bool",
+            "format": "--ignore-dependency-edges",
+            "help": "Ignores edges introduced by parent/child resource relationships."
+          },
+          {
+            "name": "ParentEdgeColor",
+            "type": "string",
+            "format": "--parent-edge-color {value}",
+            "help": "Sets the color of dependency edges in the graph (default <c>#AA6639</c>)."
+          }
+        ]
+      }
+    },
+    {
+      "help": "Import a deployment from standard in into an existing stack.",
+      "postfix": "StackImport",
+      "commonPropertySets": [
+        "stackSelect",
+        "stackInherit"
+      ],
+      "definiteArgument": "stack export",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "File",
+            "type": "string",
+            "format": "--file {value}",
+            "help": "A filename to read stack input from."
+          },
+          {
+            "name": "Force",
+            "type": "bool",
+            "format": "--force",
+            "help": "Force the import to occur, even if apparent errors are discovered beforehand (not recommended)."
+          }
+        ]
+      }
+    },
+    {
+      "help": "Create an empty stack with the given name, ready for updates.",
+      "postfix": "StackInit",
+      "commonPropertySets": [
+        "stackSelect",
+        "stackInherit"
+      ],
+      "definiteArgument": "stack init",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "{value}",
+            "help": "The name of the stack to create. Include org name if required."
+          },
+          {
+            "name": "SecretsProvider",
+            "type": "string",
+            "format": "--secrets-provider {value}",
+            "help": "The type of the provider that should be used to encrypt and decrypt secrets (possible choices: default, passphrase, awskms, azurekeyvault, gcpkms, hashivault) (default: default)."
+          }
+        ]
+      }
+    },
+    {
+      "help": "List stacks.",
+      "postfix": "StackList",
+      "commonPropertySets": [
+        "stackSelect",
+        "stackInherit"
+      ],
+      "definiteArgument": "stack ls",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "All",
+            "type": "bool",
+            "format": "--all",
+            "help": "List all stacks instead of just stacks for the current project."
+          },
+          {
+            "name": "Json",
+            "type": "bool",
+            "format": "--json",
+            "help": "Emit output as JSON."
+          },
+          {
+            "name": "Organization",
+            "type": "string",
+            "format": "--organization {value}",
+            "help": "Filter returned stacks to those in a specific organization."
+          },
+          {
+            "name": "Project",
+            "type": "string",
+            "format": "--project {value}",
+            "help": "Filter returned stacks to those with a specific project name."
+          },
+          {
+            "name": "Tag",
+            "type": "string",
+            "format": "--tag {value}",
+            "help": "Filter returned stacks to those in a specific tag (tag-name or tag-name=tag-value)."
+          }
+        ]
+      }
+    },
+    {
       "help": "Show a stacks output properties.",
       "postfix": "StackOutput",
       "commonPropertySets": [
@@ -683,6 +838,25 @@
             "type": "bool",
             "format": "--json",
             "help": "Emit output as JSON."
+          }
+        ]
+      }
+    },
+    {
+      "help": "Rename an existing stack.",
+      "postfix": "StackRename",
+      "commonPropertySets": [
+        "stackSelect",
+        "stackInherit"
+      ],
+      "definiteArgument": "stack rename",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "{value}",
+            "help": "The name of the new stack."
           }
         ]
       }
