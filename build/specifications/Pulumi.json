@@ -1195,6 +1195,18 @@
           }
         ]
       }
+    },
+    {
+      "help": "Print Pulumi’s version number.",
+      "postfix": "Version",
+      "definiteArgument": "version",
+      "settingsClass": {}
+    },
+    {
+      "help": "Displays the username of the currently logged in user.",
+      "postfix": "WhoAmI",
+      "definiteArgument": "whoami",
+      "settingsClass": {}
     }
   ],
   "commonTaskProperties": [
