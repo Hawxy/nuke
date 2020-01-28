@@ -52,7 +52,7 @@ namespace Nuke.Common.Tools.Pulumi
         public static IReadOnlyDictionary<string, object> GetStackOutput(PulumiStackOutputSettings toolSettings = null)
         {
             toolSettings ??= new PulumiStackOutputSettings();
-            return ParseJson<IReadOnlyDictionary<string, object>>(toolSettings.EnableJson());
+            return ParseJson<IReadOnlyDictionary<string, object>>(toolSettings.EnableJson().DisableLogOutput());
         }
 
         public static IReadOnlyDictionary<string, PulumiConfig> GetConfigOutput(Configure<PulumiConfigSettings> configurator)
@@ -62,7 +62,7 @@ namespace Nuke.Common.Tools.Pulumi
         public static IReadOnlyDictionary<string, PulumiConfig> GetConfigOutput(PulumiConfigSettings toolSettings = null)
         {
             toolSettings ??= new PulumiConfigSettings();
-            return ParseJson<IReadOnlyDictionary<string, PulumiConfig>>(toolSettings.EnableJson());
+            return ParseJson<IReadOnlyDictionary<string, PulumiConfig>>(toolSettings.EnableJson().DisableLogOutput());
         }
 
         private static T ParseJson<T>(ToolSettings toolSettings)
@@ -71,7 +71,7 @@ namespace Nuke.Common.Tools.Pulumi
             var output = process.Output.EnsureOnlyStd().Select(x => x.Text).ToList();
             try
             {
-                return JsonConvert.DeserializeObject<T>(string.Join("\r\n", output));
+                return JsonConvert.DeserializeObject<T>(output.JoinNewLine());
             }
             catch (Exception exception)
             {
