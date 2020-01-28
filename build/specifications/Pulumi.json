@@ -887,7 +887,7 @@
             "name": "PreserveConfig",
             "type": "bool",
             "format": "--preserve-config",
-            "help": "Do not delete the corresponding Pulumi.<stack-name>.yaml configuration file for the stack."
+            "help": "Do not delete the corresponding Pulumi.(stack-name).yaml configuration file for the stack."
           },
           {
             "name": "Yes",
@@ -1012,7 +1012,7 @@
             "name": "ResourceURN",
             "type": "string",
             "format": "{value}",
-            "help": "The resource as specified by its Pulumi URN (use <c>pulumi stack �show-urns</c> to get it)."
+            "help": "The resource as specified by its Pulumi URN (use <c>pulumi stack show-urns</c> to get it)."
           },
           {
             "name": "Force",
@@ -1042,7 +1042,7 @@
             "name": "ResourceURN",
             "type": "string",
             "format": "{value}",
-            "help": "The resource as specified by its Pulumi URN (use <c>pulumi stack �show-urns</c> to get it)."
+            "help": "The resource as specified by its Pulumi URN (use <c>pulumi stack show-urns</c> to get it)."
           },
           {
             "name": "All",
@@ -1217,7 +1217,7 @@
       "help": "Colorize output. Choices are: always, never, raw, auto (default is auto)"
     },
     {
-      "name": "WorkingDirectory",
+      "name": "Cwd",
       "type": "string",
       "format": "--cwd {value}",
       "help": "Run pulumi as if it had been started in another directory"

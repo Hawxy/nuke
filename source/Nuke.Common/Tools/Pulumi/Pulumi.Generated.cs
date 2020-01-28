@@ -1,4 +1,4 @@
-// Generated from https://github.com/Hawxy/nuke/blob/master/build/specifications/Pulumi.json
+// Generated from https://github.com/nuke-build/nuke/blob/master/build/specifications/Pulumi.json
 
 using JetBrains.Annotations;
 using Newtonsoft.Json;
@@ -52,7 +52,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///   <ul>
         ///     <li><c>&lt;stack&gt;</c> via <see cref="PulumiCancelSettings.Stack"/></li>
         ///     <li><c>--color</c> via <see cref="PulumiCancelSettings.Color"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiCancelSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiCancelSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiCancelSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiCancelSettings.Emoji"/></li>
         ///     <li><c>--help</c> via <see cref="PulumiCancelSettings.Help"/></li>
@@ -81,7 +81,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///   <ul>
         ///     <li><c>&lt;stack&gt;</c> via <see cref="PulumiCancelSettings.Stack"/></li>
         ///     <li><c>--color</c> via <see cref="PulumiCancelSettings.Color"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiCancelSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiCancelSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiCancelSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiCancelSettings.Emoji"/></li>
         ///     <li><c>--help</c> via <see cref="PulumiCancelSettings.Help"/></li>
@@ -107,7 +107,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///   <ul>
         ///     <li><c>&lt;stack&gt;</c> via <see cref="PulumiCancelSettings.Stack"/></li>
         ///     <li><c>--color</c> via <see cref="PulumiCancelSettings.Color"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiCancelSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiCancelSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiCancelSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiCancelSettings.Emoji"/></li>
         ///     <li><c>--help</c> via <see cref="PulumiCancelSettings.Help"/></li>
@@ -133,7 +133,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///   <ul>
         ///     <li><c>--color</c> via <see cref="PulumiConfigSettings.Color"/></li>
         ///     <li><c>--config-file</c> via <see cref="PulumiConfigSettings.ConfigFile"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiConfigSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiConfigSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiConfigSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiConfigSettings.Emoji"/></li>
         ///     <li><c>--help</c> via <see cref="PulumiConfigSettings.Help"/></li>
@@ -164,7 +164,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///   <ul>
         ///     <li><c>--color</c> via <see cref="PulumiConfigSettings.Color"/></li>
         ///     <li><c>--config-file</c> via <see cref="PulumiConfigSettings.ConfigFile"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiConfigSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiConfigSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiConfigSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiConfigSettings.Emoji"/></li>
         ///     <li><c>--help</c> via <see cref="PulumiConfigSettings.Help"/></li>
@@ -192,7 +192,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///   <ul>
         ///     <li><c>--color</c> via <see cref="PulumiConfigSettings.Color"/></li>
         ///     <li><c>--config-file</c> via <see cref="PulumiConfigSettings.ConfigFile"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiConfigSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiConfigSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiConfigSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiConfigSettings.Emoji"/></li>
         ///     <li><c>--help</c> via <see cref="PulumiConfigSettings.Help"/></li>
@@ -221,7 +221,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///     <li><c>&lt;value&gt;</c> via <see cref="PulumiConfigGetSettings.Value"/></li>
         ///     <li><c>--color</c> via <see cref="PulumiConfigGetSettings.Color"/></li>
         ///     <li><c>--config-file</c> via <see cref="PulumiConfigGetSettings.ConfigFile"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiConfigGetSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiConfigGetSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiConfigGetSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiConfigGetSettings.Emoji"/></li>
         ///     <li><c>--help</c> via <see cref="PulumiConfigGetSettings.Help"/></li>
@@ -253,7 +253,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///     <li><c>&lt;value&gt;</c> via <see cref="PulumiConfigGetSettings.Value"/></li>
         ///     <li><c>--color</c> via <see cref="PulumiConfigGetSettings.Color"/></li>
         ///     <li><c>--config-file</c> via <see cref="PulumiConfigGetSettings.ConfigFile"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiConfigGetSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiConfigGetSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiConfigGetSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiConfigGetSettings.Emoji"/></li>
         ///     <li><c>--help</c> via <see cref="PulumiConfigGetSettings.Help"/></li>
@@ -282,7 +282,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///     <li><c>&lt;value&gt;</c> via <see cref="PulumiConfigGetSettings.Value"/></li>
         ///     <li><c>--color</c> via <see cref="PulumiConfigGetSettings.Color"/></li>
         ///     <li><c>--config-file</c> via <see cref="PulumiConfigGetSettings.ConfigFile"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiConfigGetSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiConfigGetSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiConfigGetSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiConfigGetSettings.Emoji"/></li>
         ///     <li><c>--help</c> via <see cref="PulumiConfigGetSettings.Help"/></li>
@@ -310,7 +310,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///   <ul>
         ///     <li><c>--color</c> via <see cref="PulumiConfigRefreshSettings.Color"/></li>
         ///     <li><c>--config-file</c> via <see cref="PulumiConfigRefreshSettings.ConfigFile"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiConfigRefreshSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiConfigRefreshSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiConfigRefreshSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiConfigRefreshSettings.Emoji"/></li>
         ///     <li><c>--force</c> via <see cref="PulumiConfigRefreshSettings.Force"/></li>
@@ -340,7 +340,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///   <ul>
         ///     <li><c>--color</c> via <see cref="PulumiConfigRefreshSettings.Color"/></li>
         ///     <li><c>--config-file</c> via <see cref="PulumiConfigRefreshSettings.ConfigFile"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiConfigRefreshSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiConfigRefreshSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiConfigRefreshSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiConfigRefreshSettings.Emoji"/></li>
         ///     <li><c>--force</c> via <see cref="PulumiConfigRefreshSettings.Force"/></li>
@@ -367,7 +367,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///   <ul>
         ///     <li><c>--color</c> via <see cref="PulumiConfigRefreshSettings.Color"/></li>
         ///     <li><c>--config-file</c> via <see cref="PulumiConfigRefreshSettings.ConfigFile"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiConfigRefreshSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiConfigRefreshSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiConfigRefreshSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiConfigRefreshSettings.Emoji"/></li>
         ///     <li><c>--force</c> via <see cref="PulumiConfigRefreshSettings.Force"/></li>
@@ -395,7 +395,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///     <li><c>&lt;value&gt;</c> via <see cref="PulumiConfigRemoveSettings.Value"/></li>
         ///     <li><c>--color</c> via <see cref="PulumiConfigRemoveSettings.Color"/></li>
         ///     <li><c>--config-file</c> via <see cref="PulumiConfigRemoveSettings.ConfigFile"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiConfigRemoveSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiConfigRemoveSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiConfigRemoveSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiConfigRemoveSettings.Emoji"/></li>
         ///     <li><c>--help</c> via <see cref="PulumiConfigRemoveSettings.Help"/></li>
@@ -426,7 +426,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///     <li><c>&lt;value&gt;</c> via <see cref="PulumiConfigRemoveSettings.Value"/></li>
         ///     <li><c>--color</c> via <see cref="PulumiConfigRemoveSettings.Color"/></li>
         ///     <li><c>--config-file</c> via <see cref="PulumiConfigRemoveSettings.ConfigFile"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiConfigRemoveSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiConfigRemoveSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiConfigRemoveSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiConfigRemoveSettings.Emoji"/></li>
         ///     <li><c>--help</c> via <see cref="PulumiConfigRemoveSettings.Help"/></li>
@@ -454,7 +454,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///     <li><c>&lt;value&gt;</c> via <see cref="PulumiConfigRemoveSettings.Value"/></li>
         ///     <li><c>--color</c> via <see cref="PulumiConfigRemoveSettings.Color"/></li>
         ///     <li><c>--config-file</c> via <see cref="PulumiConfigRemoveSettings.ConfigFile"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiConfigRemoveSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiConfigRemoveSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiConfigRemoveSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiConfigRemoveSettings.Emoji"/></li>
         ///     <li><c>--help</c> via <see cref="PulumiConfigRemoveSettings.Help"/></li>
@@ -482,7 +482,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///     <li><c>&lt;value&gt;</c> via <see cref="PulumiConfigSetSettings.Value"/></li>
         ///     <li><c>--color</c> via <see cref="PulumiConfigSetSettings.Color"/></li>
         ///     <li><c>--config-file</c> via <see cref="PulumiConfigSetSettings.ConfigFile"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiConfigSetSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiConfigSetSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiConfigSetSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiConfigSetSettings.Emoji"/></li>
         ///     <li><c>--help</c> via <see cref="PulumiConfigSetSettings.Help"/></li>
@@ -515,7 +515,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///     <li><c>&lt;value&gt;</c> via <see cref="PulumiConfigSetSettings.Value"/></li>
         ///     <li><c>--color</c> via <see cref="PulumiConfigSetSettings.Color"/></li>
         ///     <li><c>--config-file</c> via <see cref="PulumiConfigSetSettings.ConfigFile"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiConfigSetSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiConfigSetSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiConfigSetSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiConfigSetSettings.Emoji"/></li>
         ///     <li><c>--help</c> via <see cref="PulumiConfigSetSettings.Help"/></li>
@@ -545,7 +545,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///     <li><c>&lt;value&gt;</c> via <see cref="PulumiConfigSetSettings.Value"/></li>
         ///     <li><c>--color</c> via <see cref="PulumiConfigSetSettings.Color"/></li>
         ///     <li><c>--config-file</c> via <see cref="PulumiConfigSetSettings.ConfigFile"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiConfigSetSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiConfigSetSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiConfigSetSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiConfigSetSettings.Emoji"/></li>
         ///     <li><c>--help</c> via <see cref="PulumiConfigSetSettings.Help"/></li>
@@ -574,7 +574,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///   <ul>
         ///     <li><c>--color</c> via <see cref="PulumiDestroySettings.Color"/></li>
         ///     <li><c>--config-file</c> via <see cref="PulumiDestroySettings.ConfigFile"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiDestroySettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiDestroySettings.Cwd"/></li>
         ///     <li><c>--debug</c> via <see cref="PulumiDestroySettings.Debug"/></li>
         ///     <li><c>--diff</c> via <see cref="PulumiDestroySettings.Diff"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiDestroySettings.DisableIntegrityChecking"/></li>
@@ -616,7 +616,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///   <ul>
         ///     <li><c>--color</c> via <see cref="PulumiDestroySettings.Color"/></li>
         ///     <li><c>--config-file</c> via <see cref="PulumiDestroySettings.ConfigFile"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiDestroySettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiDestroySettings.Cwd"/></li>
         ///     <li><c>--debug</c> via <see cref="PulumiDestroySettings.Debug"/></li>
         ///     <li><c>--diff</c> via <see cref="PulumiDestroySettings.Diff"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiDestroySettings.DisableIntegrityChecking"/></li>
@@ -655,7 +655,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///   <ul>
         ///     <li><c>--color</c> via <see cref="PulumiDestroySettings.Color"/></li>
         ///     <li><c>--config-file</c> via <see cref="PulumiDestroySettings.ConfigFile"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiDestroySettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiDestroySettings.Cwd"/></li>
         ///     <li><c>--debug</c> via <see cref="PulumiDestroySettings.Debug"/></li>
         ///     <li><c>--diff</c> via <see cref="PulumiDestroySettings.Diff"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiDestroySettings.DisableIntegrityChecking"/></li>
@@ -693,7 +693,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
         ///   <ul>
         ///     <li><c>--color</c> via <see cref="PulumiHistorySettings.Color"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiHistorySettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiHistorySettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiHistorySettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiHistorySettings.Emoji"/></li>
         ///     <li><c>--help</c> via <see cref="PulumiHistorySettings.Help"/></li>
@@ -723,7 +723,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
         ///   <ul>
         ///     <li><c>--color</c> via <see cref="PulumiHistorySettings.Color"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiHistorySettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiHistorySettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiHistorySettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiHistorySettings.Emoji"/></li>
         ///     <li><c>--help</c> via <see cref="PulumiHistorySettings.Help"/></li>
@@ -750,7 +750,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
         ///   <ul>
         ///     <li><c>--color</c> via <see cref="PulumiHistorySettings.Color"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiHistorySettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiHistorySettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiHistorySettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiHistorySettings.Emoji"/></li>
         ///     <li><c>--help</c> via <see cref="PulumiHistorySettings.Help"/></li>
@@ -779,7 +779,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///     <li><c>&lt;location&gt;</c> via <see cref="PulumiLoginSettings.Location"/></li>
         ///     <li><c>--cloud-url</c> via <see cref="PulumiLoginSettings.CloudUrl"/></li>
         ///     <li><c>--color</c> via <see cref="PulumiLoginSettings.Color"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiLoginSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiLoginSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiLoginSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiLoginSettings.Emoji"/></li>
         ///     <li><c>--help</c> via <see cref="PulumiLoginSettings.Help"/></li>
@@ -809,7 +809,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///     <li><c>&lt;location&gt;</c> via <see cref="PulumiLoginSettings.Location"/></li>
         ///     <li><c>--cloud-url</c> via <see cref="PulumiLoginSettings.CloudUrl"/></li>
         ///     <li><c>--color</c> via <see cref="PulumiLoginSettings.Color"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiLoginSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiLoginSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiLoginSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiLoginSettings.Emoji"/></li>
         ///     <li><c>--help</c> via <see cref="PulumiLoginSettings.Help"/></li>
@@ -836,7 +836,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///     <li><c>&lt;location&gt;</c> via <see cref="PulumiLoginSettings.Location"/></li>
         ///     <li><c>--cloud-url</c> via <see cref="PulumiLoginSettings.CloudUrl"/></li>
         ///     <li><c>--color</c> via <see cref="PulumiLoginSettings.Color"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiLoginSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiLoginSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiLoginSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiLoginSettings.Emoji"/></li>
         ///     <li><c>--help</c> via <see cref="PulumiLoginSettings.Help"/></li>
@@ -863,7 +863,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///     <li><c>&lt;location&gt;</c> via <see cref="PulumiLogoutSettings.Location"/></li>
         ///     <li><c>--cloud-url</c> via <see cref="PulumiLogoutSettings.CloudUrl"/></li>
         ///     <li><c>--color</c> via <see cref="PulumiLogoutSettings.Color"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiLogoutSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiLogoutSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiLogoutSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiLogoutSettings.Emoji"/></li>
         ///     <li><c>--help</c> via <see cref="PulumiLogoutSettings.Help"/></li>
@@ -893,7 +893,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///     <li><c>&lt;location&gt;</c> via <see cref="PulumiLogoutSettings.Location"/></li>
         ///     <li><c>--cloud-url</c> via <see cref="PulumiLogoutSettings.CloudUrl"/></li>
         ///     <li><c>--color</c> via <see cref="PulumiLogoutSettings.Color"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiLogoutSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiLogoutSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiLogoutSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiLogoutSettings.Emoji"/></li>
         ///     <li><c>--help</c> via <see cref="PulumiLogoutSettings.Help"/></li>
@@ -920,7 +920,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///     <li><c>&lt;location&gt;</c> via <see cref="PulumiLogoutSettings.Location"/></li>
         ///     <li><c>--cloud-url</c> via <see cref="PulumiLogoutSettings.CloudUrl"/></li>
         ///     <li><c>--color</c> via <see cref="PulumiLogoutSettings.Color"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiLogoutSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiLogoutSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiLogoutSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiLogoutSettings.Emoji"/></li>
         ///     <li><c>--help</c> via <see cref="PulumiLogoutSettings.Help"/></li>
@@ -946,7 +946,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///   <ul>
         ///     <li><c>--color</c> via <see cref="PulumiLogsSettings.Color"/></li>
         ///     <li><c>--config-file</c> via <see cref="PulumiLogsSettings.ConfigFile"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiLogsSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiLogsSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiLogsSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiLogsSettings.Emoji"/></li>
         ///     <li><c>--follow</c> via <see cref="PulumiLogsSettings.Follow"/></li>
@@ -979,7 +979,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///   <ul>
         ///     <li><c>--color</c> via <see cref="PulumiLogsSettings.Color"/></li>
         ///     <li><c>--config-file</c> via <see cref="PulumiLogsSettings.ConfigFile"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiLogsSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiLogsSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiLogsSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiLogsSettings.Emoji"/></li>
         ///     <li><c>--follow</c> via <see cref="PulumiLogsSettings.Follow"/></li>
@@ -1009,7 +1009,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///   <ul>
         ///     <li><c>--color</c> via <see cref="PulumiLogsSettings.Color"/></li>
         ///     <li><c>--config-file</c> via <see cref="PulumiLogsSettings.ConfigFile"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiLogsSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiLogsSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiLogsSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiLogsSettings.Emoji"/></li>
         ///     <li><c>--follow</c> via <see cref="PulumiLogsSettings.Follow"/></li>
@@ -1039,7 +1039,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///   <ul>
         ///     <li><c>&lt;kindNameVersion&gt;</c> via <see cref="PulumiPluginInstallSettings.KindNameVersion"/></li>
         ///     <li><c>--color</c> via <see cref="PulumiPluginInstallSettings.Color"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiPluginInstallSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiPluginInstallSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiPluginInstallSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiPluginInstallSettings.Emoji"/></li>
         ///     <li><c>--exact</c> via <see cref="PulumiPluginInstallSettings.Exact"/></li>
@@ -1071,7 +1071,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///   <ul>
         ///     <li><c>&lt;kindNameVersion&gt;</c> via <see cref="PulumiPluginInstallSettings.KindNameVersion"/></li>
         ///     <li><c>--color</c> via <see cref="PulumiPluginInstallSettings.Color"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiPluginInstallSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiPluginInstallSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiPluginInstallSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiPluginInstallSettings.Emoji"/></li>
         ///     <li><c>--exact</c> via <see cref="PulumiPluginInstallSettings.Exact"/></li>
@@ -1100,7 +1100,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///   <ul>
         ///     <li><c>&lt;kindNameVersion&gt;</c> via <see cref="PulumiPluginInstallSettings.KindNameVersion"/></li>
         ///     <li><c>--color</c> via <see cref="PulumiPluginInstallSettings.Color"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiPluginInstallSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiPluginInstallSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiPluginInstallSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiPluginInstallSettings.Emoji"/></li>
         ///     <li><c>--exact</c> via <see cref="PulumiPluginInstallSettings.Exact"/></li>
@@ -1128,7 +1128,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
         ///   <ul>
         ///     <li><c>--color</c> via <see cref="PulumiPluginListSettings.Color"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiPluginListSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiPluginListSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiPluginListSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiPluginListSettings.Emoji"/></li>
         ///     <li><c>--help</c> via <see cref="PulumiPluginListSettings.Help"/></li>
@@ -1157,7 +1157,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
         ///   <ul>
         ///     <li><c>--color</c> via <see cref="PulumiPluginListSettings.Color"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiPluginListSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiPluginListSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiPluginListSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiPluginListSettings.Emoji"/></li>
         ///     <li><c>--help</c> via <see cref="PulumiPluginListSettings.Help"/></li>
@@ -1183,7 +1183,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
         ///   <ul>
         ///     <li><c>--color</c> via <see cref="PulumiPluginListSettings.Color"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiPluginListSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiPluginListSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiPluginListSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiPluginListSettings.Emoji"/></li>
         ///     <li><c>--help</c> via <see cref="PulumiPluginListSettings.Help"/></li>
@@ -1211,7 +1211,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///     <li><c>&lt;kindNameVersion&gt;</c> via <see cref="PulumiPluginRemoveSettings.KindNameVersion"/></li>
         ///     <li><c>--all</c> via <see cref="PulumiPluginRemoveSettings.All"/></li>
         ///     <li><c>--color</c> via <see cref="PulumiPluginRemoveSettings.Color"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiPluginRemoveSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiPluginRemoveSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiPluginRemoveSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiPluginRemoveSettings.Emoji"/></li>
         ///     <li><c>--help</c> via <see cref="PulumiPluginRemoveSettings.Help"/></li>
@@ -1241,7 +1241,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///     <li><c>&lt;kindNameVersion&gt;</c> via <see cref="PulumiPluginRemoveSettings.KindNameVersion"/></li>
         ///     <li><c>--all</c> via <see cref="PulumiPluginRemoveSettings.All"/></li>
         ///     <li><c>--color</c> via <see cref="PulumiPluginRemoveSettings.Color"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiPluginRemoveSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiPluginRemoveSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiPluginRemoveSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiPluginRemoveSettings.Emoji"/></li>
         ///     <li><c>--help</c> via <see cref="PulumiPluginRemoveSettings.Help"/></li>
@@ -1268,7 +1268,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///     <li><c>&lt;kindNameVersion&gt;</c> via <see cref="PulumiPluginRemoveSettings.KindNameVersion"/></li>
         ///     <li><c>--all</c> via <see cref="PulumiPluginRemoveSettings.All"/></li>
         ///     <li><c>--color</c> via <see cref="PulumiPluginRemoveSettings.Color"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiPluginRemoveSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiPluginRemoveSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiPluginRemoveSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiPluginRemoveSettings.Emoji"/></li>
         ///     <li><c>--help</c> via <see cref="PulumiPluginRemoveSettings.Help"/></li>
@@ -1296,7 +1296,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///     <li><c>--config</c> via <see cref="PulumiPreviewSettings.Config"/></li>
         ///     <li><c>--config-file</c> via <see cref="PulumiPreviewSettings.ConfigFile"/></li>
         ///     <li><c>--config-path</c> via <see cref="PulumiPreviewSettings.ConfigPath"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiPreviewSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiPreviewSettings.Cwd"/></li>
         ///     <li><c>--debug</c> via <see cref="PulumiPreviewSettings.Debug"/></li>
         ///     <li><c>--diff</c> via <see cref="PulumiPreviewSettings.Diff"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiPreviewSettings.DisableIntegrityChecking"/></li>
@@ -1342,7 +1342,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///     <li><c>--config</c> via <see cref="PulumiPreviewSettings.Config"/></li>
         ///     <li><c>--config-file</c> via <see cref="PulumiPreviewSettings.ConfigFile"/></li>
         ///     <li><c>--config-path</c> via <see cref="PulumiPreviewSettings.ConfigPath"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiPreviewSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiPreviewSettings.Cwd"/></li>
         ///     <li><c>--debug</c> via <see cref="PulumiPreviewSettings.Debug"/></li>
         ///     <li><c>--diff</c> via <see cref="PulumiPreviewSettings.Diff"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiPreviewSettings.DisableIntegrityChecking"/></li>
@@ -1385,7 +1385,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///     <li><c>--config</c> via <see cref="PulumiPreviewSettings.Config"/></li>
         ///     <li><c>--config-file</c> via <see cref="PulumiPreviewSettings.ConfigFile"/></li>
         ///     <li><c>--config-path</c> via <see cref="PulumiPreviewSettings.ConfigPath"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiPreviewSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiPreviewSettings.Cwd"/></li>
         ///     <li><c>--debug</c> via <see cref="PulumiPreviewSettings.Debug"/></li>
         ///     <li><c>--diff</c> via <see cref="PulumiPreviewSettings.Diff"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiPreviewSettings.DisableIntegrityChecking"/></li>
@@ -1426,7 +1426,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///   <ul>
         ///     <li><c>--color</c> via <see cref="PulumiRefreshSettings.Color"/></li>
         ///     <li><c>--config-file</c> via <see cref="PulumiRefreshSettings.ConfigFile"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiRefreshSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiRefreshSettings.Cwd"/></li>
         ///     <li><c>--debug</c> via <see cref="PulumiRefreshSettings.Debug"/></li>
         ///     <li><c>--diff</c> via <see cref="PulumiRefreshSettings.Diff"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiRefreshSettings.DisableIntegrityChecking"/></li>
@@ -1465,7 +1465,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///   <ul>
         ///     <li><c>--color</c> via <see cref="PulumiRefreshSettings.Color"/></li>
         ///     <li><c>--config-file</c> via <see cref="PulumiRefreshSettings.ConfigFile"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiRefreshSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiRefreshSettings.Cwd"/></li>
         ///     <li><c>--debug</c> via <see cref="PulumiRefreshSettings.Debug"/></li>
         ///     <li><c>--diff</c> via <see cref="PulumiRefreshSettings.Diff"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiRefreshSettings.DisableIntegrityChecking"/></li>
@@ -1501,7 +1501,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///   <ul>
         ///     <li><c>--color</c> via <see cref="PulumiRefreshSettings.Color"/></li>
         ///     <li><c>--config-file</c> via <see cref="PulumiRefreshSettings.ConfigFile"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiRefreshSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiRefreshSettings.Cwd"/></li>
         ///     <li><c>--debug</c> via <see cref="PulumiRefreshSettings.Debug"/></li>
         ///     <li><c>--diff</c> via <see cref="PulumiRefreshSettings.Diff"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiRefreshSettings.DisableIntegrityChecking"/></li>
@@ -1536,7 +1536,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
         ///   <ul>
         ///     <li><c>--color</c> via <see cref="PulumiStackSettings.Color"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiStackSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiStackSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiStackSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiStackSettings.Emoji"/></li>
         ///     <li><c>--help</c> via <see cref="PulumiStackSettings.Help"/></li>
@@ -1567,7 +1567,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
         ///   <ul>
         ///     <li><c>--color</c> via <see cref="PulumiStackSettings.Color"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiStackSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiStackSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiStackSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiStackSettings.Emoji"/></li>
         ///     <li><c>--help</c> via <see cref="PulumiStackSettings.Help"/></li>
@@ -1595,7 +1595,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
         ///   <ul>
         ///     <li><c>--color</c> via <see cref="PulumiStackSettings.Color"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiStackSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiStackSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiStackSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiStackSettings.Emoji"/></li>
         ///     <li><c>--help</c> via <see cref="PulumiStackSettings.Help"/></li>
@@ -1623,7 +1623,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
         ///   <ul>
         ///     <li><c>--color</c> via <see cref="PulumiStackExportSettings.Color"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiStackExportSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiStackExportSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiStackExportSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiStackExportSettings.Emoji"/></li>
         ///     <li><c>--file</c> via <see cref="PulumiStackExportSettings.File"/></li>
@@ -1655,7 +1655,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
         ///   <ul>
         ///     <li><c>--color</c> via <see cref="PulumiStackExportSettings.Color"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiStackExportSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiStackExportSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiStackExportSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiStackExportSettings.Emoji"/></li>
         ///     <li><c>--file</c> via <see cref="PulumiStackExportSettings.File"/></li>
@@ -1684,7 +1684,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
         ///   <ul>
         ///     <li><c>--color</c> via <see cref="PulumiStackExportSettings.Color"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiStackExportSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiStackExportSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiStackExportSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiStackExportSettings.Emoji"/></li>
         ///     <li><c>--file</c> via <see cref="PulumiStackExportSettings.File"/></li>
@@ -1714,7 +1714,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///   <ul>
         ///     <li><c>&lt;file&gt;</c> via <see cref="PulumiStackGraphSettings.File"/></li>
         ///     <li><c>--color</c> via <see cref="PulumiStackGraphSettings.Color"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiStackGraphSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiStackGraphSettings.Cwd"/></li>
         ///     <li><c>--dependency-edge-color</c> via <see cref="PulumiStackGraphSettings.DependencyEdgeColor"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiStackGraphSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiStackGraphSettings.Emoji"/></li>
@@ -1750,7 +1750,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///   <ul>
         ///     <li><c>&lt;file&gt;</c> via <see cref="PulumiStackGraphSettings.File"/></li>
         ///     <li><c>--color</c> via <see cref="PulumiStackGraphSettings.Color"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiStackGraphSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiStackGraphSettings.Cwd"/></li>
         ///     <li><c>--dependency-edge-color</c> via <see cref="PulumiStackGraphSettings.DependencyEdgeColor"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiStackGraphSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiStackGraphSettings.Emoji"/></li>
@@ -1783,7 +1783,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///   <ul>
         ///     <li><c>&lt;file&gt;</c> via <see cref="PulumiStackGraphSettings.File"/></li>
         ///     <li><c>--color</c> via <see cref="PulumiStackGraphSettings.Color"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiStackGraphSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiStackGraphSettings.Cwd"/></li>
         ///     <li><c>--dependency-edge-color</c> via <see cref="PulumiStackGraphSettings.DependencyEdgeColor"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiStackGraphSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiStackGraphSettings.Emoji"/></li>
@@ -1815,7 +1815,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
         ///   <ul>
         ///     <li><c>--color</c> via <see cref="PulumiStackImportSettings.Color"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiStackImportSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiStackImportSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiStackImportSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiStackImportSettings.Emoji"/></li>
         ///     <li><c>--file</c> via <see cref="PulumiStackImportSettings.File"/></li>
@@ -1848,7 +1848,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
         ///   <ul>
         ///     <li><c>--color</c> via <see cref="PulumiStackImportSettings.Color"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiStackImportSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiStackImportSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiStackImportSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiStackImportSettings.Emoji"/></li>
         ///     <li><c>--file</c> via <see cref="PulumiStackImportSettings.File"/></li>
@@ -1878,7 +1878,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
         ///   <ul>
         ///     <li><c>--color</c> via <see cref="PulumiStackImportSettings.Color"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiStackImportSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiStackImportSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiStackImportSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiStackImportSettings.Emoji"/></li>
         ///     <li><c>--file</c> via <see cref="PulumiStackImportSettings.File"/></li>
@@ -1909,7 +1909,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///   <ul>
         ///     <li><c>&lt;name&gt;</c> via <see cref="PulumiStackInitSettings.Name"/></li>
         ///     <li><c>--color</c> via <see cref="PulumiStackInitSettings.Color"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiStackInitSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiStackInitSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiStackInitSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiStackInitSettings.Emoji"/></li>
         ///     <li><c>--help</c> via <see cref="PulumiStackInitSettings.Help"/></li>
@@ -1942,7 +1942,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///   <ul>
         ///     <li><c>&lt;name&gt;</c> via <see cref="PulumiStackInitSettings.Name"/></li>
         ///     <li><c>--color</c> via <see cref="PulumiStackInitSettings.Color"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiStackInitSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiStackInitSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiStackInitSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiStackInitSettings.Emoji"/></li>
         ///     <li><c>--help</c> via <see cref="PulumiStackInitSettings.Help"/></li>
@@ -1972,7 +1972,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///   <ul>
         ///     <li><c>&lt;name&gt;</c> via <see cref="PulumiStackInitSettings.Name"/></li>
         ///     <li><c>--color</c> via <see cref="PulumiStackInitSettings.Color"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiStackInitSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiStackInitSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiStackInitSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiStackInitSettings.Emoji"/></li>
         ///     <li><c>--help</c> via <see cref="PulumiStackInitSettings.Help"/></li>
@@ -2002,7 +2002,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///   <ul>
         ///     <li><c>--all</c> via <see cref="PulumiStackListSettings.All"/></li>
         ///     <li><c>--color</c> via <see cref="PulumiStackListSettings.Color"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiStackListSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiStackListSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiStackListSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiStackListSettings.Emoji"/></li>
         ///     <li><c>--help</c> via <see cref="PulumiStackListSettings.Help"/></li>
@@ -2038,7 +2038,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///   <ul>
         ///     <li><c>--all</c> via <see cref="PulumiStackListSettings.All"/></li>
         ///     <li><c>--color</c> via <see cref="PulumiStackListSettings.Color"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiStackListSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiStackListSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiStackListSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiStackListSettings.Emoji"/></li>
         ///     <li><c>--help</c> via <see cref="PulumiStackListSettings.Help"/></li>
@@ -2071,7 +2071,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///   <ul>
         ///     <li><c>--all</c> via <see cref="PulumiStackListSettings.All"/></li>
         ///     <li><c>--color</c> via <see cref="PulumiStackListSettings.Color"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiStackListSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiStackListSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiStackListSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiStackListSettings.Emoji"/></li>
         ///     <li><c>--help</c> via <see cref="PulumiStackListSettings.Help"/></li>
@@ -2104,7 +2104,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///   <ul>
         ///     <li><c>&lt;propertyName&gt;</c> via <see cref="PulumiStackOutputSettings.PropertyName"/></li>
         ///     <li><c>--color</c> via <see cref="PulumiStackOutputSettings.Color"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiStackOutputSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiStackOutputSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiStackOutputSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiStackOutputSettings.Emoji"/></li>
         ///     <li><c>--help</c> via <see cref="PulumiStackOutputSettings.Help"/></li>
@@ -2137,7 +2137,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///   <ul>
         ///     <li><c>&lt;propertyName&gt;</c> via <see cref="PulumiStackOutputSettings.PropertyName"/></li>
         ///     <li><c>--color</c> via <see cref="PulumiStackOutputSettings.Color"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiStackOutputSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiStackOutputSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiStackOutputSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiStackOutputSettings.Emoji"/></li>
         ///     <li><c>--help</c> via <see cref="PulumiStackOutputSettings.Help"/></li>
@@ -2167,7 +2167,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///   <ul>
         ///     <li><c>&lt;propertyName&gt;</c> via <see cref="PulumiStackOutputSettings.PropertyName"/></li>
         ///     <li><c>--color</c> via <see cref="PulumiStackOutputSettings.Color"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiStackOutputSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiStackOutputSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiStackOutputSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiStackOutputSettings.Emoji"/></li>
         ///     <li><c>--help</c> via <see cref="PulumiStackOutputSettings.Help"/></li>
@@ -2197,7 +2197,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///   <ul>
         ///     <li><c>&lt;name&gt;</c> via <see cref="PulumiStackRenameSettings.Name"/></li>
         ///     <li><c>--color</c> via <see cref="PulumiStackRenameSettings.Color"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiStackRenameSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiStackRenameSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiStackRenameSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiStackRenameSettings.Emoji"/></li>
         ///     <li><c>--help</c> via <see cref="PulumiStackRenameSettings.Help"/></li>
@@ -2229,7 +2229,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///   <ul>
         ///     <li><c>&lt;name&gt;</c> via <see cref="PulumiStackRenameSettings.Name"/></li>
         ///     <li><c>--color</c> via <see cref="PulumiStackRenameSettings.Color"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiStackRenameSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiStackRenameSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiStackRenameSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiStackRenameSettings.Emoji"/></li>
         ///     <li><c>--help</c> via <see cref="PulumiStackRenameSettings.Help"/></li>
@@ -2258,7 +2258,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///   <ul>
         ///     <li><c>&lt;name&gt;</c> via <see cref="PulumiStackRenameSettings.Name"/></li>
         ///     <li><c>--color</c> via <see cref="PulumiStackRenameSettings.Color"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiStackRenameSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiStackRenameSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiStackRenameSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiStackRenameSettings.Emoji"/></li>
         ///     <li><c>--help</c> via <see cref="PulumiStackRenameSettings.Help"/></li>
@@ -2287,7 +2287,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///   <ul>
         ///     <li><c>&lt;name&gt;</c> via <see cref="PulumiStackRemoveSettings.Name"/></li>
         ///     <li><c>--color</c> via <see cref="PulumiStackRemoveSettings.Color"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiStackRemoveSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiStackRemoveSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiStackRemoveSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiStackRemoveSettings.Emoji"/></li>
         ///     <li><c>--force</c> via <see cref="PulumiStackRemoveSettings.Force"/></li>
@@ -2322,7 +2322,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///   <ul>
         ///     <li><c>&lt;name&gt;</c> via <see cref="PulumiStackRemoveSettings.Name"/></li>
         ///     <li><c>--color</c> via <see cref="PulumiStackRemoveSettings.Color"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiStackRemoveSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiStackRemoveSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiStackRemoveSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiStackRemoveSettings.Emoji"/></li>
         ///     <li><c>--force</c> via <see cref="PulumiStackRemoveSettings.Force"/></li>
@@ -2354,7 +2354,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///   <ul>
         ///     <li><c>&lt;name&gt;</c> via <see cref="PulumiStackRemoveSettings.Name"/></li>
         ///     <li><c>--color</c> via <see cref="PulumiStackRemoveSettings.Color"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiStackRemoveSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiStackRemoveSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiStackRemoveSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiStackRemoveSettings.Emoji"/></li>
         ///     <li><c>--force</c> via <see cref="PulumiStackRemoveSettings.Force"/></li>
@@ -2386,7 +2386,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///   <ul>
         ///     <li><c>&lt;name&gt;</c> via <see cref="PulumiStackSelectSettings.Name"/></li>
         ///     <li><c>--color</c> via <see cref="PulumiStackSelectSettings.Color"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiStackSelectSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiStackSelectSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiStackSelectSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiStackSelectSettings.Emoji"/></li>
         ///     <li><c>--help</c> via <see cref="PulumiStackSelectSettings.Help"/></li>
@@ -2418,7 +2418,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///   <ul>
         ///     <li><c>&lt;name&gt;</c> via <see cref="PulumiStackSelectSettings.Name"/></li>
         ///     <li><c>--color</c> via <see cref="PulumiStackSelectSettings.Color"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiStackSelectSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiStackSelectSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiStackSelectSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiStackSelectSettings.Emoji"/></li>
         ///     <li><c>--help</c> via <see cref="PulumiStackSelectSettings.Help"/></li>
@@ -2447,7 +2447,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///   <ul>
         ///     <li><c>&lt;name&gt;</c> via <see cref="PulumiStackSelectSettings.Name"/></li>
         ///     <li><c>--color</c> via <see cref="PulumiStackSelectSettings.Color"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiStackSelectSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiStackSelectSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiStackSelectSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiStackSelectSettings.Emoji"/></li>
         ///     <li><c>--help</c> via <see cref="PulumiStackSelectSettings.Help"/></li>
@@ -2476,7 +2476,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///   <ul>
         ///     <li><c>&lt;name&gt;</c> via <see cref="PulumiStackTagGetSettings.Name"/></li>
         ///     <li><c>--color</c> via <see cref="PulumiStackTagGetSettings.Color"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiStackTagGetSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiStackTagGetSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiStackTagGetSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiStackTagGetSettings.Emoji"/></li>
         ///     <li><c>--help</c> via <see cref="PulumiStackTagGetSettings.Help"/></li>
@@ -2508,7 +2508,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///   <ul>
         ///     <li><c>&lt;name&gt;</c> via <see cref="PulumiStackTagGetSettings.Name"/></li>
         ///     <li><c>--color</c> via <see cref="PulumiStackTagGetSettings.Color"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiStackTagGetSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiStackTagGetSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiStackTagGetSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiStackTagGetSettings.Emoji"/></li>
         ///     <li><c>--help</c> via <see cref="PulumiStackTagGetSettings.Help"/></li>
@@ -2537,7 +2537,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///   <ul>
         ///     <li><c>&lt;name&gt;</c> via <see cref="PulumiStackTagGetSettings.Name"/></li>
         ///     <li><c>--color</c> via <see cref="PulumiStackTagGetSettings.Color"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiStackTagGetSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiStackTagGetSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiStackTagGetSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiStackTagGetSettings.Emoji"/></li>
         ///     <li><c>--help</c> via <see cref="PulumiStackTagGetSettings.Help"/></li>
@@ -2565,7 +2565,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
         ///   <ul>
         ///     <li><c>--color</c> via <see cref="PulumiStackTagListSettings.Color"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiStackTagListSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiStackTagListSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiStackTagListSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiStackTagListSettings.Emoji"/></li>
         ///     <li><c>--help</c> via <see cref="PulumiStackTagListSettings.Help"/></li>
@@ -2597,7 +2597,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
         ///   <ul>
         ///     <li><c>--color</c> via <see cref="PulumiStackTagListSettings.Color"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiStackTagListSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiStackTagListSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiStackTagListSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiStackTagListSettings.Emoji"/></li>
         ///     <li><c>--help</c> via <see cref="PulumiStackTagListSettings.Help"/></li>
@@ -2626,7 +2626,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
         ///   <ul>
         ///     <li><c>--color</c> via <see cref="PulumiStackTagListSettings.Color"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiStackTagListSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiStackTagListSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiStackTagListSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiStackTagListSettings.Emoji"/></li>
         ///     <li><c>--help</c> via <see cref="PulumiStackTagListSettings.Help"/></li>
@@ -2656,7 +2656,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///   <ul>
         ///     <li><c>&lt;name&gt;</c> via <see cref="PulumiStackTagRemoveSettings.Name"/></li>
         ///     <li><c>--color</c> via <see cref="PulumiStackTagRemoveSettings.Color"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiStackTagRemoveSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiStackTagRemoveSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiStackTagRemoveSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiStackTagRemoveSettings.Emoji"/></li>
         ///     <li><c>--help</c> via <see cref="PulumiStackTagRemoveSettings.Help"/></li>
@@ -2688,7 +2688,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///   <ul>
         ///     <li><c>&lt;name&gt;</c> via <see cref="PulumiStackTagRemoveSettings.Name"/></li>
         ///     <li><c>--color</c> via <see cref="PulumiStackTagRemoveSettings.Color"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiStackTagRemoveSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiStackTagRemoveSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiStackTagRemoveSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiStackTagRemoveSettings.Emoji"/></li>
         ///     <li><c>--help</c> via <see cref="PulumiStackTagRemoveSettings.Help"/></li>
@@ -2717,7 +2717,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///   <ul>
         ///     <li><c>&lt;name&gt;</c> via <see cref="PulumiStackTagRemoveSettings.Name"/></li>
         ///     <li><c>--color</c> via <see cref="PulumiStackTagRemoveSettings.Color"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiStackTagRemoveSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiStackTagRemoveSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiStackTagRemoveSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiStackTagRemoveSettings.Emoji"/></li>
         ///     <li><c>--help</c> via <see cref="PulumiStackTagRemoveSettings.Help"/></li>
@@ -2747,7 +2747,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///     <li><c>&lt;name&gt;</c> via <see cref="PulumiStackTagSetSettings.Name"/></li>
         ///     <li><c>&lt;value&gt;</c> via <see cref="PulumiStackTagSetSettings.Value"/></li>
         ///     <li><c>--color</c> via <see cref="PulumiStackTagSetSettings.Color"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiStackTagSetSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiStackTagSetSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiStackTagSetSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiStackTagSetSettings.Emoji"/></li>
         ///     <li><c>--help</c> via <see cref="PulumiStackTagSetSettings.Help"/></li>
@@ -2780,7 +2780,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///     <li><c>&lt;name&gt;</c> via <see cref="PulumiStackTagSetSettings.Name"/></li>
         ///     <li><c>&lt;value&gt;</c> via <see cref="PulumiStackTagSetSettings.Value"/></li>
         ///     <li><c>--color</c> via <see cref="PulumiStackTagSetSettings.Color"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiStackTagSetSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiStackTagSetSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiStackTagSetSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiStackTagSetSettings.Emoji"/></li>
         ///     <li><c>--help</c> via <see cref="PulumiStackTagSetSettings.Help"/></li>
@@ -2810,7 +2810,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///     <li><c>&lt;name&gt;</c> via <see cref="PulumiStackTagSetSettings.Name"/></li>
         ///     <li><c>&lt;value&gt;</c> via <see cref="PulumiStackTagSetSettings.Value"/></li>
         ///     <li><c>--color</c> via <see cref="PulumiStackTagSetSettings.Color"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiStackTagSetSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiStackTagSetSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiStackTagSetSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiStackTagSetSettings.Emoji"/></li>
         ///     <li><c>--help</c> via <see cref="PulumiStackTagSetSettings.Help"/></li>
@@ -2839,7 +2839,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///   <ul>
         ///     <li><c>&lt;resourceURN&gt;</c> via <see cref="PulumiStateDeleteSettings.ResourceURN"/></li>
         ///     <li><c>--color</c> via <see cref="PulumiStateDeleteSettings.Color"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiStateDeleteSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiStateDeleteSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiStateDeleteSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiStateDeleteSettings.Emoji"/></li>
         ///     <li><c>--force</c> via <see cref="PulumiStateDeleteSettings.Force"/></li>
@@ -2870,7 +2870,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///   <ul>
         ///     <li><c>&lt;resourceURN&gt;</c> via <see cref="PulumiStateDeleteSettings.ResourceURN"/></li>
         ///     <li><c>--color</c> via <see cref="PulumiStateDeleteSettings.Color"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiStateDeleteSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiStateDeleteSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiStateDeleteSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiStateDeleteSettings.Emoji"/></li>
         ///     <li><c>--force</c> via <see cref="PulumiStateDeleteSettings.Force"/></li>
@@ -2898,7 +2898,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///   <ul>
         ///     <li><c>&lt;resourceURN&gt;</c> via <see cref="PulumiStateDeleteSettings.ResourceURN"/></li>
         ///     <li><c>--color</c> via <see cref="PulumiStateDeleteSettings.Color"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiStateDeleteSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiStateDeleteSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiStateDeleteSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiStateDeleteSettings.Emoji"/></li>
         ///     <li><c>--force</c> via <see cref="PulumiStateDeleteSettings.Force"/></li>
@@ -2927,7 +2927,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///     <li><c>&lt;resourceURN&gt;</c> via <see cref="PulumiStateUnprotectSettings.ResourceURN"/></li>
         ///     <li><c>--all</c> via <see cref="PulumiStateUnprotectSettings.All"/></li>
         ///     <li><c>--color</c> via <see cref="PulumiStateUnprotectSettings.Color"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiStateUnprotectSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiStateUnprotectSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiStateUnprotectSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiStateUnprotectSettings.Emoji"/></li>
         ///     <li><c>--help</c> via <see cref="PulumiStateUnprotectSettings.Help"/></li>
@@ -2958,7 +2958,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///     <li><c>&lt;resourceURN&gt;</c> via <see cref="PulumiStateUnprotectSettings.ResourceURN"/></li>
         ///     <li><c>--all</c> via <see cref="PulumiStateUnprotectSettings.All"/></li>
         ///     <li><c>--color</c> via <see cref="PulumiStateUnprotectSettings.Color"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiStateUnprotectSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiStateUnprotectSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiStateUnprotectSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiStateUnprotectSettings.Emoji"/></li>
         ///     <li><c>--help</c> via <see cref="PulumiStateUnprotectSettings.Help"/></li>
@@ -2986,7 +2986,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///     <li><c>&lt;resourceURN&gt;</c> via <see cref="PulumiStateUnprotectSettings.ResourceURN"/></li>
         ///     <li><c>--all</c> via <see cref="PulumiStateUnprotectSettings.All"/></li>
         ///     <li><c>--color</c> via <see cref="PulumiStateUnprotectSettings.Color"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiStateUnprotectSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiStateUnprotectSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiStateUnprotectSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiStateUnprotectSettings.Emoji"/></li>
         ///     <li><c>--help</c> via <see cref="PulumiStateUnprotectSettings.Help"/></li>
@@ -3015,7 +3015,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///     <li><c>--config</c> via <see cref="PulumiUpSettings.Config"/></li>
         ///     <li><c>--config-file</c> via <see cref="PulumiUpSettings.ConfigFile"/></li>
         ///     <li><c>--config-path</c> via <see cref="PulumiUpSettings.ConfigPath"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiUpSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiUpSettings.Cwd"/></li>
         ///     <li><c>--debug</c> via <see cref="PulumiUpSettings.Debug"/></li>
         ///     <li><c>--diff</c> via <see cref="PulumiUpSettings.Diff"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiUpSettings.DisableIntegrityChecking"/></li>
@@ -3064,7 +3064,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///     <li><c>--config</c> via <see cref="PulumiUpSettings.Config"/></li>
         ///     <li><c>--config-file</c> via <see cref="PulumiUpSettings.ConfigFile"/></li>
         ///     <li><c>--config-path</c> via <see cref="PulumiUpSettings.ConfigPath"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiUpSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiUpSettings.Cwd"/></li>
         ///     <li><c>--debug</c> via <see cref="PulumiUpSettings.Debug"/></li>
         ///     <li><c>--diff</c> via <see cref="PulumiUpSettings.Diff"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiUpSettings.DisableIntegrityChecking"/></li>
@@ -3110,7 +3110,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///     <li><c>--config</c> via <see cref="PulumiUpSettings.Config"/></li>
         ///     <li><c>--config-file</c> via <see cref="PulumiUpSettings.ConfigFile"/></li>
         ///     <li><c>--config-path</c> via <see cref="PulumiUpSettings.ConfigPath"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiUpSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiUpSettings.Cwd"/></li>
         ///     <li><c>--debug</c> via <see cref="PulumiUpSettings.Debug"/></li>
         ///     <li><c>--diff</c> via <see cref="PulumiUpSettings.Diff"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiUpSettings.DisableIntegrityChecking"/></li>
@@ -3153,7 +3153,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
         ///   <ul>
         ///     <li><c>--color</c> via <see cref="PulumiVersionSettings.Color"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiVersionSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiVersionSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiVersionSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiVersionSettings.Emoji"/></li>
         ///     <li><c>--help</c> via <see cref="PulumiVersionSettings.Help"/></li>
@@ -3180,7 +3180,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
         ///   <ul>
         ///     <li><c>--color</c> via <see cref="PulumiVersionSettings.Color"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiVersionSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiVersionSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiVersionSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiVersionSettings.Emoji"/></li>
         ///     <li><c>--help</c> via <see cref="PulumiVersionSettings.Help"/></li>
@@ -3204,7 +3204,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
         ///   <ul>
         ///     <li><c>--color</c> via <see cref="PulumiVersionSettings.Color"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiVersionSettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiVersionSettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiVersionSettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiVersionSettings.Emoji"/></li>
         ///     <li><c>--help</c> via <see cref="PulumiVersionSettings.Help"/></li>
@@ -3228,7 +3228,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
         ///   <ul>
         ///     <li><c>--color</c> via <see cref="PulumiWhoAmISettings.Color"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiWhoAmISettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiWhoAmISettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiWhoAmISettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiWhoAmISettings.Emoji"/></li>
         ///     <li><c>--help</c> via <see cref="PulumiWhoAmISettings.Help"/></li>
@@ -3255,7 +3255,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
         ///   <ul>
         ///     <li><c>--color</c> via <see cref="PulumiWhoAmISettings.Color"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiWhoAmISettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiWhoAmISettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiWhoAmISettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiWhoAmISettings.Emoji"/></li>
         ///     <li><c>--help</c> via <see cref="PulumiWhoAmISettings.Help"/></li>
@@ -3279,7 +3279,7 @@ namespace Nuke.Common.Tools.Pulumi
         ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
         ///   <ul>
         ///     <li><c>--color</c> via <see cref="PulumiWhoAmISettings.Color"/></li>
-        ///     <li><c>--cwd</c> via <see cref="PulumiWhoAmISettings.WorkingDirectory"/></li>
+        ///     <li><c>--cwd</c> via <see cref="PulumiWhoAmISettings.Cwd"/></li>
         ///     <li><c>--disable-integrity-checking</c> via <see cref="PulumiWhoAmISettings.DisableIntegrityChecking"/></li>
         ///     <li><c>--emoji</c> via <see cref="PulumiWhoAmISettings.Emoji"/></li>
         ///     <li><c>--help</c> via <see cref="PulumiWhoAmISettings.Help"/></li>
@@ -3325,7 +3325,7 @@ namespace Nuke.Common.Tools.Pulumi
         /// <summary>
         ///   Run pulumi as if it had been started in another directory
         /// </summary>
-        public virtual string WorkingDirectory { get; internal set; }
+        public virtual string Cwd { get; internal set; }
         /// <summary>
         ///   Disable integrity checking of checkpoint files
         /// </summary>
@@ -3369,7 +3369,7 @@ namespace Nuke.Common.Tools.Pulumi
               .Add("{value}", Stack)
               .Add("--yes", Yes)
               .Add("--color {value}", Color)
-              .Add("--cwd {value}", WorkingDirectory)
+              .Add("--cwd {value}", Cwd)
               .Add("--disable-integrity-checking", DisableIntegrityChecking)
               .Add("--emoji", Emoji)
               .Add("--help", Help)
@@ -3420,7 +3420,7 @@ namespace Nuke.Common.Tools.Pulumi
         /// <summary>
         ///   Run pulumi as if it had been started in another directory
         /// </summary>
-        public virtual string WorkingDirectory { get; internal set; }
+        public virtual string Cwd { get; internal set; }
         /// <summary>
         ///   Disable integrity checking of checkpoint files
         /// </summary>
@@ -3466,7 +3466,7 @@ namespace Nuke.Common.Tools.Pulumi
               .Add("--stack {value}", Stack)
               .Add("--config-file {value}", ConfigFile)
               .Add("--color {value}", Color)
-              .Add("--cwd {value}", WorkingDirectory)
+              .Add("--cwd {value}", Cwd)
               .Add("--disable-integrity-checking", DisableIntegrityChecking)
               .Add("--emoji", Emoji)
               .Add("--help", Help)
@@ -3521,7 +3521,7 @@ namespace Nuke.Common.Tools.Pulumi
         /// <summary>
         ///   Run pulumi as if it had been started in another directory
         /// </summary>
-        public virtual string WorkingDirectory { get; internal set; }
+        public virtual string Cwd { get; internal set; }
         /// <summary>
         ///   Disable integrity checking of checkpoint files
         /// </summary>
@@ -3568,7 +3568,7 @@ namespace Nuke.Common.Tools.Pulumi
               .Add("--stack {value}", Stack)
               .Add("--config-file {value}", ConfigFile)
               .Add("--color {value}", Color)
-              .Add("--cwd {value}", WorkingDirectory)
+              .Add("--cwd {value}", Cwd)
               .Add("--disable-integrity-checking", DisableIntegrityChecking)
               .Add("--emoji", Emoji)
               .Add("--help", Help)
@@ -3615,7 +3615,7 @@ namespace Nuke.Common.Tools.Pulumi
         /// <summary>
         ///   Run pulumi as if it had been started in another directory
         /// </summary>
-        public virtual string WorkingDirectory { get; internal set; }
+        public virtual string Cwd { get; internal set; }
         /// <summary>
         ///   Disable integrity checking of checkpoint files
         /// </summary>
@@ -3660,7 +3660,7 @@ namespace Nuke.Common.Tools.Pulumi
               .Add("--stack {value}", Stack)
               .Add("--config-file {value}", ConfigFile)
               .Add("--color {value}", Color)
-              .Add("--cwd {value}", WorkingDirectory)
+              .Add("--cwd {value}", Cwd)
               .Add("--disable-integrity-checking", DisableIntegrityChecking)
               .Add("--emoji", Emoji)
               .Add("--help", Help)
@@ -3711,7 +3711,7 @@ namespace Nuke.Common.Tools.Pulumi
         /// <summary>
         ///   Run pulumi as if it had been started in another directory
         /// </summary>
-        public virtual string WorkingDirectory { get; internal set; }
+        public virtual string Cwd { get; internal set; }
         /// <summary>
         ///   Disable integrity checking of checkpoint files
         /// </summary>
@@ -3757,7 +3757,7 @@ namespace Nuke.Common.Tools.Pulumi
               .Add("--stack {value}", Stack)
               .Add("--config-file {value}", ConfigFile)
               .Add("--color {value}", Color)
-              .Add("--cwd {value}", WorkingDirectory)
+              .Add("--cwd {value}", Cwd)
               .Add("--disable-integrity-checking", DisableIntegrityChecking)
               .Add("--emoji", Emoji)
               .Add("--help", Help)
@@ -3816,7 +3816,7 @@ namespace Nuke.Common.Tools.Pulumi
         /// <summary>
         ///   Run pulumi as if it had been started in another directory
         /// </summary>
-        public virtual string WorkingDirectory { get; internal set; }
+        public virtual string Cwd { get; internal set; }
         /// <summary>
         ///   Disable integrity checking of checkpoint files
         /// </summary>
@@ -3864,7 +3864,7 @@ namespace Nuke.Common.Tools.Pulumi
               .Add("--stack {value}", Stack)
               .Add("--config-file {value}", ConfigFile)
               .Add("--color {value}", Color)
-              .Add("--cwd {value}", WorkingDirectory)
+              .Add("--cwd {value}", Cwd)
               .Add("--disable-integrity-checking", DisableIntegrityChecking)
               .Add("--emoji", Emoji)
               .Add("--help", Help)
@@ -3959,7 +3959,7 @@ namespace Nuke.Common.Tools.Pulumi
         /// <summary>
         ///   Run pulumi as if it had been started in another directory
         /// </summary>
-        public virtual string WorkingDirectory { get; internal set; }
+        public virtual string Cwd { get; internal set; }
         /// <summary>
         ///   Disable integrity checking of checkpoint files
         /// </summary>
@@ -4016,7 +4016,7 @@ namespace Nuke.Common.Tools.Pulumi
               .Add("--stack {value}", Stack)
               .Add("--config-file {value}", ConfigFile)
               .Add("--color {value}", Color)
-              .Add("--cwd {value}", WorkingDirectory)
+              .Add("--cwd {value}", Cwd)
               .Add("--disable-integrity-checking", DisableIntegrityChecking)
               .Add("--emoji", Emoji)
               .Add("--help", Help)
@@ -4063,7 +4063,7 @@ namespace Nuke.Common.Tools.Pulumi
         /// <summary>
         ///   Run pulumi as if it had been started in another directory
         /// </summary>
-        public virtual string WorkingDirectory { get; internal set; }
+        public virtual string Cwd { get; internal set; }
         /// <summary>
         ///   Disable integrity checking of checkpoint files
         /// </summary>
@@ -4108,7 +4108,7 @@ namespace Nuke.Common.Tools.Pulumi
               .Add("--show-secrets", ShowSecrets)
               .Add("--stack {value}", Stack)
               .Add("--color {value}", Color)
-              .Add("--cwd {value}", WorkingDirectory)
+              .Add("--cwd {value}", Cwd)
               .Add("--disable-integrity-checking", DisableIntegrityChecking)
               .Add("--emoji", Emoji)
               .Add("--help", Help)
@@ -4155,7 +4155,7 @@ namespace Nuke.Common.Tools.Pulumi
         /// <summary>
         ///   Run pulumi as if it had been started in another directory
         /// </summary>
-        public virtual string WorkingDirectory { get; internal set; }
+        public virtual string Cwd { get; internal set; }
         /// <summary>
         ///   Disable integrity checking of checkpoint files
         /// </summary>
@@ -4200,7 +4200,7 @@ namespace Nuke.Common.Tools.Pulumi
               .Add("--cloud-url {value}", CloudUrl)
               .Add("--local", Local)
               .Add("--color {value}", Color)
-              .Add("--cwd {value}", WorkingDirectory)
+              .Add("--cwd {value}", Cwd)
               .Add("--disable-integrity-checking", DisableIntegrityChecking)
               .Add("--emoji", Emoji)
               .Add("--help", Help)
@@ -4247,7 +4247,7 @@ namespace Nuke.Common.Tools.Pulumi
         /// <summary>
         ///   Run pulumi as if it had been started in another directory
         /// </summary>
-        public virtual string WorkingDirectory { get; internal set; }
+        public virtual string Cwd { get; internal set; }
         /// <summary>
         ///   Disable integrity checking of checkpoint files
         /// </summary>
@@ -4292,7 +4292,7 @@ namespace Nuke.Common.Tools.Pulumi
               .Add("--cloud-url {value}", CloudUrl)
               .Add("--local", Local)
               .Add("--color {value}", Color)
-              .Add("--cwd {value}", WorkingDirectory)
+              .Add("--cwd {value}", Cwd)
               .Add("--disable-integrity-checking", DisableIntegrityChecking)
               .Add("--emoji", Emoji)
               .Add("--help", Help)
@@ -4351,7 +4351,7 @@ namespace Nuke.Common.Tools.Pulumi
         /// <summary>
         ///   Run pulumi as if it had been started in another directory
         /// </summary>
-        public virtual string WorkingDirectory { get; internal set; }
+        public virtual string Cwd { get; internal set; }
         /// <summary>
         ///   Disable integrity checking of checkpoint files
         /// </summary>
@@ -4399,7 +4399,7 @@ namespace Nuke.Common.Tools.Pulumi
               .Add("--stack {value}", Stack)
               .Add("--config-file {value}", ConfigFile)
               .Add("--color {value}", Color)
-              .Add("--cwd {value}", WorkingDirectory)
+              .Add("--cwd {value}", Cwd)
               .Add("--disable-integrity-checking", DisableIntegrityChecking)
               .Add("--emoji", Emoji)
               .Add("--help", Help)
@@ -4454,7 +4454,7 @@ namespace Nuke.Common.Tools.Pulumi
         /// <summary>
         ///   Run pulumi as if it had been started in another directory
         /// </summary>
-        public virtual string WorkingDirectory { get; internal set; }
+        public virtual string Cwd { get; internal set; }
         /// <summary>
         ///   Disable integrity checking of checkpoint files
         /// </summary>
@@ -4501,7 +4501,7 @@ namespace Nuke.Common.Tools.Pulumi
               .Add("--reinstall", Reinstall)
               .Add("--server {value}", Server)
               .Add("--color {value}", Color)
-              .Add("--cwd {value}", WorkingDirectory)
+              .Add("--cwd {value}", Cwd)
               .Add("--disable-integrity-checking", DisableIntegrityChecking)
               .Add("--emoji", Emoji)
               .Add("--help", Help)
@@ -4544,7 +4544,7 @@ namespace Nuke.Common.Tools.Pulumi
         /// <summary>
         ///   Run pulumi as if it had been started in another directory
         /// </summary>
-        public virtual string WorkingDirectory { get; internal set; }
+        public virtual string Cwd { get; internal set; }
         /// <summary>
         ///   Disable integrity checking of checkpoint files
         /// </summary>
@@ -4588,7 +4588,7 @@ namespace Nuke.Common.Tools.Pulumi
               .Add("--json", Json)
               .Add("--project", Project)
               .Add("--color {value}", Color)
-              .Add("--cwd {value}", WorkingDirectory)
+              .Add("--cwd {value}", Cwd)
               .Add("--disable-integrity-checking", DisableIntegrityChecking)
               .Add("--emoji", Emoji)
               .Add("--help", Help)
@@ -4635,7 +4635,7 @@ namespace Nuke.Common.Tools.Pulumi
         /// <summary>
         ///   Run pulumi as if it had been started in another directory
         /// </summary>
-        public virtual string WorkingDirectory { get; internal set; }
+        public virtual string Cwd { get; internal set; }
         /// <summary>
         ///   Disable integrity checking of checkpoint files
         /// </summary>
@@ -4680,7 +4680,7 @@ namespace Nuke.Common.Tools.Pulumi
               .Add("--all", All)
               .Add("--yes", Yes)
               .Add("--color {value}", Color)
-              .Add("--cwd {value}", WorkingDirectory)
+              .Add("--cwd {value}", Cwd)
               .Add("--disable-integrity-checking", DisableIntegrityChecking)
               .Add("--emoji", Emoji)
               .Add("--help", Help)
@@ -4795,7 +4795,7 @@ namespace Nuke.Common.Tools.Pulumi
         /// <summary>
         ///   Run pulumi as if it had been started in another directory
         /// </summary>
-        public virtual string WorkingDirectory { get; internal set; }
+        public virtual string Cwd { get; internal set; }
         /// <summary>
         ///   Disable integrity checking of checkpoint files
         /// </summary>
@@ -4856,7 +4856,7 @@ namespace Nuke.Common.Tools.Pulumi
               .Add("--stack {value}", Stack)
               .Add("--config-file {value}", ConfigFile)
               .Add("--color {value}", Color)
-              .Add("--cwd {value}", WorkingDirectory)
+              .Add("--cwd {value}", Cwd)
               .Add("--disable-integrity-checking", DisableIntegrityChecking)
               .Add("--emoji", Emoji)
               .Add("--help", Help)
@@ -4940,7 +4940,7 @@ namespace Nuke.Common.Tools.Pulumi
         /// <summary>
         ///   Run pulumi as if it had been started in another directory
         /// </summary>
-        public virtual string WorkingDirectory { get; internal set; }
+        public virtual string Cwd { get; internal set; }
         /// <summary>
         ///   Disable integrity checking of checkpoint files
         /// </summary>
@@ -4994,7 +4994,7 @@ namespace Nuke.Common.Tools.Pulumi
               .Add("--stack {value}", Stack)
               .Add("--config-file {value}", ConfigFile)
               .Add("--color {value}", Color)
-              .Add("--cwd {value}", WorkingDirectory)
+              .Add("--cwd {value}", Cwd)
               .Add("--disable-integrity-checking", DisableIntegrityChecking)
               .Add("--emoji", Emoji)
               .Add("--help", Help)
@@ -5045,7 +5045,7 @@ namespace Nuke.Common.Tools.Pulumi
         /// <summary>
         ///   Run pulumi as if it had been started in another directory
         /// </summary>
-        public virtual string WorkingDirectory { get; internal set; }
+        public virtual string Cwd { get; internal set; }
         /// <summary>
         ///   Disable integrity checking of checkpoint files
         /// </summary>
@@ -5091,7 +5091,7 @@ namespace Nuke.Common.Tools.Pulumi
               .Add("--show-secrets", ShowSecrets)
               .Add("--show-urns", ShowUrns)
               .Add("--color {value}", Color)
-              .Add("--cwd {value}", WorkingDirectory)
+              .Add("--cwd {value}", Cwd)
               .Add("--disable-integrity-checking", DisableIntegrityChecking)
               .Add("--emoji", Emoji)
               .Add("--help", Help)
@@ -5146,7 +5146,7 @@ namespace Nuke.Common.Tools.Pulumi
         /// <summary>
         ///   Run pulumi as if it had been started in another directory
         /// </summary>
-        public virtual string WorkingDirectory { get; internal set; }
+        public virtual string Cwd { get; internal set; }
         /// <summary>
         ///   Disable integrity checking of checkpoint files
         /// </summary>
@@ -5193,7 +5193,7 @@ namespace Nuke.Common.Tools.Pulumi
               .Add("--show-secrets", ShowSecrets)
               .Add("--show-urns", ShowUrns)
               .Add("--color {value}", Color)
-              .Add("--cwd {value}", WorkingDirectory)
+              .Add("--cwd {value}", Cwd)
               .Add("--disable-integrity-checking", DisableIntegrityChecking)
               .Add("--emoji", Emoji)
               .Add("--help", Help)
@@ -5264,7 +5264,7 @@ namespace Nuke.Common.Tools.Pulumi
         /// <summary>
         ///   Run pulumi as if it had been started in another directory
         /// </summary>
-        public virtual string WorkingDirectory { get; internal set; }
+        public virtual string Cwd { get; internal set; }
         /// <summary>
         ///   Disable integrity checking of checkpoint files
         /// </summary>
@@ -5315,7 +5315,7 @@ namespace Nuke.Common.Tools.Pulumi
               .Add("--show-secrets", ShowSecrets)
               .Add("--show-urns", ShowUrns)
               .Add("--color {value}", Color)
-              .Add("--cwd {value}", WorkingDirectory)
+              .Add("--cwd {value}", Cwd)
               .Add("--disable-integrity-checking", DisableIntegrityChecking)
               .Add("--emoji", Emoji)
               .Add("--help", Help)
@@ -5374,7 +5374,7 @@ namespace Nuke.Common.Tools.Pulumi
         /// <summary>
         ///   Run pulumi as if it had been started in another directory
         /// </summary>
-        public virtual string WorkingDirectory { get; internal set; }
+        public virtual string Cwd { get; internal set; }
         /// <summary>
         ///   Disable integrity checking of checkpoint files
         /// </summary>
@@ -5422,7 +5422,7 @@ namespace Nuke.Common.Tools.Pulumi
               .Add("--show-secrets", ShowSecrets)
               .Add("--show-urns", ShowUrns)
               .Add("--color {value}", Color)
-              .Add("--cwd {value}", WorkingDirectory)
+              .Add("--cwd {value}", Cwd)
               .Add("--disable-integrity-checking", DisableIntegrityChecking)
               .Add("--emoji", Emoji)
               .Add("--help", Help)
@@ -5481,7 +5481,7 @@ namespace Nuke.Common.Tools.Pulumi
         /// <summary>
         ///   Run pulumi as if it had been started in another directory
         /// </summary>
-        public virtual string WorkingDirectory { get; internal set; }
+        public virtual string Cwd { get; internal set; }
         /// <summary>
         ///   Disable integrity checking of checkpoint files
         /// </summary>
@@ -5529,7 +5529,7 @@ namespace Nuke.Common.Tools.Pulumi
               .Add("--show-secrets", ShowSecrets)
               .Add("--show-urns", ShowUrns)
               .Add("--color {value}", Color)
-              .Add("--cwd {value}", WorkingDirectory)
+              .Add("--cwd {value}", Cwd)
               .Add("--disable-integrity-checking", DisableIntegrityChecking)
               .Add("--emoji", Emoji)
               .Add("--help", Help)
@@ -5600,7 +5600,7 @@ namespace Nuke.Common.Tools.Pulumi
         /// <summary>
         ///   Run pulumi as if it had been started in another directory
         /// </summary>
-        public virtual string WorkingDirectory { get; internal set; }
+        public virtual string Cwd { get; internal set; }
         /// <summary>
         ///   Disable integrity checking of checkpoint files
         /// </summary>
@@ -5651,7 +5651,7 @@ namespace Nuke.Common.Tools.Pulumi
               .Add("--show-secrets", ShowSecrets)
               .Add("--show-urns", ShowUrns)
               .Add("--color {value}", Color)
-              .Add("--cwd {value}", WorkingDirectory)
+              .Add("--cwd {value}", Cwd)
               .Add("--disable-integrity-checking", DisableIntegrityChecking)
               .Add("--emoji", Emoji)
               .Add("--help", Help)
@@ -5710,7 +5710,7 @@ namespace Nuke.Common.Tools.Pulumi
         /// <summary>
         ///   Run pulumi as if it had been started in another directory
         /// </summary>
-        public virtual string WorkingDirectory { get; internal set; }
+        public virtual string Cwd { get; internal set; }
         /// <summary>
         ///   Disable integrity checking of checkpoint files
         /// </summary>
@@ -5758,7 +5758,7 @@ namespace Nuke.Common.Tools.Pulumi
               .Add("--show-secrets", ShowSecrets)
               .Add("--show-urns", ShowUrns)
               .Add("--color {value}", Color)
-              .Add("--cwd {value}", WorkingDirectory)
+              .Add("--cwd {value}", Cwd)
               .Add("--disable-integrity-checking", DisableIntegrityChecking)
               .Add("--emoji", Emoji)
               .Add("--help", Help)
@@ -5813,7 +5813,7 @@ namespace Nuke.Common.Tools.Pulumi
         /// <summary>
         ///   Run pulumi as if it had been started in another directory
         /// </summary>
-        public virtual string WorkingDirectory { get; internal set; }
+        public virtual string Cwd { get; internal set; }
         /// <summary>
         ///   Disable integrity checking of checkpoint files
         /// </summary>
@@ -5860,7 +5860,7 @@ namespace Nuke.Common.Tools.Pulumi
               .Add("--show-secrets", ShowSecrets)
               .Add("--show-urns", ShowUrns)
               .Add("--color {value}", Color)
-              .Add("--cwd {value}", WorkingDirectory)
+              .Add("--cwd {value}", Cwd)
               .Add("--disable-integrity-checking", DisableIntegrityChecking)
               .Add("--emoji", Emoji)
               .Add("--help", Help)
@@ -5897,7 +5897,7 @@ namespace Nuke.Common.Tools.Pulumi
         /// </summary>
         public virtual bool? Force { get; internal set; }
         /// <summary>
-        ///   Do not delete the corresponding Pulumi.<stack-name>.yaml configuration file for the stack.
+        ///   Do not delete the corresponding Pulumi.(stack-name).yaml configuration file for the stack.
         /// </summary>
         public virtual bool? PreserveConfig { get; internal set; }
         /// <summary>
@@ -5927,7 +5927,7 @@ namespace Nuke.Common.Tools.Pulumi
         /// <summary>
         ///   Run pulumi as if it had been started in another directory
         /// </summary>
-        public virtual string WorkingDirectory { get; internal set; }
+        public virtual string Cwd { get; internal set; }
         /// <summary>
         ///   Disable integrity checking of checkpoint files
         /// </summary>
@@ -5977,7 +5977,7 @@ namespace Nuke.Common.Tools.Pulumi
               .Add("--show-secrets", ShowSecrets)
               .Add("--show-urns", ShowUrns)
               .Add("--color {value}", Color)
-              .Add("--cwd {value}", WorkingDirectory)
+              .Add("--cwd {value}", Cwd)
               .Add("--disable-integrity-checking", DisableIntegrityChecking)
               .Add("--emoji", Emoji)
               .Add("--help", Help)
@@ -6032,7 +6032,7 @@ namespace Nuke.Common.Tools.Pulumi
         /// <summary>
         ///   Run pulumi as if it had been started in another directory
         /// </summary>
-        public virtual string WorkingDirectory { get; internal set; }
+        public virtual string Cwd { get; internal set; }
         /// <summary>
         ///   Disable integrity checking of checkpoint files
         /// </summary>
@@ -6079,7 +6079,7 @@ namespace Nuke.Common.Tools.Pulumi
               .Add("--show-secrets", ShowSecrets)
               .Add("--show-urns", ShowUrns)
               .Add("--color {value}", Color)
-              .Add("--cwd {value}", WorkingDirectory)
+              .Add("--cwd {value}", Cwd)
               .Add("--disable-integrity-checking", DisableIntegrityChecking)
               .Add("--emoji", Emoji)
               .Add("--help", Help)
@@ -6134,7 +6134,7 @@ namespace Nuke.Common.Tools.Pulumi
         /// <summary>
         ///   Run pulumi as if it had been started in another directory
         /// </summary>
-        public virtual string WorkingDirectory { get; internal set; }
+        public virtual string Cwd { get; internal set; }
         /// <summary>
         ///   Disable integrity checking of checkpoint files
         /// </summary>
@@ -6181,7 +6181,7 @@ namespace Nuke.Common.Tools.Pulumi
               .Add("--show-secrets", ShowSecrets)
               .Add("--show-urns", ShowUrns)
               .Add("--color {value}", Color)
-              .Add("--cwd {value}", WorkingDirectory)
+              .Add("--cwd {value}", Cwd)
               .Add("--disable-integrity-checking", DisableIntegrityChecking)
               .Add("--emoji", Emoji)
               .Add("--help", Help)
@@ -6236,7 +6236,7 @@ namespace Nuke.Common.Tools.Pulumi
         /// <summary>
         ///   Run pulumi as if it had been started in another directory
         /// </summary>
-        public virtual string WorkingDirectory { get; internal set; }
+        public virtual string Cwd { get; internal set; }
         /// <summary>
         ///   Disable integrity checking of checkpoint files
         /// </summary>
@@ -6283,7 +6283,7 @@ namespace Nuke.Common.Tools.Pulumi
               .Add("--show-secrets", ShowSecrets)
               .Add("--show-urns", ShowUrns)
               .Add("--color {value}", Color)
-              .Add("--cwd {value}", WorkingDirectory)
+              .Add("--cwd {value}", Cwd)
               .Add("--disable-integrity-checking", DisableIntegrityChecking)
               .Add("--emoji", Emoji)
               .Add("--help", Help)
@@ -6338,7 +6338,7 @@ namespace Nuke.Common.Tools.Pulumi
         /// <summary>
         ///   Run pulumi as if it had been started in another directory
         /// </summary>
-        public virtual string WorkingDirectory { get; internal set; }
+        public virtual string Cwd { get; internal set; }
         /// <summary>
         ///   Disable integrity checking of checkpoint files
         /// </summary>
@@ -6385,7 +6385,7 @@ namespace Nuke.Common.Tools.Pulumi
               .Add("--show-secrets", ShowSecrets)
               .Add("--show-urns", ShowUrns)
               .Add("--color {value}", Color)
-              .Add("--cwd {value}", WorkingDirectory)
+              .Add("--cwd {value}", Cwd)
               .Add("--disable-integrity-checking", DisableIntegrityChecking)
               .Add("--emoji", Emoji)
               .Add("--help", Help)
@@ -6444,7 +6444,7 @@ namespace Nuke.Common.Tools.Pulumi
         /// <summary>
         ///   Run pulumi as if it had been started in another directory
         /// </summary>
-        public virtual string WorkingDirectory { get; internal set; }
+        public virtual string Cwd { get; internal set; }
         /// <summary>
         ///   Disable integrity checking of checkpoint files
         /// </summary>
@@ -6492,7 +6492,7 @@ namespace Nuke.Common.Tools.Pulumi
               .Add("--show-secrets", ShowSecrets)
               .Add("--show-urns", ShowUrns)
               .Add("--color {value}", Color)
-              .Add("--cwd {value}", WorkingDirectory)
+              .Add("--cwd {value}", Cwd)
               .Add("--disable-integrity-checking", DisableIntegrityChecking)
               .Add("--emoji", Emoji)
               .Add("--help", Help)
@@ -6521,7 +6521,7 @@ namespace Nuke.Common.Tools.Pulumi
         public override string ToolPath => base.ToolPath ?? PulumiTasks.PulumiPath;
         public override Action<OutputType, string> CustomLogger => PulumiTasks.PulumiLogger;
         /// <summary>
-        ///   The resource as specified by its Pulumi URN (use <c>pulumi stack �show-urns</c> to get it).
+        ///   The resource as specified by its Pulumi URN (use <c>pulumi stack show-urns</c> to get it).
         /// </summary>
         public virtual string ResourceURN { get; internal set; }
         /// <summary>
@@ -6543,7 +6543,7 @@ namespace Nuke.Common.Tools.Pulumi
         /// <summary>
         ///   Run pulumi as if it had been started in another directory
         /// </summary>
-        public virtual string WorkingDirectory { get; internal set; }
+        public virtual string Cwd { get; internal set; }
         /// <summary>
         ///   Disable integrity checking of checkpoint files
         /// </summary>
@@ -6589,7 +6589,7 @@ namespace Nuke.Common.Tools.Pulumi
               .Add("--Yes", Yes)
               .Add("--stack {value}", Stack)
               .Add("--color {value}", Color)
-              .Add("--cwd {value}", WorkingDirectory)
+              .Add("--cwd {value}", Cwd)
               .Add("--disable-integrity-checking", DisableIntegrityChecking)
               .Add("--emoji", Emoji)
               .Add("--help", Help)
@@ -6618,7 +6618,7 @@ namespace Nuke.Common.Tools.Pulumi
         public override string ToolPath => base.ToolPath ?? PulumiTasks.PulumiPath;
         public override Action<OutputType, string> CustomLogger => PulumiTasks.PulumiLogger;
         /// <summary>
-        ///   The resource as specified by its Pulumi URN (use <c>pulumi stack �show-urns</c> to get it).
+        ///   The resource as specified by its Pulumi URN (use <c>pulumi stack show-urns</c> to get it).
         /// </summary>
         public virtual string ResourceURN { get; internal set; }
         /// <summary>
@@ -6640,7 +6640,7 @@ namespace Nuke.Common.Tools.Pulumi
         /// <summary>
         ///   Run pulumi as if it had been started in another directory
         /// </summary>
-        public virtual string WorkingDirectory { get; internal set; }
+        public virtual string Cwd { get; internal set; }
         /// <summary>
         ///   Disable integrity checking of checkpoint files
         /// </summary>
@@ -6686,7 +6686,7 @@ namespace Nuke.Common.Tools.Pulumi
               .Add("--Yes", Yes)
               .Add("--stack {value}", Stack)
               .Add("--color {value}", Color)
-              .Add("--cwd {value}", WorkingDirectory)
+              .Add("--cwd {value}", Cwd)
               .Add("--disable-integrity-checking", DisableIntegrityChecking)
               .Add("--emoji", Emoji)
               .Add("--help", Help)
@@ -6813,7 +6813,7 @@ namespace Nuke.Common.Tools.Pulumi
         /// <summary>
         ///   Run pulumi as if it had been started in another directory
         /// </summary>
-        public virtual string WorkingDirectory { get; internal set; }
+        public virtual string Cwd { get; internal set; }
         /// <summary>
         ///   Disable integrity checking of checkpoint files
         /// </summary>
@@ -6877,7 +6877,7 @@ namespace Nuke.Common.Tools.Pulumi
               .Add("--stack {value}", Stack)
               .Add("--config-file {value}", ConfigFile)
               .Add("--color {value}", Color)
-              .Add("--cwd {value}", WorkingDirectory)
+              .Add("--cwd {value}", Cwd)
               .Add("--disable-integrity-checking", DisableIntegrityChecking)
               .Add("--emoji", Emoji)
               .Add("--help", Help)
@@ -6912,7 +6912,7 @@ namespace Nuke.Common.Tools.Pulumi
         /// <summary>
         ///   Run pulumi as if it had been started in another directory
         /// </summary>
-        public virtual string WorkingDirectory { get; internal set; }
+        public virtual string Cwd { get; internal set; }
         /// <summary>
         ///   Disable integrity checking of checkpoint files
         /// </summary>
@@ -6954,7 +6954,7 @@ namespace Nuke.Common.Tools.Pulumi
             arguments
               .Add("version")
               .Add("--color {value}", Color)
-              .Add("--cwd {value}", WorkingDirectory)
+              .Add("--cwd {value}", Cwd)
               .Add("--disable-integrity-checking", DisableIntegrityChecking)
               .Add("--emoji", Emoji)
               .Add("--help", Help)
@@ -6989,7 +6989,7 @@ namespace Nuke.Common.Tools.Pulumi
         /// <summary>
         ///   Run pulumi as if it had been started in another directory
         /// </summary>
-        public virtual string WorkingDirectory { get; internal set; }
+        public virtual string Cwd { get; internal set; }
         /// <summary>
         ///   Disable integrity checking of checkpoint files
         /// </summary>
@@ -7031,7 +7031,7 @@ namespace Nuke.Common.Tools.Pulumi
             arguments
               .Add("whoami")
               .Add("--color {value}", Color)
-              .Add("--cwd {value}", WorkingDirectory)
+              .Add("--cwd {value}", Cwd)
               .Add("--disable-integrity-checking", DisableIntegrityChecking)
               .Add("--emoji", Emoji)
               .Add("--help", Help)
@@ -7158,27 +7158,27 @@ namespace Nuke.Common.Tools.Pulumi
             return toolSettings;
         }
         #endregion
-        #region WorkingDirectory
+        #region Cwd
         /// <summary>
-        ///   <p><em>Sets <see cref="PulumiCancelSettings.WorkingDirectory"/></em></p>
+        ///   <p><em>Sets <see cref="PulumiCancelSettings.Cwd"/></em></p>
         ///   <p>Run pulumi as if it had been started in another directory</p>
         /// </summary>
         [Pure]
-        public static PulumiCancelSettings SetWorkingDirectory(this PulumiCancelSettings toolSettings, string workingDirectory)
+        public static PulumiCancelSettings SetCwd(this PulumiCancelSettings toolSettings, string cwd)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.WorkingDirectory = workingDirectory;
+            toolSettings.Cwd = cwd;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="PulumiCancelSettings.WorkingDirectory"/></em></p>
+        ///   <p><em>Resets <see cref="PulumiCancelSettings.Cwd"/></em></p>
         ///   <p>Run pulumi as if it had been started in another directory</p>
         /// </summary>
         [Pure]
-        public static PulumiCancelSettings ResetWorkingDirectory(this PulumiCancelSettings toolSettings)
+        public static PulumiCancelSettings ResetCwd(this PulumiCancelSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.WorkingDirectory = null;
+            toolSettings.Cwd = null;
             return toolSettings;
         }
         #endregion
@@ -7792,27 +7792,27 @@ namespace Nuke.Common.Tools.Pulumi
             return toolSettings;
         }
         #endregion
-        #region WorkingDirectory
+        #region Cwd
         /// <summary>
-        ///   <p><em>Sets <see cref="PulumiConfigSettings.WorkingDirectory"/></em></p>
+        ///   <p><em>Sets <see cref="PulumiConfigSettings.Cwd"/></em></p>
         ///   <p>Run pulumi as if it had been started in another directory</p>
         /// </summary>
         [Pure]
-        public static PulumiConfigSettings SetWorkingDirectory(this PulumiConfigSettings toolSettings, string workingDirectory)
+        public static PulumiConfigSettings SetCwd(this PulumiConfigSettings toolSettings, string cwd)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.WorkingDirectory = workingDirectory;
+            toolSettings.Cwd = cwd;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="PulumiConfigSettings.WorkingDirectory"/></em></p>
+        ///   <p><em>Resets <see cref="PulumiConfigSettings.Cwd"/></em></p>
         ///   <p>Run pulumi as if it had been started in another directory</p>
         /// </summary>
         [Pure]
-        public static PulumiConfigSettings ResetWorkingDirectory(this PulumiConfigSettings toolSettings)
+        public static PulumiConfigSettings ResetCwd(this PulumiConfigSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.WorkingDirectory = null;
+            toolSettings.Cwd = null;
             return toolSettings;
         }
         #endregion
@@ -8417,27 +8417,27 @@ namespace Nuke.Common.Tools.Pulumi
             return toolSettings;
         }
         #endregion
-        #region WorkingDirectory
+        #region Cwd
         /// <summary>
-        ///   <p><em>Sets <see cref="PulumiConfigGetSettings.WorkingDirectory"/></em></p>
+        ///   <p><em>Sets <see cref="PulumiConfigGetSettings.Cwd"/></em></p>
         ///   <p>Run pulumi as if it had been started in another directory</p>
         /// </summary>
         [Pure]
-        public static PulumiConfigGetSettings SetWorkingDirectory(this PulumiConfigGetSettings toolSettings, string workingDirectory)
+        public static PulumiConfigGetSettings SetCwd(this PulumiConfigGetSettings toolSettings, string cwd)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.WorkingDirectory = workingDirectory;
+            toolSettings.Cwd = cwd;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="PulumiConfigGetSettings.WorkingDirectory"/></em></p>
+        ///   <p><em>Resets <see cref="PulumiConfigGetSettings.Cwd"/></em></p>
         ///   <p>Run pulumi as if it had been started in another directory</p>
         /// </summary>
         [Pure]
-        public static PulumiConfigGetSettings ResetWorkingDirectory(this PulumiConfigGetSettings toolSettings)
+        public static PulumiConfigGetSettings ResetCwd(this PulumiConfigGetSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.WorkingDirectory = null;
+            toolSettings.Cwd = null;
             return toolSettings;
         }
         #endregion
@@ -8994,27 +8994,27 @@ namespace Nuke.Common.Tools.Pulumi
             return toolSettings;
         }
         #endregion
-        #region WorkingDirectory
+        #region Cwd
         /// <summary>
-        ///   <p><em>Sets <see cref="PulumiConfigRefreshSettings.WorkingDirectory"/></em></p>
+        ///   <p><em>Sets <see cref="PulumiConfigRefreshSettings.Cwd"/></em></p>
         ///   <p>Run pulumi as if it had been started in another directory</p>
         /// </summary>
         [Pure]
-        public static PulumiConfigRefreshSettings SetWorkingDirectory(this PulumiConfigRefreshSettings toolSettings, string workingDirectory)
+        public static PulumiConfigRefreshSettings SetCwd(this PulumiConfigRefreshSettings toolSettings, string cwd)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.WorkingDirectory = workingDirectory;
+            toolSettings.Cwd = cwd;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="PulumiConfigRefreshSettings.WorkingDirectory"/></em></p>
+        ///   <p><em>Resets <see cref="PulumiConfigRefreshSettings.Cwd"/></em></p>
         ///   <p>Run pulumi as if it had been started in another directory</p>
         /// </summary>
         [Pure]
-        public static PulumiConfigRefreshSettings ResetWorkingDirectory(this PulumiConfigRefreshSettings toolSettings)
+        public static PulumiConfigRefreshSettings ResetCwd(this PulumiConfigRefreshSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.WorkingDirectory = null;
+            toolSettings.Cwd = null;
             return toolSettings;
         }
         #endregion
@@ -9562,27 +9562,27 @@ namespace Nuke.Common.Tools.Pulumi
             return toolSettings;
         }
         #endregion
-        #region WorkingDirectory
+        #region Cwd
         /// <summary>
-        ///   <p><em>Sets <see cref="PulumiConfigRemoveSettings.WorkingDirectory"/></em></p>
+        ///   <p><em>Sets <see cref="PulumiConfigRemoveSettings.Cwd"/></em></p>
         ///   <p>Run pulumi as if it had been started in another directory</p>
         /// </summary>
         [Pure]
-        public static PulumiConfigRemoveSettings SetWorkingDirectory(this PulumiConfigRemoveSettings toolSettings, string workingDirectory)
+        public static PulumiConfigRemoveSettings SetCwd(this PulumiConfigRemoveSettings toolSettings, string cwd)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.WorkingDirectory = workingDirectory;
+            toolSettings.Cwd = cwd;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="PulumiConfigRemoveSettings.WorkingDirectory"/></em></p>
+        ///   <p><em>Resets <see cref="PulumiConfigRemoveSettings.Cwd"/></em></p>
         ///   <p>Run pulumi as if it had been started in another directory</p>
         /// </summary>
         [Pure]
-        public static PulumiConfigRemoveSettings ResetWorkingDirectory(this PulumiConfigRemoveSettings toolSettings)
+        public static PulumiConfigRemoveSettings ResetCwd(this PulumiConfigRemoveSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.WorkingDirectory = null;
+            toolSettings.Cwd = null;
             return toolSettings;
         }
         #endregion
@@ -10244,27 +10244,27 @@ namespace Nuke.Common.Tools.Pulumi
             return toolSettings;
         }
         #endregion
-        #region WorkingDirectory
+        #region Cwd
         /// <summary>
-        ///   <p><em>Sets <see cref="PulumiConfigSetSettings.WorkingDirectory"/></em></p>
+        ///   <p><em>Sets <see cref="PulumiConfigSetSettings.Cwd"/></em></p>
         ///   <p>Run pulumi as if it had been started in another directory</p>
         /// </summary>
         [Pure]
-        public static PulumiConfigSetSettings SetWorkingDirectory(this PulumiConfigSetSettings toolSettings, string workingDirectory)
+        public static PulumiConfigSetSettings SetCwd(this PulumiConfigSetSettings toolSettings, string cwd)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.WorkingDirectory = workingDirectory;
+            toolSettings.Cwd = cwd;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="PulumiConfigSetSettings.WorkingDirectory"/></em></p>
+        ///   <p><em>Resets <see cref="PulumiConfigSetSettings.Cwd"/></em></p>
         ///   <p>Run pulumi as if it had been started in another directory</p>
         /// </summary>
         [Pure]
-        public static PulumiConfigSetSettings ResetWorkingDirectory(this PulumiConfigSetSettings toolSettings)
+        public static PulumiConfigSetSettings ResetCwd(this PulumiConfigSetSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.WorkingDirectory = null;
+            toolSettings.Cwd = null;
             return toolSettings;
         }
         #endregion
@@ -11406,27 +11406,27 @@ namespace Nuke.Common.Tools.Pulumi
             return toolSettings;
         }
         #endregion
-        #region WorkingDirectory
+        #region Cwd
         /// <summary>
-        ///   <p><em>Sets <see cref="PulumiDestroySettings.WorkingDirectory"/></em></p>
+        ///   <p><em>Sets <see cref="PulumiDestroySettings.Cwd"/></em></p>
         ///   <p>Run pulumi as if it had been started in another directory</p>
         /// </summary>
         [Pure]
-        public static PulumiDestroySettings SetWorkingDirectory(this PulumiDestroySettings toolSettings, string workingDirectory)
+        public static PulumiDestroySettings SetCwd(this PulumiDestroySettings toolSettings, string cwd)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.WorkingDirectory = workingDirectory;
+            toolSettings.Cwd = cwd;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="PulumiDestroySettings.WorkingDirectory"/></em></p>
+        ///   <p><em>Resets <see cref="PulumiDestroySettings.Cwd"/></em></p>
         ///   <p>Run pulumi as if it had been started in another directory</p>
         /// </summary>
         [Pure]
-        public static PulumiDestroySettings ResetWorkingDirectory(this PulumiDestroySettings toolSettings)
+        public static PulumiDestroySettings ResetCwd(this PulumiDestroySettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.WorkingDirectory = null;
+            toolSettings.Cwd = null;
             return toolSettings;
         }
         #endregion
@@ -12016,27 +12016,27 @@ namespace Nuke.Common.Tools.Pulumi
             return toolSettings;
         }
         #endregion
-        #region WorkingDirectory
+        #region Cwd
         /// <summary>
-        ///   <p><em>Sets <see cref="PulumiHistorySettings.WorkingDirectory"/></em></p>
+        ///   <p><em>Sets <see cref="PulumiHistorySettings.Cwd"/></em></p>
         ///   <p>Run pulumi as if it had been started in another directory</p>
         /// </summary>
         [Pure]
-        public static PulumiHistorySettings SetWorkingDirectory(this PulumiHistorySettings toolSettings, string workingDirectory)
+        public static PulumiHistorySettings SetCwd(this PulumiHistorySettings toolSettings, string cwd)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.WorkingDirectory = workingDirectory;
+            toolSettings.Cwd = cwd;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="PulumiHistorySettings.WorkingDirectory"/></em></p>
+        ///   <p><em>Resets <see cref="PulumiHistorySettings.Cwd"/></em></p>
         ///   <p>Run pulumi as if it had been started in another directory</p>
         /// </summary>
         [Pure]
-        public static PulumiHistorySettings ResetWorkingDirectory(this PulumiHistorySettings toolSettings)
+        public static PulumiHistorySettings ResetCwd(this PulumiHistorySettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.WorkingDirectory = null;
+            toolSettings.Cwd = null;
             return toolSettings;
         }
         #endregion
@@ -12593,27 +12593,27 @@ namespace Nuke.Common.Tools.Pulumi
             return toolSettings;
         }
         #endregion
-        #region WorkingDirectory
+        #region Cwd
         /// <summary>
-        ///   <p><em>Sets <see cref="PulumiLoginSettings.WorkingDirectory"/></em></p>
+        ///   <p><em>Sets <see cref="PulumiLoginSettings.Cwd"/></em></p>
         ///   <p>Run pulumi as if it had been started in another directory</p>
         /// </summary>
         [Pure]
-        public static PulumiLoginSettings SetWorkingDirectory(this PulumiLoginSettings toolSettings, string workingDirectory)
+        public static PulumiLoginSettings SetCwd(this PulumiLoginSettings toolSettings, string cwd)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.WorkingDirectory = workingDirectory;
+            toolSettings.Cwd = cwd;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="PulumiLoginSettings.WorkingDirectory"/></em></p>
+        ///   <p><em>Resets <see cref="PulumiLoginSettings.Cwd"/></em></p>
         ///   <p>Run pulumi as if it had been started in another directory</p>
         /// </summary>
         [Pure]
-        public static PulumiLoginSettings ResetWorkingDirectory(this PulumiLoginSettings toolSettings)
+        public static PulumiLoginSettings ResetCwd(this PulumiLoginSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.WorkingDirectory = null;
+            toolSettings.Cwd = null;
             return toolSettings;
         }
         #endregion
@@ -13170,27 +13170,27 @@ namespace Nuke.Common.Tools.Pulumi
             return toolSettings;
         }
         #endregion
-        #region WorkingDirectory
+        #region Cwd
         /// <summary>
-        ///   <p><em>Sets <see cref="PulumiLogoutSettings.WorkingDirectory"/></em></p>
+        ///   <p><em>Sets <see cref="PulumiLogoutSettings.Cwd"/></em></p>
         ///   <p>Run pulumi as if it had been started in another directory</p>
         /// </summary>
         [Pure]
-        public static PulumiLogoutSettings SetWorkingDirectory(this PulumiLogoutSettings toolSettings, string workingDirectory)
+        public static PulumiLogoutSettings SetCwd(this PulumiLogoutSettings toolSettings, string cwd)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.WorkingDirectory = workingDirectory;
+            toolSettings.Cwd = cwd;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="PulumiLogoutSettings.WorkingDirectory"/></em></p>
+        ///   <p><em>Resets <see cref="PulumiLogoutSettings.Cwd"/></em></p>
         ///   <p>Run pulumi as if it had been started in another directory</p>
         /// </summary>
         [Pure]
-        public static PulumiLogoutSettings ResetWorkingDirectory(this PulumiLogoutSettings toolSettings)
+        public static PulumiLogoutSettings ResetCwd(this PulumiLogoutSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.WorkingDirectory = null;
+            toolSettings.Cwd = null;
             return toolSettings;
         }
         #endregion
@@ -13852,27 +13852,27 @@ namespace Nuke.Common.Tools.Pulumi
             return toolSettings;
         }
         #endregion
-        #region WorkingDirectory
+        #region Cwd
         /// <summary>
-        ///   <p><em>Sets <see cref="PulumiLogsSettings.WorkingDirectory"/></em></p>
+        ///   <p><em>Sets <see cref="PulumiLogsSettings.Cwd"/></em></p>
         ///   <p>Run pulumi as if it had been started in another directory</p>
         /// </summary>
         [Pure]
-        public static PulumiLogsSettings SetWorkingDirectory(this PulumiLogsSettings toolSettings, string workingDirectory)
+        public static PulumiLogsSettings SetCwd(this PulumiLogsSettings toolSettings, string cwd)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.WorkingDirectory = workingDirectory;
+            toolSettings.Cwd = cwd;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="PulumiLogsSettings.WorkingDirectory"/></em></p>
+        ///   <p><em>Resets <see cref="PulumiLogsSettings.Cwd"/></em></p>
         ///   <p>Run pulumi as if it had been started in another directory</p>
         /// </summary>
         [Pure]
-        public static PulumiLogsSettings ResetWorkingDirectory(this PulumiLogsSettings toolSettings)
+        public static PulumiLogsSettings ResetCwd(this PulumiLogsSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.WorkingDirectory = null;
+            toolSettings.Cwd = null;
             return toolSettings;
         }
         #endregion
@@ -14510,27 +14510,27 @@ namespace Nuke.Common.Tools.Pulumi
             return toolSettings;
         }
         #endregion
-        #region WorkingDirectory
+        #region Cwd
         /// <summary>
-        ///   <p><em>Sets <see cref="PulumiPluginInstallSettings.WorkingDirectory"/></em></p>
+        ///   <p><em>Sets <see cref="PulumiPluginInstallSettings.Cwd"/></em></p>
         ///   <p>Run pulumi as if it had been started in another directory</p>
         /// </summary>
         [Pure]
-        public static PulumiPluginInstallSettings SetWorkingDirectory(this PulumiPluginInstallSettings toolSettings, string workingDirectory)
+        public static PulumiPluginInstallSettings SetCwd(this PulumiPluginInstallSettings toolSettings, string cwd)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.WorkingDirectory = workingDirectory;
+            toolSettings.Cwd = cwd;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="PulumiPluginInstallSettings.WorkingDirectory"/></em></p>
+        ///   <p><em>Resets <see cref="PulumiPluginInstallSettings.Cwd"/></em></p>
         ///   <p>Run pulumi as if it had been started in another directory</p>
         /// </summary>
         [Pure]
-        public static PulumiPluginInstallSettings ResetWorkingDirectory(this PulumiPluginInstallSettings toolSettings)
+        public static PulumiPluginInstallSettings ResetCwd(this PulumiPluginInstallSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.WorkingDirectory = null;
+            toolSettings.Cwd = null;
             return toolSettings;
         }
         #endregion
@@ -15096,27 +15096,27 @@ namespace Nuke.Common.Tools.Pulumi
             return toolSettings;
         }
         #endregion
-        #region WorkingDirectory
+        #region Cwd
         /// <summary>
-        ///   <p><em>Sets <see cref="PulumiPluginListSettings.WorkingDirectory"/></em></p>
+        ///   <p><em>Sets <see cref="PulumiPluginListSettings.Cwd"/></em></p>
         ///   <p>Run pulumi as if it had been started in another directory</p>
         /// </summary>
         [Pure]
-        public static PulumiPluginListSettings SetWorkingDirectory(this PulumiPluginListSettings toolSettings, string workingDirectory)
+        public static PulumiPluginListSettings SetCwd(this PulumiPluginListSettings toolSettings, string cwd)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.WorkingDirectory = workingDirectory;
+            toolSettings.Cwd = cwd;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="PulumiPluginListSettings.WorkingDirectory"/></em></p>
+        ///   <p><em>Resets <see cref="PulumiPluginListSettings.Cwd"/></em></p>
         ///   <p>Run pulumi as if it had been started in another directory</p>
         /// </summary>
         [Pure]
-        public static PulumiPluginListSettings ResetWorkingDirectory(this PulumiPluginListSettings toolSettings)
+        public static PulumiPluginListSettings ResetCwd(this PulumiPluginListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.WorkingDirectory = null;
+            toolSettings.Cwd = null;
             return toolSettings;
         }
         #endregion
@@ -15706,27 +15706,27 @@ namespace Nuke.Common.Tools.Pulumi
             return toolSettings;
         }
         #endregion
-        #region WorkingDirectory
+        #region Cwd
         /// <summary>
-        ///   <p><em>Sets <see cref="PulumiPluginRemoveSettings.WorkingDirectory"/></em></p>
+        ///   <p><em>Sets <see cref="PulumiPluginRemoveSettings.Cwd"/></em></p>
         ///   <p>Run pulumi as if it had been started in another directory</p>
         /// </summary>
         [Pure]
-        public static PulumiPluginRemoveSettings SetWorkingDirectory(this PulumiPluginRemoveSettings toolSettings, string workingDirectory)
+        public static PulumiPluginRemoveSettings SetCwd(this PulumiPluginRemoveSettings toolSettings, string cwd)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.WorkingDirectory = workingDirectory;
+            toolSettings.Cwd = cwd;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="PulumiPluginRemoveSettings.WorkingDirectory"/></em></p>
+        ///   <p><em>Resets <see cref="PulumiPluginRemoveSettings.Cwd"/></em></p>
         ///   <p>Run pulumi as if it had been started in another directory</p>
         /// </summary>
         [Pure]
-        public static PulumiPluginRemoveSettings ResetWorkingDirectory(this PulumiPluginRemoveSettings toolSettings)
+        public static PulumiPluginRemoveSettings ResetCwd(this PulumiPluginRemoveSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.WorkingDirectory = null;
+            toolSettings.Cwd = null;
             return toolSettings;
         }
         #endregion
@@ -17225,27 +17225,27 @@ namespace Nuke.Common.Tools.Pulumi
             return toolSettings;
         }
         #endregion
-        #region WorkingDirectory
+        #region Cwd
         /// <summary>
-        ///   <p><em>Sets <see cref="PulumiPreviewSettings.WorkingDirectory"/></em></p>
+        ///   <p><em>Sets <see cref="PulumiPreviewSettings.Cwd"/></em></p>
         ///   <p>Run pulumi as if it had been started in another directory</p>
         /// </summary>
         [Pure]
-        public static PulumiPreviewSettings SetWorkingDirectory(this PulumiPreviewSettings toolSettings, string workingDirectory)
+        public static PulumiPreviewSettings SetCwd(this PulumiPreviewSettings toolSettings, string cwd)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.WorkingDirectory = workingDirectory;
+            toolSettings.Cwd = cwd;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="PulumiPreviewSettings.WorkingDirectory"/></em></p>
+        ///   <p><em>Resets <see cref="PulumiPreviewSettings.Cwd"/></em></p>
         ///   <p>Run pulumi as if it had been started in another directory</p>
         /// </summary>
         [Pure]
-        public static PulumiPreviewSettings ResetWorkingDirectory(this PulumiPreviewSettings toolSettings)
+        public static PulumiPreviewSettings ResetCwd(this PulumiPreviewSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.WorkingDirectory = null;
+            toolSettings.Cwd = null;
             return toolSettings;
         }
         #endregion
@@ -18273,27 +18273,27 @@ namespace Nuke.Common.Tools.Pulumi
             return toolSettings;
         }
         #endregion
-        #region WorkingDirectory
+        #region Cwd
         /// <summary>
-        ///   <p><em>Sets <see cref="PulumiRefreshSettings.WorkingDirectory"/></em></p>
+        ///   <p><em>Sets <see cref="PulumiRefreshSettings.Cwd"/></em></p>
         ///   <p>Run pulumi as if it had been started in another directory</p>
         /// </summary>
         [Pure]
-        public static PulumiRefreshSettings SetWorkingDirectory(this PulumiRefreshSettings toolSettings, string workingDirectory)
+        public static PulumiRefreshSettings SetCwd(this PulumiRefreshSettings toolSettings, string cwd)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.WorkingDirectory = workingDirectory;
+            toolSettings.Cwd = cwd;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="PulumiRefreshSettings.WorkingDirectory"/></em></p>
+        ///   <p><em>Resets <see cref="PulumiRefreshSettings.Cwd"/></em></p>
         ///   <p>Run pulumi as if it had been started in another directory</p>
         /// </summary>
         [Pure]
-        public static PulumiRefreshSettings ResetWorkingDirectory(this PulumiRefreshSettings toolSettings)
+        public static PulumiRefreshSettings ResetCwd(this PulumiRefreshSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.WorkingDirectory = null;
+            toolSettings.Cwd = null;
             return toolSettings;
         }
         #endregion
@@ -18940,27 +18940,27 @@ namespace Nuke.Common.Tools.Pulumi
             return toolSettings;
         }
         #endregion
-        #region WorkingDirectory
+        #region Cwd
         /// <summary>
-        ///   <p><em>Sets <see cref="PulumiStackSettings.WorkingDirectory"/></em></p>
+        ///   <p><em>Sets <see cref="PulumiStackSettings.Cwd"/></em></p>
         ///   <p>Run pulumi as if it had been started in another directory</p>
         /// </summary>
         [Pure]
-        public static PulumiStackSettings SetWorkingDirectory(this PulumiStackSettings toolSettings, string workingDirectory)
+        public static PulumiStackSettings SetCwd(this PulumiStackSettings toolSettings, string cwd)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.WorkingDirectory = workingDirectory;
+            toolSettings.Cwd = cwd;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="PulumiStackSettings.WorkingDirectory"/></em></p>
+        ///   <p><em>Resets <see cref="PulumiStackSettings.Cwd"/></em></p>
         ///   <p>Run pulumi as if it had been started in another directory</p>
         /// </summary>
         [Pure]
-        public static PulumiStackSettings ResetWorkingDirectory(this PulumiStackSettings toolSettings)
+        public static PulumiStackSettings ResetCwd(this PulumiStackSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.WorkingDirectory = null;
+            toolSettings.Cwd = null;
             return toolSettings;
         }
         #endregion
@@ -19631,27 +19631,27 @@ namespace Nuke.Common.Tools.Pulumi
             return toolSettings;
         }
         #endregion
-        #region WorkingDirectory
+        #region Cwd
         /// <summary>
-        ///   <p><em>Sets <see cref="PulumiStackExportSettings.WorkingDirectory"/></em></p>
+        ///   <p><em>Sets <see cref="PulumiStackExportSettings.Cwd"/></em></p>
         ///   <p>Run pulumi as if it had been started in another directory</p>
         /// </summary>
         [Pure]
-        public static PulumiStackExportSettings SetWorkingDirectory(this PulumiStackExportSettings toolSettings, string workingDirectory)
+        public static PulumiStackExportSettings SetCwd(this PulumiStackExportSettings toolSettings, string cwd)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.WorkingDirectory = workingDirectory;
+            toolSettings.Cwd = cwd;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="PulumiStackExportSettings.WorkingDirectory"/></em></p>
+        ///   <p><em>Resets <see cref="PulumiStackExportSettings.Cwd"/></em></p>
         ///   <p>Run pulumi as if it had been started in another directory</p>
         /// </summary>
         [Pure]
-        public static PulumiStackExportSettings ResetWorkingDirectory(this PulumiStackExportSettings toolSettings)
+        public static PulumiStackExportSettings ResetCwd(this PulumiStackExportSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.WorkingDirectory = null;
+            toolSettings.Cwd = null;
             return toolSettings;
         }
         #endregion
@@ -20484,27 +20484,27 @@ namespace Nuke.Common.Tools.Pulumi
             return toolSettings;
         }
         #endregion
-        #region WorkingDirectory
+        #region Cwd
         /// <summary>
-        ///   <p><em>Sets <see cref="PulumiStackGraphSettings.WorkingDirectory"/></em></p>
+        ///   <p><em>Sets <see cref="PulumiStackGraphSettings.Cwd"/></em></p>
         ///   <p>Run pulumi as if it had been started in another directory</p>
         /// </summary>
         [Pure]
-        public static PulumiStackGraphSettings SetWorkingDirectory(this PulumiStackGraphSettings toolSettings, string workingDirectory)
+        public static PulumiStackGraphSettings SetCwd(this PulumiStackGraphSettings toolSettings, string cwd)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.WorkingDirectory = workingDirectory;
+            toolSettings.Cwd = cwd;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="PulumiStackGraphSettings.WorkingDirectory"/></em></p>
+        ///   <p><em>Resets <see cref="PulumiStackGraphSettings.Cwd"/></em></p>
         ///   <p>Run pulumi as if it had been started in another directory</p>
         /// </summary>
         [Pure]
-        public static PulumiStackGraphSettings ResetWorkingDirectory(this PulumiStackGraphSettings toolSettings)
+        public static PulumiStackGraphSettings ResetCwd(this PulumiStackGraphSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.WorkingDirectory = null;
+            toolSettings.Cwd = null;
             return toolSettings;
         }
         #endregion
@@ -21232,27 +21232,27 @@ namespace Nuke.Common.Tools.Pulumi
             return toolSettings;
         }
         #endregion
-        #region WorkingDirectory
+        #region Cwd
         /// <summary>
-        ///   <p><em>Sets <see cref="PulumiStackImportSettings.WorkingDirectory"/></em></p>
+        ///   <p><em>Sets <see cref="PulumiStackImportSettings.Cwd"/></em></p>
         ///   <p>Run pulumi as if it had been started in another directory</p>
         /// </summary>
         [Pure]
-        public static PulumiStackImportSettings SetWorkingDirectory(this PulumiStackImportSettings toolSettings, string workingDirectory)
+        public static PulumiStackImportSettings SetCwd(this PulumiStackImportSettings toolSettings, string cwd)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.WorkingDirectory = workingDirectory;
+            toolSettings.Cwd = cwd;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="PulumiStackImportSettings.WorkingDirectory"/></em></p>
+        ///   <p><em>Resets <see cref="PulumiStackImportSettings.Cwd"/></em></p>
         ///   <p>Run pulumi as if it had been started in another directory</p>
         /// </summary>
         [Pure]
-        public static PulumiStackImportSettings ResetWorkingDirectory(this PulumiStackImportSettings toolSettings)
+        public static PulumiStackImportSettings ResetCwd(this PulumiStackImportSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.WorkingDirectory = null;
+            toolSettings.Cwd = null;
             return toolSettings;
         }
         #endregion
@@ -21947,27 +21947,27 @@ namespace Nuke.Common.Tools.Pulumi
             return toolSettings;
         }
         #endregion
-        #region WorkingDirectory
+        #region Cwd
         /// <summary>
-        ///   <p><em>Sets <see cref="PulumiStackInitSettings.WorkingDirectory"/></em></p>
+        ///   <p><em>Sets <see cref="PulumiStackInitSettings.Cwd"/></em></p>
         ///   <p>Run pulumi as if it had been started in another directory</p>
         /// </summary>
         [Pure]
-        public static PulumiStackInitSettings SetWorkingDirectory(this PulumiStackInitSettings toolSettings, string workingDirectory)
+        public static PulumiStackInitSettings SetCwd(this PulumiStackInitSettings toolSettings, string cwd)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.WorkingDirectory = workingDirectory;
+            toolSettings.Cwd = cwd;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="PulumiStackInitSettings.WorkingDirectory"/></em></p>
+        ///   <p><em>Resets <see cref="PulumiStackInitSettings.Cwd"/></em></p>
         ///   <p>Run pulumi as if it had been started in another directory</p>
         /// </summary>
         [Pure]
-        public static PulumiStackInitSettings ResetWorkingDirectory(this PulumiStackInitSettings toolSettings)
+        public static PulumiStackInitSettings ResetCwd(this PulumiStackInitSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.WorkingDirectory = null;
+            toolSettings.Cwd = null;
             return toolSettings;
         }
         #endregion
@@ -22800,27 +22800,27 @@ namespace Nuke.Common.Tools.Pulumi
             return toolSettings;
         }
         #endregion
-        #region WorkingDirectory
+        #region Cwd
         /// <summary>
-        ///   <p><em>Sets <see cref="PulumiStackListSettings.WorkingDirectory"/></em></p>
+        ///   <p><em>Sets <see cref="PulumiStackListSettings.Cwd"/></em></p>
         ///   <p>Run pulumi as if it had been started in another directory</p>
         /// </summary>
         [Pure]
-        public static PulumiStackListSettings SetWorkingDirectory(this PulumiStackListSettings toolSettings, string workingDirectory)
+        public static PulumiStackListSettings SetCwd(this PulumiStackListSettings toolSettings, string cwd)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.WorkingDirectory = workingDirectory;
+            toolSettings.Cwd = cwd;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="PulumiStackListSettings.WorkingDirectory"/></em></p>
+        ///   <p><em>Resets <see cref="PulumiStackListSettings.Cwd"/></em></p>
         ///   <p>Run pulumi as if it had been started in another directory</p>
         /// </summary>
         [Pure]
-        public static PulumiStackListSettings ResetWorkingDirectory(this PulumiStackListSettings toolSettings)
+        public static PulumiStackListSettings ResetCwd(this PulumiStackListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.WorkingDirectory = null;
+            toolSettings.Cwd = null;
             return toolSettings;
         }
         #endregion
@@ -23548,27 +23548,27 @@ namespace Nuke.Common.Tools.Pulumi
             return toolSettings;
         }
         #endregion
-        #region WorkingDirectory
+        #region Cwd
         /// <summary>
-        ///   <p><em>Sets <see cref="PulumiStackOutputSettings.WorkingDirectory"/></em></p>
+        ///   <p><em>Sets <see cref="PulumiStackOutputSettings.Cwd"/></em></p>
         ///   <p>Run pulumi as if it had been started in another directory</p>
         /// </summary>
         [Pure]
-        public static PulumiStackOutputSettings SetWorkingDirectory(this PulumiStackOutputSettings toolSettings, string workingDirectory)
+        public static PulumiStackOutputSettings SetCwd(this PulumiStackOutputSettings toolSettings, string cwd)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.WorkingDirectory = workingDirectory;
+            toolSettings.Cwd = cwd;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="PulumiStackOutputSettings.WorkingDirectory"/></em></p>
+        ///   <p><em>Resets <see cref="PulumiStackOutputSettings.Cwd"/></em></p>
         ///   <p>Run pulumi as if it had been started in another directory</p>
         /// </summary>
         [Pure]
-        public static PulumiStackOutputSettings ResetWorkingDirectory(this PulumiStackOutputSettings toolSettings)
+        public static PulumiStackOutputSettings ResetCwd(this PulumiStackOutputSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.WorkingDirectory = null;
+            toolSettings.Cwd = null;
             return toolSettings;
         }
         #endregion
@@ -24239,27 +24239,27 @@ namespace Nuke.Common.Tools.Pulumi
             return toolSettings;
         }
         #endregion
-        #region WorkingDirectory
+        #region Cwd
         /// <summary>
-        ///   <p><em>Sets <see cref="PulumiStackRenameSettings.WorkingDirectory"/></em></p>
+        ///   <p><em>Sets <see cref="PulumiStackRenameSettings.Cwd"/></em></p>
         ///   <p>Run pulumi as if it had been started in another directory</p>
         /// </summary>
         [Pure]
-        public static PulumiStackRenameSettings SetWorkingDirectory(this PulumiStackRenameSettings toolSettings, string workingDirectory)
+        public static PulumiStackRenameSettings SetCwd(this PulumiStackRenameSettings toolSettings, string cwd)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.WorkingDirectory = workingDirectory;
+            toolSettings.Cwd = cwd;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="PulumiStackRenameSettings.WorkingDirectory"/></em></p>
+        ///   <p><em>Resets <see cref="PulumiStackRenameSettings.Cwd"/></em></p>
         ///   <p>Run pulumi as if it had been started in another directory</p>
         /// </summary>
         [Pure]
-        public static PulumiStackRenameSettings ResetWorkingDirectory(this PulumiStackRenameSettings toolSettings)
+        public static PulumiStackRenameSettings ResetCwd(this PulumiStackRenameSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.WorkingDirectory = null;
+            toolSettings.Cwd = null;
             return toolSettings;
         }
         #endregion
@@ -24771,7 +24771,7 @@ namespace Nuke.Common.Tools.Pulumi
         #region PreserveConfig
         /// <summary>
         ///   <p><em>Sets <see cref="PulumiStackRemoveSettings.PreserveConfig"/></em></p>
-        ///   <p>Do not delete the corresponding Pulumi.<stack-name>.yaml configuration file for the stack.</p>
+        ///   <p>Do not delete the corresponding Pulumi.(stack-name).yaml configuration file for the stack.</p>
         /// </summary>
         [Pure]
         public static PulumiStackRemoveSettings SetPreserveConfig(this PulumiStackRemoveSettings toolSettings, bool? preserveConfig)
@@ -24782,7 +24782,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Resets <see cref="PulumiStackRemoveSettings.PreserveConfig"/></em></p>
-        ///   <p>Do not delete the corresponding Pulumi.<stack-name>.yaml configuration file for the stack.</p>
+        ///   <p>Do not delete the corresponding Pulumi.(stack-name).yaml configuration file for the stack.</p>
         /// </summary>
         [Pure]
         public static PulumiStackRemoveSettings ResetPreserveConfig(this PulumiStackRemoveSettings toolSettings)
@@ -24793,7 +24793,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Enables <see cref="PulumiStackRemoveSettings.PreserveConfig"/></em></p>
-        ///   <p>Do not delete the corresponding Pulumi.<stack-name>.yaml configuration file for the stack.</p>
+        ///   <p>Do not delete the corresponding Pulumi.(stack-name).yaml configuration file for the stack.</p>
         /// </summary>
         [Pure]
         public static PulumiStackRemoveSettings EnablePreserveConfig(this PulumiStackRemoveSettings toolSettings)
@@ -24804,7 +24804,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Disables <see cref="PulumiStackRemoveSettings.PreserveConfig"/></em></p>
-        ///   <p>Do not delete the corresponding Pulumi.<stack-name>.yaml configuration file for the stack.</p>
+        ///   <p>Do not delete the corresponding Pulumi.(stack-name).yaml configuration file for the stack.</p>
         /// </summary>
         [Pure]
         public static PulumiStackRemoveSettings DisablePreserveConfig(this PulumiStackRemoveSettings toolSettings)
@@ -24815,7 +24815,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Toggles <see cref="PulumiStackRemoveSettings.PreserveConfig"/></em></p>
-        ///   <p>Do not delete the corresponding Pulumi.<stack-name>.yaml configuration file for the stack.</p>
+        ///   <p>Do not delete the corresponding Pulumi.(stack-name).yaml configuration file for the stack.</p>
         /// </summary>
         [Pure]
         public static PulumiStackRemoveSettings TogglePreserveConfig(this PulumiStackRemoveSettings toolSettings)
@@ -25101,27 +25101,27 @@ namespace Nuke.Common.Tools.Pulumi
             return toolSettings;
         }
         #endregion
-        #region WorkingDirectory
+        #region Cwd
         /// <summary>
-        ///   <p><em>Sets <see cref="PulumiStackRemoveSettings.WorkingDirectory"/></em></p>
+        ///   <p><em>Sets <see cref="PulumiStackRemoveSettings.Cwd"/></em></p>
         ///   <p>Run pulumi as if it had been started in another directory</p>
         /// </summary>
         [Pure]
-        public static PulumiStackRemoveSettings SetWorkingDirectory(this PulumiStackRemoveSettings toolSettings, string workingDirectory)
+        public static PulumiStackRemoveSettings SetCwd(this PulumiStackRemoveSettings toolSettings, string cwd)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.WorkingDirectory = workingDirectory;
+            toolSettings.Cwd = cwd;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="PulumiStackRemoveSettings.WorkingDirectory"/></em></p>
+        ///   <p><em>Resets <see cref="PulumiStackRemoveSettings.Cwd"/></em></p>
         ///   <p>Run pulumi as if it had been started in another directory</p>
         /// </summary>
         [Pure]
-        public static PulumiStackRemoveSettings ResetWorkingDirectory(this PulumiStackRemoveSettings toolSettings)
+        public static PulumiStackRemoveSettings ResetCwd(this PulumiStackRemoveSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.WorkingDirectory = null;
+            toolSettings.Cwd = null;
             return toolSettings;
         }
         #endregion
@@ -25792,27 +25792,27 @@ namespace Nuke.Common.Tools.Pulumi
             return toolSettings;
         }
         #endregion
-        #region WorkingDirectory
+        #region Cwd
         /// <summary>
-        ///   <p><em>Sets <see cref="PulumiStackSelectSettings.WorkingDirectory"/></em></p>
+        ///   <p><em>Sets <see cref="PulumiStackSelectSettings.Cwd"/></em></p>
         ///   <p>Run pulumi as if it had been started in another directory</p>
         /// </summary>
         [Pure]
-        public static PulumiStackSelectSettings SetWorkingDirectory(this PulumiStackSelectSettings toolSettings, string workingDirectory)
+        public static PulumiStackSelectSettings SetCwd(this PulumiStackSelectSettings toolSettings, string cwd)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.WorkingDirectory = workingDirectory;
+            toolSettings.Cwd = cwd;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="PulumiStackSelectSettings.WorkingDirectory"/></em></p>
+        ///   <p><em>Resets <see cref="PulumiStackSelectSettings.Cwd"/></em></p>
         ///   <p>Run pulumi as if it had been started in another directory</p>
         /// </summary>
         [Pure]
-        public static PulumiStackSelectSettings ResetWorkingDirectory(this PulumiStackSelectSettings toolSettings)
+        public static PulumiStackSelectSettings ResetCwd(this PulumiStackSelectSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.WorkingDirectory = null;
+            toolSettings.Cwd = null;
             return toolSettings;
         }
         #endregion
@@ -26483,27 +26483,27 @@ namespace Nuke.Common.Tools.Pulumi
             return toolSettings;
         }
         #endregion
-        #region WorkingDirectory
+        #region Cwd
         /// <summary>
-        ///   <p><em>Sets <see cref="PulumiStackTagGetSettings.WorkingDirectory"/></em></p>
+        ///   <p><em>Sets <see cref="PulumiStackTagGetSettings.Cwd"/></em></p>
         ///   <p>Run pulumi as if it had been started in another directory</p>
         /// </summary>
         [Pure]
-        public static PulumiStackTagGetSettings SetWorkingDirectory(this PulumiStackTagGetSettings toolSettings, string workingDirectory)
+        public static PulumiStackTagGetSettings SetCwd(this PulumiStackTagGetSettings toolSettings, string cwd)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.WorkingDirectory = workingDirectory;
+            toolSettings.Cwd = cwd;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="PulumiStackTagGetSettings.WorkingDirectory"/></em></p>
+        ///   <p><em>Resets <see cref="PulumiStackTagGetSettings.Cwd"/></em></p>
         ///   <p>Run pulumi as if it had been started in another directory</p>
         /// </summary>
         [Pure]
-        public static PulumiStackTagGetSettings ResetWorkingDirectory(this PulumiStackTagGetSettings toolSettings)
+        public static PulumiStackTagGetSettings ResetCwd(this PulumiStackTagGetSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.WorkingDirectory = null;
+            toolSettings.Cwd = null;
             return toolSettings;
         }
         #endregion
@@ -27207,27 +27207,27 @@ namespace Nuke.Common.Tools.Pulumi
             return toolSettings;
         }
         #endregion
-        #region WorkingDirectory
+        #region Cwd
         /// <summary>
-        ///   <p><em>Sets <see cref="PulumiStackTagListSettings.WorkingDirectory"/></em></p>
+        ///   <p><em>Sets <see cref="PulumiStackTagListSettings.Cwd"/></em></p>
         ///   <p>Run pulumi as if it had been started in another directory</p>
         /// </summary>
         [Pure]
-        public static PulumiStackTagListSettings SetWorkingDirectory(this PulumiStackTagListSettings toolSettings, string workingDirectory)
+        public static PulumiStackTagListSettings SetCwd(this PulumiStackTagListSettings toolSettings, string cwd)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.WorkingDirectory = workingDirectory;
+            toolSettings.Cwd = cwd;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="PulumiStackTagListSettings.WorkingDirectory"/></em></p>
+        ///   <p><em>Resets <see cref="PulumiStackTagListSettings.Cwd"/></em></p>
         ///   <p>Run pulumi as if it had been started in another directory</p>
         /// </summary>
         [Pure]
-        public static PulumiStackTagListSettings ResetWorkingDirectory(this PulumiStackTagListSettings toolSettings)
+        public static PulumiStackTagListSettings ResetCwd(this PulumiStackTagListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.WorkingDirectory = null;
+            toolSettings.Cwd = null;
             return toolSettings;
         }
         #endregion
@@ -27898,27 +27898,27 @@ namespace Nuke.Common.Tools.Pulumi
             return toolSettings;
         }
         #endregion
-        #region WorkingDirectory
+        #region Cwd
         /// <summary>
-        ///   <p><em>Sets <see cref="PulumiStackTagRemoveSettings.WorkingDirectory"/></em></p>
+        ///   <p><em>Sets <see cref="PulumiStackTagRemoveSettings.Cwd"/></em></p>
         ///   <p>Run pulumi as if it had been started in another directory</p>
         /// </summary>
         [Pure]
-        public static PulumiStackTagRemoveSettings SetWorkingDirectory(this PulumiStackTagRemoveSettings toolSettings, string workingDirectory)
+        public static PulumiStackTagRemoveSettings SetCwd(this PulumiStackTagRemoveSettings toolSettings, string cwd)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.WorkingDirectory = workingDirectory;
+            toolSettings.Cwd = cwd;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="PulumiStackTagRemoveSettings.WorkingDirectory"/></em></p>
+        ///   <p><em>Resets <see cref="PulumiStackTagRemoveSettings.Cwd"/></em></p>
         ///   <p>Run pulumi as if it had been started in another directory</p>
         /// </summary>
         [Pure]
-        public static PulumiStackTagRemoveSettings ResetWorkingDirectory(this PulumiStackTagRemoveSettings toolSettings)
+        public static PulumiStackTagRemoveSettings ResetCwd(this PulumiStackTagRemoveSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.WorkingDirectory = null;
+            toolSettings.Cwd = null;
             return toolSettings;
         }
         #endregion
@@ -28613,27 +28613,27 @@ namespace Nuke.Common.Tools.Pulumi
             return toolSettings;
         }
         #endregion
-        #region WorkingDirectory
+        #region Cwd
         /// <summary>
-        ///   <p><em>Sets <see cref="PulumiStackTagSetSettings.WorkingDirectory"/></em></p>
+        ///   <p><em>Sets <see cref="PulumiStackTagSetSettings.Cwd"/></em></p>
         ///   <p>Run pulumi as if it had been started in another directory</p>
         /// </summary>
         [Pure]
-        public static PulumiStackTagSetSettings SetWorkingDirectory(this PulumiStackTagSetSettings toolSettings, string workingDirectory)
+        public static PulumiStackTagSetSettings SetCwd(this PulumiStackTagSetSettings toolSettings, string cwd)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.WorkingDirectory = workingDirectory;
+            toolSettings.Cwd = cwd;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="PulumiStackTagSetSettings.WorkingDirectory"/></em></p>
+        ///   <p><em>Resets <see cref="PulumiStackTagSetSettings.Cwd"/></em></p>
         ///   <p>Run pulumi as if it had been started in another directory</p>
         /// </summary>
         [Pure]
-        public static PulumiStackTagSetSettings ResetWorkingDirectory(this PulumiStackTagSetSettings toolSettings)
+        public static PulumiStackTagSetSettings ResetCwd(this PulumiStackTagSetSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.WorkingDirectory = null;
+            toolSettings.Cwd = null;
             return toolSettings;
         }
         #endregion
@@ -29064,7 +29064,7 @@ namespace Nuke.Common.Tools.Pulumi
         #region ResourceURN
         /// <summary>
         ///   <p><em>Sets <see cref="PulumiStateDeleteSettings.ResourceURN"/></em></p>
-        ///   <p>The resource as specified by its Pulumi URN (use <c>pulumi stack �show-urns</c> to get it).</p>
+        ///   <p>The resource as specified by its Pulumi URN (use <c>pulumi stack show-urns</c> to get it).</p>
         /// </summary>
         [Pure]
         public static PulumiStateDeleteSettings SetResourceURN(this PulumiStateDeleteSettings toolSettings, string resourceURN)
@@ -29075,7 +29075,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Resets <see cref="PulumiStateDeleteSettings.ResourceURN"/></em></p>
-        ///   <p>The resource as specified by its Pulumi URN (use <c>pulumi stack �show-urns</c> to get it).</p>
+        ///   <p>The resource as specified by its Pulumi URN (use <c>pulumi stack show-urns</c> to get it).</p>
         /// </summary>
         [Pure]
         public static PulumiStateDeleteSettings ResetResourceURN(this PulumiStateDeleteSettings toolSettings)
@@ -29247,27 +29247,27 @@ namespace Nuke.Common.Tools.Pulumi
             return toolSettings;
         }
         #endregion
-        #region WorkingDirectory
+        #region Cwd
         /// <summary>
-        ///   <p><em>Sets <see cref="PulumiStateDeleteSettings.WorkingDirectory"/></em></p>
+        ///   <p><em>Sets <see cref="PulumiStateDeleteSettings.Cwd"/></em></p>
         ///   <p>Run pulumi as if it had been started in another directory</p>
         /// </summary>
         [Pure]
-        public static PulumiStateDeleteSettings SetWorkingDirectory(this PulumiStateDeleteSettings toolSettings, string workingDirectory)
+        public static PulumiStateDeleteSettings SetCwd(this PulumiStateDeleteSettings toolSettings, string cwd)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.WorkingDirectory = workingDirectory;
+            toolSettings.Cwd = cwd;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="PulumiStateDeleteSettings.WorkingDirectory"/></em></p>
+        ///   <p><em>Resets <see cref="PulumiStateDeleteSettings.Cwd"/></em></p>
         ///   <p>Run pulumi as if it had been started in another directory</p>
         /// </summary>
         [Pure]
-        public static PulumiStateDeleteSettings ResetWorkingDirectory(this PulumiStateDeleteSettings toolSettings)
+        public static PulumiStateDeleteSettings ResetCwd(this PulumiStateDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.WorkingDirectory = null;
+            toolSettings.Cwd = null;
             return toolSettings;
         }
         #endregion
@@ -29698,7 +29698,7 @@ namespace Nuke.Common.Tools.Pulumi
         #region ResourceURN
         /// <summary>
         ///   <p><em>Sets <see cref="PulumiStateUnprotectSettings.ResourceURN"/></em></p>
-        ///   <p>The resource as specified by its Pulumi URN (use <c>pulumi stack �show-urns</c> to get it).</p>
+        ///   <p>The resource as specified by its Pulumi URN (use <c>pulumi stack show-urns</c> to get it).</p>
         /// </summary>
         [Pure]
         public static PulumiStateUnprotectSettings SetResourceURN(this PulumiStateUnprotectSettings toolSettings, string resourceURN)
@@ -29709,7 +29709,7 @@ namespace Nuke.Common.Tools.Pulumi
         }
         /// <summary>
         ///   <p><em>Resets <see cref="PulumiStateUnprotectSettings.ResourceURN"/></em></p>
-        ///   <p>The resource as specified by its Pulumi URN (use <c>pulumi stack �show-urns</c> to get it).</p>
+        ///   <p>The resource as specified by its Pulumi URN (use <c>pulumi stack show-urns</c> to get it).</p>
         /// </summary>
         [Pure]
         public static PulumiStateUnprotectSettings ResetResourceURN(this PulumiStateUnprotectSettings toolSettings)
@@ -29881,27 +29881,27 @@ namespace Nuke.Common.Tools.Pulumi
             return toolSettings;
         }
         #endregion
-        #region WorkingDirectory
+        #region Cwd
         /// <summary>
-        ///   <p><em>Sets <see cref="PulumiStateUnprotectSettings.WorkingDirectory"/></em></p>
+        ///   <p><em>Sets <see cref="PulumiStateUnprotectSettings.Cwd"/></em></p>
         ///   <p>Run pulumi as if it had been started in another directory</p>
         /// </summary>
         [Pure]
-        public static PulumiStateUnprotectSettings SetWorkingDirectory(this PulumiStateUnprotectSettings toolSettings, string workingDirectory)
+        public static PulumiStateUnprotectSettings SetCwd(this PulumiStateUnprotectSettings toolSettings, string cwd)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.WorkingDirectory = workingDirectory;
+            toolSettings.Cwd = cwd;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="PulumiStateUnprotectSettings.WorkingDirectory"/></em></p>
+        ///   <p><em>Resets <see cref="PulumiStateUnprotectSettings.Cwd"/></em></p>
         ///   <p>Run pulumi as if it had been started in another directory</p>
         /// </summary>
         [Pure]
-        public static PulumiStateUnprotectSettings ResetWorkingDirectory(this PulumiStateUnprotectSettings toolSettings)
+        public static PulumiStateUnprotectSettings ResetCwd(this PulumiStateUnprotectSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.WorkingDirectory = null;
+            toolSettings.Cwd = null;
             return toolSettings;
         }
         #endregion
@@ -31538,27 +31538,27 @@ namespace Nuke.Common.Tools.Pulumi
             return toolSettings;
         }
         #endregion
-        #region WorkingDirectory
+        #region Cwd
         /// <summary>
-        ///   <p><em>Sets <see cref="PulumiUpSettings.WorkingDirectory"/></em></p>
+        ///   <p><em>Sets <see cref="PulumiUpSettings.Cwd"/></em></p>
         ///   <p>Run pulumi as if it had been started in another directory</p>
         /// </summary>
         [Pure]
-        public static PulumiUpSettings SetWorkingDirectory(this PulumiUpSettings toolSettings, string workingDirectory)
+        public static PulumiUpSettings SetCwd(this PulumiUpSettings toolSettings, string cwd)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.WorkingDirectory = workingDirectory;
+            toolSettings.Cwd = cwd;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="PulumiUpSettings.WorkingDirectory"/></em></p>
+        ///   <p><em>Resets <see cref="PulumiUpSettings.Cwd"/></em></p>
         ///   <p>Run pulumi as if it had been started in another directory</p>
         /// </summary>
         [Pure]
-        public static PulumiUpSettings ResetWorkingDirectory(this PulumiUpSettings toolSettings)
+        public static PulumiUpSettings ResetCwd(this PulumiUpSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.WorkingDirectory = null;
+            toolSettings.Cwd = null;
             return toolSettings;
         }
         #endregion
@@ -32010,27 +32010,27 @@ namespace Nuke.Common.Tools.Pulumi
             return toolSettings;
         }
         #endregion
-        #region WorkingDirectory
+        #region Cwd
         /// <summary>
-        ///   <p><em>Sets <see cref="PulumiVersionSettings.WorkingDirectory"/></em></p>
+        ///   <p><em>Sets <see cref="PulumiVersionSettings.Cwd"/></em></p>
         ///   <p>Run pulumi as if it had been started in another directory</p>
         /// </summary>
         [Pure]
-        public static PulumiVersionSettings SetWorkingDirectory(this PulumiVersionSettings toolSettings, string workingDirectory)
+        public static PulumiVersionSettings SetCwd(this PulumiVersionSettings toolSettings, string cwd)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.WorkingDirectory = workingDirectory;
+            toolSettings.Cwd = cwd;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="PulumiVersionSettings.WorkingDirectory"/></em></p>
+        ///   <p><em>Resets <see cref="PulumiVersionSettings.Cwd"/></em></p>
         ///   <p>Run pulumi as if it had been started in another directory</p>
         /// </summary>
         [Pure]
-        public static PulumiVersionSettings ResetWorkingDirectory(this PulumiVersionSettings toolSettings)
+        public static PulumiVersionSettings ResetCwd(this PulumiVersionSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.WorkingDirectory = null;
+            toolSettings.Cwd = null;
             return toolSettings;
         }
         #endregion
@@ -32482,27 +32482,27 @@ namespace Nuke.Common.Tools.Pulumi
             return toolSettings;
         }
         #endregion
-        #region WorkingDirectory
+        #region Cwd
         /// <summary>
-        ///   <p><em>Sets <see cref="PulumiWhoAmISettings.WorkingDirectory"/></em></p>
+        ///   <p><em>Sets <see cref="PulumiWhoAmISettings.Cwd"/></em></p>
         ///   <p>Run pulumi as if it had been started in another directory</p>
         /// </summary>
         [Pure]
-        public static PulumiWhoAmISettings SetWorkingDirectory(this PulumiWhoAmISettings toolSettings, string workingDirectory)
+        public static PulumiWhoAmISettings SetCwd(this PulumiWhoAmISettings toolSettings, string cwd)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.WorkingDirectory = workingDirectory;
+            toolSettings.Cwd = cwd;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="PulumiWhoAmISettings.WorkingDirectory"/></em></p>
+        ///   <p><em>Resets <see cref="PulumiWhoAmISettings.Cwd"/></em></p>
         ///   <p>Run pulumi as if it had been started in another directory</p>
         /// </summary>
         [Pure]
-        public static PulumiWhoAmISettings ResetWorkingDirectory(this PulumiWhoAmISettings toolSettings)
+        public static PulumiWhoAmISettings ResetCwd(this PulumiWhoAmISettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.WorkingDirectory = null;
+            toolSettings.Cwd = null;
             return toolSettings;
         }
         #endregion

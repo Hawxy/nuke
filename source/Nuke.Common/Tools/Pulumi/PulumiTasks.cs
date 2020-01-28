@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using JetBrains.Annotations;
 using Newtonsoft.Json;
+using Nuke.Common.CI.AzurePipelines;
+using Nuke.Common.IO;
 using Nuke.Common.Tooling;
 using Nuke.Common.Utilities;
 
@@ -10,7 +13,7 @@ namespace Nuke.Common.Tools.Pulumi
 {
     public partial class PulumiTasks
     {
-        public static void EnsureInstalled()
+        public static async Task EnsureInstalled()
         {
             try
             {
@@ -18,13 +21,26 @@ namespace Nuke.Common.Tools.Pulumi
             }
             catch (Exception)
             {
+                Logger.Info("Installing Pulumi...");
                 if (EnvironmentInfo.IsWin)
                 {
-                    var psScript = @"-NoProfile -InputFormat None -ExecutionPolicy Bypass -Command ""[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; iex ((New-Object System.Net.WebClient).DownloadString('https://get.pulumi.com/install.ps1'))""";
+                    var file = NukeBuild.TemporaryDirectory / "install.ps1";
+                    await HttpTasks.HttpDownloadFileAsync("https://get.pulumi.com/install.ps1", file);
+                    var psScript = $"-NoProfile -InputFormat None -ExecutionPolicy Bypass -Command {file}";
                     ProcessTasks.StartProcess(ToolPathResolver.GetPathExecutable("powershell"), psScript).AssertZeroExitCode();
                 }
                 else
                     ProcessTasks.StartProcess(ToolPathResolver.GetPathExecutable("bash"), "curl -fsSL https://get.pulumi.com | sh").AssertZeroExitCode();
+            }
+
+            //Fix an issue on azure pipelines where DOTNET_CLI_HOME isn't set for the dotnet runner.
+            if (AzurePipelines.IsRunningAzurePipelines)
+            {
+                if (EnvironmentInfo.GetVariable<string>("DOTNET_CLI_HOME") is null)
+                {
+                    Logger.Info("DOTNET_CLI_HOME is missing, setting...");
+                    EnvironmentInfo.SetVariable("DOTNET_CLI_HOME", EnvironmentInfo.GetVariable<string>("AGENT_TEMPDIRECTORY"));
+                }
             }
         }
 
