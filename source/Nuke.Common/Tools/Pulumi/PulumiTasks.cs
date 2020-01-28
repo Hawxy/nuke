@@ -44,21 +44,30 @@ namespace Nuke.Common.Tools.Pulumi
             }
         }
 
+        public static IReadOnlyDictionary<string, object> GetStackOutput(Configure<PulumiStackOutputSettings> configurator)
+        {
+            return GetStackOutput(configurator(new PulumiStackOutputSettings()));
+        }
+
         public static IReadOnlyDictionary<string, object> GetStackOutput(PulumiStackOutputSettings toolSettings = null)
         {
             toolSettings ??= new PulumiStackOutputSettings();
-            return ParseJson<IReadOnlyDictionary<string, object>>(toolSettings.EnableJson().DisableLogOutput());
+            return ParseJson<IReadOnlyDictionary<string, object>>(toolSettings.EnableJson());
         }
 
+        public static IReadOnlyDictionary<string, PulumiConfig> GetConfigOutput(Configure<PulumiConfigSettings> configurator)
+        {
+            return GetConfigOutput(configurator(new PulumiConfigSettings()));
+        }
         public static IReadOnlyDictionary<string, PulumiConfig> GetConfigOutput(PulumiConfigSettings toolSettings = null)
         {
             toolSettings ??= new PulumiConfigSettings();
-            return ParseJson<IReadOnlyDictionary<string, PulumiConfig>>(toolSettings.EnableJson().DisableLogOutput());
+            return ParseJson<IReadOnlyDictionary<string, PulumiConfig>>(toolSettings.EnableJson());
         }
 
         private static T ParseJson<T>(ToolSettings toolSettings)
         {
-            var process = ProcessTasks.StartProcess(toolSettings);
+            var process = ProcessTasks.StartProcess(toolSettings).AssertZeroExitCode();
             var output = process.Output.EnsureOnlyStd().Select(x => x.Text).ToList();
             try
             {
