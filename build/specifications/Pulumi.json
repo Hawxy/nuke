@@ -6,13 +6,14 @@
   "name": "Pulumi",
   "officialUrl": "https://www.pulumi.com/",
   "help": "Pulumi is controlled primarily using the command line interface (CLI). It works in conjunction with the Pulumi service to deploy changes to your cloud apps and infrastructure. It keeps a history of who updated what in your team and when. This CLI has been designed for great inner loop productivity, in addition to continuous integration and delivery scenarios.",
-  "pathExecutable": "pulumi",
+  "customExecutable": true,
   "tasks": [
     {
       "help": "Cancel a stacks currently running update, if any.",
       "postfix": "Cancel",
       "definiteArgument": "cancel",
       "settingsClass": {
+        "baseClass": "PulumiBaseSettings",
         "properties": [
           {
             "name": "Stack",
@@ -38,6 +39,7 @@
       ],
       "definiteArgument": "config",
       "settingsClass": {
+        "baseClass": "PulumiBaseSettings",
         "properties": [
           {
             "name": "Json",
@@ -63,6 +65,7 @@
       ],
       "definiteArgument": "config get",
       "settingsClass": {
+        "baseClass": "PulumiBaseSettings",
         "properties": [
           {
             "name": "Value",
@@ -94,6 +97,7 @@
       ],
       "definiteArgument": "config refresh",
       "settingsClass": {
+        "baseClass": "PulumiBaseSettings",
         "properties": [
           {
             "name": "Force",
@@ -113,6 +117,7 @@
       ],
       "definiteArgument": "config rm",
       "settingsClass": {
+        "baseClass": "PulumiBaseSettings",
         "properties": [
           {
             "name": "Value",
@@ -138,6 +143,7 @@
       ],
       "definiteArgument": "config rm",
       "settingsClass": {
+        "baseClass": "PulumiBaseSettings",
         "properties": [
           {
             "name": "Value",
@@ -175,6 +181,7 @@
       ],
       "definiteArgument": "destroy",
       "settingsClass": {
+        "baseClass": "PulumiBaseSettings",
         "properties": [
           {
             "name": "Debug",
@@ -265,6 +272,7 @@
       ],
       "definiteArgument": "history",
       "settingsClass": {
+        "baseClass": "PulumiBaseSettings",
         "properties": [
           {
             "name": "Json",
@@ -286,6 +294,7 @@
       "postfix": "Login",
       "definiteArgument": "login",
       "settingsClass": {
+        "baseClass": "PulumiBaseSettings",
         "properties": [
           {
             "name": "Location",
@@ -313,6 +322,7 @@
       "postfix": "Logout",
       "definiteArgument": "logout",
       "settingsClass": {
+        "baseClass": "PulumiBaseSettings",
         "properties": [
           {
             "name": "Location",
@@ -344,6 +354,7 @@
       ],
       "definiteArgument": "logs",
       "settingsClass": {
+        "baseClass": "PulumiBaseSettings",
         "properties": [
           {
             "name": "Follow",
@@ -377,6 +388,7 @@
       "postfix": "PluginInstall",
       "definiteArgument": "plugin install",
       "settingsClass": {
+        "baseClass": "PulumiBaseSettings",
         "properties": [
           {
             "name": "KindNameVersion",
@@ -416,6 +428,7 @@
       "postfix": "PluginList",
       "definiteArgument": "plugin ls",
       "settingsClass": {
+        "baseClass": "PulumiBaseSettings",
         "properties": [
           {
             "name": "Json",
@@ -437,6 +450,7 @@
       "postfix": "PluginRemove",
       "definiteArgument": "plugin rm",
       "settingsClass": {
+        "baseClass": "PulumiBaseSettings",
         "properties": [
           {
             "name": "KindNameVersion",
@@ -468,6 +482,7 @@
       ],
       "definiteArgument": "preview",
       "settingsClass": {
+        "baseClass": "PulumiBaseSettings",
         "properties": [
           {
             "name": "Config",
@@ -587,6 +602,7 @@
       ],
       "definiteArgument": "refresh",
       "settingsClass": {
+        "baseClass": "PulumiBaseSettings",
         "properties": [
           {
             "name": "Debug",
@@ -660,7 +676,7 @@
         "stackInherit"
       ],
       "definiteArgument": "stack",
-      "settingsClass": {}
+      "settingsClass": { "baseClass": "PulumiBaseSettings" }
     },
     {
       "help": "Export a stack's deployment to standard out.",
@@ -671,6 +687,7 @@
       ],
       "definiteArgument": "stack export",
       "settingsClass": {
+        "baseClass": "PulumiBaseSettings",
         "properties": [
           {
             "name": "File",
@@ -690,6 +707,7 @@
       ],
       "definiteArgument": "stack graph",
       "settingsClass": {
+        "baseClass": "PulumiBaseSettings",
         "properties": [
           {
             "name": "File",
@@ -733,6 +751,7 @@
       ],
       "definiteArgument": "stack export",
       "settingsClass": {
+        "baseClass": "PulumiBaseSettings",
         "properties": [
           {
             "name": "File",
@@ -758,6 +777,7 @@
       ],
       "definiteArgument": "stack init",
       "settingsClass": {
+        "baseClass": "PulumiBaseSettings",
         "properties": [
           {
             "name": "Name",
@@ -783,6 +803,7 @@
       ],
       "definiteArgument": "stack ls",
       "settingsClass": {
+        "baseClass": "PulumiBaseSettings",
         "properties": [
           {
             "name": "All",
@@ -826,6 +847,7 @@
       ],
       "definiteArgument": "stack output",
       "settingsClass": {
+        "baseClass": "PulumiBaseSettings",
         "properties": [
           {
             "name": "PropertyName",
@@ -851,6 +873,7 @@
       ],
       "definiteArgument": "stack rename",
       "settingsClass": {
+        "baseClass": "PulumiBaseSettings",
         "properties": [
           {
             "name": "Name",
@@ -870,6 +893,7 @@
       ],
       "definiteArgument": "stack rm",
       "settingsClass": {
+        "baseClass": "PulumiBaseSettings",
         "properties": [
           {
             "name": "Name",
@@ -907,6 +931,7 @@
       ],
       "definiteArgument": "stack select",
       "settingsClass": {
+        "baseClass": "PulumiBaseSettings",
         "properties": [
           {
             "name": "Name",
@@ -926,6 +951,7 @@
       ],
       "definiteArgument": "stack tag get",
       "settingsClass": {
+        "baseClass": "PulumiBaseSettings",
         "properties": [
           {
             "name": "Name",
@@ -945,6 +971,7 @@
       ],
       "definiteArgument": "stack tag ls",
       "settingsClass": {
+        "baseClass": "PulumiBaseSettings",
         "properties": [
           {
             "name": "Json",
@@ -964,6 +991,7 @@
       ],
       "definiteArgument": "stack tag rm",
       "settingsClass": {
+        "baseClass": "PulumiBaseSettings",
         "properties": [
           {
             "name": "Name",
@@ -983,6 +1011,7 @@
       ],
       "definiteArgument": "stack tag set",
       "settingsClass": {
+        "baseClass": "PulumiBaseSettings",
         "properties": [
           {
             "name": "Name",
@@ -1007,6 +1036,7 @@
       ],
       "definiteArgument": "state delete",
       "settingsClass": {
+        "baseClass": "PulumiBaseSettings",
         "properties": [
           {
             "name": "ResourceURN",
@@ -1037,6 +1067,7 @@
       ],
       "definiteArgument": "state unprotect",
       "settingsClass": {
+        "baseClass": "PulumiBaseSettings",
         "properties": [
           {
             "name": "ResourceURN",
@@ -1068,6 +1099,7 @@
       ],
       "definiteArgument": "up",
       "settingsClass": {
+        "baseClass": "PulumiBaseSettings",
         "properties": [
           {
             "name": "Config",
@@ -1200,13 +1232,13 @@
       "help": "Print Pulumi’s version number.",
       "postfix": "Version",
       "definiteArgument": "version",
-      "settingsClass": {}
+      "settingsClass": { "baseClass": "PulumiBaseSettings" }
     },
     {
       "help": "Displays the username of the currently logged in user.",
       "postfix": "WhoAmI",
       "definiteArgument": "whoami",
-      "settingsClass": {}
+      "settingsClass": { "baseClass": "PulumiBaseSettings" }
     }
   ],
   "commonTaskProperties": [

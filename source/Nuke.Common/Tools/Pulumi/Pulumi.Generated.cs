@@ -1,4 +1,4 @@
-// Generated from https://github.com/nuke-build/nuke/blob/master/build/specifications/Pulumi.json
+﻿// Generated from https://github.com/Hawxy/nuke/blob/master/build/specifications/Pulumi.json
 
 using JetBrains.Annotations;
 using Newtonsoft.Json;
@@ -31,7 +31,7 @@ namespace Nuke.Common.Tools.Pulumi
         /// </summary>
         public static string PulumiPath =>
             ToolPathResolver.TryGetEnvironmentExecutable("PULUMI_EXE") ??
-            ToolPathResolver.GetPathExecutable("pulumi");
+            GetToolPath();
         public static Action<OutputType, string> PulumiLogger { get; set; } = ProcessTasks.DefaultLogger;
         /// <summary>
         ///   <p>Pulumi is controlled primarily using the command line interface (CLI). It works in conjunction with the Pulumi service to deploy changes to your cloud apps and infrastructure. It keeps a history of who updated what in your team and when. This CLI has been designed for great inner loop productivity, in addition to continuous integration and delivery scenarios.</p>
@@ -3303,12 +3303,12 @@ namespace Nuke.Common.Tools.Pulumi
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class PulumiCancelSettings : ToolSettings
+    public partial class PulumiCancelSettings : PulumiBaseSettings
     {
         /// <summary>
         ///   Path to the Pulumi executable.
         /// </summary>
-        public override string ToolPath => base.ToolPath ?? PulumiTasks.PulumiPath;
+        public override string ToolPath => base.ToolPath ?? GetToolPath();
         public override Action<OutputType, string> CustomLogger => PulumiTasks.PulumiLogger;
         /// <summary>
         ///   The name of the stack to operate on. Defaults to the current stack.
@@ -3390,12 +3390,12 @@ namespace Nuke.Common.Tools.Pulumi
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class PulumiConfigSettings : ToolSettings
+    public partial class PulumiConfigSettings : PulumiBaseSettings
     {
         /// <summary>
         ///   Path to the Pulumi executable.
         /// </summary>
-        public override string ToolPath => base.ToolPath ?? PulumiTasks.PulumiPath;
+        public override string ToolPath => base.ToolPath ?? GetToolPath();
         public override Action<OutputType, string> CustomLogger => PulumiTasks.PulumiLogger;
         /// <summary>
         ///    Emit output as JSON.
@@ -3487,12 +3487,12 @@ namespace Nuke.Common.Tools.Pulumi
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class PulumiConfigGetSettings : ToolSettings
+    public partial class PulumiConfigGetSettings : PulumiBaseSettings
     {
         /// <summary>
         ///   Path to the Pulumi executable.
         /// </summary>
-        public override string ToolPath => base.ToolPath ?? PulumiTasks.PulumiPath;
+        public override string ToolPath => base.ToolPath ?? GetToolPath();
         public override Action<OutputType, string> CustomLogger => PulumiTasks.PulumiLogger;
         /// <summary>
         ///   The configuration value to get.
@@ -3589,12 +3589,12 @@ namespace Nuke.Common.Tools.Pulumi
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class PulumiConfigRefreshSettings : ToolSettings
+    public partial class PulumiConfigRefreshSettings : PulumiBaseSettings
     {
         /// <summary>
         ///   Path to the Pulumi executable.
         /// </summary>
-        public override string ToolPath => base.ToolPath ?? PulumiTasks.PulumiPath;
+        public override string ToolPath => base.ToolPath ?? GetToolPath();
         public override Action<OutputType, string> CustomLogger => PulumiTasks.PulumiLogger;
         /// <summary>
         ///   Overwrite configuration file, if it exists, without creating a backup.
@@ -3681,12 +3681,12 @@ namespace Nuke.Common.Tools.Pulumi
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class PulumiConfigRemoveSettings : ToolSettings
+    public partial class PulumiConfigRemoveSettings : PulumiBaseSettings
     {
         /// <summary>
         ///   Path to the Pulumi executable.
         /// </summary>
-        public override string ToolPath => base.ToolPath ?? PulumiTasks.PulumiPath;
+        public override string ToolPath => base.ToolPath ?? GetToolPath();
         public override Action<OutputType, string> CustomLogger => PulumiTasks.PulumiLogger;
         /// <summary>
         ///   The configuration value to remove.
@@ -3778,12 +3778,12 @@ namespace Nuke.Common.Tools.Pulumi
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class PulumiConfigSetSettings : ToolSettings
+    public partial class PulumiConfigSetSettings : PulumiBaseSettings
     {
         /// <summary>
         ///   Path to the Pulumi executable.
         /// </summary>
-        public override string ToolPath => base.ToolPath ?? PulumiTasks.PulumiPath;
+        public override string ToolPath => base.ToolPath ?? GetToolPath();
         public override Action<OutputType, string> CustomLogger => PulumiTasks.PulumiLogger;
         /// <summary>
         ///   The configuration value to set.
@@ -3885,12 +3885,12 @@ namespace Nuke.Common.Tools.Pulumi
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class PulumiDestroySettings : ToolSettings
+    public partial class PulumiDestroySettings : PulumiBaseSettings
     {
         /// <summary>
         ///   Path to the Pulumi executable.
         /// </summary>
-        public override string ToolPath => base.ToolPath ?? PulumiTasks.PulumiPath;
+        public override string ToolPath => base.ToolPath ?? GetToolPath();
         public override Action<OutputType, string> CustomLogger => PulumiTasks.PulumiLogger;
         /// <summary>
         ///   Print detailed debugging output during resource operations.
@@ -4037,12 +4037,12 @@ namespace Nuke.Common.Tools.Pulumi
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class PulumiHistorySettings : ToolSettings
+    public partial class PulumiHistorySettings : PulumiBaseSettings
     {
         /// <summary>
         ///   Path to the Pulumi executable.
         /// </summary>
-        public override string ToolPath => base.ToolPath ?? PulumiTasks.PulumiPath;
+        public override string ToolPath => base.ToolPath ?? GetToolPath();
         public override Action<OutputType, string> CustomLogger => PulumiTasks.PulumiLogger;
         /// <summary>
         ///   Emit output as JSON.
@@ -4129,12 +4129,12 @@ namespace Nuke.Common.Tools.Pulumi
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class PulumiLoginSettings : ToolSettings
+    public partial class PulumiLoginSettings : PulumiBaseSettings
     {
         /// <summary>
         ///   Path to the Pulumi executable.
         /// </summary>
-        public override string ToolPath => base.ToolPath ?? PulumiTasks.PulumiPath;
+        public override string ToolPath => base.ToolPath ?? GetToolPath();
         public override Action<OutputType, string> CustomLogger => PulumiTasks.PulumiLogger;
         /// <summary>
         ///   Specify a URL or a local/cloud path to the Pulumi instance you wish to use. Defaults to app.pulumi.com.
@@ -4221,12 +4221,12 @@ namespace Nuke.Common.Tools.Pulumi
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class PulumiLogoutSettings : ToolSettings
+    public partial class PulumiLogoutSettings : PulumiBaseSettings
     {
         /// <summary>
         ///   Path to the Pulumi executable.
         /// </summary>
-        public override string ToolPath => base.ToolPath ?? PulumiTasks.PulumiPath;
+        public override string ToolPath => base.ToolPath ?? GetToolPath();
         public override Action<OutputType, string> CustomLogger => PulumiTasks.PulumiLogger;
         /// <summary>
         ///   Specify a URL or a local/cloud path to the Pulumi instance you wish to logout from. If no URL is provided, you will be logged out of the current backend.
@@ -4313,12 +4313,12 @@ namespace Nuke.Common.Tools.Pulumi
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class PulumiLogsSettings : ToolSettings
+    public partial class PulumiLogsSettings : PulumiBaseSettings
     {
         /// <summary>
         ///   Path to the Pulumi executable.
         /// </summary>
-        public override string ToolPath => base.ToolPath ?? PulumiTasks.PulumiPath;
+        public override string ToolPath => base.ToolPath ?? GetToolPath();
         public override Action<OutputType, string> CustomLogger => PulumiTasks.PulumiLogger;
         /// <summary>
         ///   Follow the log stream in real time (like tail -f).
@@ -4420,12 +4420,12 @@ namespace Nuke.Common.Tools.Pulumi
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class PulumiPluginInstallSettings : ToolSettings
+    public partial class PulumiPluginInstallSettings : PulumiBaseSettings
     {
         /// <summary>
         ///   Path to the Pulumi executable.
         /// </summary>
-        public override string ToolPath => base.ToolPath ?? PulumiTasks.PulumiPath;
+        public override string ToolPath => base.ToolPath ?? GetToolPath();
         public override Action<OutputType, string> CustomLogger => PulumiTasks.PulumiLogger;
         /// <summary>
         ///   Installation may be run either with a specific KIND, NAME, and VERSION, or by omitting these and letting Pulumi compute the set of plugins that may be required by the current project. VERSION cannot be a range: it must be a specific number.
@@ -4522,12 +4522,12 @@ namespace Nuke.Common.Tools.Pulumi
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class PulumiPluginListSettings : ToolSettings
+    public partial class PulumiPluginListSettings : PulumiBaseSettings
     {
         /// <summary>
         ///   Path to the Pulumi executable.
         /// </summary>
-        public override string ToolPath => base.ToolPath ?? PulumiTasks.PulumiPath;
+        public override string ToolPath => base.ToolPath ?? GetToolPath();
         public override Action<OutputType, string> CustomLogger => PulumiTasks.PulumiLogger;
         /// <summary>
         ///   Emit output as JSON.
@@ -4609,12 +4609,12 @@ namespace Nuke.Common.Tools.Pulumi
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class PulumiPluginRemoveSettings : ToolSettings
+    public partial class PulumiPluginRemoveSettings : PulumiBaseSettings
     {
         /// <summary>
         ///   Path to the Pulumi executable.
         /// </summary>
-        public override string ToolPath => base.ToolPath ?? PulumiTasks.PulumiPath;
+        public override string ToolPath => base.ToolPath ?? GetToolPath();
         public override Action<OutputType, string> CustomLogger => PulumiTasks.PulumiLogger;
         /// <summary>
         ///   Specify KIND, NAME, and/or VERSION to narrow down what will be removed. If none are specified, the entire cache will be cleared. If only KIND and NAME are specified, but not VERSION, all versions of the plugin with the given KIND and NAME will be removed. VERSION may be a range.
@@ -4701,12 +4701,12 @@ namespace Nuke.Common.Tools.Pulumi
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class PulumiPreviewSettings : ToolSettings
+    public partial class PulumiPreviewSettings : PulumiBaseSettings
     {
         /// <summary>
         ///   Path to the Pulumi executable.
         /// </summary>
-        public override string ToolPath => base.ToolPath ?? PulumiTasks.PulumiPath;
+        public override string ToolPath => base.ToolPath ?? GetToolPath();
         public override Action<OutputType, string> CustomLogger => PulumiTasks.PulumiLogger;
         /// <summary>
         ///   Config to use during the preview.
@@ -4877,12 +4877,12 @@ namespace Nuke.Common.Tools.Pulumi
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class PulumiRefreshSettings : ToolSettings
+    public partial class PulumiRefreshSettings : PulumiBaseSettings
     {
         /// <summary>
         ///   Path to the Pulumi executable.
         /// </summary>
-        public override string ToolPath => base.ToolPath ?? PulumiTasks.PulumiPath;
+        public override string ToolPath => base.ToolPath ?? GetToolPath();
         public override Action<OutputType, string> CustomLogger => PulumiTasks.PulumiLogger;
         /// <summary>
         ///   Print detailed debugging output during resource operations.
@@ -5015,12 +5015,12 @@ namespace Nuke.Common.Tools.Pulumi
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class PulumiStackSettings : ToolSettings
+    public partial class PulumiStackSettings : PulumiBaseSettings
     {
         /// <summary>
         ///   Path to the Pulumi executable.
         /// </summary>
-        public override string ToolPath => base.ToolPath ?? PulumiTasks.PulumiPath;
+        public override string ToolPath => base.ToolPath ?? GetToolPath();
         public override Action<OutputType, string> CustomLogger => PulumiTasks.PulumiLogger;
         /// <summary>
         ///   The name of the stack to operate on. Defaults to the current stack
@@ -5112,12 +5112,12 @@ namespace Nuke.Common.Tools.Pulumi
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class PulumiStackExportSettings : ToolSettings
+    public partial class PulumiStackExportSettings : PulumiBaseSettings
     {
         /// <summary>
         ///   Path to the Pulumi executable.
         /// </summary>
-        public override string ToolPath => base.ToolPath ?? PulumiTasks.PulumiPath;
+        public override string ToolPath => base.ToolPath ?? GetToolPath();
         public override Action<OutputType, string> CustomLogger => PulumiTasks.PulumiLogger;
         /// <summary>
         ///   A filename to write stack output to.
@@ -5214,12 +5214,12 @@ namespace Nuke.Common.Tools.Pulumi
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class PulumiStackGraphSettings : ToolSettings
+    public partial class PulumiStackGraphSettings : PulumiBaseSettings
     {
         /// <summary>
         ///   Path to the Pulumi executable.
         /// </summary>
-        public override string ToolPath => base.ToolPath ?? PulumiTasks.PulumiPath;
+        public override string ToolPath => base.ToolPath ?? GetToolPath();
         public override Action<OutputType, string> CustomLogger => PulumiTasks.PulumiLogger;
         /// <summary>
         ///   The file to export to.
@@ -5336,12 +5336,12 @@ namespace Nuke.Common.Tools.Pulumi
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class PulumiStackImportSettings : ToolSettings
+    public partial class PulumiStackImportSettings : PulumiBaseSettings
     {
         /// <summary>
         ///   Path to the Pulumi executable.
         /// </summary>
-        public override string ToolPath => base.ToolPath ?? PulumiTasks.PulumiPath;
+        public override string ToolPath => base.ToolPath ?? GetToolPath();
         public override Action<OutputType, string> CustomLogger => PulumiTasks.PulumiLogger;
         /// <summary>
         ///   A filename to read stack input from.
@@ -5443,12 +5443,12 @@ namespace Nuke.Common.Tools.Pulumi
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class PulumiStackInitSettings : ToolSettings
+    public partial class PulumiStackInitSettings : PulumiBaseSettings
     {
         /// <summary>
         ///   Path to the Pulumi executable.
         /// </summary>
-        public override string ToolPath => base.ToolPath ?? PulumiTasks.PulumiPath;
+        public override string ToolPath => base.ToolPath ?? GetToolPath();
         public override Action<OutputType, string> CustomLogger => PulumiTasks.PulumiLogger;
         /// <summary>
         ///   The name of the stack to create. Include org name if required.
@@ -5550,12 +5550,12 @@ namespace Nuke.Common.Tools.Pulumi
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class PulumiStackListSettings : ToolSettings
+    public partial class PulumiStackListSettings : PulumiBaseSettings
     {
         /// <summary>
         ///   Path to the Pulumi executable.
         /// </summary>
-        public override string ToolPath => base.ToolPath ?? PulumiTasks.PulumiPath;
+        public override string ToolPath => base.ToolPath ?? GetToolPath();
         public override Action<OutputType, string> CustomLogger => PulumiTasks.PulumiLogger;
         /// <summary>
         ///   List all stacks instead of just stacks for the current project.
@@ -5672,12 +5672,12 @@ namespace Nuke.Common.Tools.Pulumi
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class PulumiStackOutputSettings : ToolSettings
+    public partial class PulumiStackOutputSettings : PulumiBaseSettings
     {
         /// <summary>
         ///   Path to the Pulumi executable.
         /// </summary>
-        public override string ToolPath => base.ToolPath ?? PulumiTasks.PulumiPath;
+        public override string ToolPath => base.ToolPath ?? GetToolPath();
         public override Action<OutputType, string> CustomLogger => PulumiTasks.PulumiLogger;
         /// <summary>
         ///   Show output of a specific property.
@@ -5779,12 +5779,12 @@ namespace Nuke.Common.Tools.Pulumi
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class PulumiStackRenameSettings : ToolSettings
+    public partial class PulumiStackRenameSettings : PulumiBaseSettings
     {
         /// <summary>
         ///   Path to the Pulumi executable.
         /// </summary>
-        public override string ToolPath => base.ToolPath ?? PulumiTasks.PulumiPath;
+        public override string ToolPath => base.ToolPath ?? GetToolPath();
         public override Action<OutputType, string> CustomLogger => PulumiTasks.PulumiLogger;
         /// <summary>
         ///   The name of the new stack.
@@ -5881,12 +5881,12 @@ namespace Nuke.Common.Tools.Pulumi
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class PulumiStackRemoveSettings : ToolSettings
+    public partial class PulumiStackRemoveSettings : PulumiBaseSettings
     {
         /// <summary>
         ///   Path to the Pulumi executable.
         /// </summary>
-        public override string ToolPath => base.ToolPath ?? PulumiTasks.PulumiPath;
+        public override string ToolPath => base.ToolPath ?? GetToolPath();
         public override Action<OutputType, string> CustomLogger => PulumiTasks.PulumiLogger;
         /// <summary>
         ///   The name of the stack to remove.
@@ -5998,12 +5998,12 @@ namespace Nuke.Common.Tools.Pulumi
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class PulumiStackSelectSettings : ToolSettings
+    public partial class PulumiStackSelectSettings : PulumiBaseSettings
     {
         /// <summary>
         ///   Path to the Pulumi executable.
         /// </summary>
-        public override string ToolPath => base.ToolPath ?? PulumiTasks.PulumiPath;
+        public override string ToolPath => base.ToolPath ?? GetToolPath();
         public override Action<OutputType, string> CustomLogger => PulumiTasks.PulumiLogger;
         /// <summary>
         ///   The name of the new stack.
@@ -6100,12 +6100,12 @@ namespace Nuke.Common.Tools.Pulumi
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class PulumiStackTagGetSettings : ToolSettings
+    public partial class PulumiStackTagGetSettings : PulumiBaseSettings
     {
         /// <summary>
         ///   Path to the Pulumi executable.
         /// </summary>
-        public override string ToolPath => base.ToolPath ?? PulumiTasks.PulumiPath;
+        public override string ToolPath => base.ToolPath ?? GetToolPath();
         public override Action<OutputType, string> CustomLogger => PulumiTasks.PulumiLogger;
         /// <summary>
         ///   The name of the tag.
@@ -6202,12 +6202,12 @@ namespace Nuke.Common.Tools.Pulumi
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class PulumiStackTagListSettings : ToolSettings
+    public partial class PulumiStackTagListSettings : PulumiBaseSettings
     {
         /// <summary>
         ///   Path to the Pulumi executable.
         /// </summary>
-        public override string ToolPath => base.ToolPath ?? PulumiTasks.PulumiPath;
+        public override string ToolPath => base.ToolPath ?? GetToolPath();
         public override Action<OutputType, string> CustomLogger => PulumiTasks.PulumiLogger;
         /// <summary>
         ///   Emit output as JSON.
@@ -6304,12 +6304,12 @@ namespace Nuke.Common.Tools.Pulumi
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class PulumiStackTagRemoveSettings : ToolSettings
+    public partial class PulumiStackTagRemoveSettings : PulumiBaseSettings
     {
         /// <summary>
         ///   Path to the Pulumi executable.
         /// </summary>
-        public override string ToolPath => base.ToolPath ?? PulumiTasks.PulumiPath;
+        public override string ToolPath => base.ToolPath ?? GetToolPath();
         public override Action<OutputType, string> CustomLogger => PulumiTasks.PulumiLogger;
         /// <summary>
         ///   The name of the tag.
@@ -6406,12 +6406,12 @@ namespace Nuke.Common.Tools.Pulumi
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class PulumiStackTagSetSettings : ToolSettings
+    public partial class PulumiStackTagSetSettings : PulumiBaseSettings
     {
         /// <summary>
         ///   Path to the Pulumi executable.
         /// </summary>
-        public override string ToolPath => base.ToolPath ?? PulumiTasks.PulumiPath;
+        public override string ToolPath => base.ToolPath ?? GetToolPath();
         public override Action<OutputType, string> CustomLogger => PulumiTasks.PulumiLogger;
         /// <summary>
         ///   The name of the tag.
@@ -6513,12 +6513,12 @@ namespace Nuke.Common.Tools.Pulumi
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class PulumiStateDeleteSettings : ToolSettings
+    public partial class PulumiStateDeleteSettings : PulumiBaseSettings
     {
         /// <summary>
         ///   Path to the Pulumi executable.
         /// </summary>
-        public override string ToolPath => base.ToolPath ?? PulumiTasks.PulumiPath;
+        public override string ToolPath => base.ToolPath ?? GetToolPath();
         public override Action<OutputType, string> CustomLogger => PulumiTasks.PulumiLogger;
         /// <summary>
         ///   The resource as specified by its Pulumi URN (use <c>pulumi stack show-urns</c> to get it).
@@ -6610,12 +6610,12 @@ namespace Nuke.Common.Tools.Pulumi
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class PulumiStateUnprotectSettings : ToolSettings
+    public partial class PulumiStateUnprotectSettings : PulumiBaseSettings
     {
         /// <summary>
         ///   Path to the Pulumi executable.
         /// </summary>
-        public override string ToolPath => base.ToolPath ?? PulumiTasks.PulumiPath;
+        public override string ToolPath => base.ToolPath ?? GetToolPath();
         public override Action<OutputType, string> CustomLogger => PulumiTasks.PulumiLogger;
         /// <summary>
         ///   The resource as specified by its Pulumi URN (use <c>pulumi stack show-urns</c> to get it).
@@ -6707,12 +6707,12 @@ namespace Nuke.Common.Tools.Pulumi
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class PulumiUpSettings : ToolSettings
+    public partial class PulumiUpSettings : PulumiBaseSettings
     {
         /// <summary>
         ///   Path to the Pulumi executable.
         /// </summary>
-        public override string ToolPath => base.ToolPath ?? PulumiTasks.PulumiPath;
+        public override string ToolPath => base.ToolPath ?? GetToolPath();
         public override Action<OutputType, string> CustomLogger => PulumiTasks.PulumiLogger;
         /// <summary>
         ///   Config to use during the update.
@@ -6898,12 +6898,12 @@ namespace Nuke.Common.Tools.Pulumi
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class PulumiVersionSettings : ToolSettings
+    public partial class PulumiVersionSettings : PulumiBaseSettings
     {
         /// <summary>
         ///   Path to the Pulumi executable.
         /// </summary>
-        public override string ToolPath => base.ToolPath ?? PulumiTasks.PulumiPath;
+        public override string ToolPath => base.ToolPath ?? GetToolPath();
         public override Action<OutputType, string> CustomLogger => PulumiTasks.PulumiLogger;
         /// <summary>
         ///   Colorize output. Choices are: always, never, raw, auto (default is auto)
@@ -6975,12 +6975,12 @@ namespace Nuke.Common.Tools.Pulumi
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class PulumiWhoAmISettings : ToolSettings
+    public partial class PulumiWhoAmISettings : PulumiBaseSettings
     {
         /// <summary>
         ///   Path to the Pulumi executable.
         /// </summary>
-        public override string ToolPath => base.ToolPath ?? PulumiTasks.PulumiPath;
+        public override string ToolPath => base.ToolPath ?? GetToolPath();
         public override Action<OutputType, string> CustomLogger => PulumiTasks.PulumiLogger;
         /// <summary>
         ///   Colorize output. Choices are: always, never, raw, auto (default is auto)
@@ -32932,10 +32932,10 @@ namespace Nuke.Common.Tools.Pulumi
     [TypeConverter(typeof(TypeConverter<ColorizeOutput>))]
     public partial class ColorizeOutput : Enumeration
     {
-        public static ColorizeOutput Always = (ColorizeOutput) "Always";
-        public static ColorizeOutput Never = (ColorizeOutput) "Never";
-        public static ColorizeOutput Raw = (ColorizeOutput) "Raw";
-        public static ColorizeOutput Auto = (ColorizeOutput) "Auto";
+        public static ColorizeOutput Always = (ColorizeOutput)"Always";
+        public static ColorizeOutput Never = (ColorizeOutput)"Never";
+        public static ColorizeOutput Raw = (ColorizeOutput)"Raw";
+        public static ColorizeOutput Auto = (ColorizeOutput)"Auto";
         public static explicit operator ColorizeOutput(string value)
         {
             return new ColorizeOutput { Value = value };

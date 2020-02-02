@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
-using System.Threading.Tasks;
 using JetBrains.Annotations;
 using Newtonsoft.Json;
-using Nuke.Common.CI.AzurePipelines;
 using Nuke.Common.IO;
 using Nuke.Common.Tooling;
 using Nuke.Common.Utilities;
@@ -13,7 +12,21 @@ namespace Nuke.Common.Tools.Pulumi
 {
     public partial class PulumiTasks
     {
-        public static async Task EnsureInstalled()
+        internal static string GetToolPath()
+        {
+            //After installation, the set path may not be available until the next job/task
+            try
+            {
+                return ToolPathResolver.GetPathExecutable("pulumi");
+            }
+            catch
+            {
+                return EnvironmentInfo.IsWin
+                    ? Path.Combine(EnvironmentInfo.GetVariable<string>("USERPROFILE") ?? throw new InvalidOperationException(), ".pulumi", "bin", "pulumi.exe")
+                    : Path.Combine(EnvironmentInfo.GetVariable<string>("HOME") ?? throw new InvalidOperationException(), ".pulumi", "bin", "pulumi");
+            }
+        }
+        public static void InstallIfMissing()
         {
             try
             {
@@ -23,25 +36,25 @@ namespace Nuke.Common.Tools.Pulumi
             {
                 Logger.Info("Installing Pulumi...");
                 if (EnvironmentInfo.IsWin)
-                {
-                    var file = NukeBuild.TemporaryDirectory / "install.ps1";
-                    await HttpTasks.HttpDownloadFileAsync("https://get.pulumi.com/install.ps1", file);
-                    var psScript = $"-NoProfile -InputFormat None -ExecutionPolicy Bypass -Command {file}";
-                    ProcessTasks.StartProcess(ToolPathResolver.GetPathExecutable("powershell"), psScript).AssertZeroExitCode();
-                }
+                    InstallWin();
                 else
-                    ProcessTasks.StartProcess(ToolPathResolver.GetPathExecutable("bash"), "curl -fsSL https://get.pulumi.com | sh").AssertZeroExitCode();
+                    InstallUnix();
             }
+        }
 
-            //Fix an issue on azure pipelines where DOTNET_CLI_HOME isn't set for the dotnet runner.
-            if (AzurePipelines.IsRunningAzurePipelines)
-            {
-                if (EnvironmentInfo.GetVariable<string>("DOTNET_CLI_HOME") is null)
-                {
-                    Logger.Info("DOTNET_CLI_HOME is missing, setting...");
-                    EnvironmentInfo.SetVariable("DOTNET_CLI_HOME", EnvironmentInfo.GetVariable<string>("AGENT_TEMPDIRECTORY"));
-                }
-            }
+        private static void InstallWin()
+        {
+            var file = NukeBuild.TemporaryDirectory / "install.ps1";
+            HttpTasks.HttpDownloadFile("https://get.pulumi.com/install.ps1", file);
+            var psScript = $"-NoProfile -InputFormat None -ExecutionPolicy Bypass -Command {file}";
+            ProcessTasks.StartProcess(ToolPathResolver.GetPathExecutable("powershell"), psScript).AssertZeroExitCode();
+        }
+
+        private static void InstallUnix()
+        {
+            var file = NukeBuild.TemporaryDirectory / "install.sh";
+            HttpTasks.HttpDownloadFile("https://get.pulumi.com/install.sh", file);
+            ProcessTasks.StartProcess(ToolPathResolver.GetPathExecutable("bash"), $"{file} | export PATH=$PATH:$HOME/.pulumi/bin").AssertZeroExitCode();
         }
 
         public static IReadOnlyDictionary<string, object> GetStackOutput(Configure<PulumiStackOutputSettings> configurator)
@@ -81,13 +94,13 @@ namespace Nuke.Common.Tools.Pulumi
                     exception);
             }
         }
-    } 
-    
-    
-   public class PulumiConfig
-   {
-       [CanBeNull] 
-       public string Value { get; set; }
-       public bool Secret { get; set; }
-   }
+    }
+
+
+    public class PulumiConfig
+    {
+        [CanBeNull]
+        public string Value { get; set; }
+        public bool Secret { get; set; }
+    }
 }
